@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="COM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="COM_WebSvc_OraPKG" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx</Value>
+    </Setting>
+    <Setting Name="COM_SEPHIROTHWebSvc_OraPKG" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

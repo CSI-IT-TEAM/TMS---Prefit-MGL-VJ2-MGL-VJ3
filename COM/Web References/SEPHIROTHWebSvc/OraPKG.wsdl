@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/webservices/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/webservices/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test_DBConnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test_DBConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Test_DBConnectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sephiroth">
+        <s:complexType />
+      </s:element>
+      <s:element name="SephirothResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SephirothResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrQry" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Ora_SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_SelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_MultiSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrDT" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrQry" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_MultiSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_MultiSelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Modify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrQry" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_ModifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_ModifyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_MultiModify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrQry" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_MultiModifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_MultiModifyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Select_Procedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="DS_Para">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Select_ProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_Select_ProcedureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Run_Procedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="DS_Para">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Run_ProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_Run_ProcedureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Run_Procedure_Blob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Procude_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter_Name" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter_Type" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parameter_Value" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="photo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Ora_Run_Procedure_BlobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ora_Run_Procedure_BlobResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Modify_Procedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_Info" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="DS_Data">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ora_Modify_ProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ora_Modify_ProcedureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Test_DBConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Test_DBConnect" />
+  </wsdl:message>
+  <wsdl:message name="Test_DBConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:Test_DBConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SephirothSoapIn">
+    <wsdl:part name="parameters" element="tns:Sephiroth" />
+  </wsdl:message>
+  <wsdl:message name="SephirothSoapOut">
+    <wsdl:part name="parameters" element="tns:SephirothResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Select" />
+  </wsdl:message>
+  <wsdl:message name="Ora_SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_MultiSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_MultiSelect" />
+  </wsdl:message>
+  <wsdl:message name="Ora_MultiSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_MultiSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_ModifySoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Modify" />
+  </wsdl:message>
+  <wsdl:message name="Ora_ModifySoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_ModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_MultiModifySoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_MultiModify" />
+  </wsdl:message>
+  <wsdl:message name="Ora_MultiModifySoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_MultiModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Select_ProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Select_Procedure" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Select_ProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_Select_ProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Run_ProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Run_Procedure" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Run_ProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_Run_ProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Run_Procedure_BlobSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Run_Procedure_Blob" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Run_Procedure_BlobSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_Run_Procedure_BlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Modify_ProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:Ora_Modify_Procedure" />
+  </wsdl:message>
+  <wsdl:message name="Ora_Modify_ProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:Ora_Modify_ProcedureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OraPKGSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Hello Test</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test_DBConnect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Oracle DataBase WebService Connection Test</wsdl:documentation>
+      <wsdl:input message="tns:Test_DBConnectSoapIn" />
+      <wsdl:output message="tns:Test_DBConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sephiroth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Welcome Sephiroth_WebService</wsdl:documentation>
+      <wsdl:input message="tns:SephirothSoapIn" />
+      <wsdl:output message="tns:SephirothSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Directly, Select to oracle database with sql query </wsdl:documentation>
+      <wsdl:input message="tns:Ora_SelectSoapIn" />
+      <wsdl:output message="tns:Ora_SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiSelect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Directly, Select to oracle database with Multi-Sql query </wsdl:documentation>
+      <wsdl:input message="tns:Ora_MultiSelectSoapIn" />
+      <wsdl:output message="tns:Ora_MultiSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Directly, Modify to oracle database with Sql query(Insert/Update/Delete) </wsdl:documentation>
+      <wsdl:input message="tns:Ora_ModifySoapIn" />
+      <wsdl:output message="tns:Ora_ModifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiModify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Directly, Modify to oracle database with Multi-Sql query(Insert/Update/Delete) </wsdl:documentation>
+      <wsdl:input message="tns:Ora_MultiModifySoapIn" />
+      <wsdl:output message="tns:Ora_MultiModifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select_Procedure">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use oracle Procedure to select with Multi-Cursor </wsdl:documentation>
+      <wsdl:input message="tns:Ora_Select_ProcedureSoapIn" />
+      <wsdl:output message="tns:Ora_Select_ProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use oracle Procedure to select with Multi-Cursor </wsdl:documentation>
+      <wsdl:input message="tns:Ora_Run_ProcedureSoapIn" />
+      <wsdl:output message="tns:Ora_Run_ProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure_Blob">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use oracle Procedure to save with blob type </wsdl:documentation>
+      <wsdl:input message="tns:Ora_Run_Procedure_BlobSoapIn" />
+      <wsdl:output message="tns:Ora_Run_Procedure_BlobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify_Procedure">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use oracle Procedure to Modify with DataSet of Multi-Table </wsdl:documentation>
+      <wsdl:input message="tns:Ora_Modify_ProcedureSoapIn" />
+      <wsdl:output message="tns:Ora_Modify_ProcedureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OraPKGSoap" type="tns:OraPKGSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost/webservices/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_DBConnect">
+      <soap:operation soapAction="http://localhost/webservices/Test_DBConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sephiroth">
+      <soap:operation soapAction="http://localhost/webservices/Sephiroth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiSelect">
+      <soap:operation soapAction="http://localhost/webservices/Ora_MultiSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Modify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiModify">
+      <soap:operation soapAction="http://localhost/webservices/Ora_MultiModify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select_Procedure">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Select_Procedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Run_Procedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure_Blob">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Run_Procedure_Blob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify_Procedure">
+      <soap:operation soapAction="http://localhost/webservices/Ora_Modify_Procedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OraPKGSoap12" type="tns:OraPKGSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost/webservices/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test_DBConnect">
+      <soap12:operation soapAction="http://localhost/webservices/Test_DBConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sephiroth">
+      <soap12:operation soapAction="http://localhost/webservices/Sephiroth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiSelect">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_MultiSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Modify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_MultiModify">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_MultiModify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Select_Procedure">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Select_Procedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Run_Procedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Run_Procedure_Blob">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Run_Procedure_Blob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ora_Modify_Procedure">
+      <soap12:operation soapAction="http://localhost/webservices/Ora_Modify_Procedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OraPKG">
+    <wsdl:port name="OraPKGSoap" binding="tns:OraPKGSoap">
+      <soap:address location="http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OraPKGSoap12" binding="tns:OraPKGSoap12">
+      <soap12:address location="http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

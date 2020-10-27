@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>COM</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>COM</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComFunction.cs" />
+    <Compile Include="ComVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OraDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SEPHIROTHWebSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebSvc\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SEPHIROTHWebSvc\OraPKG.wsdl" />
+    <None Include="Web References\SEPHIROTHWebSvc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebSvc\OraPKG.wsdl" />
+    <None Include="Web References\WebSvc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <WebReferenceUrl Include="http://172.30.10.7/LMESPOP_WebService/OraPKG.asmx">
+      <RelPath>Web References\WebSvc\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+      <UpdateFromURL>http://172.30.10.7/LMESPOP_WebService/OraPKG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SEPHIROTHWebSvc\</RelPath>
+      <UpdateFromURL>http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>COM_SEPHIROTHWebSvc_OraPKG</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebSvc\OraPKG.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SEPHIROTHWebSvc\OraPKG.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FBBE7E17-5F53-4802-B462-50F1901578ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FORM</RootNamespace>
+    <AssemblyName>DSF_VJ3_MENU</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAIN\bin\Debug\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>New Project4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COM, Version=1.0.6972.20751, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\COM.dll</HintPath>
+    </Reference>
+    <Reference Include="ComVar, Version=1.0.6984.18247, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ComVar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Data.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Printing.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Utils.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraBars.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraEditors.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGauges.v17.1.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraNavBar.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraPrinting.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\msdatasrc.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir_cp, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\netchartdir_cp.dll</HintPath>
+    </Reference>
+    <Reference Include="ShapeControl, Version=1.0.6374.27716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ShapeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLib\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\A1Panel.designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLib\A1PanelGraphics.cs" />
+    <Compile Include="ClassLib\ComCtl.cs" />
+    <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="ClassLib\Database.cs" />
+    <Compile Include="ClassLib\Globals.cs" />
+    <Compile Include="ClassLib\GroupboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\LabelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSF_VJ3_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSF_VJ3_MENU.Designer.cs">
+      <DependentUpon>DSF_VJ3_MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FRM_MODEL_DETAIL_LW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FRM_MODEL_DETAIL_LW.designer.cs">
+      <DependentUpon>FRM_MODEL_DETAIL_LW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FRM_PERFORMANCE_DASHBOARD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FRM_PERFORMANCE_DASHBOARD.designer.cs">
+      <DependentUpon>FRM_PERFORMANCE_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL_LINE.cs" />
+    <Compile Include="UC\ButtonMenuhandler.cs" />
+    <Compile Include="UC\UC_GRID_PERFORMANCE_DASHBOARD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_GRID_PERFORMANCE_DASHBOARD.designer.cs">
+      <DependentUpon>UC_GRID_PERFORMANCE_DASHBOARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MENU_DSF_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MENU_DSF_2.Designer.cs">
+      <DependentUpon>UC_MENU_DSF_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MENU_DSF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MENU_DSF.Designer.cs">
+      <DependentUpon>UC_MENU_DSF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSF_VJ3_MENU.resx">
+      <DependentUpon>DSF_VJ3_MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FRM_MODEL_DETAIL_LW.resx">
+      <DependentUpon>FRM_MODEL_DETAIL_LW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FRM_PERFORMANCE_DASHBOARD.resx">
+      <DependentUpon>FRM_PERFORMANCE_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_GRID_PERFORMANCE_DASHBOARD.resx">
+      <DependentUpon>UC_GRID_PERFORMANCE_DASHBOARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MENU_DSF_2.resx">
+      <DependentUpon>UC_MENU_DSF_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MENU_DSF.resx">
+      <DependentUpon>UC_MENU_DSF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANDON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnMainG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invtorySub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiskill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NPI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PFC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod_result.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodresult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodtivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qual_Rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\under-construction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leadtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas-inventory-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanicButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whstoreage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\under-construction-2408061_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxFPSpreadADO">
+      <Guid>{F856EC8B-F03C-4515-BDC6-64CBD617566A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxFPUSpreadADO">
+      <Guid>{B9411660-10E6-4A53-BE96-7FED334704FA}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="FPSpreadADO">
+      <Guid>{F856EC8B-F03C-4515-BDC6-64CBD617566A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="FPUSpreadADO">
+      <Guid>{B9411660-10E6-4A53-BE96-7FED334704FA}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\under-construction-2408061_960_7201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VieSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="New Project4.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
