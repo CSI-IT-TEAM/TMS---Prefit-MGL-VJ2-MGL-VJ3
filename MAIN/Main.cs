@@ -495,6 +495,7 @@ namespace MAIN
         {
             try
             {
+                if (_splashForm == null) return;
                 // Need to call on the thread that launched this splash       
                 if (_splashForm.InvokeRequired)
                     _splashForm.Invoke(new MethodInvoker(CloseSplash));
