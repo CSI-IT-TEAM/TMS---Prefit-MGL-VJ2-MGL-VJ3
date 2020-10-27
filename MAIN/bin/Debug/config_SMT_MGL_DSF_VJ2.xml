@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Base>
+	<MAIN>
+		<grpForm>SMT_MGL_DSF_VJ2</grpForm> <!--TMS_PREFIT-->
+		<FlashScreen>false</FlashScreen>
+		<Auto_Download>fasle</Auto_Download>
+	     	<OP_CD>IPP</OP_CD>
+		<CMP_CD>IP</CMP_CD>
+		<CMP_NM>IP</CMP_NM>
+		<AREA>NOS</AREA>
+		<Type>1</Type>
+		<SCREEN>1</SCREEN>
+	<Monitor>1</Monitor>
+	<Loc>012</Loc>
+	<LocNM>Nos F</LocNM>
+	<Thread>HOP</Thread>
+	</MAIN>
+  
+	<Auto_Download>
+		<grpForm>SMT_MGL_DSF_VJ2</grpForm>
+	</Auto_Download>
+	<GMES>
+		<PROCESS_NAME>JBrowser6</PROCESS_NAME>
+		<PATH>C:\JihooSoft\JBrowser6_GMES\JBrowser6.exe</PATH>
+	</GMES>
+	<QMS>
+		<PROCESS_NAME>JBrowser6</PROCESS_NAME>
+		<PATH>C:\\Program Files\\CSI\\QCS\\FlexQuality.exe</PATH>
+	</QMS>
+
+  
+	<LANG>VN</LANG>
+	<MENU_BUTTON>T/T/T/T/T/T</MENU_BUTTON>
+	<LINE_CD>099</LINE_CD>	
+	<LINE_NAME>N</LINE_NAME>
+	<NUMBER_MLINE>8</NUMBER_MLINE>
+	<FRM_MAIN>
+		<frmMain>69</frmMain>
+	</FRM_MAIN>
+</Base>
