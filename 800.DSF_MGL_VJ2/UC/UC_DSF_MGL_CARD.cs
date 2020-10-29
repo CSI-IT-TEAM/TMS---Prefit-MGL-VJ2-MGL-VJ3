@@ -187,5 +187,17 @@ namespace FORM.UC
 
         #region Variable
         #endregion
+
+        private void lblFac_Click(object sender, EventArgs e)
+        {
+            ComVar.Var._IsBack = true;
+            ComVar.Var._strValue1 = _FacCode;
+            if (_FacCode.Equals("001") || _FacCode.Equals("099"))
+            {
+                ComVar.Var.callForm = "23";
+            }
+            else
+                ComVar.Var.callForm = "69";
+        }
     }
 }

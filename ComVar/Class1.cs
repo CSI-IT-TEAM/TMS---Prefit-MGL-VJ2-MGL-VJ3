@@ -80,7 +80,50 @@ namespace ComVar
 
     public class Func
     {
-        
+
+        public static Dictionary<string, Tuple<string, string, string, string, string, string>> getInitForm2(string dll_name, string class_name)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            DataTable dt;
+            Dictionary<string, Tuple<string, string, string, string, string, string>> dtn = null;
+            string process_name = "SEPHIROTH.PROC_STB_GET_FORM_INIT";
+
+            MyOraDB.ReDim_Parameter(3);
+            MyOraDB.Process_Name = process_name;
+
+            MyOraDB.Parameter_Name[0] = "ARG_DLL_NM";
+            MyOraDB.Parameter_Name[1] = "ARG_CLASS_NM";
+            MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
+
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+
+            MyOraDB.Parameter_Values[0] = dll_name;
+            MyOraDB.Parameter_Values[1] = class_name;
+            MyOraDB.Parameter_Values[2] = "";
+
+            MyOraDB.Add_Select_Parameter(true);
+            ds_ret = MyOraDB.Exe_Select_Procedure();
+
+            if (ds_ret != null)
+            {
+                dt = ds_ret.Tables[0];
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dtn = new Dictionary<string, Tuple<string, string, string, string, string, string>>();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        dtn.Add(dt.Rows[i]["COM_NM"].ToString()
+                               , new Tuple<string, string, string, string, string, string>(dt.Rows[i]["COM_VL"].ToString(), dt.Rows[i]["VALUE2"].ToString(), dt.Rows[i]["VALUE3"].ToString()
+                                                                                         , dt.Rows[i]["VALUE4"].ToString(), dt.Rows[i]["VALUE5"].ToString(), dt.Rows[i]["VALUE6"].ToString()));
+                    }
+                }
+            }
+            return dtn;
+        }
+
 
         public static Dictionary<string, string> getInitForm(string dll_name, string class_name)
         {

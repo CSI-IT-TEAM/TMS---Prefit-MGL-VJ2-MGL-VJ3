@@ -77,8 +77,8 @@ namespace FORM
         {
             try
             {
-                string[] FacCode = new string[] { "F1", "NOS N", "TOT", "LD", "LE", "TOT" };
-                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD", "LE", "Total" };
+                string[] FacCode = new string[] { "001", "099", "TOT", "201", "202", "TOT" };
+                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD Assembly", "LE Assembly", "Total" };
 
                 DataTable dt = SP_SMT_EMD_MENU_SELECT("Q");
                 for (int j = 0; j < tblContent.RowCount; j++)
@@ -129,7 +129,7 @@ namespace FORM
             if (cCount >= 10)
             {
                 cCount = 0;
-                string[] FacCode = new string[] { "F1", "NOS N", "TOT", "LD", "LE", "TOT" };
+                string[] FacCode = new string[] { "001", "099", "TOT", "201", "202", "TOT" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD", "LE", "Total" };
                 // DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
                 //for (int i = 0; i < dt.Rows.Count; i++)
@@ -142,7 +142,6 @@ namespace FORM
                 //            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
                 //        }
                 //    }
-
                 //}
 
             }
@@ -179,7 +178,6 @@ namespace FORM
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
             ComVar.Var.callForm = "375";
-            //MessageBox.Show(this, "Under Contruction!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUpstream_MouseEnter(object sender, EventArgs e)

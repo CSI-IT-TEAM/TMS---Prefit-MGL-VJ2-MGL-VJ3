@@ -32,7 +32,7 @@ namespace FORM
         private void Form_Load(object sender, EventArgs e)
         {
          //   pnHeader.Height = 75;
-            pnHeader.BackColor = Color.FromArgb(0, 176, 80);
+           // pnHeader.BackColor = Color.FromArgb(0, 176, 80);
             pnYMD.Controls.Add(DWMY);
             formatband();
             DWMY.OnDWMYClick += DWMYClick;
@@ -49,6 +49,7 @@ namespace FORM
 
             if (this.Visible)
             {
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOT") ? "VJ1,VJ2 Support BTS by Year" : ComVar.Var._strValue1 + " Support BTS by Year";
                 DWMY.YMD_Change(4); DWMY.YMD_Change(2);
                 _iCountReload = 40;
                 tmrDate.Start();

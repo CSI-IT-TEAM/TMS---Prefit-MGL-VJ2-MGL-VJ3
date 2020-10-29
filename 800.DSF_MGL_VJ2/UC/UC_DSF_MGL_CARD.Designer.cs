@@ -391,6 +391,7 @@
             this.lblFac.Size = new System.Drawing.Size(308, 53);
             this.lblFac.TabIndex = 4;
             this.lblFac.Text = "Vĩnh Cửu (VJ1)";
+            this.lblFac.Click += new System.EventHandler(this.lblFac_Click);
             // 
             // UC_DSF_MGL_CARD
             // 
