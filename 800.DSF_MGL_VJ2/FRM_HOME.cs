@@ -120,7 +120,6 @@ namespace FORM
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             InitTableContents();
-
         }
         int cCount = 0;
         private void timer1_Tick(object sender, EventArgs e)
@@ -148,14 +147,6 @@ namespace FORM
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
         }
 
-        private void btnPrefit_Cockpit_MouseEnter(object sender, EventArgs e)
-        {
-        }
-
-        private void btnPrefit_Cockpit_MouseLeave(object sender, EventArgs e)
-        {
-        }
-
         private void btnDSF_Click(object sender, EventArgs e)
         {
             ComVar.Var._IsBack = true;
@@ -178,14 +169,6 @@ namespace FORM
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
             ComVar.Var.callForm = "375";
-        }
-
-        private void btnUpstream_MouseEnter(object sender, EventArgs e)
-        {
-        }
-
-        private void btnUpstream_MouseLeave(object sender, EventArgs e)
-        {
         }
 
         private void FRM_HOME_VisibleChanged(object sender, EventArgs e)

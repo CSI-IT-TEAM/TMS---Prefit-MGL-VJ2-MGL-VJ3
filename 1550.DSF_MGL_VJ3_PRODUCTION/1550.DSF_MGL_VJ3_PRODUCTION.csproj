@@ -124,6 +124,24 @@
     <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.Designer.cs">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_MGL_WEEKLY_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_WEEKLY_PRODUCTION.designer.cs">
+      <DependentUpon>FRM_MGL_WEEKLY_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTION.designer.cs">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTION.designer.cs">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTION.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_TMS_HOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +179,12 @@
     <Compile Include="UC\UC_DWMY.designer.cs">
       <DependentUpon>UC_DWMY.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.designer.cs">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_TMS_CARD_V3.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +203,12 @@
     <Compile Include="UC\UC_TMS_CARD.Designer.cs">
       <DependentUpon>UC_TMS_CARD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.designer.cs">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FRM_HOME.resx">
@@ -195,6 +225,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_WEEKLY_PRODUCTION.resx">
+      <DependentUpon>FRM_MGL_WEEKLY_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_MONTHLY_PRODUCTION.resx">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_YEARLY_PRODUCTION.resx">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_TMS_HOME.resx">
       <DependentUpon>FRM_TMS_HOME.cs</DependentUpon>
@@ -216,6 +255,9 @@
     <EmbeddedResource Include="UC\UC_DWMY.resx">
       <DependentUpon>UC_DWMY.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MONTH_SELECTION.resx">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_TMS_CARD_V3.resx">
       <DependentUpon>UC_TMS_CARD_V3.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_TMS_CARD.resx">
       <DependentUpon>UC_TMS_CARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_YEAR_SELECTION.resx">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

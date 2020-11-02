@@ -91,6 +91,7 @@ namespace FORM
                 {
                     lbltitle.Text = ComVar.Var._strValue1.Equals("TOT") ? "VJ1,VJ2 Support Production Status by Day" : ComVar.Var._strValue1 + " Support Production Status by Day";
                     cCount = 60;
+                    uc.YMD_Change(1, "");
                     switch (ComVar.Var._strValue1)
                     {
                         case "VJ2":
@@ -138,6 +139,7 @@ namespace FORM
             {
                 cCount = 0;
                 BindingData4Grid();
+                
             }
 
         }
