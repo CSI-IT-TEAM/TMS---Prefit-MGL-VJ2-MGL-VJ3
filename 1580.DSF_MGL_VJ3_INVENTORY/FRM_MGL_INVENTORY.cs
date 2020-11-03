@@ -88,7 +88,7 @@ namespace FORM
                 for (int i = 0; i < gridView1.Columns.Count; i++)
                 {
                     gridView1.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;  
-                    if (i <= 4)
+                    if (i <= 4)  
                     {
                         gridView1.Columns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
                     }
