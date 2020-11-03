@@ -887,15 +887,7 @@
             this.grpProd.TextBackColor = System.Drawing.Color.RoyalBlue;
             this.grpProd.TextBorderColor = System.Drawing.Color.Black;
             this.grpProd.TextBorderWith = 1F;
-            // 
-            // axfpSpread1
-            // 
-            this.axfpSpread1.DataSource = null;
-            this.axfpSpread1.Location = new System.Drawing.Point(5, 37);
-            this.axfpSpread1.Name = "axfpSpread1";
-            this.axfpSpread1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpSpread1.OcxState")));
-            this.axfpSpread1.Size = new System.Drawing.Size(208, 192);
-            this.axfpSpread1.TabIndex = 15;
+           
             // 
             // UC_MENU_DSF
             // 

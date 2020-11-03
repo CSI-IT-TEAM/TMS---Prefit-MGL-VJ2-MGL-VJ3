@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13B82CE1-E5C2-4EA3-AE9E-733B5D6A5923}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FORM</RootNamespace>
+    <AssemblyName>DSF_MGL_VJ3_INVENTORY</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAIN\bin\Debug\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="COM, Version=1.0.7378.15998, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\COM.dll</HintPath>
+    </Reference>
+    <Reference Include="ComVar, Version=1.0.7458.17402, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ComVar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLib\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\A1Panel.Designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLib\A1PanelGraphics.cs" />
+    <Compile Include="ClassLib\AdvancedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\Database.cs" />
+    <Compile Include="ClassLib\Globals.cs" />
+    <Compile Include="ClassLib\GroupboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\LabelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\RoundedRectangle.cs" />
+    <Compile Include="ClassLib\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="MyCellMergeHelper.cs" />
+    <Compile Include="MyGridPainter.cs" />
+    <Compile Include="MyMergedCell.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_INVENTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_INVENTORY.designer.cs">
+      <DependentUpon>FRM_MGL_INVENTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tmsHomeModel.cs" />
+    <Compile Include="UC\UC_CHART_PROD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_CHART_PROD.Designer.cs">
+      <DependentUpon>UC_CHART_PROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_DSF_MGL_CARD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DSF_MGL_CARD.Designer.cs">
+      <DependentUpon>UC_DSF_MGL_CARD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.designer.cs">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD_V3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD_V3.Designer.cs">
+      <DependentUpon>UC_TMS_CARD_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD_V2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD_V2.Designer.cs">
+      <DependentUpon>UC_TMS_CARD_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_TMS_CARD.Designer.cs">
+      <DependentUpon>UC_TMS_CARD.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_INVENTORY.resx">
+      <DependentUpon>FRM_MGL_INVENTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_CHART_PROD.resx">
+      <DependentUpon>UC_CHART_PROD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DSF_MGL_CARD.resx">
+      <DependentUpon>UC_DSF_MGL_CARD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DWMY.resx">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_TMS_CARD_V3.resx">
+      <DependentUpon>UC_TMS_CARD_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_TMS_CARD_V2.resx">
+      <DependentUpon>UC_TMS_CARD_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_TMS_CARD.resx">
+      <DependentUpon>UC_TMS_CARD.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carcsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckgreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footer_CSI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANDON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invtorySub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leadtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiskill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NPI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PFC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\predic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodresult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodtivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FtyButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FtyButtonHover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
