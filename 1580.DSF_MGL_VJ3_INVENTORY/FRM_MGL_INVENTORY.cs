@@ -80,10 +80,10 @@ namespace FORM
                 dtsource = SEL_INVENTORY_SHORTAGE(_line_cd);
                 grid.DataSource = dtsource;
                 gridView1.Columns[0].Width = 60;
-                gridView1.Columns[1].Width = 90;
-                gridView1.Columns[2].Width = 190;
+                gridView1.Columns[1].Width = 85;
+                gridView1.Columns[2].Width = 200;
                 gridView1.Columns[3].Width = 93;
-                gridView1.Columns[4].Width = 120;
+                gridView1.Columns[4].Width = 140;
                 gridView1.OptionsView.AllowCellMerge = true;
                 for (int i = 0; i < gridView1.Columns.Count; i++)
                 {
@@ -92,14 +92,6 @@ namespace FORM
                     {
                         gridView1.Columns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
                     }
-                }   
-                gridView1.TopRowIndex = gridView1.RowCount - 1;
-                //gridView1.Columns[0].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-                //gridView1.Columns[1].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-                //gridView1.Columns[2].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-
-                for (int i = 0; i < gridView1.Columns.Count; i++)
-                {
                     if (i < 5)
                     {
                         gridView1.Columns[i].Caption = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(gridView1.Columns[i].GetCaption().Replace("_", " ").ToLower());
@@ -108,8 +100,14 @@ namespace FORM
                     else
                     {
                         gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                        gridView1.Columns[i].Width = 69;
                     }
-                }
+                }   
+                gridView1.TopRowIndex = gridView1.RowCount - 1;
+                //gridView1.Columns[0].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+                //gridView1.Columns[1].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+                //gridView1.Columns[2].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+                
                 //_Helper.removeMerged();
                 //if (first)
                 //    _Helper = new MyCellMergeHelper(gridView1);
