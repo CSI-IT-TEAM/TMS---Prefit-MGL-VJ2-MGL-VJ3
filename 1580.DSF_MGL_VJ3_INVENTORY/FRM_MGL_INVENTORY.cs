@@ -92,7 +92,7 @@ namespace FORM
                     {
                         gridView1.Columns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
                     }
-                }
+                }   
                 gridView1.TopRowIndex = gridView1.RowCount - 1;
                 //gridView1.Columns[0].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
                 //gridView1.Columns[1].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
