@@ -335,7 +335,6 @@ namespace FORM
         {
 
         }
-
         private void uc_month_ValueChangeEvent(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
