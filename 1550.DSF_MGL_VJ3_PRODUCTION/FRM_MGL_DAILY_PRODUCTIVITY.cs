@@ -53,6 +53,7 @@ namespace FORM
         #endregion
         Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
         DataTable dt = null;
+        string lang = "";
         int cCount = 0;
         private void FRM_MGL_DAILY_PRODUCTIVITY_Load(object sender, EventArgs e)
         {
@@ -181,6 +182,8 @@ namespace FORM
             {
                 lbltitle.Text = ComVar.Var._strValue1.Equals("TOT") ? "VJ1,VJ2 Support Productivity Status by Day" : ComVar.Var._strValue1 + " Support Productivity  Status by Day";
                 cCount = 60;
+                lang = ComVar.Var._strValue3;
+                uc.YMD_Change(1, lang);
                 switch (ComVar.Var._strValue1)
                 {
                     case "VJ2":

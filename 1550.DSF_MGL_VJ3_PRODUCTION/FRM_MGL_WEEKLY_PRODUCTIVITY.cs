@@ -37,13 +37,13 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_VJ3.SMT_PRODUCTIVITY_WEEKLY_SELECT";
+                string process_name = "MES.PKG_MGL_VJ3.SMT_PRODUCTIVITY_WEEKLY_SELECT";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
-                MyOraDB.Parameter_Name[0] = "V_P_TYPE";
-                MyOraDB.Parameter_Name[1] = "V_P_DATE";
-                MyOraDB.Parameter_Name[2] = "V_P_LINE";
-                MyOraDB.Parameter_Name[3] = "V_P_MLINE";
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_DATE";
+                MyOraDB.Parameter_Name[2] = "ARG_LINE";
+                MyOraDB.Parameter_Name[3] = "ARG_MLINE";
                 MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
                 MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
@@ -150,11 +150,11 @@ namespace FORM
             try
             {
                 var sTitle = new List<string>();
-                int mLineStart = Convert.ToInt32(line.Equals("202") ? mline : line);
-                if (mLineStart == 3)
-                    mLineStart = 2;
-                else if (mLineStart == 2)
-                    mLineStart = 3;
+                //int mLineStart = Convert.ToInt32(line.Equals("202") ? mline : line);
+                //if (mLineStart == 3)
+                //    mLineStart = 2;
+                //else if (mLineStart == 2)
+                //    mLineStart = 3;
                 //if (!sChart.Equals("UPC"))
                 //{
                 //    switch (line)
@@ -205,15 +205,17 @@ namespace FORM
         private void FRM_PROD_STATUS_DAILY_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)
-            { lang = ComVar.Var._strValue3;
+            {
+                lang = ComVar.Var._strValue3;
                 uc.YMD_Change(2,lang);
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOT") ? "VJ1,VJ2 Support Productivity Status by Week" : ComVar.Var._strValue1 + " Support Productivity  Status by Week";
                 cCount = 30-1;
                // line = "001"; mline = ComVar.Var._strValue1;
                 line = ComVar.Var._strValue1; mline = ComVar.Var._strValue2;
                // line = "099"; mline = "001";
                 switch (line)
                 {
-                    case "202":
+                    case "VJ2":
                         //grdBandStit3.Visible = false;
                         //chartUPS3.Visible = false;
                         tblMain2.ColumnStyles[0].Width = 38.00F;
@@ -234,21 +236,21 @@ namespace FORM
                         tblMain2.ColumnStyles[2].SizeType = SizeType.Percent;
                         break;
                 }
-                switch (lang)
-                {
-                    case "Vi":
-                        lang = "Vi";
-                        lbltitle.Text = "Tình trạng năng suất theo tuần";
-                        break;
-                    case "En":
-                        lang = "En";
-                        lbltitle.Text = "Productivity Status by Week";
-                        break;
-                    default:
-                        lbltitle.Text = "Productivity Status by Week";
-                        break;
+                //switch (lang)
+                //{
+                //    case "Vi":
+                //        lang = "Vi";
+                //        lbltitle.Text = "Tình trạng năng suất theo tuần";
+                //        break;
+                //    case "En":
+                //        lang = "En";
+                //        lbltitle.Text = "Productivity Status by Week";
+                //        break;
+                //    default:
+                //        lbltitle.Text = "Productivity Status by Week";
+                //        break;
 
-                }
+                //}
                 tmr.Start();
             }
             else
