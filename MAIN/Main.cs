@@ -44,7 +44,7 @@ namespace MAIN
                 _dtXML = ComVar.Func.ReadXML(Application.StartupPath + "\\Config.XML", "MAIN");
                 GoFullscreen();
                 /// Run 1 form using Test
-               //runSingleForm();
+            //   runSingleForm();
 
                 ///Run Group form by Config file
                 runGroupForm();
@@ -84,11 +84,11 @@ namespace MAIN
         /// Run 1 form using Test
         /// </summary>
         /// 
-        /*
+        
         private void runSingleForm()
         {
-            Assembly assembly = Assembly.LoadFile(Application.StartupPath + @"\DLL\SMT_DGF_PROD_NOS_L.DLL");
-            Type type = assembly.GetType("FORM.FORM_SMT_PROD_DAY");
+            Assembly assembly = Assembly.LoadFile(Application.StartupPath + @"\DLL\DSF_MGL_VJ3_HR.DLL");
+            Type type = assembly.GetType("FORM.FRM_MGL_HR_ABSENT");
 
             Form form = (Form)Activator.CreateInstance(type);
 
@@ -98,8 +98,8 @@ namespace MAIN
             pnMain.Controls.Add(form);
             form.Show();
         }
-        */
-
+        
+        /*
         private void runSingleForm()
         {
             Assembly assembly = Assembly.LoadFile(Application.StartupPath + @"\DLL\TMS_PREFIT.DLL");
@@ -117,6 +117,7 @@ namespace MAIN
             form.Show();
             ComVar.Var._Frm_Curr = pnMain.Controls[0].Name;
         }
+        */
 
         #region Run Group Form
 
