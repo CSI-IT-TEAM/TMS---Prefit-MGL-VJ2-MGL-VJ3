@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FRM_MGL_MONTHLY_PRODUCTION
+    partial class FRM_MGL_MONTHLY_PRODUCTIVITY
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -67,7 +68,7 @@
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             this.pnUC = new System.Windows.Forms.Panel();
             this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
             this.splMain = new System.Windows.Forms.SplitContainer();
@@ -146,8 +147,8 @@
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.RATE = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.tblMain2 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartUPS2 = new DevExpress.XtraCharts.ChartControl();
             this.chartUPS3 = new DevExpress.XtraCharts.ChartControl();
+            this.chartUPS2 = new DevExpress.XtraCharts.ChartControl();
             this.chartUPS1 = new DevExpress.XtraCharts.ChartControl();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnGauge = new System.Windows.Forms.Panel();
@@ -172,13 +173,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
             this.tblMain2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
@@ -247,13 +248,13 @@
             // 
             this.lbltitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbltitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold);
+            this.lbltitle.Font = new System.Drawing.Font("Calibri", 62.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.ForeColor = System.Drawing.Color.White;
             this.lbltitle.Location = new System.Drawing.Point(0, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(1920, 109);
             this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Production Status by Month";
+            this.lbltitle.Text = "Productivity Status by Month";
             this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tmr
@@ -269,7 +270,7 @@
             this.pnUC.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnUC.Location = new System.Drawing.Point(0, 109);
             this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1904, 59);
+            this.pnUC.Size = new System.Drawing.Size(1293, 59);
             this.pnUC.TabIndex = 5;
             // 
             // uc_month
@@ -296,8 +297,8 @@
             // 
             this.splMain.Panel2.Controls.Add(this.tblMain2);
             this.splMain.Panel2.Controls.Add(this.tblMain);
-            this.splMain.Size = new System.Drawing.Size(1904, 873);
-            this.splMain.SplitterDistance = 286;
+            this.splMain.Size = new System.Drawing.Size(1293, 547);
+            this.splMain.SplitterDistance = 201;
             this.splMain.TabIndex = 6;
             // 
             // grdView
@@ -308,7 +309,7 @@
             this.grdView.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdView.MainView = this.gvwView;
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1904, 286);
+            this.grdView.Size = new System.Drawing.Size(1293, 201);
             this.grdView.TabIndex = 1;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
@@ -381,13 +382,12 @@
             this.gvwView.OptionsView.ShowGroupPanel = false;
             this.gvwView.OptionsView.ShowIndicator = false;
             this.gvwView.PaintStyleName = "Flat";
-            this.gvwView.RowHeight = 35;
+            this.gvwView.RowHeight = 25;
             this.gvwView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.bdgrdView_RowCellStyle);
             // 
             // bandDate
             // 
             this.bandDate.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.bandDate.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.bandDate.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.bandDate.AppearanceHeader.Options.UseBackColor = true;
             this.bandDate.AppearanceHeader.Options.UseForeColor = true;
@@ -401,7 +401,6 @@
             // gridBand2
             // 
             this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.gridBand2.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
             this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
@@ -422,7 +421,6 @@
             // bandMon
             // 
             this.bandMon.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.bandMon.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.bandMon.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.bandMon.AppearanceHeader.Options.UseBackColor = true;
             this.bandMon.AppearanceHeader.Options.UseForeColor = true;
@@ -465,7 +463,6 @@
             // band01
             // 
             this.band01.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band01.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band01.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band01.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band01.AppearanceHeader.Options.UseBackColor = true;
@@ -489,7 +486,6 @@
             // band02
             // 
             this.band02.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band02.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band02.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band02.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band02.AppearanceHeader.Options.UseBackColor = true;
@@ -512,7 +508,6 @@
             // band03
             // 
             this.band03.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band03.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band03.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band03.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band03.AppearanceHeader.Options.UseBackColor = true;
@@ -535,7 +530,6 @@
             // band04
             // 
             this.band04.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band04.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band04.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band04.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band04.AppearanceHeader.Options.UseBackColor = true;
@@ -558,7 +552,6 @@
             // band05
             // 
             this.band05.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band05.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band05.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band05.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band05.AppearanceHeader.Options.UseBackColor = true;
@@ -581,7 +574,6 @@
             // band06
             // 
             this.band06.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band06.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band06.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band06.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band06.AppearanceHeader.Options.UseBackColor = true;
@@ -604,7 +596,6 @@
             // band07
             // 
             this.band07.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band07.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band07.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band07.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band07.AppearanceHeader.Options.UseBackColor = true;
@@ -627,7 +618,6 @@
             // band08
             // 
             this.band08.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band08.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band08.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band08.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band08.AppearanceHeader.Options.UseBackColor = true;
@@ -650,7 +640,6 @@
             // band09
             // 
             this.band09.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band09.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band09.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band09.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band09.AppearanceHeader.Options.UseBackColor = true;
@@ -673,7 +662,6 @@
             // band10
             // 
             this.band10.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band10.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band10.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band10.AppearanceHeader.Options.UseBackColor = true;
@@ -696,7 +684,6 @@
             // band11
             // 
             this.band11.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band11.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band11.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band11.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band11.AppearanceHeader.Options.UseBackColor = true;
@@ -719,7 +706,6 @@
             // band12
             // 
             this.band12.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band12.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band12.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band12.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band12.AppearanceHeader.Options.UseBackColor = true;
@@ -742,7 +728,6 @@
             // band13
             // 
             this.band13.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band13.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band13.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band13.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band13.AppearanceHeader.Options.UseBackColor = true;
@@ -765,7 +750,6 @@
             // band14
             // 
             this.band14.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band14.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band14.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band14.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band14.AppearanceHeader.Options.UseBackColor = true;
@@ -788,7 +772,6 @@
             // band15
             // 
             this.band15.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band15.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band15.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band15.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band15.AppearanceHeader.Options.UseBackColor = true;
@@ -811,7 +794,6 @@
             // band16
             // 
             this.band16.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band16.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band16.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band16.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band16.AppearanceHeader.Options.UseBackColor = true;
@@ -834,7 +816,6 @@
             // band17
             // 
             this.band17.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band17.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band17.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band17.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band17.AppearanceHeader.Options.UseBackColor = true;
@@ -857,7 +838,6 @@
             // band18
             // 
             this.band18.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band18.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band18.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band18.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band18.AppearanceHeader.Options.UseBackColor = true;
@@ -880,7 +860,6 @@
             // band19
             // 
             this.band19.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band19.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band19.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band19.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band19.AppearanceHeader.Options.UseBackColor = true;
@@ -903,7 +882,6 @@
             // band20
             // 
             this.band20.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band20.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band20.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band20.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band20.AppearanceHeader.Options.UseBackColor = true;
@@ -926,7 +904,6 @@
             // band21
             // 
             this.band21.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band21.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band21.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band21.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band21.AppearanceHeader.Options.UseBackColor = true;
@@ -949,7 +926,6 @@
             // band22
             // 
             this.band22.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band22.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band22.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band22.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band22.AppearanceHeader.Options.UseBackColor = true;
@@ -972,7 +948,6 @@
             // band23
             // 
             this.band23.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band23.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band23.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band23.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band23.AppearanceHeader.Options.UseBackColor = true;
@@ -995,7 +970,6 @@
             // band24
             // 
             this.band24.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band24.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band24.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band24.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band24.AppearanceHeader.Options.UseBackColor = true;
@@ -1018,7 +992,6 @@
             // band25
             // 
             this.band25.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band25.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band25.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band25.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band25.AppearanceHeader.Options.UseBackColor = true;
@@ -1041,7 +1014,6 @@
             // band26
             // 
             this.band26.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band26.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band26.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band26.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band26.AppearanceHeader.Options.UseBackColor = true;
@@ -1064,7 +1036,6 @@
             // band27
             // 
             this.band27.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band27.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band27.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band27.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band27.AppearanceHeader.Options.UseBackColor = true;
@@ -1087,7 +1058,6 @@
             // band28
             // 
             this.band28.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band28.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band28.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band28.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band28.AppearanceHeader.Options.UseBackColor = true;
@@ -1110,7 +1080,6 @@
             // band29
             // 
             this.band29.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band29.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band29.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band29.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band29.AppearanceHeader.Options.UseBackColor = true;
@@ -1133,7 +1102,6 @@
             // band30
             // 
             this.band30.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band30.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band30.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band30.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band30.AppearanceHeader.Options.UseBackColor = true;
@@ -1156,7 +1124,6 @@
             // band31
             // 
             this.band31.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.band31.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.band31.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.band31.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.band31.AppearanceHeader.Options.UseBackColor = true;
@@ -1179,7 +1146,6 @@
             // bandAVG
             // 
             this.bandAVG.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.bandAVG.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
             this.bandAVG.AppearanceHeader.ForeColor = System.Drawing.Color.White;
             this.bandAVG.AppearanceHeader.Options.UseBackColor = true;
             this.bandAVG.AppearanceHeader.Options.UseForeColor = true;
@@ -1199,15 +1165,13 @@
             // 
             // gridBand1
             // 
-            this.gridBand1.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.gridBand1.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
-            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-            this.gridBand1.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand1.Caption = "Target";
             this.gridBand1.Columns.Add(this.TARGET);
             this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 3;
+            this.gridBand1.Visible = false;
+            this.gridBand1.VisibleIndex = -1;
             this.gridBand1.Width = 75;
             // 
             // TARGET
@@ -1219,15 +1183,13 @@
             // 
             // gridBand3
             // 
-            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
-            this.gridBand3.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
-            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
             this.gridBand3.Caption = "%";
             this.gridBand3.Columns.Add(this.RATE);
             this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 4;
+            this.gridBand3.Visible = false;
+            this.gridBand3.VisibleIndex = -1;
             this.gridBand3.Width = 75;
             // 
             // RATE
@@ -1243,35 +1205,31 @@
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMain2.Controls.Add(this.chartUPS3, 0, 0);
             this.tblMain2.Controls.Add(this.chartUPS2, 0, 0);
-            this.tblMain2.Controls.Add(this.chartUPS3, 1, 0);
             this.tblMain2.Controls.Add(this.chartUPS1, 0, 0);
             this.tblMain2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tblMain2.Location = new System.Drawing.Point(0, 285);
+            this.tblMain2.Location = new System.Drawing.Point(0, 281);
             this.tblMain2.Name = "tblMain2";
             this.tblMain2.RowCount = 1;
             this.tblMain2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain2.Size = new System.Drawing.Size(1904, 295);
+            this.tblMain2.Size = new System.Drawing.Size(1293, 281);
             this.tblMain2.TabIndex = 1;
             // 
-            // chartUPS2
+            // chartUPS3
             // 
-            this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartUPS2.DataBindings = null;
-            xyDiagram1.AxisX.Title.Text = "Date";
-            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartUPS3.DataBindings = null;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Title.Text = "Quantity (Prs)";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPS2.Diagram = xyDiagram1;
-            this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartUPS2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chartUPS2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chartUPS2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chartUPS2.Legend.Name = "Default Legend";
-            this.chartUPS2.Location = new System.Drawing.Point(637, 3);
-            this.chartUPS2.Name = "chartUPS2";
+            this.chartUPS3.Diagram = xyDiagram1;
+            this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartUPS3.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.chartUPS3.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.chartUPS3.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartUPS3.Legend.Name = "Default Legend";
+            this.chartUPS3.Location = new System.Drawing.Point(865, 3);
+            this.chartUPS3.Name = "chartUPS3";
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Actual";
             lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -1282,34 +1240,30 @@
             series1.View = lineSeriesView1;
             series2.Name = "Target";
             series2.View = lineSeriesView2;
-            this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chartUPS2.Size = new System.Drawing.Size(628, 289);
-            this.chartUPS2.TabIndex = 2;
-            chartTitle1.Text = "Stitching 2";
-            this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            this.chartUPS3.Size = new System.Drawing.Size(425, 275);
+            this.chartUPS3.TabIndex = 2;
+            chartTitle1.Text = "Stitching 3";
+            this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
-            this.chartUPS2.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
+            this.chartUPS3.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
-            // chartUPS3
+            // chartUPS2
             // 
-            this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartUPS3.DataBindings = null;
-            xyDiagram2.AxisX.Title.Text = "Date";
-            xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartUPS2.DataBindings = null;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Title.Text = "Quantity (Prs)";
-            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPS3.Diagram = xyDiagram2;
-            this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartUPS3.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chartUPS3.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chartUPS3.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chartUPS3.Legend.Name = "Default Legend";
-            this.chartUPS3.Location = new System.Drawing.Point(1271, 3);
-            this.chartUPS3.Name = "chartUPS3";
+            this.chartUPS2.Diagram = xyDiagram2;
+            this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartUPS2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.chartUPS2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.chartUPS2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartUPS2.Legend.Name = "Default Legend";
+            this.chartUPS2.Location = new System.Drawing.Point(434, 3);
+            this.chartUPS2.Name = "chartUPS2";
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series3.Name = "Actual";
             lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -1320,25 +1274,21 @@
             series3.View = lineSeriesView3;
             series4.Name = "Target";
             series4.View = lineSeriesView4;
-            this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3,
         series4};
-            this.chartUPS3.Size = new System.Drawing.Size(630, 289);
-            this.chartUPS3.TabIndex = 1;
-            chartTitle2.Text = "Stitching 3";
-            this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            this.chartUPS2.Size = new System.Drawing.Size(425, 275);
+            this.chartUPS2.TabIndex = 1;
+            chartTitle2.Text = "Stitching 2";
+            this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
-            this.chartUPS3.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
+            this.chartUPS2.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
             // chartUPS1
             // 
             this.chartUPS1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS1.DataBindings = null;
-            xyDiagram3.AxisX.Title.Text = "Date";
-            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.Title.Text = "Quantity (Prs)";
-            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
             this.chartUPS1.Diagram = xyDiagram3;
             this.chartUPS1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1361,7 +1311,7 @@
             this.chartUPS1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series5,
         series6};
-            this.chartUPS1.Size = new System.Drawing.Size(628, 289);
+            this.chartUPS1.Size = new System.Drawing.Size(425, 275);
             this.chartUPS1.TabIndex = 0;
             chartTitle3.Text = "Stitching 1";
             this.chartUPS1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
@@ -1381,16 +1331,16 @@
             this.tblMain.RowCount = 1;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.Size = new System.Drawing.Size(1904, 285);
+            this.tblMain.Size = new System.Drawing.Size(1293, 281);
             this.tblMain.TabIndex = 0;
             // 
             // pnGauge
             // 
             this.pnGauge.Controls.Add(this.panel2);
             this.pnGauge.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGauge.Location = new System.Drawing.Point(955, 3);
+            this.pnGauge.Location = new System.Drawing.Point(649, 3);
             this.pnGauge.Name = "pnGauge";
-            this.pnGauge.Size = new System.Drawing.Size(946, 279);
+            this.pnGauge.Size = new System.Drawing.Size(641, 275);
             this.pnGauge.TabIndex = 5;
             // 
             // panel2
@@ -1399,7 +1349,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(946, 279);
+            this.panel2.Size = new System.Drawing.Size(641, 275);
             this.panel2.TabIndex = 4;
             // 
             // gaugeControl1
@@ -1414,18 +1364,18 @@
             this.cGauge1});
             this.gaugeControl1.Location = new System.Drawing.Point(0, 0);
             this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(946, 279);
-            this.gaugeControl1.TabIndex = 1;
+            this.gaugeControl1.Size = new System.Drawing.Size(641, 275);
+            this.gaugeControl1.TabIndex = 0;
             // 
             // lblYellow
             // 
             this.lblYellow.BackColor = System.Drawing.Color.Yellow;
             this.lblYellow.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblYellow.Location = new System.Drawing.Point(721, 0);
+            this.lblYellow.Location = new System.Drawing.Point(142, 71);
             this.lblYellow.Name = "lblYellow";
             this.lblYellow.Size = new System.Drawing.Size(134, 51);
             this.lblYellow.TabIndex = 12;
-            this.lblYellow.Text = "95% ~ 98%";
+            this.lblYellow.Text = "8 ~ 9";
             this.lblYellow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGreen
@@ -1433,11 +1383,11 @@
             this.lblGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblGreen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.lblGreen.ForeColor = System.Drawing.Color.White;
-            this.lblGreen.Location = new System.Drawing.Point(861, 0);
+            this.lblGreen.Location = new System.Drawing.Point(282, 71);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(76, 51);
             this.lblGreen.TabIndex = 13;
-            this.lblGreen.Text = ">98%";
+            this.lblGreen.Text = ">9";
             this.lblGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRed
@@ -1445,29 +1395,29 @@
             this.lblRed.BackColor = System.Drawing.Color.Red;
             this.lblRed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.lblRed.ForeColor = System.Drawing.Color.White;
-            this.lblRed.Location = new System.Drawing.Point(639, 0);
+            this.lblRed.Location = new System.Drawing.Point(60, 71);
             this.lblRed.Name = "lblRed";
             this.lblRed.Size = new System.Drawing.Size(76, 51);
             this.lblRed.TabIndex = 10;
-            this.lblRed.Text = "<95%";
+            this.lblRed.Text = "<8";
             this.lblRed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTitleProd
             // 
             this.lblTitleProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblTitleProd.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleProd.Location = new System.Drawing.Point(5, 0);
+            this.lblTitleProd.Location = new System.Drawing.Point(3, 11);
             this.lblTitleProd.Name = "lblTitleProd";
-            this.lblTitleProd.Size = new System.Drawing.Size(628, 51);
+            this.lblTitleProd.Size = new System.Drawing.Size(423, 51);
             this.lblTitleProd.TabIndex = 11;
-            this.lblTitleProd.Text = "Monthly Stitching Production Average";
+            this.lblTitleProd.Text = "POD";
             this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cGauge1
             // 
             this.cGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent1});
-            this.cGauge1.Bounds = new System.Drawing.Rectangle(6, 52, 934, 270);
+            this.cGauge1.Bounds = new System.Drawing.Rectangle(433, 6, 505, 263);
             this.cGauge1.Name = "cGauge1";
             this.cGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.arcScaleNeedleComponent1});
@@ -1500,43 +1450,43 @@
             this.arcScale.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style3_4;
             this.arcScale.MajorTickmark.TextOffset = -18F;
             this.arcScale.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.arcScale.MaxValue = 100F;
+            this.arcScale.MaxValue = 12F;
             this.arcScale.MinorTickCount = 4;
             this.arcScale.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style3_3;
-            this.arcScale.MinValue = 90F;
+            this.arcScale.MinValue = 6F;
             this.arcScale.Name = "scale1";
             this.arcScale.RadiusX = 104F;
             this.arcScale.RadiusY = 104F;
             arcScaleRange1.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
             arcScaleRange1.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
             arcScaleRange1.EndThickness = 5F;
-            arcScaleRange1.EndValue = 95F;
+            arcScaleRange1.EndValue = 8F;
             arcScaleRange1.Name = "Range0";
             arcScaleRange1.ShapeOffset = 0F;
             arcScaleRange1.StartThickness = 5F;
-            arcScaleRange1.StartValue = 90F;
+            arcScaleRange1.StartValue = 6F;
             arcScaleRange2.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
             arcScaleRange2.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
             arcScaleRange2.EndThickness = 5F;
-            arcScaleRange2.EndValue = 98F;
+            arcScaleRange2.EndValue = 9F;
             arcScaleRange2.Name = "Range1";
             arcScaleRange2.ShapeOffset = 0F;
             arcScaleRange2.StartThickness = 5F;
-            arcScaleRange2.StartValue = 95F;
+            arcScaleRange2.StartValue = 8F;
             arcScaleRange3.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
             arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
             arcScaleRange3.EndThickness = 5F;
-            arcScaleRange3.EndValue = 100F;
+            arcScaleRange3.EndValue = 12F;
             arcScaleRange3.Name = "Range2";
             arcScaleRange3.ShapeOffset = 0F;
             arcScaleRange3.StartThickness = 5F;
-            arcScaleRange3.StartValue = 98F;
+            arcScaleRange3.StartValue = 9F;
             this.arcScale.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
             arcScaleRange1,
             arcScaleRange2,
             arcScaleRange3});
             this.arcScale.StartAngle = -180F;
-            this.arcScale.Value = 90F;
+            this.arcScale.Value = 6F;
             // 
             // arcScaleNeedleComponent1
             // 
@@ -1557,11 +1507,7 @@
             // 
             this.chartUPC.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPC.DataBindings = null;
-            xyDiagram4.AxisX.Title.Text = "Date";
-            xyDiagram4.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.Title.Text = "Quantity (Prs)";
-            xyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
             this.chartUPC.Diagram = xyDiagram4;
             this.chartUPC.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1584,23 +1530,23 @@
             this.chartUPC.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series7,
         series8};
-            this.chartUPC.Size = new System.Drawing.Size(946, 279);
+            this.chartUPC.Size = new System.Drawing.Size(640, 275);
             this.chartUPC.TabIndex = 0;
             chartTitle4.Text = "Cutting";
             this.chartUPC.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle4});
             this.chartUPC.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
-            // FRM_MGL_MONTHLY_PRODUCTION
+            // FRM_PRODUCTIVITY_MONTHLY_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1293, 715);
             this.Controls.Add(this.splMain);
             this.Controls.Add(this.pnUC);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_MGL_MONTHLY_PRODUCTION";
-            this.Text = "FRM_PROD_STATUS_MONTHLY_V2";
+            this.Name = "FRM_PRODUCTIVITY_MONTHLY_V2";
+            this.Text = "FRM_PRODUCTIVITY_MONTHLY";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_VisibleChanged);
@@ -1619,13 +1565,13 @@
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
@@ -1738,8 +1684,8 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private System.Windows.Forms.TableLayoutPanel tblMain2;
-        private DevExpress.XtraCharts.ChartControl chartUPS3;
         private DevExpress.XtraCharts.ChartControl chartUPS1;
+        private DevExpress.XtraCharts.ChartControl chartUPS3;
         private DevExpress.XtraCharts.ChartControl chartUPS2;
         private System.Windows.Forms.Panel pnGauge;
         private System.Windows.Forms.Panel panel2;
