@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FRM_MGL_WEEKLY_PRODUCTION
+    partial class FRM_MGL_WEEKLY_PRODUCTIVITY
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange1 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
@@ -39,6 +38,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY2 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -47,6 +47,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY3 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -55,6 +56,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView3 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation3 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY4 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -63,6 +65,7 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView4 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView4 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation4 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnYMD = new System.Windows.Forms.Panel();
@@ -71,7 +74,7 @@
             this.tmr = new System.Windows.Forms.Timer();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnGauge = new System.Windows.Forms.Panel();
-            this.gaugeProd = new DevExpress.XtraGauges.Win.GaugeControl();
+            this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
             this.lblYellow = new System.Windows.Forms.Label();
             this.lblGreen = new System.Windows.Forms.Label();
             this.lblRed = new System.Windows.Forms.Label();
@@ -83,13 +86,13 @@
             this.arcScaleSpindleCapComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent();
             this.chartUPC = new DevExpress.XtraCharts.ChartControl();
             this.tblMain2 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartUPS3 = new DevExpress.XtraCharts.ChartControl();
             this.chartUPS2 = new DevExpress.XtraCharts.ChartControl();
+            this.chartUPS3 = new DevExpress.XtraCharts.ChartControl();
             this.chartUPS1 = new DevExpress.XtraCharts.ChartControl();
             this.panel1.SuspendLayout();
             this.tblMain.SuspendLayout();
             this.pnGauge.SuspendLayout();
-            this.gaugeProd.SuspendLayout();
+            this.gaugeControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScale)).BeginInit();
@@ -104,7 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
             this.tblMain2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
@@ -112,7 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
@@ -170,15 +173,14 @@
             // 
             this.lbltitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbltitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold);
+            this.lbltitle.Font = new System.Drawing.Font("Calibri", 62.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.ForeColor = System.Drawing.Color.White;
             this.lbltitle.Location = new System.Drawing.Point(0, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(1920, 109);
             this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Production Status by Week";
+            this.lbltitle.Text = "Productivity Status by Week";
             this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbltitle.DoubleClick += new System.EventHandler(this.lbltitle_DoubleClick);
             // 
             // tmr
             // 
@@ -204,37 +206,37 @@
             // 
             // pnGauge
             // 
-            this.pnGauge.Controls.Add(this.gaugeProd);
+            this.pnGauge.Controls.Add(this.gaugeControl1);
             this.pnGauge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnGauge.Location = new System.Drawing.Point(955, 3);
             this.pnGauge.Name = "pnGauge";
             this.pnGauge.Size = new System.Drawing.Size(946, 434);
             this.pnGauge.TabIndex = 4;
             // 
-            // gaugeProd
+            // gaugeControl1
             // 
-            this.gaugeProd.AutoLayout = false;
-            this.gaugeProd.Controls.Add(this.lblYellow);
-            this.gaugeProd.Controls.Add(this.lblGreen);
-            this.gaugeProd.Controls.Add(this.lblRed);
-            this.gaugeProd.Controls.Add(this.lblTitleProd);
-            this.gaugeProd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gaugeProd.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
+            this.gaugeControl1.AutoLayout = false;
+            this.gaugeControl1.Controls.Add(this.lblYellow);
+            this.gaugeControl1.Controls.Add(this.lblGreen);
+            this.gaugeControl1.Controls.Add(this.lblRed);
+            this.gaugeControl1.Controls.Add(this.lblTitleProd);
+            this.gaugeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
             this.cGauge1});
-            this.gaugeProd.Location = new System.Drawing.Point(0, 0);
-            this.gaugeProd.Name = "gaugeProd";
-            this.gaugeProd.Size = new System.Drawing.Size(946, 434);
-            this.gaugeProd.TabIndex = 0;
+            this.gaugeControl1.Location = new System.Drawing.Point(0, 0);
+            this.gaugeControl1.Name = "gaugeControl1";
+            this.gaugeControl1.Size = new System.Drawing.Size(946, 434);
+            this.gaugeControl1.TabIndex = 1;
             // 
             // lblYellow
             // 
             this.lblYellow.BackColor = System.Drawing.Color.Yellow;
             this.lblYellow.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lblYellow.Location = new System.Drawing.Point(723, 3);
+            this.lblYellow.Location = new System.Drawing.Point(726, 0);
             this.lblYellow.Name = "lblYellow";
             this.lblYellow.Size = new System.Drawing.Size(134, 51);
             this.lblYellow.TabIndex = 8;
-            this.lblYellow.Text = "95% ~ 98%";
+            this.lblYellow.Text = "8 ~ 9";
             this.lblYellow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblGreen
@@ -242,11 +244,11 @@
             this.lblGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblGreen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.lblGreen.ForeColor = System.Drawing.Color.White;
-            this.lblGreen.Location = new System.Drawing.Point(863, 3);
+            this.lblGreen.Location = new System.Drawing.Point(866, 0);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(76, 51);
             this.lblGreen.TabIndex = 9;
-            this.lblGreen.Text = ">98%";
+            this.lblGreen.Text = ">9";
             this.lblGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRed
@@ -254,29 +256,29 @@
             this.lblRed.BackColor = System.Drawing.Color.Red;
             this.lblRed.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.lblRed.ForeColor = System.Drawing.Color.White;
-            this.lblRed.Location = new System.Drawing.Point(641, 3);
+            this.lblRed.Location = new System.Drawing.Point(644, 0);
             this.lblRed.Name = "lblRed";
             this.lblRed.Size = new System.Drawing.Size(76, 51);
             this.lblRed.TabIndex = 6;
-            this.lblRed.Text = "<95%";
+            this.lblRed.Text = "<8";
             this.lblRed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTitleProd
             // 
             this.lblTitleProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblTitleProd.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleProd.Location = new System.Drawing.Point(7, 3);
+            this.lblTitleProd.Location = new System.Drawing.Point(10, 0);
             this.lblTitleProd.Name = "lblTitleProd";
             this.lblTitleProd.Size = new System.Drawing.Size(628, 51);
             this.lblTitleProd.TabIndex = 7;
-            this.lblTitleProd.Text = "Weekly Assembly Production Average";
+            this.lblTitleProd.Text = "POD";
             this.lblTitleProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cGauge1
             // 
             this.cGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent1});
-            this.cGauge1.Bounds = new System.Drawing.Rectangle(6, 60, 934, 394);
+            this.cGauge1.Bounds = new System.Drawing.Rectangle(6, 52, 934, 405);
             this.cGauge1.Name = "cGauge1";
             this.cGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.arcScaleNeedleComponent1});
@@ -309,50 +311,50 @@
             this.arcScale.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style3_4;
             this.arcScale.MajorTickmark.TextOffset = -18F;
             this.arcScale.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.arcScale.MaxValue = 100F;
+            this.arcScale.MaxValue = 12F;
             this.arcScale.MinorTickCount = 4;
             this.arcScale.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style3_3;
-            this.arcScale.MinValue = 90F;
+            this.arcScale.MinValue = 6F;
             this.arcScale.Name = "scale1";
             this.arcScale.RadiusX = 104F;
             this.arcScale.RadiusY = 104F;
             arcScaleRange1.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
             arcScaleRange1.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
             arcScaleRange1.EndThickness = 5F;
-            arcScaleRange1.EndValue = 95F;
+            arcScaleRange1.EndValue = 8F;
             arcScaleRange1.Name = "Range0";
             arcScaleRange1.ShapeOffset = 0F;
             arcScaleRange1.StartThickness = 5F;
-            arcScaleRange1.StartValue = 90F;
+            arcScaleRange1.StartValue = 6F;
             arcScaleRange2.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
             arcScaleRange2.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
             arcScaleRange2.EndThickness = 5F;
-            arcScaleRange2.EndValue = 98F;
+            arcScaleRange2.EndValue = 9F;
             arcScaleRange2.Name = "Range1";
             arcScaleRange2.ShapeOffset = 0F;
             arcScaleRange2.StartThickness = 5F;
-            arcScaleRange2.StartValue = 95F;
-            arcScaleRange3.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
-            arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
+            arcScaleRange2.StartValue = 8F;
+            arcScaleRange3.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
+            arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
             arcScaleRange3.EndThickness = 5F;
-            arcScaleRange3.EndValue = 100F;
+            arcScaleRange3.EndValue = 12F;
             arcScaleRange3.Name = "Range2";
             arcScaleRange3.ShapeOffset = 0F;
             arcScaleRange3.StartThickness = 5F;
-            arcScaleRange3.StartValue = 98F;
+            arcScaleRange3.StartValue = 9F;
             this.arcScale.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
             arcScaleRange1,
             arcScaleRange2,
             arcScaleRange3});
             this.arcScale.StartAngle = -180F;
-            this.arcScale.Value = 90F;
+            this.arcScale.Value = 12F;
             // 
             // arcScaleNeedleComponent1
             // 
             this.arcScaleNeedleComponent1.ArcScale = this.arcScale;
             this.arcScaleNeedleComponent1.EndOffset = -8F;
             this.arcScaleNeedleComponent1.Name = "needle1";
-            this.arcScaleNeedleComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.NeedleShapeType.CircularFull_Style6;
+            this.arcScaleNeedleComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.NeedleShapeType.CircularFull_Style3;
             this.arcScaleNeedleComponent1.ZOrder = -50;
             // 
             // arcScaleSpindleCapComponent1
@@ -391,6 +393,8 @@
             splineSeriesView1.AxisYName = "Secondary AxisY 1";
             splineSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
             splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
             series2.View = splineSeriesView1;
             this.chartUPC.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
@@ -408,21 +412,21 @@
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblMain2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblMain2.Controls.Add(this.chartUPS3, 0, 0);
             this.tblMain2.Controls.Add(this.chartUPS2, 0, 0);
+            this.tblMain2.Controls.Add(this.chartUPS3, 1, 0);
             this.tblMain2.Controls.Add(this.chartUPS1, 0, 0);
             this.tblMain2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tblMain2.Location = new System.Drawing.Point(0, 549);
             this.tblMain2.Name = "tblMain2";
             this.tblMain2.RowCount = 1;
             this.tblMain2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain2.Size = new System.Drawing.Size(1904, 480);
+            this.tblMain2.Size = new System.Drawing.Size(1904, 489);
             this.tblMain2.TabIndex = 6;
             // 
-            // chartUPS3
+            // chartUPS2
             // 
-            this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartUPS3.DataBindings = null;
+            this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartUPS2.DataBindings = null;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram2.AxisY.Title.Text = "Production (Prs)";
             xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
@@ -432,15 +436,15 @@
             secondaryAxisY2.VisibleInPanesSerializable = "-1";
             xyDiagram2.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
             secondaryAxisY2});
-            this.chartUPS3.Diagram = xyDiagram2;
-            this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartUPS3.Legend.Name = "Default Legend";
-            this.chartUPS3.Location = new System.Drawing.Point(1271, 3);
-            this.chartUPS3.Name = "chartUPS3";
+            this.chartUPS2.Diagram = xyDiagram2;
+            this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartUPS2.Legend.Name = "Default Legend";
+            this.chartUPS2.Location = new System.Drawing.Point(637, 3);
+            this.chartUPS2.Name = "chartUPS2";
             sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             series3.Label = sideBySideBarSeriesLabel2;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Stitching 1";
+            series3.Name = "Stitching 2";
             sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
             series3.View = sideBySideBarSeriesView2;
             series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -448,21 +452,22 @@
             splineSeriesView2.AxisYName = "Secondary AxisY 1";
             splineSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
             splineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation2.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            splineSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
             series4.View = splineSeriesView2;
-            this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3,
         series4};
-            this.chartUPS3.Size = new System.Drawing.Size(630, 474);
-            this.chartUPS3.TabIndex = 4;
-            chartTitle2.Text = "Stitching 3";
-            this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            this.chartUPS2.Size = new System.Drawing.Size(628, 483);
+            this.chartUPS2.TabIndex = 2;
+            chartTitle2.Text = "Stitching 2";
+            this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
-            this.chartUPS3.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
-            // chartUPS2
+            // chartUPS3
             // 
-            this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartUPS2.DataBindings = null;
+            this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartUPS3.DataBindings = null;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram3.AxisY.Title.Text = "Production (Prs)";
             xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
@@ -472,15 +477,15 @@
             secondaryAxisY3.VisibleInPanesSerializable = "-1";
             xyDiagram3.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
             secondaryAxisY3});
-            this.chartUPS2.Diagram = xyDiagram3;
-            this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartUPS2.Legend.Name = "Default Legend";
-            this.chartUPS2.Location = new System.Drawing.Point(637, 3);
-            this.chartUPS2.Name = "chartUPS2";
+            this.chartUPS3.Diagram = xyDiagram3;
+            this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartUPS3.Legend.Name = "Default Legend";
+            this.chartUPS3.Location = new System.Drawing.Point(1271, 3);
+            this.chartUPS3.Name = "chartUPS3";
             sideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             series5.Label = sideBySideBarSeriesLabel3;
             series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series5.Name = "Stitching 1";
+            series5.Name = "Stitching 3";
             sideBySideBarSeriesView3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
             series5.View = sideBySideBarSeriesView3;
             series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -488,16 +493,17 @@
             splineSeriesView3.AxisYName = "Secondary AxisY 1";
             splineSeriesView3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
             splineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation3.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            splineSeriesView3.SeriesPointAnimation = xyMarkerSlideAnimation3;
             series6.View = splineSeriesView3;
-            this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series5,
         series6};
-            this.chartUPS2.Size = new System.Drawing.Size(628, 474);
-            this.chartUPS2.TabIndex = 3;
-            chartTitle3.Text = "Stitching 2";
-            this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            this.chartUPS3.Size = new System.Drawing.Size(630, 483);
+            this.chartUPS3.TabIndex = 1;
+            chartTitle3.Text = "Stitching 3";
+            this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle3});
-            this.chartUPS2.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
             // chartUPS1
             // 
@@ -528,18 +534,19 @@
             splineSeriesView4.AxisYName = "Secondary AxisY 1";
             splineSeriesView4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
             splineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation4.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            splineSeriesView4.SeriesPointAnimation = xyMarkerSlideAnimation4;
             series8.View = splineSeriesView4;
             this.chartUPS1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series7,
         series8};
-            this.chartUPS1.Size = new System.Drawing.Size(628, 474);
-            this.chartUPS1.TabIndex = 2;
+            this.chartUPS1.Size = new System.Drawing.Size(628, 483);
+            this.chartUPS1.TabIndex = 0;
             chartTitle4.Text = "Stitching 1";
             this.chartUPS1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle4});
-            this.chartUPS1.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
-            // FRM_MGL_WEEKLY_PRODUCTION
+            // FRM_MGL_WEEKLY_PRODUCTIVITY
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
@@ -547,15 +554,15 @@
             this.Controls.Add(this.tblMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_MGL_WEEKLY_PRODUCTION";
-            this.Text = "FRM_PROD_STATUS_WEEKLY_V2";
+            this.Name = "FRM_MGL_WEEKLY_PRODUCTIVITY";
+            this.Text = "FRM_PRODUCTIVITY_WEEKLY";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.tblMain.ResumeLayout(false);
             this.pnGauge.ResumeLayout(false);
-            this.gaugeProd.ResumeLayout(false);
+            this.gaugeControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScale)).EndInit();
@@ -577,7 +584,7 @@
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
@@ -585,7 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).EndInit();
@@ -608,11 +615,11 @@
         private System.Windows.Forms.TableLayoutPanel tblMain;
         private DevExpress.XtraCharts.ChartControl chartUPC;
         private System.Windows.Forms.TableLayoutPanel tblMain2;
-        private DevExpress.XtraCharts.ChartControl chartUPS1;
-        private DevExpress.XtraCharts.ChartControl chartUPS3;
         private DevExpress.XtraCharts.ChartControl chartUPS2;
+        private DevExpress.XtraCharts.ChartControl chartUPS3;
+        private DevExpress.XtraCharts.ChartControl chartUPS1;
         private System.Windows.Forms.Panel pnGauge;
-        private DevExpress.XtraGauges.Win.GaugeControl gaugeProd;
+        private DevExpress.XtraGauges.Win.GaugeControl gaugeControl1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge cGauge1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent arcScaleBackgroundLayerComponent1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScale;
