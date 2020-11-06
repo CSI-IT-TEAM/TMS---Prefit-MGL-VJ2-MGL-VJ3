@@ -53,6 +53,7 @@ namespace FORM
         #endregion
         Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
         DataTable dt = null;
+        string lang = "";
         int cCount = 0;
         private void FRM_MGL_DAILY_PRODUCTIVITY_Load(object sender, EventArgs e)
         {
@@ -68,16 +69,16 @@ namespace FORM
                     ComVar.Var.callForm = "back";
                     break;
                 case "D":
-                    ComVar.Var.callForm = "1550";
+                    ComVar.Var.callForm = "1560";
                     break;
                 case "W":
-                    ComVar.Var.callForm = "1551";
+                    ComVar.Var.callForm = "1561";
                     break;
                 case "M":
-                    ComVar.Var.callForm = "1552";
+                    ComVar.Var.callForm = "1562";
                     break;
                 case "Y":
-                    ComVar.Var.callForm = "1553";
+                    ComVar.Var.callForm = "1563";
                     break;
             }
         }
@@ -181,6 +182,8 @@ namespace FORM
             {
                 lbltitle.Text = ComVar.Var._strValue1.Equals("TOT") ? "VJ1,VJ2 Support Productivity Status by Day" : ComVar.Var._strValue1 + " Support Productivity  Status by Day";
                 cCount = 60;
+                lang = ComVar.Var._strValue3;
+                uc.YMD_Change(1, lang);
                 switch (ComVar.Var._strValue1)
                 {
                     case "VJ2":

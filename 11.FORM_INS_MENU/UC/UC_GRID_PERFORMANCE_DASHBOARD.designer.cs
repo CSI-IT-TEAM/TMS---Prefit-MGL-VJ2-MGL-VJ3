@@ -72,16 +72,7 @@
             this.lblTitile.TabIndex = 0;
             this.lblTitile.Text = "Production";
             this.lblTitile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // axfpSpread1
-            // 
-            this.axfpSpread1.DataSource = null;
-            this.axfpSpread1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axfpSpread1.Location = new System.Drawing.Point(0, 52);
-            this.axfpSpread1.Name = "axfpSpread1";
-            this.axfpSpread1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpSpread1.OcxState")));
-            this.axfpSpread1.Size = new System.Drawing.Size(628, 252);
-            this.axfpSpread1.TabIndex = 2;
+            
             // 
             // UC_GRID_PERFORMANCE_DASHBOARD
             // 

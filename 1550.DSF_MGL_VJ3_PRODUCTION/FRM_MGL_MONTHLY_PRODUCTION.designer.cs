@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -68,7 +67,7 @@
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.tmr = new System.Windows.Forms.Timer();
             this.pnUC = new System.Windows.Forms.Panel();
             this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
             this.splMain = new System.Windows.Forms.SplitContainer();

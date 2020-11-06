@@ -26,7 +26,7 @@ namespace FORM
         DataTable dt = null;
         #endregion
         #region UC
-        UC.UC_DWMY uc = new UC.UC_DWMY(3,""); //Hiển thị 4 Button, Button Day thì Disable
+        UC.UC_DWMY uc = new UC.UC_DWMY(3, ""); //Hiển thị 4 Button, Button Day thì Disable
         #endregion
         Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
         int cCount = 0;
@@ -104,11 +104,11 @@ namespace FORM
         private void BindingData()
         {
             formatband();
-            dt = SMT_PROD_MONTHLY_SELECT("Q",uc_month.GetValue().ToString(), line, mline); ;
-            grdView.DataSource = dt;  
+            dt = SMT_PROD_MONTHLY_SELECT("Q", uc_month.GetValue().ToString(), line, mline); ;
+            grdView.DataSource = dt;
             for (int i = 0; i < gvwView.Columns.Count; i++)
             {
-                if (i > 0 && i < gvwView.Columns.Count -1)
+                if (i > 0 && i < gvwView.Columns.Count - 1)
                 {
                     gvwView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                     gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -123,11 +123,10 @@ namespace FORM
             InitChart("UPC", dt, chartUPC); InitChart("UPS1", dt, chartUPS1); InitChart("UPS2", dt, chartUPS2); InitChart("UPS3", dt, chartUPS3);
         }
 
-        private void InitChart(string sChart,DataTable dt, DevExpress.XtraCharts.ChartControl chartControl)
+        private void InitChart(string sChart, DataTable dt, DevExpress.XtraCharts.ChartControl chartControl)
         {
             try
             {
-               
                 chartControl.DataSource = dt.Select("DAY <> 'AVG'", "DAY").CopyToDataTable();
                 chartControl.Series[1].ArgumentDataMember = "DAY";
                 chartControl.Series[1].ValueDataMembers.AddRange(new string[] { sChart + "_TAR" });
@@ -136,7 +135,8 @@ namespace FORM
                 ((DevExpress.XtraCharts.XYDiagram)chartControl.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
             }
             catch { }
-            finally {
+            finally
+            {
                 BindingGauge(dt);
             }
         }
@@ -201,7 +201,7 @@ namespace FORM
                 uc.YMD_Change(3, lang);
                 cCount = 60;
                 line = ComVar.Var._strValue1; mline = ComVar.Var._strValue2;
-               // line = "099"; mline = "001";
+                // line = "099"; mline = "001";
                 switch (line)
                 {
                     case "VJ2":
@@ -246,7 +246,7 @@ namespace FORM
         {
             try
             {
-                    
+
                 if (e.Column.FieldName.Contains("RATE"))
                 {
                     if (e.CellValue.ToString().Contains("G"))
@@ -281,22 +281,20 @@ namespace FORM
             {
                 int n;
                 DataTable dtsource = null;
-                
+
                 //SMT_PROD_MONTHLY_SELECT("H", uc_month.GetValue().ToString(), line, mline); //
                 dtsource = SMT_PROD_MONTHLY_SELECT("H", uc_month.GetValue().ToString(), line, mline);//db.SEL_OS_PROD_MONTH("H", uc_month.GetValue().ToString(), "");
                 if (dtsource != null && dtsource.Rows.Count > 0)
                 {
-                    string name;
                     bandMon.Caption = dtsource.Rows[0]["MON"].ToString();
                     if (dtsource.Rows.Count > 0)
                     {
                         foreach (DevExpress.XtraGrid.Views.BandedGrid.GridBand band in gvwView.Bands[1].Children)
                         {
                             double num;
-                            
-                            if (double.TryParse(band.Name.Substring(4,2), out num))
+
+                            if (double.TryParse(band.Name.Substring(4, 2), out num))
                             {
-                                //band.Caption = "";
                                 for (int i = 0; i < dtsource.Rows.Count; i++)
                                 {
                                     if (band.Name.Contains(dtsource.Rows[i][0].ToString().Substring(dtsource.Rows[i][0].ToString().Length - 2)))
@@ -314,9 +312,7 @@ namespace FORM
                                             band.AppearanceHeader.BackColor2 = Color.DarkCyan;
                                             band.AppearanceHeader.ForeColor = Color.White;
                                         }
-                                        band.Caption = dtsource.Rows[i]["CAPTION"].ToString().Replace("_","\n");
-                                        
-                                       
+                                        band.Caption = dtsource.Rows[i]["CAPTION"].ToString().Replace("_", "\n");
                                         break;
                                     }
                                     if (i == dtsource.Rows.Count - 1)
@@ -327,7 +323,6 @@ namespace FORM
                             }
                         }
                     }
-                   
                 }
             }
             catch
@@ -336,13 +331,10 @@ namespace FORM
             }
         }
 
-
-
         private void chart_CustomDrawAxisLabel(object sender, DevExpress.XtraCharts.CustomDrawAxisLabelEventArgs e)
         {
 
         }
-
         private void uc_month_ValueChangeEvent(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -358,7 +350,7 @@ namespace FORM
                 AxisBase axis = e.Item.Axis;
                 if (axis is AxisX)
                 {
-                    e.Item.Text = e.Item.Text.Replace("_","\n");
+                    e.Item.Text = e.Item.Text.Replace("_", "\n");
                     e.Item.TextColor = Color.Green;
                     e.Item.EnableAntialiasing = DefaultBoolean.True;
                 }

@@ -173,13 +173,13 @@
             // 
             this.lbltitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbltitle.Font = new System.Drawing.Font("Calibri", 62.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Font = new System.Drawing.Font("Calibri", 46F, System.Drawing.FontStyle.Bold);
             this.lbltitle.ForeColor = System.Drawing.Color.White;
             this.lbltitle.Location = new System.Drawing.Point(0, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(1920, 109);
             this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Productivity Status by Week";
+            this.lbltitle.Text = "VJ1,VJ2 Support Productivity Status by Week";
             this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tmr
