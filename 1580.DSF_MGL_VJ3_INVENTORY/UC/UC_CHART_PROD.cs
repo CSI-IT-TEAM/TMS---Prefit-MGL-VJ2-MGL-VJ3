@@ -19,10 +19,10 @@ namespace FORM.UC
         public void BindingData(DataTable dt)
         {
             chartControl1.DataSource = dt;
-            chartControl1.Series[1].ArgumentDataMember = "LINE_CD";
-            chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
             chartControl1.Series[0].ArgumentDataMember = "LINE_CD";
-            chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "PLAN_QTY" });
+            chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+            chartControl1.Series[1].ArgumentDataMember = "LINE_CD";
+            chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PLAN_QTY" });
             chartControl1.Series[2].ArgumentDataMember = "LINE_CD";
             chartControl1.Series[2].ValueDataMembers.AddRange(new string[] { "RATE" });
 
