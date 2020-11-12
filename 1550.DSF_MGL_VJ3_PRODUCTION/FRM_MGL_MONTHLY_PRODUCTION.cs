@@ -114,7 +114,6 @@ namespace FORM
                     gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                     gvwView.Columns[i].DisplayFormat.FormatString = "#,0.##";
                 }
-
             }
         }
         private void BindingChart()
