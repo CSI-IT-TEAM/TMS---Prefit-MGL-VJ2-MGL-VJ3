@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.tblContent = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTitle = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.btnUpstream = new System.Windows.Forms.Button();
             this.btnDSF = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTitle = new DevExpress.XtraEditors.LabelControl();
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +84,42 @@
             this.pnHeader.Size = new System.Drawing.Size(1898, 97);
             this.pnHeader.TabIndex = 0;
             // 
+            // btnUpstream
+            // 
+            this.btnUpstream.BackgroundImage = global::FORM.Properties.Resources.FtyButton;
+            this.btnUpstream.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpstream.FlatAppearance.BorderSize = 0;
+            this.btnUpstream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnUpstream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnUpstream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpstream.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpstream.ForeColor = System.Drawing.Color.White;
+            this.btnUpstream.Location = new System.Drawing.Point(1400, -1);
+            this.btnUpstream.Name = "btnUpstream";
+            this.btnUpstream.Size = new System.Drawing.Size(101, 99);
+            this.btnUpstream.TabIndex = 38;
+            this.btnUpstream.Text = "DSF \r\nPlant B";
+            this.btnUpstream.UseVisualStyleBackColor = true;
+            this.btnUpstream.Click += new System.EventHandler(this.btnUpstream_Click_1);
+            // 
+            // btnDSF
+            // 
+            this.btnDSF.BackgroundImage = global::FORM.Properties.Resources.FtyButton;
+            this.btnDSF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDSF.FlatAppearance.BorderSize = 0;
+            this.btnDSF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDSF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDSF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSF.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnDSF.ForeColor = System.Drawing.Color.White;
+            this.btnDSF.Location = new System.Drawing.Point(1507, 0);
+            this.btnDSF.Name = "btnDSF";
+            this.btnDSF.Size = new System.Drawing.Size(101, 99);
+            this.btnDSF.TabIndex = 39;
+            this.btnDSF.Text = "DSF\r\nPlant E";
+            this.btnDSF.UseVisualStyleBackColor = true;
+            this.btnDSF.Click += new System.EventHandler(this.btnDSF_Click_1);
+            // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
@@ -123,40 +158,6 @@
             this.tmrDate.Enabled = true;
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnUpstream
-            // 
-            this.btnUpstream.BackgroundImage = global::FORM.Properties.Resources.FtyButton;
-            this.btnUpstream.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpstream.FlatAppearance.BorderSize = 0;
-            this.btnUpstream.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnUpstream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnUpstream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpstream.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpstream.ForeColor = System.Drawing.Color.White;
-            this.btnUpstream.Location = new System.Drawing.Point(1400, -1);
-            this.btnUpstream.Name = "btnUpstream";
-            this.btnUpstream.Size = new System.Drawing.Size(101, 99);
-            this.btnUpstream.TabIndex = 38;
-            this.btnUpstream.Text = "DSF \r\nPlant B";
-            this.btnUpstream.UseVisualStyleBackColor = true;
-            // 
-            // btnDSF
-            // 
-            this.btnDSF.BackgroundImage = global::FORM.Properties.Resources.FtyButton;
-            this.btnDSF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDSF.FlatAppearance.BorderSize = 0;
-            this.btnDSF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDSF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDSF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSF.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnDSF.ForeColor = System.Drawing.Color.White;
-            this.btnDSF.Location = new System.Drawing.Point(1507, 0);
-            this.btnDSF.Name = "btnDSF";
-            this.btnDSF.Size = new System.Drawing.Size(101, 99);
-            this.btnDSF.TabIndex = 39;
-            this.btnDSF.Text = "DSF\r\nPlant E";
-            this.btnDSF.UseVisualStyleBackColor = true;
             // 
             // FRM_HOME
             // 

@@ -50,7 +50,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ3.MGL_HOME_DATA_SELECT";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_HOME_DATA_SELECT";
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -77,23 +77,53 @@ namespace FORM
         {
             try
             {
-                string[] FacCode = new string[] { "001", "099", "TOT", "201", "202", "TOT" };
+                string[] FacCode = new string[] { "000", "099", "TOTAL1", "201", "202", "TOTAL2" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD Assembly", "LE Assembly", "Total" };
 
                 DataTable dt = SP_SMT_EMD_MENU_SELECT("Q");
-                for (int j = 0; j < tblContent.RowCount; j++)
-                {
-                    for (int i = 0; i < tblContent.ColumnCount; i++)
-                    {
+                //for (int j = 0; j < tblContent.RowCount; j++)
+                //{
+                //    for (int i = 0; i < tblContent.ColumnCount; i++)
+                //    {
 
-                        UC.UC_DSF_MGL_CARD MGL_CARD = new UC.UC_DSF_MGL_CARD();
-                        tblContent.Controls.Add(MGL_CARD, i, j);
-                        UC_MGL_MENU[iDx] = MGL_CARD;
-                        MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
-                        MGL_CARD.BindingTree(dt);
-                        MGL_CARD.Dock = DockStyle.Fill;
-                        iDx++;
-                    }
+                //        UC.UC_DSF_MGL_CARD MGL_CARD = new UC.UC_DSF_MGL_CARD();
+                //        tblContent.Controls.Add(MGL_CARD, i, j);
+                //        MGL_CARD.Tag = FacCode[iDx];
+                //        UC_MGL_MENU[iDx] = MGL_CARD;
+                //        MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
+                //        MGL_CARD.BindingTree(dt);
+                //        MGL_CARD.Dock = DockStyle.Fill;
+                //        iDx++;
+                //    }
+                //}
+
+                int j = 0;
+                for (int i = 0; i < tblContent.ColumnCount; i++)
+                {
+
+                    UC.UC_DSF_MGL_CARD MGL_CARD = new UC.UC_DSF_MGL_CARD();
+                    tblContent.Controls.Add(MGL_CARD, i, j);
+                    MGL_CARD.Tag = FacCode[iDx];
+                    UC_MGL_MENU[iDx] = MGL_CARD;
+                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
+                    MGL_CARD.BindingTree(dt);
+                    MGL_CARD.Dock = DockStyle.Fill;
+                    iDx++;
+                }
+
+                DataTable dt1 = SP_SMT_EMD_MENU_SELECT("Q2");
+                j = 1;
+                for (int i = 0; i < tblContent.ColumnCount; i++)
+                {
+
+                    UC.UC_DSF_MGL_CARD MGL_CARD = new UC.UC_DSF_MGL_CARD();
+                    tblContent.Controls.Add(MGL_CARD, i, j);
+                    MGL_CARD.Tag = FacCode[iDx];
+                    UC_MGL_MENU[iDx] = MGL_CARD;
+                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
+                    MGL_CARD.BindingTree(dt1);
+                    MGL_CARD.Dock = DockStyle.Fill;
+                    iDx++;
                 }
             }
             catch (Exception ex) { }
@@ -128,8 +158,22 @@ namespace FORM
             if (cCount >= 10)
             {
                 cCount = 0;
-                string[] FacCode = new string[] { "001", "099", "TOT", "201", "202", "TOT" };
-                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD", "LE", "Total" };
+                string[] FacCode = new string[] { "000", "099", "TOTAL1", "201", "202", "TOTAL2" };
+                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
+                DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    for (int j = 0; j < UC_MGL_MENU.Length; j++)
+                    {
+                        if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
+                        {
+                            string Factory = UC_MGL_MENU[j].Tag.ToString();
+                            //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                        }
+                    }
+
+                }
                 // DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
                 //for (int i = 0; i < dt.Rows.Count; i++)
                 //{
@@ -180,6 +224,16 @@ namespace FORM
             }
             else
                 tmrDate.Stop();
+        }
+
+        private void btnUpstream_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDSF_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

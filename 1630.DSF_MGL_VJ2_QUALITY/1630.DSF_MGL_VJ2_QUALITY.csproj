@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F145C924-37E9-4623-9049-E3D3C7D6CFC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FORM</RootNamespace>
+    <AssemblyName>DSF_MGL_VJ2_QUALITY</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAIN\bin\Debug\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.FPSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.FPUSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPUSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="COM, Version=1.0.7378.15998, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\COM.dll</HintPath>
+    </Reference>
+    <Reference Include="ComVar, Version=1.0.7458.17402, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ComVar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.FPSpreadADO">
+      <HintPath>..\MAIN\bin\Debug\Interop.FPSpreadADO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.FPUSpreadADO">
+      <HintPath>..\MAIN\bin\Debug\Interop.FPUSpreadADO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MSDATASRC, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\MSDATASRC.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLib\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\A1Panel.Designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLib\A1PanelGraphics.cs" />
+    <Compile Include="ClassLib\AdvancedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\Database.cs" />
+    <Compile Include="ClassLib\Globals.cs" />
+    <Compile Include="ClassLib\GroupboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\LabelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\RoundedRectangle.cs" />
+    <Compile Include="ClassLib\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="FORM_NPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_EXTERNAL_OSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_EXTERNAL_OSD.Designer.cs">
+      <DependentUpon>FRM_MGL_EXTERNAL_OSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_INTERNAL_OSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_INTERNAL_OSD.Designer.cs">
+      <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SMT_EXTERNAL_POPUP_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SMT_EXTERNAL_POPUP_1.designer.cs">
+      <DependentUpon>FRM_SMT_EXTERNAL_POPUP_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SMT_EXTERNAL_POPUP_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SMT_EXTERNAL_POPUP_2.designer.cs">
+      <DependentUpon>FRM_SMT_EXTERNAL_POPUP_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SMT_INTERNAL_POPUP_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SMT_INTERNAL_POPUP_1.designer.cs">
+      <DependentUpon>FRM_SMT_INTERNAL_POPUP_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SMT_INTERNAL_POPUP_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SMT_INTERNAL_POPUP_2.designer.cs">
+      <DependentUpon>FRM_SMT_INTERNAL_POPUP_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tmsHomeModel.cs" />
+    <Compile Include="UC\UC_DWMY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.designer.cs">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.designer.cs">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORM_NPI.resx">
+      <DependentUpon>FORM_NPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_EXTERNAL_OSD.resx">
+      <DependentUpon>FRM_MGL_EXTERNAL_OSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_INTERNAL_OSD.resx">
+      <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SMT_EXTERNAL_POPUP_1.resx">
+      <DependentUpon>FRM_SMT_EXTERNAL_POPUP_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SMT_EXTERNAL_POPUP_2.resx">
+      <DependentUpon>FRM_SMT_EXTERNAL_POPUP_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SMT_INTERNAL_POPUP_1.resx">
+      <DependentUpon>FRM_SMT_INTERNAL_POPUP_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SMT_INTERNAL_POPUP_2.resx">
+      <DependentUpon>FRM_SMT_INTERNAL_POPUP_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DWMY.resx">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MONTH_SELECTION.resx">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VJ3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carcsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckgreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footer_CSI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail_Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANDON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invtorySub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leadtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiskill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NPI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PFC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\predic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodresult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodtivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FtyButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FtyButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ip_icon_05_sample5e.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

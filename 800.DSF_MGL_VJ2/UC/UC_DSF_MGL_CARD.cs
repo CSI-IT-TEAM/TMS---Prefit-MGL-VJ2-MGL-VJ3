@@ -40,11 +40,12 @@ namespace FORM.UC
             table.Rows.Add(5, 3, 300, "Dilantin", "Melanie", DateTime.Now);
             return table;
         }
-        string _FacCode;
+        string _FacCode, _FacTitle;
         public void BindingData(string FacCode,string FacTitle,DataTable dt)
         {
             lblFac.Text = FacTitle;
             _FacCode = FacCode;
+            _FacTitle = FacTitle;
             lblDplan.Text = "0 Prs";
             lblRplan.Text = "0 Prs";
             lblAct.Text = "0 Prs";
@@ -115,6 +116,7 @@ namespace FORM.UC
                     {
                         ComVar.Var._IsBack = true;
                         ComVar.Var._strValue1 = _FacCode;
+                        ComVar.Var._strValue2 = _FacTitle;
                         ComVar.Var.callForm = GetSelectedNode(treeList1);
                     }
                   
