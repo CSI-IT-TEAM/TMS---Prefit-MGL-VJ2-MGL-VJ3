@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.XYDiagram xyDiagram5 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series9 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView9 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series10 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView10 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle5 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram6 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series11 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView11 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series12 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView12 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle6 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram7 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series13 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView13 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series14 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView14 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle7 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram8 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series15 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView15 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.Series series16 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView16 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle8 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange4 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange5 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange6 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView6 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView7 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView8 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange1 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chart2 = new DevExpress.XtraCharts.ChartControl();
@@ -144,29 +144,29 @@
             this.tblMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).BeginInit();
             this.panel2.SuspendLayout();
             this.gaugeControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularRealTime)).BeginInit();
@@ -220,129 +220,129 @@
             // 
             this.chart2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chart2.DataBindings = null;
-            xyDiagram5.AxisX.Title.Text = "Hours";
-            xyDiagram5.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram5.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram5.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram5.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram5.AxisY.VisibleInPanesSerializable = "-1";
-            this.chart2.Diagram = xyDiagram5;
+            xyDiagram1.AxisX.Title.Text = "Hours";
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chart2.Diagram = xyDiagram1;
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart2.Legend.Name = "Default Legend";
             this.chart2.Location = new System.Drawing.Point(635, 3);
             this.chart2.Name = "chart2";
-            series9.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series9.Name = "Actual";
-            lineSeriesView9.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series9.View = lineSeriesView9;
-            series10.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series10.Name = "Target";
-            lineSeriesView10.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series10.View = lineSeriesView10;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Actual";
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.View = lineSeriesView1;
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.Name = "Target";
+            lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.View = lineSeriesView2;
             this.chart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series9,
-        series10};
+        series1,
+        series2};
             this.chart2.Size = new System.Drawing.Size(626, 277);
             this.chart2.TabIndex = 3;
-            chartTitle5.Text = "Line 2";
+            chartTitle1.Text = "Line 2";
             this.chart2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle5});
+            chartTitle1});
             // 
             // chart1
             // 
             this.chart1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chart1.DataBindings = null;
-            xyDiagram6.AxisX.Title.Text = "Hours";
-            xyDiagram6.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram6.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram6.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram6.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram6.AxisY.VisibleInPanesSerializable = "-1";
-            this.chart1.Diagram = xyDiagram6;
+            xyDiagram2.AxisX.Title.Text = "Hours";
+            xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chart1.Diagram = xyDiagram2;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart1.Legend.Name = "Default Legend";
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
-            series11.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series11.Name = "Actual";
-            lineSeriesView11.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series11.View = lineSeriesView11;
-            series12.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series12.Name = "Target";
-            lineSeriesView12.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series12.View = lineSeriesView12;
+            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.Name = "Actual";
+            lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.View = lineSeriesView3;
+            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series4.Name = "Target";
+            lineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series4.View = lineSeriesView4;
             this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series11,
-        series12};
+        series3,
+        series4};
             this.chart1.Size = new System.Drawing.Size(626, 277);
             this.chart1.TabIndex = 0;
-            chartTitle6.Text = "Line 1";
+            chartTitle2.Text = "Line 1";
             this.chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle6});
+            chartTitle2});
             // 
             // chart4
             // 
             this.chart4.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chart4.DataBindings = null;
-            xyDiagram7.AxisX.Title.Text = "Hours";
-            xyDiagram7.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram7.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram7.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram7.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram7.AxisY.VisibleInPanesSerializable = "-1";
-            this.chart4.Diagram = xyDiagram7;
+            xyDiagram3.AxisX.Title.Text = "Hours";
+            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            this.chart4.Diagram = xyDiagram3;
             this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart4.Legend.Name = "Default Legend";
             this.chart4.Location = new System.Drawing.Point(635, 286);
             this.chart4.Name = "chart4";
-            series13.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series13.Name = "Actual";
-            lineSeriesView13.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series13.View = lineSeriesView13;
-            series14.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series14.Name = "Target";
-            lineSeriesView14.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series14.View = lineSeriesView14;
+            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series5.Name = "Actual";
+            lineSeriesView5.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series5.View = lineSeriesView5;
+            series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series6.Name = "Target";
+            lineSeriesView6.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series6.View = lineSeriesView6;
             this.chart4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series13,
-        series14};
+        series5,
+        series6};
             this.chart4.Size = new System.Drawing.Size(626, 278);
             this.chart4.TabIndex = 2;
-            chartTitle7.Text = "Line 4";
+            chartTitle3.Text = "Line 4";
             this.chart4.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle7});
+            chartTitle3});
             // 
             // chart3
             // 
             this.chart3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chart3.DataBindings = null;
-            xyDiagram8.AxisX.Title.Text = "Hours";
-            xyDiagram8.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram8.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram8.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram8.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram8.AxisY.VisibleInPanesSerializable = "-1";
-            this.chart3.Diagram = xyDiagram8;
+            xyDiagram4.AxisX.Title.Text = "Hours";
+            xyDiagram4.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram4.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
+            this.chart3.Diagram = xyDiagram4;
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart3.Legend.Name = "Default Legend";
             this.chart3.Location = new System.Drawing.Point(3, 286);
             this.chart3.Name = "chart3";
-            series15.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series15.Name = "Actual";
-            lineSeriesView15.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series15.View = lineSeriesView15;
-            series16.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series16.Name = "Target";
-            lineSeriesView16.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series16.View = lineSeriesView16;
+            series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series7.Name = "Actual";
+            lineSeriesView7.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series7.View = lineSeriesView7;
+            series8.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series8.Name = "Target";
+            lineSeriesView8.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series8.View = lineSeriesView8;
             this.chart3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series15,
-        series16};
+        series7,
+        series8};
             this.chart3.Size = new System.Drawing.Size(626, 278);
             this.chart3.TabIndex = 1;
-            chartTitle8.Text = "Line 3";
+            chartTitle4.Text = "Line 3";
             this.chart3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle8});
+            chartTitle4});
             // 
             // panel2
             // 
@@ -507,31 +507,31 @@
             this.arcScaleComponent1.Name = "scale1";
             this.arcScaleComponent1.RadiusX = 123F;
             this.arcScaleComponent1.RadiusY = 123F;
-            arcScaleRange4.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
-            arcScaleRange4.EndThickness = 12F;
-            arcScaleRange4.EndValue = 33F;
-            arcScaleRange4.Name = "Range0";
-            arcScaleRange4.ShapeOffset = -3F;
-            arcScaleRange4.StartThickness = 12F;
-            arcScaleRange4.StartValue = -0.3F;
-            arcScaleRange5.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
-            arcScaleRange5.EndThickness = 12F;
-            arcScaleRange5.EndValue = 66F;
-            arcScaleRange5.Name = "Range1";
-            arcScaleRange5.ShapeOffset = -3F;
-            arcScaleRange5.StartThickness = 12F;
-            arcScaleRange5.StartValue = 33F;
-            arcScaleRange6.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Green");
-            arcScaleRange6.EndThickness = 12F;
-            arcScaleRange6.EndValue = 100.3F;
-            arcScaleRange6.Name = "Range2";
-            arcScaleRange6.ShapeOffset = -3F;
-            arcScaleRange6.StartThickness = 12F;
-            arcScaleRange6.StartValue = 66F;
+            arcScaleRange1.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
+            arcScaleRange1.EndThickness = 12F;
+            arcScaleRange1.EndValue = 33F;
+            arcScaleRange1.Name = "Range0";
+            arcScaleRange1.ShapeOffset = -3F;
+            arcScaleRange1.StartThickness = 12F;
+            arcScaleRange1.StartValue = -0.3F;
+            arcScaleRange2.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
+            arcScaleRange2.EndThickness = 12F;
+            arcScaleRange2.EndValue = 66F;
+            arcScaleRange2.Name = "Range1";
+            arcScaleRange2.ShapeOffset = -3F;
+            arcScaleRange2.StartThickness = 12F;
+            arcScaleRange2.StartValue = 33F;
+            arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Green");
+            arcScaleRange3.EndThickness = 12F;
+            arcScaleRange3.EndValue = 100.3F;
+            arcScaleRange3.Name = "Range2";
+            arcScaleRange3.ShapeOffset = -3F;
+            arcScaleRange3.StartThickness = 12F;
+            arcScaleRange3.StartValue = 66F;
             this.arcScaleComponent1.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
-            arcScaleRange4,
-            arcScaleRange5,
-            arcScaleRange6});
+            arcScaleRange1,
+            arcScaleRange2,
+            arcScaleRange3});
             this.arcScaleComponent1.StartAngle = -180F;
             this.arcScaleComponent1.Value = 80F;
             // 
@@ -1436,29 +1436,29 @@
             this.VisibleChanged += new System.EventHandler(this.FRM_MGL_DAILY_PRODUCTION_VisibleChanged);
             this.tblMain.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.gaugeControl1.ResumeLayout(false);

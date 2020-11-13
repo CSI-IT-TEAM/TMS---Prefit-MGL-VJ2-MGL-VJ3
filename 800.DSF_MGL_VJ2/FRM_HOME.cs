@@ -108,7 +108,7 @@ namespace FORM
                     MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
                     MGL_CARD.BindingTree(dt);
                     MGL_CARD.Dock = DockStyle.Fill;
-                    iDx++;
+                    iDx++;  
                 }
 
                 DataTable dt1 = SP_SMT_EMD_MENU_SELECT("Q2");
