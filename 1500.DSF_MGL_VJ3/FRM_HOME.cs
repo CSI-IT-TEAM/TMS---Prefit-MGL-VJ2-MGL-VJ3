@@ -70,6 +70,7 @@ namespace FORM
                 return null;
             }
         }
+       
         #endregion
         UC.UC_DSF_MGL_CARD[] UC_MGL_MENU = new UC.UC_DSF_MGL_CARD[3];
         private void InitTableContents()
