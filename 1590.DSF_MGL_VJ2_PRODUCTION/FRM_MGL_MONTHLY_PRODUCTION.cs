@@ -11,22 +11,17 @@ using System.Data.OracleClient;
 
 namespace FORM
 {
-    public partial class FRM_SMT_MON_PROD_V2 : Form
+    public partial class FRM_MGL_MONTHLY_PRODUCTION : Form
     {
-        public FRM_SMT_MON_PROD_V2()
+        public FRM_MGL_MONTHLY_PRODUCTION()
         {
             InitializeComponent();
         }
         int indexScreen;
         string line, mline;
-        public FRM_SMT_MON_PROD_V2(string title, int _indexScreen, string _line, string _mline)
-        {
-            InitializeComponent();
-            indexScreen = _indexScreen;
-            line = _line;
-            mline = _mline;
-            lbltitle.Text = title;
-        }
+        Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
+        UC.UC_DWMY uc = new UC.UC_DWMY(3, "");//Hiển thị 4 Button, Button Day thì Disable
+        DataTable dt = null;
 
         int int_count = 0;
         int i_col_cur = 0;
@@ -35,12 +30,34 @@ namespace FORM
 
         private void FRM_SMT_MON_PROD_V2_Load(object sender, EventArgs e)
         {
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            ClassLib.ComCtl.Form_Maximized(this, indexScreen); //2 man hinh tro len
-            //load_data();
-            //CreateChart();
+            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+            _dtnInit = ComVar.Func.getInitForm(this.GetType().Assembly.GetName().Name, this.GetType().Name);
+            pnYMD.Controls.Add(uc);
+            uc.OnDWMYClick += DWMYClick;
         }
-                
+
+        void DWMYClick(string ButtonCap, string ButtonCD)
+        {
+            switch (ButtonCD)
+            {
+                case "C":
+                    ComVar.Var.callForm = "back";
+                    break;
+                case "D":
+                    ComVar.Var.callForm = "1640";
+                    break;
+                case "W":
+                    ComVar.Var.callForm = "1641";
+                    break;
+                case "M":
+                    ComVar.Var.callForm = "1642";
+                    break;
+                case "Y":
+                    ComVar.Var.callForm = "1643";
+                    break;
+            }
+        }
+
         //private void CreateChart()
         //{
         //    try
@@ -137,12 +154,12 @@ namespace FORM
         //       series5.Label.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         //       series5.Label.TextPattern = "{V:#,#}";
         //       series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-                
+
         //        //// Add both series to the chart.
         //        stackedBarChart.Series.AddRange(new Series[] { series1, series3, series4, series5 });
 
         //        //Contanst Line
-                
+
         //        //((XYDiagram)stackedBarChart.Diagram).AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] { constantLine1 });
         //        ((XYDiagram)stackedBarChart.Diagram).AxisX.Label.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         //        //title
@@ -161,7 +178,7 @@ namespace FORM
         //        ((XYDiagram)stackedBarChart.Diagram).AxisX.Label.Angle = 0;
         //        ((XYDiagram)stackedBarChart.Diagram).AxisX.Label.ResolveOverlappingOptions.AllowRotate = false;
         //        ((XYDiagram)stackedBarChart.Diagram).AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
-                                
+
         //        //legend
         //        stackedBarChart.Legend.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         //        stackedBarChart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
@@ -185,34 +202,6 @@ namespace FORM
         //    {                
         //    }
         //}
-        
-        private void ClearGrid(AxFPSpreadADO.AxfpSpread Grid)
-        {
-            for (int irow = 3; irow <= Grid.MaxRows; irow++)
-            {
-                Grid.Row = irow;
-                for (int icol = 1; icol <= Grid.MaxCols; icol++)
-                {
-                    Grid.Col = icol;
-                    //Grid.SetText(icol, irow, "");
-                    switch (irow % 2)
-                    {
-                        case 0:
-                            Grid.BackColor = BackColor1;
-                            Grid.ForeColor = Color.Black;
-                            break;
-                        case 1:
-                            Grid.BackColor = BackColor2;
-                            Grid.ForeColor = Color.Black;
-                            break;
-                    }
-                    Grid.Font = new Font("Calibri", 14, FontStyle.Regular);
-                }
-
-                axfpSpread.set_RowHeight(irow, 30);
-            }
-            axfpSpread.RowsFrozen = 2;
-        }
 
         private void bindingdatachart(DevExpress.XtraCharts.ChartControl _chart, DataTable dt, string col1, string col2)
         {
@@ -279,22 +268,6 @@ namespace FORM
             // }
         }
 
-        private string GetText(AxFPSpreadADO.AxfpSpread spread, int col, int row)
-        {
-            try
-            {
-                object data = null;
-                spread.GetText(col, row, ref data);
-                return data.ToString();
-            }
-            catch (Exception ex)
-            {
-                //return "";
-                //log.Error(ex);
-                return null;
-            }
-
-        }
         private void load_data()
         {
             try
@@ -305,103 +278,56 @@ namespace FORM
                 DataTable dt1 = SEL_SMT_MON_PROD_STATUS("C1", line, "");
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    //axfpSpread.MaxRows = dt.Rows.Count + 2;
-                    ClearGrid(axfpSpread);
-                    //axfpSpread.SetCellBorder(1, 1, axfpSpread.MaxCols, axfpSpread.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexBottom, 0, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
-                    //axfpSpread.SetCellBorder(1, 1, axfpSpread.MaxCols, axfpSpread.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexTop, 0, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
-                    //axfpSpread.SetCellBorder(1, 1, axfpSpread.MaxCols, axfpSpread.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexLeft, 0, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
-                    //axfpSpread.SetCellBorder(1, 1, axfpSpread.MaxCols, axfpSpread.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexRight, 0, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
-
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    grdView.DataSource = dt;
+                    for(int i=0; i<gvwView.Columns.Count; i++)
                     {
-                        for (int j = 1; j < dt.Columns.Count; j++)
+                        gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+                        if (gvwView.Columns[i].FieldName.Equals("LINE"))
                         {
-
-                            if (j > 2)
-                            {
-                                if (dt.Columns[j].ColumnName.Replace("'", "") == "RATE")
-                                    axfpSpread.SetText(j, i + 3, dt.Rows[i][j].ToString() == "" ? "" : Convert.ToDouble(dt.Rows[i][j].ToString()).ToString() + "%");
-                                else
-                                    axfpSpread.SetText(j, i + 3, dt.Rows[i][j].ToString() == "" ? "" : Convert.ToDouble(dt.Rows[i][j].ToString()).ToString("###,###,###"));
-                            }
-                            else
-                            {
-                                axfpSpread.SetText(j, i + 3, dt.Rows[i][j].ToString());
-                            }
-                            //axfpSpread.SetText(j, i + 3, "2,999");
-                            if (j==dt.Columns.Count-1)
-                            {
-                                axfpSpread.Row = i + 3;
-                                axfpSpread.Col = j;
-                                if (Convert.ToDouble(GetText(axfpSpread, j, i + 3).Replace("%", "").Trim()) < 95)
-                                {
-                                    axfpSpread.BackColor = Color.Red;
-                                    axfpSpread.ForeColor = Color.White;
-                                }
-                                else if (Convert.ToDouble(GetText(axfpSpread, j, i + 3).Replace("%", "").Trim()) > 98)
-                                {
-                                    axfpSpread.BackColor = Color.Green;
-                                    axfpSpread.ForeColor = Color.White;
-                                }
-                                else 
-                                {
-                                    axfpSpread.BackColor = Color.Yellow;
-                                    axfpSpread.ForeColor = Color.Black;
-                                }
-
-                            }
+                            gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
                         }
-                        axfpSpread.set_RowHeight(i + 3, 30);
+                        if (gvwView.Columns[i].FieldName.Equals("RATE"))
+                        {
+                            gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                            gvwView.Columns[i].DisplayFormat.FormatString = "#,#.#";
+                        }
                     }
-                    for(int i = dt.Rows.Count+3;i<=axfpSpread.MaxRows;i++)
-                    {
-                        axfpSpread.set_RowHeight(i, 0);
-                    }
+                   
                 }
                 bindingdatachart(chartControl1, dt_chart,  "UPC_QTY","UPC_TAR");
                 bindingdatachart(chartControl2, dt_chart, "UPS1_QTY", "UPS1_TAR");
                 bindingdatachart(chartControl3, dt_chart, "UPS2_QTY", "UPS2_TAR");
                 bindingdatachart(chartControl4, dt_chart, "FSS_QTY", "FSS_TAR");
                 bindingdatachart(chartControl5, dt_chart, "FGA_QTY", "FGA_TAR");
-                //if (dt1 != null && dt1.Rows.Count > 0)
-                //{
-                //    BindingGauges(circularGauge, Convert.ToDouble(dt1.Rows[0]["RATE"]), Convert.ToInt32(dt1.Rows[0]["V_MIN"]), Convert.ToInt32(dt1.Rows[0]["V_MAX"]), Convert.ToInt32(dt1.Rows[0]["R_MIN"]), Convert.ToInt32(dt1.Rows[0]["R_MAX"]));
-                //    lblR.Text = "<" + dt1.Rows[0]["R_MIN"].ToString() + "%";
-                //    lblY.Text = ">=" + dt1.Rows[0]["R_MIN"].ToString() + "% && <=" + dt1.Rows[0]["R_MAX"].ToString() + "%";
-                //    lblG.Text = ">" + dt1.Rows[0]["R_MAX"].ToString() + "%";
-                //    lblRPlan.Text = "R.Plan: " + Convert.ToDouble(dt1.Rows[0]["RPLAN"]).ToString("#,#") + "Prs";
-                //    lblProd.Text = "Prod: " + Convert.ToDouble(dt1.Rows[0]["PROD"]).ToString("#,#") + "Prs";
-                //    lblRate.Text = "Rate: " + Convert.ToDouble(dt1.Rows[0]["RATE"]).ToString("#,#.0") + "%";
-                //    labelRate.Text = Convert.ToDouble(dt1.Rows[0]["RATE"]).ToString("#,0.0") + "%";
-                //}  
+
                 int i_min = 0, i_max = 100;
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    if (GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim() != "")
+                    if (gvwView.GetRowCellValue(4,"RATE").ToString().Replace("%","").Trim() != "")
                     {
-                        
-                        if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) > 90 && Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim())<100)
+                        double RATE = double.Parse(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim());
+                        if (RATE > 90 && RATE < 100)
                         {
                             i_min = 90;
                             i_max = 100;
                         }
-                        else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) < 90)
+                        else if (RATE < 90)
                         {
                             i_min = 90 - 3;
                             i_max = 100;
                         }
-                        else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) >= 100)
+                        else if (RATE >= 100)
                         {
                             i_min = 90;
                             i_max = 100 + 3;
                         }
-                        else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim())  == 0)
+                        else if (RATE == 0)
                         {
                             i_min = 0;
                             i_max = 100;
                         }
-                        BindingGauges(circularGauge, Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()), i_min, i_max, 95, 98);
-                        labelRate.Text = Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) + "%";
+                        BindingGauges(circularGauge, RATE, i_min, i_max, 95, 98);
+                        labelRate.Text = RATE + "%";
                     }
                 }
                 else
@@ -418,46 +344,53 @@ namespace FORM
         {
             try
             {
-                DataTable dt = SEL_SMT_MON_PROD_STATUS("H",line,"");
-                int i;
-                if (dt != null && dt.Rows.Count > 0)
+                DataTable dtsource = SEL_SMT_MON_PROD_STATUS("H",line,"");
+                if (dtsource != null && dtsource.Rows.Count > 0)
                 {                    
-                    axfpSpread.SetText(1, 1, dt.Rows[0]["MON"].ToString());
-                    //axfpSpread.set_ColWidth(1, 16.5);
-                  //  axfpSpread.set_ColWidth(2, 226);
-                    for (i = 0; i < dt.Rows.Count; i++)
+                    if (dtsource != null && dtsource.Rows.Count > 0)
                     {
-
-                        if (dt.Rows[i]["CUR"].ToString() == "1")
+                        bandMon.Caption = dtsource.Rows[0]["MON"].ToString();
+                        if (dtsource.Rows.Count > 0)
                         {
-                            axfpSpread.Row = 1;
-                            axfpSpread.Col = i + 3;
-                            axfpSpread.BackColor = Color.Salmon;
-                            axfpSpread.Row = 2;
-                            axfpSpread.Col = i + 3;
-                            axfpSpread.BackColor = Color.Salmon;
-                            
+                            foreach (DevExpress.XtraGrid.Views.BandedGrid.GridBand band in gvwView.Bands[1].Children)
+                            {
+                                double num;
+
+                                if (double.TryParse(band.Name.Substring(4, 2), out num))
+                                {
+                                    for (int i = 0; i < dtsource.Rows.Count; i++)
+                                    {
+                                        if (band.Name.Contains(dtsource.Rows[i][1].ToString()))
+                                        {
+                                            band.Visible = true;
+                                            if (dtsource.Rows[i]["CUR"].ToString().Contains("1"))
+                                            {
+                                                band.AppearanceHeader.BackColor = Color.Salmon;
+                                                band.AppearanceHeader.BackColor2 = Color.Salmon;
+                                                band.AppearanceHeader.ForeColor = Color.White;
+                                            }
+                                            else
+                                            {
+                                                band.AppearanceHeader.BackColor = Color.DarkCyan;
+                                                band.AppearanceHeader.BackColor2 = Color.DarkCyan;
+                                                band.AppearanceHeader.ForeColor = Color.White;
+                                            }
+                                            band.Caption = dtsource.Rows[i]["DAY"].ToString()+ "\n" + dtsource.Rows[i]["DAY1"].ToString();
+                                            break;
+                                        }
+                                        if (i == dtsource.Rows.Count - 1)
+                                        {
+                                            band.Visible = false;
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        axfpSpread.AddCellSpan(i + 3, 1, 1, 1);
-                        axfpSpread.SetText(i + 3, 1, dt.Rows[i]["DAY"].ToString());
-                        axfpSpread.SetText(i + 3, 2, dt.Rows[i]["DAY1"].ToString());
-                        axfpSpread.set_ColWidth(i + 3, (double)215 / (double)(dt.Rows.Count));
-                        //axfpSpread.set_ColWidth(i + 2, 240 / 27 + 0.3);
-                        //axfpSpread.set_ColWidth(i + 2, (axfpSpread.Width-axfpSpread.get_ColWidth(1))/dt.Rows.Count);
-                    }
-                    //axfpSpread.set_ColWidth(1, 16.3 + 220 - axfpSpread.get_ColWidth(i + 1) * dt.Rows.Count);
-                    axfpSpread.AddCellSpan(dt.Rows.Count + 2, 1, 1, 2);
-                    axfpSpread.AddCellSpan(dt.Rows.Count + 1, 1, 1, 2);
-                    axfpSpread.AddCellSpan(dt.Rows.Count, 1, 1, 2);
-                    //axfpSpread.set_ColWidth(1, 16.4 + 0.1 * 25 / dt.Rows.Count ); 
-                    for ( int j = i + 3; j<= axfpSpread.MaxCols;j++)
-                    {
-                        axfpSpread.set_ColWidth(j,0);
                     }
                 }
                 
             }
-            catch
+            catch (Exception ex)
             {
             }
         }
@@ -468,28 +401,25 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_MGL.SP_PROD_MONTH";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_PRODUCTION_MONTHLY";
 
-                MyOraDB.ReDim_Parameter(5);
+                MyOraDB.ReDim_Parameter(4);
                 MyOraDB.Process_Name = process_name;
 
-                MyOraDB.Parameter_Name[0] = "V_P_TYPE";
-                MyOraDB.Parameter_Name[1] = "V_P_FAC";
-                MyOraDB.Parameter_Name[2] = "V_P_MLINE";
-                MyOraDB.Parameter_Name[3] = "V_P_DATE";
-                MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_LINE";
+                MyOraDB.Parameter_Name[2] = "ARG_DATE";
+                MyOraDB.Parameter_Name[3] = "OUT_CURSOR";
 
                 MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[4] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
 
                 MyOraDB.Parameter_Values[0] = ARG_QTYPE;
                 MyOraDB.Parameter_Values[1] = ARG_LINE;
-                MyOraDB.Parameter_Values[2] = ARG_DATE;
-                MyOraDB.Parameter_Values[3] = uc_month.GetValue();
-                MyOraDB.Parameter_Values[4] = "";
+                MyOraDB.Parameter_Values[2] = uc_month.GetValue();
+                MyOraDB.Parameter_Values[3] = "";
 
 
                 MyOraDB.Add_Select_Parameter(true);
@@ -562,6 +492,9 @@ namespace FORM
         {
             if (this.Visible)
             {
+                uc.YMD_Change(3, "");
+                line = ComVar.Var._strValue1;
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Month" : ComVar.Var._strValue2 + " Production Status by Month";
                 int_count = 19;
                 timer2.Start();
             }
@@ -572,51 +505,7 @@ namespace FORM
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form fc = Application.OpenForms["FORM_SMT_PROD_DAILY_MGL"];
-            if (fc != null)
-                fc.Close();
-
-
-            string Caption = "Production Status by Day";
-            //switch (Lang)
-            //{
-            //    case "Vn":
-            //        Caption = "Trạng thái sản xuất theo Ngày";
-            //        break;
-            //    default:
-            //        Caption = "Production Status by Day";
-            //        break;
-            //}
-
-
-            FORM_SMT_PROD_DAILY_MGL f = new FORM_SMT_PROD_DAILY_MGL(Caption, 1, line, mline);
-            f.Show();
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form fc = Application.OpenForms["FRM_SMT_WEEKLY_PROD_V2"];
-            if (fc != null)
-                fc.Close();
-
-            string Caption = "Production Status by Week";
-            //switch (Lang)
-            //{
-            //    case "Vn":
-            //        Caption = "Trạng thái sản xuất theo Tuần";
-            //        break;
-            //    default:
-            //        Caption = "Production Status by Week";
-            //        break;
-            //}
-
-            FRM_SMT_WEEKLY_PROD_V2 f = new FRM_SMT_WEEKLY_PROD_V2(Caption, 1, line, mline);
-            f.Show();
-        }
+        
 
         private void chartControl1_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
         {
@@ -633,28 +522,42 @@ namespace FORM
             }
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void gvwView_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
         {
-            this.Hide();
-            Form fc = Application.OpenForms["FRM_SMT_YEAR_PROD_V2"];
-            if (fc != null)
-                fc.Close();
+            if (e.CellValue == DBNull.Value) return;
+            if (e.Column.FieldName.Equals("RATE"))
+                e.DisplayText = double.Parse(e.CellValue.ToString()).ToString("#,#.#") + "%";
+        }
 
-
-            string Caption = "Production Status by Year";
-            //switch (Lang)
-            //{
-            //    case "Vn":
-            //        Caption = "Trạng thái sản xuất theo Năm";
-            //        break;
-            //    default:
-            //        Caption = "Production Status by Year";
-            //        break;
-            //}
-
-
-            FRM_SMT_YEAR_PROD_V2 f = new FRM_SMT_YEAR_PROD_V2(Caption, 1, line, mline);
-            f.Show();
+        private void gvwView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            if(e.RowHandle % 2 == 0 && e.Column.ColumnHandle > 1)
+            {
+                e.Appearance.BackColor = Color.White;
+            }
+            else
+            {
+                e.Appearance.BackColor = Color.LightCyan;
+            }
+            if (e.CellValue == DBNull.Value) return;
+            if (e.Column.FieldName.Equals("RATE") && e.CellValue != DBNull.Value)
+            {
+                if (double.Parse(e.CellValue.ToString()) > 98)
+                {
+                    e.Appearance.BackColor = Color.Green;
+                    e.Appearance.ForeColor = Color.White;
+                }
+                else if (double.Parse(e.CellValue.ToString()) < 95)
+                {
+                    e.Appearance.BackColor = Color.Red;
+                    e.Appearance.ForeColor = Color.White;
+                }
+                else
+                {
+                    e.Appearance.BackColor = Color.Yellow;
+                    e.Appearance.ForeColor = Color.Black;
+                }
+            }
         }
 
         private void uc_month_ValueChangeEvent(object sender, EventArgs e)

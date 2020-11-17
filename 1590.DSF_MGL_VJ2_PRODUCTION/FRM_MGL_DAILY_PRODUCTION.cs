@@ -435,7 +435,7 @@ namespace FORM
                         e.Appearance.ForeColor = Color.Black;
                     }
                 }
-                if (bdgrdView.GetRowCellValue(e.RowHandle, "MLINE_CD").ToString().Contains("TOTAL"))
+                if (bdgrdView.GetRowCellValue(e.RowHandle, "MLINE_CD").ToString().Contains("TOTAL") && e.Column.ColumnHandle > 1)
                 {
                     e.Appearance.BackColor = Color.Orange;
                     e.Appearance.ForeColor = Color.Black;

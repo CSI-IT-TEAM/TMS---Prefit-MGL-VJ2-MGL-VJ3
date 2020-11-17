@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -67,7 +68,7 @@
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             this.pnUC = new System.Windows.Forms.Panel();
             this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
             this.splMain = new System.Windows.Forms.SplitContainer();
@@ -1591,7 +1592,7 @@
             chartTitle4});
             this.chartUPC.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
-            // FRM_MGL_MONTHLY_PRODUCTION
+            // FRM_MGL_MONTHLY_PRODUCTION_S
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
@@ -1599,7 +1600,7 @@
             this.Controls.Add(this.pnUC);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_MGL_MONTHLY_PRODUCTION";
+            this.Name = "FRM_MGL_MONTHLY_PRODUCTION_S";
             this.Text = "FRM_PROD_STATUS_MONTHLY_V2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_Load);

@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange1 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY2 = new DevExpress.XtraCharts.SecondaryAxisY();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY3 = new DevExpress.XtraCharts.SecondaryAxisY();
-            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView3 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY4 = new DevExpress.XtraCharts.SecondaryAxisY();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel4 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView4 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView4 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange7 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange8 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange9 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraCharts.XYDiagram xyDiagram9 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY9 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.Series series17 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel9 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView9 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series18 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView9 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle9 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram10 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY10 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.Series series19 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel10 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView10 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series20 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView10 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle10 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram11 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY11 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.Series series21 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel11 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView11 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series22 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView11 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle11 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram12 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY12 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.Series series23 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel12 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView12 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series24 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView12 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle12 = new DevExpress.XtraCharts.ChartTitle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnGauge = new System.Windows.Forms.Panel();
             this.gaugeProd = new DevExpress.XtraGauges.Win.GaugeControl();
@@ -95,38 +96,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView9)).BeginInit();
             this.tblMain2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView12)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -217,7 +218,6 @@
             this.gaugeProd.Controls.Add(this.lblGreen);
             this.gaugeProd.Controls.Add(this.lblRed);
             this.gaugeProd.Controls.Add(this.lblTitleProd);
-            this.gaugeProd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gaugeProd.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
             this.cGauge1});
             this.gaugeProd.Location = new System.Drawing.Point(0, 0);
@@ -315,34 +315,34 @@
             this.arcScale.Name = "scale1";
             this.arcScale.RadiusX = 104F;
             this.arcScale.RadiusY = 104F;
-            arcScaleRange1.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
-            arcScaleRange1.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
-            arcScaleRange1.EndThickness = 5F;
-            arcScaleRange1.EndValue = 95F;
-            arcScaleRange1.Name = "Range0";
-            arcScaleRange1.ShapeOffset = 0F;
-            arcScaleRange1.StartThickness = 5F;
-            arcScaleRange1.StartValue = 90F;
-            arcScaleRange2.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
-            arcScaleRange2.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
-            arcScaleRange2.EndThickness = 5F;
-            arcScaleRange2.EndValue = 98F;
-            arcScaleRange2.Name = "Range1";
-            arcScaleRange2.ShapeOffset = 0F;
-            arcScaleRange2.StartThickness = 5F;
-            arcScaleRange2.StartValue = 95F;
-            arcScaleRange3.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
-            arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
-            arcScaleRange3.EndThickness = 5F;
-            arcScaleRange3.EndValue = 100F;
-            arcScaleRange3.Name = "Range2";
-            arcScaleRange3.ShapeOffset = 0F;
-            arcScaleRange3.StartThickness = 5F;
-            arcScaleRange3.StartValue = 98F;
+            arcScaleRange7.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
+            arcScaleRange7.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
+            arcScaleRange7.EndThickness = 5F;
+            arcScaleRange7.EndValue = 95F;
+            arcScaleRange7.Name = "Range0";
+            arcScaleRange7.ShapeOffset = 0F;
+            arcScaleRange7.StartThickness = 5F;
+            arcScaleRange7.StartValue = 90F;
+            arcScaleRange8.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
+            arcScaleRange8.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
+            arcScaleRange8.EndThickness = 5F;
+            arcScaleRange8.EndValue = 98F;
+            arcScaleRange8.Name = "Range1";
+            arcScaleRange8.ShapeOffset = 0F;
+            arcScaleRange8.StartThickness = 5F;
+            arcScaleRange8.StartValue = 95F;
+            arcScaleRange9.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
+            arcScaleRange9.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00C000");
+            arcScaleRange9.EndThickness = 5F;
+            arcScaleRange9.EndValue = 100F;
+            arcScaleRange9.Name = "Range2";
+            arcScaleRange9.ShapeOffset = 0F;
+            arcScaleRange9.StartThickness = 5F;
+            arcScaleRange9.StartValue = 98F;
             this.arcScale.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
-            arcScaleRange1,
-            arcScaleRange2,
-            arcScaleRange3});
+            arcScaleRange7,
+            arcScaleRange8,
+            arcScaleRange9});
             this.arcScale.StartAngle = -180F;
             this.arcScale.Value = 90F;
             // 
@@ -365,40 +365,40 @@
             // 
             this.chartUPC.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPC.DataBindings = null;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            secondaryAxisY1.AxisID = 0;
-            secondaryAxisY1.Name = "Secondary AxisY 1";
-            secondaryAxisY1.VisibleInPanesSerializable = "-1";
-            xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY1});
-            this.chartUPC.Diagram = xyDiagram1;
+            xyDiagram9.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram9.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram9.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram9.AxisY.VisibleInPanesSerializable = "-1";
+            secondaryAxisY9.AxisID = 0;
+            secondaryAxisY9.Name = "Secondary AxisY 1";
+            secondaryAxisY9.VisibleInPanesSerializable = "-1";
+            xyDiagram9.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
+            secondaryAxisY9});
+            this.chartUPC.Diagram = xyDiagram9;
             this.chartUPC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPC.Legend.Name = "Default Legend";
             this.chartUPC.Location = new System.Drawing.Point(3, 3);
             this.chartUPC.Name = "chartUPC";
-            sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series1.Label = sideBySideBarSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Stitching 1";
-            sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            series1.View = sideBySideBarSeriesView1;
-            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Target";
-            splineSeriesView1.AxisYName = "Secondary AxisY 1";
-            splineSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
-            splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.View = splineSeriesView1;
+            sideBySideBarSeriesLabel9.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series17.Label = sideBySideBarSeriesLabel9;
+            series17.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series17.Name = "Stitching 1";
+            sideBySideBarSeriesView9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            series17.View = sideBySideBarSeriesView9;
+            series18.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series18.Name = "Target";
+            splineSeriesView9.AxisYName = "Secondary AxisY 1";
+            splineSeriesView9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
+            splineSeriesView9.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series18.View = splineSeriesView9;
             this.chartUPC.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
+        series17,
+        series18};
             this.chartUPC.Size = new System.Drawing.Size(946, 434);
             this.chartUPC.TabIndex = 0;
-            chartTitle1.Text = "Cutting";
+            chartTitle9.Text = "Cutting";
             this.chartUPC.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
+            chartTitle9});
             this.chartUPC.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
             // tblMain2
@@ -422,123 +422,123 @@
             // 
             this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS3.DataBindings = null;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            secondaryAxisY2.AxisID = 0;
-            secondaryAxisY2.Name = "Secondary AxisY 1";
-            secondaryAxisY2.VisibleInPanesSerializable = "-1";
-            xyDiagram2.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY2});
-            this.chartUPS3.Diagram = xyDiagram2;
+            xyDiagram10.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram10.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram10.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram10.AxisY.VisibleInPanesSerializable = "-1";
+            secondaryAxisY10.AxisID = 0;
+            secondaryAxisY10.Name = "Secondary AxisY 1";
+            secondaryAxisY10.VisibleInPanesSerializable = "-1";
+            xyDiagram10.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
+            secondaryAxisY10});
+            this.chartUPS3.Diagram = xyDiagram10;
             this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS3.Legend.Name = "Default Legend";
             this.chartUPS3.Location = new System.Drawing.Point(1271, 3);
             this.chartUPS3.Name = "chartUPS3";
-            sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series3.Label = sideBySideBarSeriesLabel2;
-            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Stitching 1";
-            sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            series3.View = sideBySideBarSeriesView2;
-            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series4.Name = "Target";
-            splineSeriesView2.AxisYName = "Secondary AxisY 1";
-            splineSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
-            splineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series4.View = splineSeriesView2;
+            sideBySideBarSeriesLabel10.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series19.Label = sideBySideBarSeriesLabel10;
+            series19.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series19.Name = "Stitching 1";
+            sideBySideBarSeriesView10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            series19.View = sideBySideBarSeriesView10;
+            series20.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series20.Name = "Target";
+            splineSeriesView10.AxisYName = "Secondary AxisY 1";
+            splineSeriesView10.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
+            splineSeriesView10.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series20.View = splineSeriesView10;
             this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3,
-        series4};
+        series19,
+        series20};
             this.chartUPS3.Size = new System.Drawing.Size(630, 474);
             this.chartUPS3.TabIndex = 4;
-            chartTitle2.Text = "Stitching 3";
+            chartTitle10.Text = "Stitching 3";
             this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            chartTitle10});
             this.chartUPS3.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
             // chartUPS2
             // 
             this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS2.DataBindings = null;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            secondaryAxisY3.AxisID = 0;
-            secondaryAxisY3.Name = "Secondary AxisY 1";
-            secondaryAxisY3.VisibleInPanesSerializable = "-1";
-            xyDiagram3.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY3});
-            this.chartUPS2.Diagram = xyDiagram3;
+            xyDiagram11.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram11.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram11.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram11.AxisY.VisibleInPanesSerializable = "-1";
+            secondaryAxisY11.AxisID = 0;
+            secondaryAxisY11.Name = "Secondary AxisY 1";
+            secondaryAxisY11.VisibleInPanesSerializable = "-1";
+            xyDiagram11.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
+            secondaryAxisY11});
+            this.chartUPS2.Diagram = xyDiagram11;
             this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS2.Legend.Name = "Default Legend";
             this.chartUPS2.Location = new System.Drawing.Point(637, 3);
             this.chartUPS2.Name = "chartUPS2";
-            sideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series5.Label = sideBySideBarSeriesLabel3;
-            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series5.Name = "Stitching 1";
-            sideBySideBarSeriesView3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            series5.View = sideBySideBarSeriesView3;
-            series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series6.Name = "Target";
-            splineSeriesView3.AxisYName = "Secondary AxisY 1";
-            splineSeriesView3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
-            splineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series6.View = splineSeriesView3;
+            sideBySideBarSeriesLabel11.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series21.Label = sideBySideBarSeriesLabel11;
+            series21.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series21.Name = "Stitching 1";
+            sideBySideBarSeriesView11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            series21.View = sideBySideBarSeriesView11;
+            series22.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series22.Name = "Target";
+            splineSeriesView11.AxisYName = "Secondary AxisY 1";
+            splineSeriesView11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
+            splineSeriesView11.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series22.View = splineSeriesView11;
             this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5,
-        series6};
+        series21,
+        series22};
             this.chartUPS2.Size = new System.Drawing.Size(628, 474);
             this.chartUPS2.TabIndex = 3;
-            chartTitle3.Text = "Stitching 2";
+            chartTitle11.Text = "Stitching 2";
             this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle3});
+            chartTitle11});
             this.chartUPS2.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
             // chartUPS1
             // 
             this.chartUPS1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS1.DataBindings = null;
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.Title.Text = "Production (Prs)";
-            xyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            secondaryAxisY4.AxisID = 0;
-            secondaryAxisY4.Name = "Secondary AxisY 1";
-            secondaryAxisY4.VisibleInPanesSerializable = "-1";
-            xyDiagram4.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY4});
-            this.chartUPS1.Diagram = xyDiagram4;
+            xyDiagram12.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram12.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram12.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram12.AxisY.VisibleInPanesSerializable = "-1";
+            secondaryAxisY12.AxisID = 0;
+            secondaryAxisY12.Name = "Secondary AxisY 1";
+            secondaryAxisY12.VisibleInPanesSerializable = "-1";
+            xyDiagram12.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
+            secondaryAxisY12});
+            this.chartUPS1.Diagram = xyDiagram12;
             this.chartUPS1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS1.Legend.Name = "Default Legend";
             this.chartUPS1.Location = new System.Drawing.Point(3, 3);
             this.chartUPS1.Name = "chartUPS1";
-            sideBySideBarSeriesLabel4.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series7.Label = sideBySideBarSeriesLabel4;
-            series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series7.Name = "Stitching 1";
-            sideBySideBarSeriesView4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            series7.View = sideBySideBarSeriesView4;
-            series8.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series8.Name = "Target";
-            splineSeriesView4.AxisYName = "Secondary AxisY 1";
-            splineSeriesView4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
-            splineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series8.View = splineSeriesView4;
+            sideBySideBarSeriesLabel12.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series23.Label = sideBySideBarSeriesLabel12;
+            series23.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series23.Name = "Stitching 1";
+            sideBySideBarSeriesView12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            series23.View = sideBySideBarSeriesView12;
+            series24.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series24.Name = "Target";
+            splineSeriesView12.AxisYName = "Secondary AxisY 1";
+            splineSeriesView12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(48)))), ((int)(((byte)(160)))));
+            splineSeriesView12.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series24.View = splineSeriesView12;
             this.chartUPS1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7,
-        series8};
+        series23,
+        series24};
             this.chartUPS1.Size = new System.Drawing.Size(628, 474);
             this.chartUPS1.TabIndex = 2;
-            chartTitle4.Text = "Stitching 1";
+            chartTitle12.Text = "Stitching 1";
             this.chartUPS1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle4});
+            chartTitle12});
             this.chartUPS1.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chart_CustomDrawAxisLabel);
             // 
-            // FRM_MGL_WEEKLY_PRODUCTION
+            // FRM_MGL_WEEKLY_PRODUCTION_S
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
@@ -546,7 +546,7 @@
             this.Controls.Add(this.tblMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_MGL_WEEKLY_PRODUCTION";
+            this.Name = "FRM_MGL_WEEKLY_PRODUCTION_S";
             this.Text = "FRM_PROD_STATUS_WEEKLY_V2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_PROD_STATUS_DAILY_Load);
@@ -560,38 +560,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPC)).EndInit();
             this.tblMain2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS1)).EndInit();
             this.ResumeLayout(false);
 
