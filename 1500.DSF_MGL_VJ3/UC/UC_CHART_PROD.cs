@@ -70,7 +70,6 @@ namespace FORM.UC
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

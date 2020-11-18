@@ -140,11 +140,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FRM_MGL_BTS_YEARLY.cs">
+    <Compile Include="FRM_MGL_BTS_DAILY.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_MGL_BTS_YEARLY.designer.cs">
-      <DependentUpon>FRM_MGL_BTS_YEARLY.cs</DependentUpon>
+    <Compile Include="FRM_MGL_BTS_DAILY.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_DAILY.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_MGL_BTS_MONTHLY.cs">
       <SubType>Form</SubType>
@@ -152,17 +152,35 @@
     <Compile Include="FRM_MGL_BTS_MONTHLY.designer.cs">
       <DependentUpon>FRM_MGL_BTS_MONTHLY.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_MGL_BTS_WEEKLY.cs">
+    <Compile Include="FRM_MGL_BTS_YEARLY.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_MGL_BTS_WEEKLY.designer.cs">
-      <DependentUpon>FRM_MGL_BTS_WEEKLY.cs</DependentUpon>
+    <Compile Include="FRM_MGL_BTS_YEARLY.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_YEARLY.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_MGL_BTS_DAILY.cs">
+    <Compile Include="FRM_MGL_BTS_YEARLY_S.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_MGL_BTS_DAILY.designer.cs">
-      <DependentUpon>FRM_MGL_BTS_DAILY.cs</DependentUpon>
+    <Compile Include="FRM_MGL_BTS_YEARLY_S.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_YEARLY_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_MONTHLY_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_MONTHLY_S.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_MONTHLY_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_WEEKLY_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_WEEKLY_S.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_WEEKLY_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_DAILY_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_BTS_DAILY_S.designer.cs">
+      <DependentUpon>FRM_MGL_BTS_DAILY_S.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassLib\A1Panel.cs">
       <SubType>Component</SubType>
@@ -215,17 +233,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FRM_MGL_BTS_YEARLY.resx">
-      <DependentUpon>FRM_MGL_BTS_YEARLY.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_MGL_BTS_DAILY.resx">
+      <DependentUpon>FRM_MGL_BTS_DAILY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_BTS_MONTHLY.resx">
       <DependentUpon>FRM_MGL_BTS_MONTHLY.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_MGL_BTS_WEEKLY.resx">
-      <DependentUpon>FRM_MGL_BTS_WEEKLY.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_MGL_BTS_YEARLY.resx">
+      <DependentUpon>FRM_MGL_BTS_YEARLY.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_MGL_BTS_DAILY.resx">
-      <DependentUpon>FRM_MGL_BTS_DAILY.cs</DependentUpon>
+    <EmbeddedResource Include="FRM_MGL_BTS_YEARLY_S.resx">
+      <DependentUpon>FRM_MGL_BTS_YEARLY_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_BTS_MONTHLY_S.resx">
+      <DependentUpon>FRM_MGL_BTS_MONTHLY_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_BTS_WEEKLY_S.resx">
+      <DependentUpon>FRM_MGL_BTS_WEEKLY_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_BTS_DAILY_S.resx">
+      <DependentUpon>FRM_MGL_BTS_DAILY_S.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

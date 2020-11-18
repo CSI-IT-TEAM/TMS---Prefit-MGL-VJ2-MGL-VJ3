@@ -12,9 +12,9 @@ using System.Linq.Expressions;
 
 namespace FORM
 {
-    public partial class FRM_MGL_BTS_YEARLY : Form
+    public partial class FRM_MGL_BTS_YEARLY_S : Form
     {
-        public FRM_MGL_BTS_YEARLY()
+        public FRM_MGL_BTS_YEARLY_S()
         {
             InitializeComponent();
            
@@ -85,7 +85,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_YEAR";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_YEAR_SUPPORT";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";

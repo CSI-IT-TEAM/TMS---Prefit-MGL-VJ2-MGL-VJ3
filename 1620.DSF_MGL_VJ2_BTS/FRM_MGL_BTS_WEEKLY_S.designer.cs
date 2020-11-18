@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FRM_MGL_BTS_WEEKLY
+    partial class FRM_MGL_BTS_WEEKLY_S
     {
         /// <summary>
         /// Required designer variable.

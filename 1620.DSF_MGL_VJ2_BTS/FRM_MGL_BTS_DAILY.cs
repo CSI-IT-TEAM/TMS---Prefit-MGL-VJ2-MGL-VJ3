@@ -73,13 +73,13 @@ namespace FORM
         #endregion
 
         #region Ora
-        public DataTable SMT_EMD_BTS_MONTHLY_SELECT(string ARG_TYPE, string ARG_DATE, string ARG_LINE_CD, string ARG_MLINE_CD)
+        public DataTable SMT_EMD_BTS_SELECT(string ARG_TYPE, string ARG_DATE, string ARG_LINE_CD, string ARG_MLINE_CD)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_DAY_SUPPORT";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_DAY";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -198,7 +198,7 @@ namespace FORM
                 DataTable dtsource = null;
 
                 //SMT_PROD_MONTHLY_SELECT("H", uc_month.GetValue().ToString(), line, mline); //
-                dtsource = SMT_EMD_BTS_MONTHLY_SELECT("H", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
+                dtsource = SMT_EMD_BTS_SELECT("H", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
                 if (dtsource != null && dtsource.Rows.Count > 0)
                 {
                     bandMon.Caption = dtsource.Rows[0]["MON"].ToString();
@@ -258,7 +258,7 @@ namespace FORM
         {
             try
             {
-                DataTable dt = SMT_EMD_BTS_MONTHLY_SELECT("C", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
+                DataTable dt = SMT_EMD_BTS_SELECT("C", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
                 //ChartVSM.DataSource = dt;
                 //ChartVSM.Series[0].ArgumentDataMember = "DD";
                 //ChartVSM.Series[0].ValueDataMembers.AddRange(new string[] { "VJ1" });
@@ -290,19 +290,22 @@ namespace FORM
             {
                 //grdView.ShowLoadingPanel();
                 //grdViewB1.ShowLoadingPanel();
-                DataTable dt = SMT_EMD_BTS_MONTHLY_SELECT("Q", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
+                DataTable dt = SMT_EMD_BTS_SELECT("Q", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
                 grdView.DataSource = dt;
                 formatband();
                 FormatGrid();
                 //FormatGridB();
                 //grdView.HideLoadingPanel();
                 //grdViewB1.HideLoadingPanel();
+             
             }
+          
             catch { }
             finally
             {
                 //BindingSummary();
             }
+
         }
 
         private void BindingSummary()
@@ -434,16 +437,16 @@ namespace FORM
                     ComVar.Var.callForm = "back";
                     break;
                 case "D":
-                    ComVar.Var.callForm = "1620";
+                    ComVar.Var.callForm = "1625";
                     break;
                 case "W":
-                    ComVar.Var.callForm = "1621";
+                    ComVar.Var.callForm = "1626";
                     break;
                 case "M":
-                    ComVar.Var.callForm = "1622";
+                    ComVar.Var.callForm = "1627";
                     break;
                 case "Y":
-                    ComVar.Var.callForm = "1623";
+                    ComVar.Var.callForm = "1628";
                     break;
             }
         }

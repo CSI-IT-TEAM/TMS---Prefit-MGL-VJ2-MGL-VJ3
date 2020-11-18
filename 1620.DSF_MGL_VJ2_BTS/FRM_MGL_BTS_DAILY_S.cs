@@ -11,66 +11,63 @@ using DevExpress.XtraCharts;
 
 namespace FORM
 {
-    public partial class FRM_MGL_BTS_WEEKLY : Form
+    public partial class FRM_MGL_BTS_DAILY_S : Form
     {
-        public FRM_MGL_BTS_WEEKLY()
+        public FRM_MGL_BTS_DAILY_S()
         {
             InitializeComponent();
-           
+
         }
 
         #region Global Variant
         int _iCountReload = 0;
         UC.NavBar nvFactory = new UC.NavBar("Factory");
         UC.NavBar nvBottom = new UC.NavBar("Bottom");
-        UC.UC_DWMY DWMY = new UC.UC_DWMY(2, "");
+        UC.UC_DWMY DWMY = new UC.UC_DWMY(1,"");
         Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
         #endregion
 
         #region Load/Visible Change/ Timer Date
         private void Form_Load(object sender, EventArgs e)
         {
-          //  pnHeader.Height = 75;
-            pnHeader.BackColor = Color.FromArgb(0, 176, 80);
             pnYMD.Controls.Add(DWMY);
-          
             DWMY.OnDWMYClick += DWMYClick;
-           
+
         }
-       
-        void OnUCMenuClick(string TitleCode,string MenuCode)
+
+        void OnUCMenuClick(string TitleCode, string MenuCode)
         {
             MessageBox.Show(TitleCode + " / " + MenuCode);
-
         }
         private void Form_VisibleChanged(object sender, EventArgs e)
         {
-
             if (this.Visible)
             {
-                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support BTS by Week" : ComVar.Var._strValue2 + " BTS by Week";
-                DWMY.YMD_Change(2,"");
-                _iCountReload = 40;
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support BTS by Day" : ComVar.Var._strValue2 + " BTS by Day";
+                DWMY.YMD_Change(1, "");
+                _iCountReload = 60;
                 tmrDate.Start();
-                    
             }
             else
                 tmrDate.Stop();
-           
         }
 
         private void tmrDate_Tick(object sender, EventArgs e)
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             _iCountReload++;
-
-            if (_iCountReload >= 40)
+            try
             {
-                BindingDataGrid();
-                BindingDataChart();
-                _iCountReload = 0;
-
+                if (_iCountReload >= 60)
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    BindingDataGrid();
+                    BindingDataChart();
+                    _iCountReload = 0;
+                    this.Cursor = Cursors.Default;
+                }
             }
+            catch { _iCountReload = 0; this.Cursor = Cursors.Default; }
 
         }
         #endregion
@@ -82,7 +79,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_WEEK_SUPPORT";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_DAY_SUPPORT";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -113,6 +110,35 @@ namespace FORM
                 return null;
             }
         }
+        //private DataTable SP_SMT_EMD_GRID_DATA_SELECT(string V_P_TYPE, string V_P_FAC)
+        //{
+        //    COM.OraDB MyOraDB = new COM.OraDB();
+        //    DataSet ds_ret;
+        //    try
+        //    {
+        //        string process_name = "MES.PKG_SMT_PROD_EMD.SP_SMT_EMD_GRID_DATA_SELECT";
+        //        MyOraDB.ReDim_Parameter(3);
+        //        MyOraDB.Process_Name = process_name;
+        //        MyOraDB.Parameter_Name[0] = "V_P_TYPE";
+        //        MyOraDB.Parameter_Name[1] = "V_P_FAC";
+        //        MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
+        //        MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+        //        MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+        //        MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+        //        MyOraDB.Parameter_Values[0] = V_P_TYPE;
+        //        MyOraDB.Parameter_Values[1] = V_P_FAC;
+        //        MyOraDB.Parameter_Values[2] = "";
+        //        MyOraDB.Add_Select_Parameter(true);
+        //        ds_ret = MyOraDB.Exe_Select_Procedure();
+
+        //        if (ds_ret == null) return null;
+        //        return ds_ret.Tables[process_name];
+        //    }
+        //    catch
+        //    {
+        //        return null;
+        //    }
+        //}
         #endregion
 
         #region Function
@@ -161,7 +187,7 @@ namespace FORM
             }
 
         }
-        #endregion 
+        #endregion
 
         #region Method
         private void formatband()
@@ -184,7 +210,7 @@ namespace FORM
 
                             if (double.TryParse(band.Name.Substring(4, 2), out num))
                             {
-                                
+
                                 for (int i = 0; i < dtsource.Rows.Count; i++)
                                 {
                                     if (band.Name.Contains(dtsource.Rows[i][0].ToString().Substring(dtsource.Rows[i][0].ToString().Length - 2)))
@@ -195,7 +221,6 @@ namespace FORM
                                             band.AppearanceHeader.BackColor = Color.Salmon;
                                             band.AppearanceHeader.BackColor2 = Color.Salmon;
                                             band.AppearanceHeader.ForeColor = Color.White;
-                                           
                                         }
                                         else
                                         {
@@ -204,9 +229,9 @@ namespace FORM
                                             band.AppearanceHeader.ForeColor = Color.Black;
                                         }
 
-                                        band.Caption = dtsource.Rows[i]["CAPTION"].ToString().Replace("_", "\n").Replace("CURR","");
+                                        band.Caption = dtsource.Rows[i]["CAPTION"].ToString().Replace("_", "\n").Replace("CURR", "");
                                         band.RowCount = 2;
-                                        band.AppearanceHeader.Font = new Font("Calibri", 18, FontStyle.Bold);
+                                        band.AppearanceHeader.Font = new Font("Calibri", 16, FontStyle.Bold);
                                         break;
                                     }
                                     if (i == dtsource.Rows.Count - 1)
@@ -229,32 +254,30 @@ namespace FORM
             }
         }
 
-        //private void BindingDataChart()
-        //{
-        //    try
-        //    {
-        //        DataTable dt = SMT_EMD_BTS_MONTHLY_SELECT("C", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
-        //        ChartVSM.DataSource = dt;
-        //        ChartVSM.Series[0].ArgumentDataMember = "DD";
-        //        ChartVSM.Series[0].ValueDataMembers.AddRange(new string[] { "VJ1" });
-        //        ChartVSM.Series[1].ArgumentDataMember = "DD";
-        //        ChartVSM.Series[1].ValueDataMembers.AddRange(new string[] { "VJ2" });
-        //    }
-        //    catch { }
-        //}
-
         private void BindingDataChart()
         {
             try
             {
                 DataTable dt = SMT_EMD_BTS_MONTHLY_SELECT("C", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
+                //ChartVSM.DataSource = dt;
+                //ChartVSM.Series[0].ArgumentDataMember = "DD";
+                //ChartVSM.Series[0].ValueDataMembers.AddRange(new string[] { "VJ1" });
+                //ChartVSM.Series[1].ArgumentDataMember = "DD";
+                //ChartVSM.Series[1].ValueDataMembers.AddRange(new string[] { "VJ2" });
+                DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
                 ChartVSM.DataSource = dt;
                 ChartVSM.SeriesDataMember = "DIV";
                 ChartVSM.SeriesTemplate.ArgumentDataMember = "YMD";
                 ChartVSM.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "BTS" });
                 ChartVSM.SeriesTemplate.View = lineSeriesView1;
+             
                 ChartVSM.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+                ChartVSM.Titles.Clear();
+                chartTitle1.Font = new System.Drawing.Font("Tahoma", 14F);
+                chartTitle1.Text = ComVar.Var._strValue2;// + " Support";
+                this.ChartVSM.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
                 lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
 
             }
@@ -268,7 +291,7 @@ namespace FORM
                 //grdView.ShowLoadingPanel();
                 //grdViewB1.ShowLoadingPanel();
                 DataTable dt = SMT_EMD_BTS_MONTHLY_SELECT("Q", uc_month.GetValue().ToString(), ComVar.Var._strValue1, "");
-                grdView.DataSource =  dt;
+                grdView.DataSource = dt;
                 formatband();
                 FormatGrid();
                 //FormatGridB();
@@ -277,13 +300,13 @@ namespace FORM
             }
             catch { }
             finally
-            { 
-            //BindingSummary();
+            {
+                //BindingSummary();
             }
         }
 
         private void BindingSummary()
-        { 
+        {
             //try
             //{ 
             //DataTable dt = SP_SMT_EMD_GRID_DATA_SELECT("ALL", "VJ");
@@ -430,7 +453,7 @@ namespace FORM
             Control cnt = (Control)sender;
             ComVar.Var.callForm = cnt.Tag == null ? "" : cnt.Tag.ToString();
         }
-        
+
         #endregion
 
         private void lblDate_DoubleClick(object sender, EventArgs e)
@@ -479,6 +502,11 @@ namespace FORM
             {
                 e.Appearance.BackColor = Color.Navy; e.Appearance.BackColor2 = Color.Navy; e.Appearance.ForeColor = Color.White;
             }
+            if (e.CellValue.ToString().Contains("BLACK"))
+            {
+                e.Appearance.BackColor = Color.Black; e.Appearance.BackColor2 = Color.Black; e.Appearance.ForeColor = Color.White;
+            }
+
         }
 
     }

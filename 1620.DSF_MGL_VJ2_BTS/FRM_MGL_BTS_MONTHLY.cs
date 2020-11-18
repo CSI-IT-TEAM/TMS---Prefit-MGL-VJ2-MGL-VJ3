@@ -91,7 +91,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_MONTH_SUPPORT";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_BTS_MONTH";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
