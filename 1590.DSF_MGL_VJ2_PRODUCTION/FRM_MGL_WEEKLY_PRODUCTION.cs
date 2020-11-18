@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.OracleClient;
 using DevExpress.XtraCharts;
+using DevExpress.XtraGauges.Core.Model;
 
 namespace FORM
 {
@@ -44,6 +45,7 @@ namespace FORM
                     CreateChart(chartControl5, dt.Select(" OP_CD = 'FGA' ").CopyToDataTable(), "FGA");
                     
                 }
+
                 if (dt1 != null && dt1.Rows.Count > 0)
                 {
                     BindingGauges(circularGauge, Convert.ToDouble(dt1.Rows[0]["RATE"]), Convert.ToInt32(dt1.Rows[0]["V_MIN"]), Convert.ToInt32(dt1.Rows[0]["V_MAX"]), Convert.ToDouble(dt1.Rows[0]["R_MIN"]), Convert.ToDouble(dt1.Rows[0]["R_MAX"]));
@@ -54,6 +56,21 @@ namespace FORM
                     lblProd.Text = "Prod: " + Convert.ToDouble(dt1.Rows[0]["PROD"]).ToString("#,#") + "Prs";
                     lblRate.Text = "Rate: " + Convert.ToDouble(dt1.Rows[0]["RATE"]).ToString("#,#.#") + "%";
                     labelRate.Text = Convert.ToDouble(dt1.Rows[0]["RATE"]).ToString("#,0.0") + "%";
+
+                    //arcScale.Ranges[0].StartValue = 90;
+                    //arcScale.Ranges[0].EndValue = arcScale.Ranges[1].StartValue = Convert.ToSingle(dt1.Rows[0]["R_MIN"]); ;
+                    //arcScale.Ranges[1].EndValue = arcScale.Ranges[2].StartValue = Convert.ToSingle(dt1.Rows[0]["R_MAX"]); ;
+                    //arcScale.Ranges[2].EndValue = 100;
+                    //arcScale.EnableAnimation = true;
+                    //arcScale.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseInOut;
+                    //arcScale.EasingFunction = new BackEase();
+                    //double num = Convert.ToDouble(dt1.Rows[0]["RATE"]);
+                    //arcScale.Value = (float)num;
+                    //lblRed.Text = "<" + dt1.Rows[0]["R_MIN"].ToString();
+                    //lblYellow.Text = dt1.Rows[0]["RMIN"].ToString() + " ~ " + dt1.Rows[0]["R_MAX"].ToString();
+                    //lblGreen.Text = ">" + dt1.Rows[0]["R_MAX"].ToString();
+                    //lblTitleProd.Text = "Weekly Assembly Production Average: " + num.ToString() + "%";
+
                 }
                 else
                 {
@@ -366,7 +383,7 @@ namespace FORM
             if (this.Visible)
             {
                 uc.YMD_Change(2, "");
-                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Month" : ComVar.Var._strValue2 + " Production Status by Month";
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Week" : ComVar.Var._strValue2 + " Production Status by Week";
                 int_count = 19;
                 line = ComVar.Var._strValue1;
                 timer2.Start();
