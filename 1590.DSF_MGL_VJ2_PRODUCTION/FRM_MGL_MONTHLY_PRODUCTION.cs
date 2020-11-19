@@ -531,31 +531,34 @@ namespace FORM
 
         private void gvwView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
-            if(e.RowHandle % 2 == 0 && e.Column.ColumnHandle > 1)
+            if (e.Column.ColumnHandle > 1)
             {
-                e.Appearance.BackColor = Color.White;
-            }
-            else
-            {
-                e.Appearance.BackColor = Color.LightCyan;
-            }
-            if (e.CellValue == DBNull.Value) return;
-            if (e.Column.FieldName.Equals("RATE") && e.CellValue != DBNull.Value)
-            {
-                if (double.Parse(e.CellValue.ToString()) > 98)
+                if (e.RowHandle % 2 == 0 && e.Column.ColumnHandle > 1)
                 {
-                    e.Appearance.BackColor = Color.Green;
-                    e.Appearance.ForeColor = Color.White;
-                }
-                else if (double.Parse(e.CellValue.ToString()) < 95)
-                {
-                    e.Appearance.BackColor = Color.Red;
-                    e.Appearance.ForeColor = Color.White;
+                    e.Appearance.BackColor = Color.White;
                 }
                 else
                 {
-                    e.Appearance.BackColor = Color.Yellow;
-                    e.Appearance.ForeColor = Color.Black;
+                    e.Appearance.BackColor = Color.LightCyan;
+                }
+                if (e.CellValue == DBNull.Value) return;
+                if (e.Column.FieldName.Equals("RATE") && e.CellValue != DBNull.Value)
+                {
+                    if (double.Parse(e.CellValue.ToString()) > 98)
+                    {
+                        e.Appearance.BackColor = Color.Green;
+                        e.Appearance.ForeColor = Color.White;
+                    }
+                    else if (double.Parse(e.CellValue.ToString()) < 95)
+                    {
+                        e.Appearance.BackColor = Color.Red;
+                        e.Appearance.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        e.Appearance.BackColor = Color.Yellow;
+                        e.Appearance.ForeColor = Color.Black;
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FRM_SMT_YEAR_PROD_V2
+    partial class FRM_MGL_YEARLY_PRODUCTION
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_SMT_YEAR_PROD_V2));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -65,15 +64,7 @@
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lbltitle = new System.Windows.Forms.Label();
             this.splMain = new System.Windows.Forms.SplitContainer();
-            this.axfpSpread = new AxFPSpreadADO.AxfpSpread();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
@@ -95,11 +86,12 @@
             this.cGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
             this.circularGauge = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
             this.uc_year = new FORM.UC.UC_YEAR_SELECTION();
+            this.pnYMD = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lbltitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
-            this.splMain.Panel1.SuspendLayout();
             this.splMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axfpSpread)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -145,13 +137,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.simpleButton3);
-            this.panel1.Controls.Add(this.simpleButton2);
-            this.panel1.Controls.Add(this.simpleButton4);
-            this.panel1.Controls.Add(this.simpleButton1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pnYMD);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lbltitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -162,140 +150,15 @@
             this.panel1.Size = new System.Drawing.Size(1920, 109);
             this.panel1.TabIndex = 2;
             // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(1458, 6);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton3.TabIndex = 54;
-            this.simpleButton3.Text = "Month";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(1277, 58);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton2.TabIndex = 53;
-            this.simpleButton2.Text = "Week";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton4.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton4.Appearance.Options.UseBackColor = true;
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton4.Enabled = false;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(1458, 58);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton4.TabIndex = 52;
-            this.simpleButton4.Text = "Year";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(1277, 7);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton1.TabIndex = 52;
-            this.simpleButton1.Text = "Day";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1163, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 101);
-            this.button1.TabIndex = 51;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // lblDate
-            // 
-            this.lblDate.BackColor = System.Drawing.Color.DarkOrange;
-            this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblDate.Location = new System.Drawing.Point(1639, 0);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(281, 109);
-            this.lblDate.TabIndex = 48;
-            this.lblDate.Text = "lblDate";
-            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbltitle
-            // 
-            this.lbltitle.BackColor = System.Drawing.Color.DarkOrange;
-            this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbltitle.Font = new System.Drawing.Font("Calibri", 62.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.ForeColor = System.Drawing.Color.White;
-            this.lbltitle.Location = new System.Drawing.Point(0, 0);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(1920, 109);
-            this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Production Status by Year";
-            this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbltitle.Click += new System.EventHandler(this.label1_Click);
-            // 
             // splMain
             // 
             this.splMain.Location = new System.Drawing.Point(0, 168);
             this.splMain.Name = "splMain";
             this.splMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splMain.Panel1
-            // 
-            this.splMain.Panel1.Controls.Add(this.axfpSpread);
             this.splMain.Panel2Collapsed = true;
             this.splMain.Size = new System.Drawing.Size(1920, 301);
             this.splMain.SplitterDistance = 110;
             this.splMain.TabIndex = 3;
-            // 
-            // axfpSpread
-            // 
-            this.axfpSpread.DataSource = null;
-            this.axfpSpread.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axfpSpread.Location = new System.Drawing.Point(0, 0);
-            this.axfpSpread.Name = "axfpSpread";
-            this.axfpSpread.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpSpread.OcxState")));
-            this.axfpSpread.Size = new System.Drawing.Size(1920, 301);
-            this.axfpSpread.TabIndex = 0;
             // 
             // timer2
             // 
@@ -786,7 +649,42 @@
             this.uc_year.TabIndex = 53;
             this.uc_year.ValueChangeEvent += new System.EventHandler(this.uc_year_ValueChangeEvent);
             // 
-            // FRM_SMT_YEAR_PROD_V2
+            // pnYMD
+            // 
+            this.pnYMD.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pnYMD.Location = new System.Drawing.Point(1183, 3);
+            this.pnYMD.Name = "pnYMD";
+            this.pnYMD.Size = new System.Drawing.Size(450, 96);
+            this.pnYMD.TabIndex = 58;
+            // 
+            // lblDate
+            // 
+            this.lblDate.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDate.Location = new System.Drawing.Point(1639, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(281, 109);
+            this.lblDate.TabIndex = 57;
+            this.lblDate.Text = "lblDate";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbltitle
+            // 
+            this.lbltitle.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbltitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold);
+            this.lbltitle.ForeColor = System.Drawing.Color.White;
+            this.lbltitle.Location = new System.Drawing.Point(0, 0);
+            this.lbltitle.Name = "lbltitle";
+            this.lbltitle.Size = new System.Drawing.Size(1920, 109);
+            this.lbltitle.TabIndex = 56;
+            this.lbltitle.Text = "Production Status by Month";
+            this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FRM_MGL_YEARLY_PRODUCTION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -796,15 +694,13 @@
             this.Controls.Add(this.splMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_SMT_YEAR_PROD_V2";
+            this.Name = "FRM_MGL_YEARLY_PRODUCTION";
             this.Text = "FRM_SMT_MON_PROD_STATUS";
             this.Load += new System.EventHandler(this.FRM_SMT_YEAR_PROD_V2_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_YEAR_PROD_V2_VisibleChanged);
             this.panel1.ResumeLayout(false);
-            this.splMain.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).EndInit();
             this.splMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axfpSpread)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
@@ -854,15 +750,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.SplitContainer splMain;
-        private AxFPSpreadADO.AxfpSpread axfpSpread;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraCharts.ChartControl chartControl3;
         private DevExpress.XtraCharts.ChartControl chartControl2;
@@ -882,7 +771,9 @@
         private System.Windows.Forms.Label lblY;
         private System.Windows.Forms.Label lblG;
         private System.Windows.Forms.Label lblR;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private UC.UC_YEAR_SELECTION uc_year;
+        private System.Windows.Forms.Panel pnYMD;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lbltitle;
     }
 }
