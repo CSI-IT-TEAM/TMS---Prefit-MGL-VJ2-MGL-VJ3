@@ -268,9 +268,10 @@ namespace MAIN
                 }
 
                 //Show form call and then hide form current
-               // ctr.Hide();
-               //AnimateWindow(ctr.Handle, 500, AW_SLIDE | 0x8);
-                ctr.Show();
+                // ctr.Hide();
+                //AnimateWindow(ctr.Handle, 500, AW_SLIDE | 0x8);
+                if (ctr != null)
+                    ctr.Show();
                
                 pnMain.Controls.Find(ComVar.Var._Frm_Curr.ToUpper(), false).FirstOrDefault().Hide();
 
