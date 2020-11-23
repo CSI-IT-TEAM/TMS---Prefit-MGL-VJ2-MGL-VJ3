@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FORM</RootNamespace>
-    <AssemblyName>DSF_MGL_VJ3_HR</AssemblyName>
+    <AssemblyName>DSF_MGL_VJ2_HR</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

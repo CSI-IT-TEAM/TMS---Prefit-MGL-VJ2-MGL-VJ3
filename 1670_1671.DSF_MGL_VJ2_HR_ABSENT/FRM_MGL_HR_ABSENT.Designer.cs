@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_HR_ABSENT));
             DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             DevExpress.XtraCharts.PieFlyInAnimation pieFlyInAnimation1 = new DevExpress.XtraCharts.PieFlyInAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_HR_ABSENT));
             this.pnHeader = new System.Windows.Forms.Panel();
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
-            this.axfpAbsent = new AxFPSpreadADO.AxfpSpread();
             this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.arcScaleComponent2 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.cGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
             this.arcScaleBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent();
             this.arcScaleComponentRub = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
@@ -57,12 +55,12 @@
             this.lblAbenst2 = new System.Windows.Forms.Label();
             this.lblAbenst1 = new System.Windows.Forms.Label();
             this.lblTotAbsent = new System.Windows.Forms.Label();
-            this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
             this.uc_year = new FORM.UC.UC_YEAR_SELECTION();
+            this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
+            this.cGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.axfpAbsent = new AxFPSpreadADO.AxfpSpread();
             this.pnHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axfpAbsent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponentRub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
@@ -75,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axfpAbsent)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHeader
@@ -127,15 +127,6 @@
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Human Absenteeism by Month";
             // 
-            // axfpAbsent
-            // 
-            this.axfpAbsent.DataSource = null;
-            this.axfpAbsent.Location = new System.Drawing.Point(5, 170);
-            this.axfpAbsent.Name = "axfpAbsent";
-            this.axfpAbsent.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpAbsent.OcxState")));
-            this.axfpAbsent.Size = new System.Drawing.Size(1914, 473);
-            this.axfpAbsent.TabIndex = 0;
-            // 
             // tmrDate
             // 
             this.tmrDate.Interval = 1000;
@@ -176,23 +167,6 @@
             this.gaugeControl1.Name = "gaugeControl1";
             this.gaugeControl1.Size = new System.Drawing.Size(929, 380);
             this.gaugeControl1.TabIndex = 18;
-            // 
-            // cGauge1
-            // 
-            this.cGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
-            this.arcScaleBackgroundLayerComponent1});
-            this.cGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 916, 370);
-            this.cGauge1.Labels.AddRange(new DevExpress.XtraGauges.Win.Base.LabelComponent[] {
-            this.labelComponent1,
-            this.lblRubValueG,
-            this.lblTitleGauges});
-            this.cGauge1.Name = "cGauge1";
-            this.cGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
-            this.arcScaleNeedleComponent1});
-            this.cGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
-            this.arcScaleComponentRub});
-            this.cGauge1.SpindleCaps.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent[] {
-            this.arcScaleSpindleCapComponent1});
             // 
             // arcScaleBackgroundLayerComponent1
             // 
@@ -374,6 +348,14 @@
             this.lblTotAbsent.Text = "Total Absent";
             this.lblTotAbsent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // uc_year
+            // 
+            this.uc_year.AutoSize = true;
+            this.uc_year.Location = new System.Drawing.Point(10, 121);
+            this.uc_year.Name = "uc_year";
+            this.uc_year.Size = new System.Drawing.Size(229, 47);
+            this.uc_year.TabIndex = 60;
+            // 
             // uc_month
             // 
             this.uc_month.AutoSize = true;
@@ -383,20 +365,38 @@
             this.uc_month.TabIndex = 59;
             this.uc_month.ValueChangeEvent += new System.EventHandler(this.uc_month_ValueChangeEvent);
             // 
-            // uc_year
+            // cGauge1
             // 
-            this.uc_year.AutoSize = true;
-            this.uc_year.Location = new System.Drawing.Point(10, 121);
-            this.uc_year.Name = "uc_year";
-            this.uc_year.Size = new System.Drawing.Size(229, 47);
-            this.uc_year.TabIndex = 60;
+            this.cGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
+            this.arcScaleBackgroundLayerComponent1});
+            this.cGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 916, 370);
+            this.cGauge1.Labels.AddRange(new DevExpress.XtraGauges.Win.Base.LabelComponent[] {
+            this.labelComponent1,
+            this.lblRubValueG,
+            this.lblTitleGauges});
+            this.cGauge1.Name = "cGauge1";
+            this.cGauge1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
+            this.arcScaleNeedleComponent1});
+            this.cGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
+            this.arcScaleComponentRub});
+            this.cGauge1.SpindleCaps.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent[] {
+            this.arcScaleSpindleCapComponent1});
+            // 
+            // axfpAbsent
+            // 
+            this.axfpAbsent.DataSource = null;
+            this.axfpAbsent.Location = new System.Drawing.Point(5, 170);
+            this.axfpAbsent.Name = "axfpAbsent";
+            this.axfpAbsent.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpAbsent.OcxState")));
+            this.axfpAbsent.Size = new System.Drawing.Size(1914, 473);
+            this.axfpAbsent.TabIndex = 0;
             // 
             // FRM_MGL_HR_ABSENT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 1062);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.uc_year);
             this.Controls.Add(this.uc_month);
             this.Controls.Add(this.lblTotAbsent);
@@ -412,9 +412,7 @@
             this.Load += new System.EventHandler(this.FRM_SMT_HR_ABSENT_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_HR_ABSENT_VisibleChanged);
             this.pnHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axfpAbsent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponentRub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
@@ -427,6 +425,8 @@
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHrCmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axfpAbsent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

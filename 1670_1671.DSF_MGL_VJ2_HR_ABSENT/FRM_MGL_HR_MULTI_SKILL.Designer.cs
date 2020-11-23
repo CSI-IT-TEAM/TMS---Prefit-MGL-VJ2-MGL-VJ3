@@ -323,7 +323,7 @@
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
             // 
-            // FORM_SMT_MULTI_SKILL_RATIO
+            // FRM_MGL_HR_MULTI_SKILL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

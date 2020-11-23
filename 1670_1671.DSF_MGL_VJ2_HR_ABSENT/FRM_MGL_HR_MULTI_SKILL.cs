@@ -148,7 +148,7 @@ namespace FORM
             try
             {
                // ARG_LINE = "008";
-                string process_name = "MES.PKG_SMT_PHUOC.SP_SMT_MULTI_SKILL_V2";
+                string process_name = "MES.PKG_SMT_B_HR_STATUS.SEL_MGL_VJ2_MULTI_SKILL";
 
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
@@ -165,7 +165,7 @@ namespace FORM
                 MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[4] = (int)OracleType.Cursor;
 
-                MyOraDB.Parameter_Values[0] = "E";
+                MyOraDB.Parameter_Values[0] = "Q";
                 MyOraDB.Parameter_Values[1] = ARG_PROCESS;
                 MyOraDB.Parameter_Values[2] = ComVar.Var._strValue1;
                 MyOraDB.Parameter_Values[3] = "001";
@@ -664,12 +664,10 @@ namespace FORM
             Line = ComVar.Var._strValue1;
             Mline = ComVar.Var._strValue2;
             Lang = ComVar.Var._strValue3;
-            if (Line == "099" || Line == "001" || Line == "002" || Line == "003" || Line == "004" || Line == "005" || Line == "006")
+            if (Line == "099" || Line == "000" || Line == "TOTAL1")
             {
-                Cutting.PageVisible = false;
-                Nosew.PageVisible = false;
-                HF.PageVisible = false;
-                Stitching.PageVisible = false;
+                Assembly.PageVisible = false;
+                Stockfit.PageVisible = false;
                
             }
             if (ComVar.Var._strValue1 == "Vn")

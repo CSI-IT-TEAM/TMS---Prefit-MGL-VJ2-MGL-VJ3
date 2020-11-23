@@ -93,6 +93,11 @@ namespace FORM
             {
                 if (argDt == null || argDt.Rows.Count == 0) return;
                 axfpAbsent.Visible = false;
+                for (int i = 1; i <= axfpAbsent.MaxRows; i++)
+                {
+                    axfpAbsent.Row = i;
+                    axfpAbsent.RowHidden = false;
+                }
                 int iMaxLine;
                 int.TryParse(argDt.Compute("max([RN])", "").ToString(), out iMaxLine);
                 
@@ -111,10 +116,17 @@ namespace FORM
                     setDataGrid(dt, i);
                 }
 
-                
 
 
-                axfpAbsent.MaxRows = 2 + (6 * iMaxLine);
+
+                //axfpAbsent.MaxRows = 2 + (6 * iMaxLine);
+
+                for (int i = 2 + (6 * iMaxLine) + 1; i <= axfpAbsent.MaxRows; i++)
+                {
+                    axfpAbsent.Row = i;
+                    axfpAbsent.RowHidden = true;
+                }
+
                 //merge Row Month
                 axfpAbsent.AddCellSpan(4, 1, iNumCol - 1, 1);
 
@@ -343,7 +355,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_B_HR_STATUS.SEL_MGL_VJ3_HR_ABSENT";
+                string process_name = "MES.PKG_SMT_B_HR_STATUS.SEL_MGL_VJ2_HR_ABSENT";
 
                 MyOraDB.ReDim_Parameter(6);
                 MyOraDB.Process_Name = process_name;
