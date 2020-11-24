@@ -195,7 +195,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
-            ComVar.Var.callForm = "538";//DSF plant b
+            //ComVar.Var.callForm = "538";//DSF plant b
         }
 
         private void lblDate_DoubleClick(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
-            ComVar.Var.callForm = "375";
+           // ComVar.Var.callForm = "375";
         }
 
         private void FRM_HOME_VisibleChanged(object sender, EventArgs e)
@@ -226,14 +226,11 @@ namespace FORM
                 tmrDate.Stop();
         }
 
-        private void btnUpstream_Click_1(object sender, EventArgs e)
+        private void btnPrefit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnDSF_Click_1(object sender, EventArgs e)
-        {
-
+            ComVar.Var._IsBack = true;
+            ComVar.Var._Value = "back";
+            ComVar.Var.callForm = "375";
         }
     }
 }

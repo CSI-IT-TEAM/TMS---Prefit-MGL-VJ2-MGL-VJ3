@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B523F981-EC13-47D1-B1D2-5DAFB3893EDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FORM</RootNamespace>
+    <AssemblyName>DSF_MGL_VJ2_PREFIT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAIN\bin\Debug\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.FPSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.FPUSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPUSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="COM, Version=1.0.6972.20751, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ComVar\bin\Debug\COM.dll</HintPath>
+    </Reference>
+    <Reference Include="ComVar, Version=1.0.6984.18247, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ComVar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Data.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Printing.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Utils.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraBars.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraEditors.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGauges.v17.1.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraNavBar.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraPrinting.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FPSpreadADO">
+      <HintPath>..\MAIN\bin\Debug\Interop.FPSpreadADO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.FPUSpreadADO">
+      <HintPath>..\MAIN\bin\Debug\Interop.FPUSpreadADO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\msdatasrc.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir_cp, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\netchartdir_cp.dll</HintPath>
+    </Reference>
+    <Reference Include="ShapeControl, Version=1.0.6374.27716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\ShapeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellColorHelper.cs" />
+    <Compile Include="ClassLib\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\A1Panel.designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLib\A1PanelGraphics.cs" />
+    <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="ClassLib\Database.cs" />
+    <Compile Include="ClassLib\Globals.cs" />
+    <Compile Include="ClassLib\GroupboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\LabelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_PREFIT_TALLYSHEET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_PREFIT_TALLYSHEET.Designer.cs">
+      <DependentUpon>FRM_MGL_PREFIT_TALLYSHEET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_msg_confirm_ups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_msg_confirm_ups.Designer.cs">
+      <DependentUpon>frm_msg_confirm_ups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_msg_detail_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_msg_detail_set.Designer.cs">
+      <DependentUpon>frm_msg_detail_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_STITCHING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_STITCHING.Designer.cs">
+      <DependentUpon>FRM_STITCHING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\MyCellMergeHelper.cs" />
+    <Compile Include="Helper\MyGridPainter.cs" />
+    <Compile Include="Helper\MyMergedCell.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\NavBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\NavBar.Designer.cs">
+      <DependentUpon>NavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.Designer.cs">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_GAUGE_GothicMat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_GAUGE_GothicMat.Designer.cs">
+      <DependentUpon>UC_GAUGE_GothicMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.Designer.cs">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_TOPO_CHART.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_TOPO_CHART.Designer.cs">
+      <DependentUpon>UC_TOPO_CHART.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.Designer.cs">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FRM_MGL_PREFIT_TALLYSHEET.resx">
+      <DependentUpon>FRM_MGL_PREFIT_TALLYSHEET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_msg_confirm_ups.resx">
+      <DependentUpon>frm_msg_confirm_ups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_msg_detail_set.resx">
+      <DependentUpon>frm_msg_detail_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_STITCHING.resx">
+      <DependentUpon>FRM_STITCHING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\NavBar.resx">
+      <DependentUpon>NavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DWMY.resx">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_GAUGE_GothicMat.resx">
+      <DependentUpon>UC_GAUGE_GothicMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MONTH_SELECTION.resx">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_TOPO_CHART.resx">
+      <DependentUpon>UC_TOPO_CHART.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_YEAR_SELECTION.resx">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3.MGL_F3\2.MGL_FTY3.csproj">
+      <Project>{44F6A7D0-0FE0-4D01-8C88-7F12CBBC5832}</Project>
+      <Name>2.MGL_FTY3</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANDON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invtorySub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leadtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiskill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NPI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PFC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodresult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prodtivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qual_Rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoeProd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnImageHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_Confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E_OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VieSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer_icon_up_2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
