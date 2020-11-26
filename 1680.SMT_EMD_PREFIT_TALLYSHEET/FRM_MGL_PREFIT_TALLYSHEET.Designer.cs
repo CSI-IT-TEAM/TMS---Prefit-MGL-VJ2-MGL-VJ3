@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_PREFIT_TALLYSHEET));
             this.pnTop = new DevExpress.XtraEditors.PanelControl();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +41,7 @@
             this.btnVN_EN = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.tmr = new System.Windows.Forms.Timer();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.navFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -69,7 +68,7 @@
             // 
             // pnTop
             // 
-            this.pnTop.Appearance.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnTop.Appearance.BackColor = System.Drawing.Color.DarkTurquoise;
             this.pnTop.Appearance.Options.UseBackColor = true;
             this.pnTop.Controls.Add(this.button1);
             this.pnTop.Controls.Add(this.pnProcess);
@@ -85,7 +84,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
@@ -102,7 +101,7 @@
             // 
             // pnProcess
             // 
-            this.pnProcess.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnProcess.BackColor = System.Drawing.Color.DarkTurquoise;
             this.pnProcess.Controls.Add(this.btnCutting);
             this.pnProcess.Controls.Add(this.btnNosew);
             this.pnProcess.Controls.Add(this.btnHF);
@@ -226,7 +225,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblDate.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.White;
@@ -254,7 +253,7 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTitle.Font = new System.Drawing.Font("Calibri", 50F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Snow;
@@ -268,7 +267,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.LimeGreen;
+            this.label1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Snow;
@@ -390,7 +389,7 @@
             this.pnPage5.Size = new System.Drawing.Size(1920, 970);
             this.pnPage5.TabIndex = 1;
             // 
-            // FRM_PREFIT_TALLYSHEET
+            // FRM_MGL_PREFIT_TALLYSHEET
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -398,7 +397,7 @@
             this.Controls.Add(this.navFrame);
             this.Controls.Add(this.pnTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_PREFIT_TALLYSHEET";
+            this.Name = "FRM_MGL_PREFIT_TALLYSHEET";
             this.Text = "FRM_HOME";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_HOME_Load);

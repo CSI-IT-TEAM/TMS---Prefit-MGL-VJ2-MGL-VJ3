@@ -275,7 +275,9 @@ namespace FORM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ComVar.Var.callForm = "1";
+            ComVar.Var.callForm = "back";
+            //ComVar.Var._Value = "back";
         }
+
     }
 }
