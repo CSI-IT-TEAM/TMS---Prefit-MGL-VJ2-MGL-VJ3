@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.tblContent = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.btnPrefit = new System.Windows.Forms.Button();
             this.btnUpstream = new System.Windows.Forms.Button();
             this.btnDSF = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +76,7 @@
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnHeader.Controls.Add(this.btnPrefit);
             this.pnHeader.Controls.Add(this.btnUpstream);
             this.pnHeader.Controls.Add(this.btnDSF);
             this.pnHeader.Controls.Add(this.lblDate);
@@ -83,6 +86,24 @@
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(1898, 97);
             this.pnHeader.TabIndex = 0;
+            // 
+            // btnPrefit
+            // 
+            this.btnPrefit.BackgroundImage = global::FORM.Properties.Resources.FtyButton;
+            this.btnPrefit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrefit.FlatAppearance.BorderSize = 0;
+            this.btnPrefit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPrefit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPrefit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrefit.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrefit.ForeColor = System.Drawing.Color.White;
+            this.btnPrefit.Location = new System.Drawing.Point(1293, 0);
+            this.btnPrefit.Name = "btnPrefit";
+            this.btnPrefit.Size = new System.Drawing.Size(101, 99);
+            this.btnPrefit.TabIndex = 40;
+            this.btnPrefit.Text = "Prefit Tally Sheet";
+            this.btnPrefit.UseVisualStyleBackColor = true;
+            this.btnPrefit.Click += new System.EventHandler(this.btnPrefit_Click);
             // 
             // btnUpstream
             // 
@@ -100,7 +121,7 @@
             this.btnUpstream.TabIndex = 38;
             this.btnUpstream.Text = "DSF \r\nPlant B";
             this.btnUpstream.UseVisualStyleBackColor = true;
-            this.btnUpstream.Click += new System.EventHandler(this.btnUpstream_Click_1);
+            this.btnUpstream.Click += new System.EventHandler(this.btnUpstream_Click);
             // 
             // btnDSF
             // 
@@ -118,7 +139,7 @@
             this.btnDSF.TabIndex = 39;
             this.btnDSF.Text = "DSF\r\nPlant E";
             this.btnDSF.UseVisualStyleBackColor = true;
-            this.btnDSF.Click += new System.EventHandler(this.btnDSF_Click_1);
+            this.btnDSF.Click += new System.EventHandler(this.btnDSF_Click);
             // 
             // lblDate
             // 
@@ -188,5 +209,6 @@
         private System.Windows.Forms.TableLayoutPanel tblContent;
         private System.Windows.Forms.Button btnUpstream;
         private System.Windows.Forms.Button btnDSF;
+        private System.Windows.Forms.Button btnPrefit;
     }
 }

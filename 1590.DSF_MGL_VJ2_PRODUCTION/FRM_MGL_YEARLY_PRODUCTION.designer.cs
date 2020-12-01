@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FRM_SMT_YEAR_PROD_V2
+    partial class FRM_MGL_YEARLY_PRODUCTION
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_SMT_YEAR_PROD_V2));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -65,15 +64,48 @@
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
             this.splMain = new System.Windows.Forms.SplitContainer();
-            this.axfpSpread = new AxFPSpreadADO.AxfpSpread();
+            this.grdView = new DevExpress.XtraGrid.GridControl();
+            this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.bandDate = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.OP_CD = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumn1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.PROCESS = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandYear = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.band01 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL01 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band02 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL02 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band03 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL03 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band04 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL04 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band05 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL05 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band06 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL06 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band07 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL07 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band08 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL08 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band09 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL09 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band10 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL10 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.band12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COL12 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.TARGET = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandAVG = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.COLAVG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.RATE = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
@@ -99,7 +131,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
             this.splMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axfpSpread)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -145,13 +178,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.simpleButton3);
-            this.panel1.Controls.Add(this.simpleButton2);
-            this.panel1.Controls.Add(this.simpleButton4);
-            this.panel1.Controls.Add(this.simpleButton1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pnYMD);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lbltitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -162,92 +191,17 @@
             this.panel1.Size = new System.Drawing.Size(1920, 109);
             this.panel1.TabIndex = 2;
             // 
-            // simpleButton3
+            // pnYMD
             // 
-            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton3.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton3.Appearance.Options.UseBackColor = true;
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(1458, 6);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton3.TabIndex = 54;
-            this.simpleButton3.Text = "Month";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(1277, 58);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton2.TabIndex = 53;
-            this.simpleButton2.Text = "Week";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton4.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton4.Appearance.Options.UseBackColor = true;
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton4.Enabled = false;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(1458, 58);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton4.TabIndex = 52;
-            this.simpleButton4.Text = "Year";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(1277, 7);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(175, 48);
-            this.simpleButton1.TabIndex = 52;
-            this.simpleButton1.Text = "Day";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1163, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 101);
-            this.button1.TabIndex = 51;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnBack_Click);
+            this.pnYMD.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pnYMD.Location = new System.Drawing.Point(1183, 3);
+            this.pnYMD.Name = "pnYMD";
+            this.pnYMD.Size = new System.Drawing.Size(450, 96);
+            this.pnYMD.TabIndex = 58;
             // 
             // lblDate
             // 
-            this.lblDate.BackColor = System.Drawing.Color.DarkOrange;
+            this.lblDate.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
@@ -255,23 +209,22 @@
             this.lblDate.Location = new System.Drawing.Point(1639, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(281, 109);
-            this.lblDate.TabIndex = 48;
+            this.lblDate.TabIndex = 57;
             this.lblDate.Text = "lblDate";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbltitle
             // 
-            this.lbltitle.BackColor = System.Drawing.Color.DarkOrange;
+            this.lbltitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lbltitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbltitle.Font = new System.Drawing.Font("Calibri", 62.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold);
             this.lbltitle.ForeColor = System.Drawing.Color.White;
             this.lbltitle.Location = new System.Drawing.Point(0, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(1920, 109);
-            this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "Production Status by Year";
+            this.lbltitle.TabIndex = 56;
+            this.lbltitle.Text = "Production Status by Month";
             this.lbltitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbltitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // splMain
             // 
@@ -281,21 +234,496 @@
             // 
             // splMain.Panel1
             // 
-            this.splMain.Panel1.Controls.Add(this.axfpSpread);
+            this.splMain.Panel1.Controls.Add(this.grdView);
             this.splMain.Panel2Collapsed = true;
             this.splMain.Size = new System.Drawing.Size(1920, 301);
             this.splMain.SplitterDistance = 110;
             this.splMain.TabIndex = 3;
             // 
-            // axfpSpread
+            // grdView
             // 
-            this.axfpSpread.DataSource = null;
-            this.axfpSpread.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axfpSpread.Location = new System.Drawing.Point(0, 0);
-            this.axfpSpread.Name = "axfpSpread";
-            this.axfpSpread.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpSpread.OcxState")));
-            this.axfpSpread.Size = new System.Drawing.Size(1920, 301);
-            this.axfpSpread.TabIndex = 0;
+            this.grdView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdView.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdView.Location = new System.Drawing.Point(0, 0);
+            this.grdView.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.grdView.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grdView.MainView = this.gvwView;
+            this.grdView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdView.Name = "grdView";
+            this.grdView.Size = new System.Drawing.Size(1920, 301);
+            this.grdView.TabIndex = 3;
+            this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvwView});
+            // 
+            // gvwView
+            // 
+            this.gvwView.Appearance.BandPanel.BackColor = System.Drawing.Color.DarkCyan;
+            this.gvwView.Appearance.BandPanel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvwView.Appearance.BandPanel.ForeColor = System.Drawing.Color.White;
+            this.gvwView.Appearance.BandPanel.Options.UseBackColor = true;
+            this.gvwView.Appearance.BandPanel.Options.UseFont = true;
+            this.gvwView.Appearance.BandPanel.Options.UseForeColor = true;
+            this.gvwView.Appearance.BandPanel.Options.UseTextOptions = true;
+            this.gvwView.Appearance.BandPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvwView.Appearance.BandPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gvwView.Appearance.Row.Font = new System.Drawing.Font("Calibri", 14F);
+            this.gvwView.Appearance.Row.Options.UseFont = true;
+            this.gvwView.Appearance.Row.Options.UseTextOptions = true;
+            this.gvwView.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvwView.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gvwView.BandPanelRowHeight = 50;
+            this.gvwView.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.bandDate,
+            this.bandYear,
+            this.gridBand1,
+            this.bandAVG,
+            this.gridBand3});
+            this.gvwView.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.OP_CD,
+            this.bandedGridColumn1,
+            this.PROCESS,
+            this.COL01,
+            this.COL02,
+            this.COL03,
+            this.COL04,
+            this.COL05,
+            this.COL06,
+            this.COL07,
+            this.COL08,
+            this.COL09,
+            this.COL10,
+            this.COL11,
+            this.COL12,
+            this.COLAVG,
+            this.TARGET,
+            this.RATE});
+            this.gvwView.GridControl = this.grdView;
+            this.gvwView.Name = "gvwView";
+            this.gvwView.OptionsBehavior.AllowSortAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.gvwView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvwView.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gvwView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gvwView.OptionsView.ColumnAutoWidth = false;
+            this.gvwView.OptionsView.ShowColumnHeaders = false;
+            this.gvwView.OptionsView.ShowGroupPanel = false;
+            this.gvwView.OptionsView.ShowIndicator = false;
+            this.gvwView.PaintStyleName = "Flat";
+            this.gvwView.RowHeight = 45;
+            // 
+            // bandDate
+            // 
+            this.bandDate.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.bandDate.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.bandDate.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.bandDate.AppearanceHeader.Options.UseBackColor = true;
+            this.bandDate.AppearanceHeader.Options.UseForeColor = true;
+            this.bandDate.Caption = "Year";
+            this.bandDate.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand2});
+            this.bandDate.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.bandDate.Name = "bandDate";
+            this.bandDate.VisibleIndex = 0;
+            this.bandDate.Width = 243;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.gridBand2.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.gridBand2.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.gridBand2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand2.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand2.Caption = "Month";
+            this.gridBand2.Columns.Add(this.OP_CD);
+            this.gridBand2.Columns.Add(this.bandedGridColumn1);
+            this.gridBand2.Columns.Add(this.PROCESS);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 0;
+            this.gridBand2.Width = 243;
+            // 
+            // OP_CD
+            // 
+            this.OP_CD.Caption = "OP_CD";
+            this.OP_CD.FieldName = "OP_CD";
+            this.OP_CD.Name = "OP_CD";
+            // 
+            // bandedGridColumn1
+            // 
+            this.bandedGridColumn1.Caption = "LINE";
+            this.bandedGridColumn1.FieldName = "LINE";
+            this.bandedGridColumn1.Name = "bandedGridColumn1";
+            this.bandedGridColumn1.Visible = true;
+            this.bandedGridColumn1.Width = 106;
+            // 
+            // PROCESS
+            // 
+            this.PROCESS.Caption = "PROCESS";
+            this.PROCESS.FieldName = "PROCESS";
+            this.PROCESS.Name = "PROCESS";
+            this.PROCESS.Visible = true;
+            this.PROCESS.Width = 137;
+            // 
+            // bandYear
+            // 
+            this.bandYear.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.bandYear.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.bandYear.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.bandYear.AppearanceHeader.Options.UseBackColor = true;
+            this.bandYear.AppearanceHeader.Options.UseForeColor = true;
+            this.bandYear.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.band01,
+            this.band02,
+            this.band03,
+            this.band04,
+            this.band05,
+            this.band06,
+            this.band07,
+            this.band08,
+            this.band09,
+            this.band10,
+            this.band11,
+            this.band12});
+            this.bandYear.Name = "bandYear";
+            this.bandYear.VisibleIndex = 1;
+            this.bandYear.Width = 1320;
+            // 
+            // band01
+            // 
+            this.band01.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band01.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band01.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band01.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band01.AppearanceHeader.Options.UseBackColor = true;
+            this.band01.AppearanceHeader.Options.UseFont = true;
+            this.band01.AppearanceHeader.Options.UseForeColor = true;
+            this.band01.Caption = "Jan";
+            this.band01.Columns.Add(this.COL01);
+            this.band01.Name = "band01";
+            this.band01.VisibleIndex = 0;
+            this.band01.Width = 110;
+            // 
+            // COL01
+            // 
+            this.COL01.Caption = "COL01";
+            this.COL01.FieldName = "COL01";
+            this.COL01.Name = "COL01";
+            this.COL01.Visible = true;
+            this.COL01.Width = 110;
+            // 
+            // band02
+            // 
+            this.band02.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band02.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band02.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band02.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band02.AppearanceHeader.Options.UseBackColor = true;
+            this.band02.AppearanceHeader.Options.UseFont = true;
+            this.band02.AppearanceHeader.Options.UseForeColor = true;
+            this.band02.Caption = "Feb";
+            this.band02.Columns.Add(this.COL02);
+            this.band02.Name = "band02";
+            this.band02.VisibleIndex = 1;
+            this.band02.Width = 110;
+            // 
+            // COL02
+            // 
+            this.COL02.Caption = "COL02";
+            this.COL02.FieldName = "COL02";
+            this.COL02.Name = "COL02";
+            this.COL02.Visible = true;
+            this.COL02.Width = 110;
+            // 
+            // band03
+            // 
+            this.band03.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band03.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band03.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band03.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band03.AppearanceHeader.Options.UseBackColor = true;
+            this.band03.AppearanceHeader.Options.UseFont = true;
+            this.band03.AppearanceHeader.Options.UseForeColor = true;
+            this.band03.Caption = "Mar";
+            this.band03.Columns.Add(this.COL03);
+            this.band03.Name = "band03";
+            this.band03.VisibleIndex = 2;
+            this.band03.Width = 110;
+            // 
+            // COL03
+            // 
+            this.COL03.Caption = "COL03";
+            this.COL03.FieldName = "COL03";
+            this.COL03.Name = "COL03";
+            this.COL03.Visible = true;
+            this.COL03.Width = 110;
+            // 
+            // band04
+            // 
+            this.band04.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band04.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band04.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band04.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band04.AppearanceHeader.Options.UseBackColor = true;
+            this.band04.AppearanceHeader.Options.UseFont = true;
+            this.band04.AppearanceHeader.Options.UseForeColor = true;
+            this.band04.Caption = "Apr";
+            this.band04.Columns.Add(this.COL04);
+            this.band04.Name = "band04";
+            this.band04.VisibleIndex = 3;
+            this.band04.Width = 110;
+            // 
+            // COL04
+            // 
+            this.COL04.Caption = "COL04";
+            this.COL04.FieldName = "COL04";
+            this.COL04.Name = "COL04";
+            this.COL04.Visible = true;
+            this.COL04.Width = 110;
+            // 
+            // band05
+            // 
+            this.band05.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band05.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band05.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band05.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band05.AppearanceHeader.Options.UseBackColor = true;
+            this.band05.AppearanceHeader.Options.UseFont = true;
+            this.band05.AppearanceHeader.Options.UseForeColor = true;
+            this.band05.Caption = "May";
+            this.band05.Columns.Add(this.COL05);
+            this.band05.Name = "band05";
+            this.band05.VisibleIndex = 4;
+            this.band05.Width = 110;
+            // 
+            // COL05
+            // 
+            this.COL05.Caption = "COL05";
+            this.COL05.FieldName = "COL05";
+            this.COL05.Name = "COL05";
+            this.COL05.Visible = true;
+            this.COL05.Width = 110;
+            // 
+            // band06
+            // 
+            this.band06.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band06.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band06.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band06.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band06.AppearanceHeader.Options.UseBackColor = true;
+            this.band06.AppearanceHeader.Options.UseFont = true;
+            this.band06.AppearanceHeader.Options.UseForeColor = true;
+            this.band06.Caption = "Jun";
+            this.band06.Columns.Add(this.COL06);
+            this.band06.Name = "band06";
+            this.band06.VisibleIndex = 5;
+            this.band06.Width = 110;
+            // 
+            // COL06
+            // 
+            this.COL06.Caption = "COL06";
+            this.COL06.FieldName = "COL06";
+            this.COL06.Name = "COL06";
+            this.COL06.Visible = true;
+            this.COL06.Width = 110;
+            // 
+            // band07
+            // 
+            this.band07.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band07.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band07.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band07.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band07.AppearanceHeader.Options.UseBackColor = true;
+            this.band07.AppearanceHeader.Options.UseFont = true;
+            this.band07.AppearanceHeader.Options.UseForeColor = true;
+            this.band07.Caption = "Jul";
+            this.band07.Columns.Add(this.COL07);
+            this.band07.Name = "band07";
+            this.band07.VisibleIndex = 6;
+            this.band07.Width = 110;
+            // 
+            // COL07
+            // 
+            this.COL07.Caption = "COL07";
+            this.COL07.FieldName = "COL07";
+            this.COL07.Name = "COL07";
+            this.COL07.Visible = true;
+            this.COL07.Width = 110;
+            // 
+            // band08
+            // 
+            this.band08.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band08.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band08.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band08.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band08.AppearanceHeader.Options.UseBackColor = true;
+            this.band08.AppearanceHeader.Options.UseFont = true;
+            this.band08.AppearanceHeader.Options.UseForeColor = true;
+            this.band08.Caption = "Aug";
+            this.band08.Columns.Add(this.COL08);
+            this.band08.Name = "band08";
+            this.band08.VisibleIndex = 7;
+            this.band08.Width = 110;
+            // 
+            // COL08
+            // 
+            this.COL08.Caption = "COL08";
+            this.COL08.FieldName = "COL08";
+            this.COL08.Name = "COL08";
+            this.COL08.Visible = true;
+            this.COL08.Width = 110;
+            // 
+            // band09
+            // 
+            this.band09.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band09.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band09.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band09.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band09.AppearanceHeader.Options.UseBackColor = true;
+            this.band09.AppearanceHeader.Options.UseFont = true;
+            this.band09.AppearanceHeader.Options.UseForeColor = true;
+            this.band09.Caption = "Nov";
+            this.band09.Columns.Add(this.COL09);
+            this.band09.Name = "band09";
+            this.band09.VisibleIndex = 8;
+            this.band09.Width = 110;
+            // 
+            // COL09
+            // 
+            this.COL09.Caption = "COL09";
+            this.COL09.FieldName = "COL09";
+            this.COL09.Name = "COL09";
+            this.COL09.Visible = true;
+            this.COL09.Width = 110;
+            // 
+            // band10
+            // 
+            this.band10.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band10.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band10.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band10.AppearanceHeader.Options.UseBackColor = true;
+            this.band10.AppearanceHeader.Options.UseFont = true;
+            this.band10.AppearanceHeader.Options.UseForeColor = true;
+            this.band10.Caption = "Oct";
+            this.band10.Columns.Add(this.COL10);
+            this.band10.Name = "band10";
+            this.band10.VisibleIndex = 9;
+            this.band10.Width = 110;
+            // 
+            // COL10
+            // 
+            this.COL10.Caption = "COL10";
+            this.COL10.FieldName = "COL10";
+            this.COL10.Name = "COL10";
+            this.COL10.Visible = true;
+            this.COL10.Width = 110;
+            // 
+            // band11
+            // 
+            this.band11.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band11.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band11.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band11.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band11.AppearanceHeader.Options.UseBackColor = true;
+            this.band11.AppearanceHeader.Options.UseFont = true;
+            this.band11.AppearanceHeader.Options.UseForeColor = true;
+            this.band11.Caption = "Sep";
+            this.band11.Columns.Add(this.COL11);
+            this.band11.Name = "band11";
+            this.band11.VisibleIndex = 10;
+            this.band11.Width = 110;
+            // 
+            // COL11
+            // 
+            this.COL11.Caption = "COL11";
+            this.COL11.FieldName = "COL11";
+            this.COL11.Name = "COL11";
+            this.COL11.Visible = true;
+            this.COL11.Width = 110;
+            // 
+            // band12
+            // 
+            this.band12.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.band12.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.band12.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.band12.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.band12.AppearanceHeader.Options.UseBackColor = true;
+            this.band12.AppearanceHeader.Options.UseFont = true;
+            this.band12.AppearanceHeader.Options.UseForeColor = true;
+            this.band12.Caption = "Dec";
+            this.band12.Columns.Add(this.COL12);
+            this.band12.Name = "band12";
+            this.band12.VisibleIndex = 11;
+            this.band12.Width = 110;
+            // 
+            // COL12
+            // 
+            this.COL12.Caption = "COL12";
+            this.COL12.FieldName = "COL12";
+            this.COL12.Name = "COL12";
+            this.COL12.Visible = true;
+            this.COL12.Width = 110;
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.gridBand1.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand1.Caption = "Target";
+            this.gridBand1.Columns.Add(this.TARGET);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 2;
+            this.gridBand1.Width = 110;
+            // 
+            // TARGET
+            // 
+            this.TARGET.Caption = "TARGET";
+            this.TARGET.FieldName = "TAR";
+            this.TARGET.Name = "TARGET";
+            this.TARGET.Visible = true;
+            this.TARGET.Width = 110;
+            // 
+            // bandAVG
+            // 
+            this.bandAVG.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.bandAVG.AppearanceHeader.BackColor2 = System.Drawing.Color.DarkCyan;
+            this.bandAVG.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bandAVG.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.bandAVG.AppearanceHeader.Options.UseBackColor = true;
+            this.bandAVG.AppearanceHeader.Options.UseFont = true;
+            this.bandAVG.AppearanceHeader.Options.UseForeColor = true;
+            this.bandAVG.Caption = "AVG";
+            this.bandAVG.Columns.Add(this.COLAVG);
+            this.bandAVG.Name = "bandAVG";
+            this.bandAVG.VisibleIndex = 3;
+            this.bandAVG.Width = 110;
+            // 
+            // COLAVG
+            // 
+            this.COLAVG.Caption = "COLAVG";
+            this.COLAVG.FieldName = "COLAVG";
+            this.COLAVG.Name = "COLAVG";
+            this.COLAVG.Visible = true;
+            this.COLAVG.Width = 110;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.AppearanceHeader.BackColor = System.Drawing.Color.DarkCyan;
+            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            this.gridBand3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridBand3.Caption = "%";
+            this.gridBand3.Columns.Add(this.RATE);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 4;
+            this.gridBand3.Width = 110;
+            // 
+            // RATE
+            // 
+            this.RATE.Caption = "%";
+            this.RATE.FieldName = "RATE";
+            this.RATE.Name = "RATE";
+            this.RATE.Visible = true;
+            this.RATE.Width = 110;
             // 
             // timer2
             // 
@@ -786,7 +1214,7 @@
             this.uc_year.TabIndex = 53;
             this.uc_year.ValueChangeEvent += new System.EventHandler(this.uc_year_ValueChangeEvent);
             // 
-            // FRM_SMT_YEAR_PROD_V2
+            // FRM_MGL_YEARLY_PRODUCTION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -796,7 +1224,7 @@
             this.Controls.Add(this.splMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRM_SMT_YEAR_PROD_V2";
+            this.Name = "FRM_MGL_YEARLY_PRODUCTION";
             this.Text = "FRM_SMT_MON_PROD_STATUS";
             this.Load += new System.EventHandler(this.FRM_SMT_YEAR_PROD_V2_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_YEAR_PROD_V2_VisibleChanged);
@@ -804,7 +1232,8 @@
             this.splMain.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).EndInit();
             this.splMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axfpSpread)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
@@ -854,15 +1283,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbltitle;
         private System.Windows.Forms.SplitContainer splMain;
-        private AxFPSpreadADO.AxfpSpread axfpSpread;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraCharts.ChartControl chartControl3;
         private DevExpress.XtraCharts.ChartControl chartControl2;
@@ -882,7 +1304,47 @@
         private System.Windows.Forms.Label lblY;
         private System.Windows.Forms.Label lblG;
         private System.Windows.Forms.Label lblR;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private UC.UC_YEAR_SELECTION uc_year;
+        private System.Windows.Forms.Panel pnYMD;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lbltitle;
+        private DevExpress.XtraGrid.GridControl grdView;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView gvwView;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn PROCESS;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL01;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL02;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL03;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL04;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL05;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL06;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL07;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL08;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL09;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL10;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL11;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL12;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COLAVG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn TARGET;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn RATE;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn OP_CD;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumn1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandDate;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandYear;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band01;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band02;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band03;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band04;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band05;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band06;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band07;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band08;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band09;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band10;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band11;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band12;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandAVG;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
     }
 }

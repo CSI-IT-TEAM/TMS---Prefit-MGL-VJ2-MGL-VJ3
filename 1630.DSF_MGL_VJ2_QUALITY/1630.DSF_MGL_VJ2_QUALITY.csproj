@@ -130,6 +130,12 @@
     <Compile Include="FRM_MGL_INTERNAL_OSD.Designer.cs">
       <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_MGL_NPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_NPI.designer.cs">
+      <DependentUpon>FRM_MGL_NPI.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_SMT_EXTERNAL_POPUP_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_INTERNAL_OSD.resx">
       <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_NPI.resx">
+      <DependentUpon>FRM_MGL_NPI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_SMT_EXTERNAL_POPUP_1.resx">
       <DependentUpon>FRM_SMT_EXTERNAL_POPUP_1.cs</DependentUpon>

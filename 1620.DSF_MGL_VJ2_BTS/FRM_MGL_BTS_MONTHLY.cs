@@ -436,16 +436,16 @@ namespace FORM
                     ComVar.Var.callForm = "back";
                     break;
                 case "D":
-                    ComVar.Var.callForm = "1620";
+                    ComVar.Var.callForm = "1625";
                     break;
                 case "W":
-                    ComVar.Var.callForm = "1621";
+                    ComVar.Var.callForm = "1626";
                     break;
                 case "M":
-                    ComVar.Var.callForm = "1622";
+                    ComVar.Var.callForm = "1627";
                     break;
                 case "Y":
-                    ComVar.Var.callForm = "1623";
+                    ComVar.Var.callForm = "1628";
                     break;
             }
         }
