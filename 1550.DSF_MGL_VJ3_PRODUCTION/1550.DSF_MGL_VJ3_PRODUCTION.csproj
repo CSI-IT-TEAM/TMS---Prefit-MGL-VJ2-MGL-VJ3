@@ -124,6 +124,12 @@
     <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.Designer.cs">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY_V2.Designer.cs">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY_V2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_MGL_WEEKLY_PRODUCTION.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_MONTHLY_PRODUCTIVITY_V2.resx">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY_V2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_WEEKLY_PRODUCTION.resx">
       <DependentUpon>FRM_MGL_WEEKLY_PRODUCTION.cs</DependentUpon>

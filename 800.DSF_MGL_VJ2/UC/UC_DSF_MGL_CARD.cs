@@ -119,7 +119,6 @@ namespace FORM.UC
                         ComVar.Var._strValue2 = _FacTitle;
                         ComVar.Var.callForm = GetSelectedNode(treeList1);
                     }
-                  
                 }
             }
 
