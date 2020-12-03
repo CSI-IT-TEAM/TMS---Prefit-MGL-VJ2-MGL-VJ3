@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.XYDiagram xyDiagram5 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series9 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView9 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation5 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction5 = new DevExpress.XtraCharts.ElasticEasingFunction();
-            DevExpress.XtraCharts.Series series10 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView10 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle5 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram6 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series11 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView11 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation6 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction6 = new DevExpress.XtraCharts.ElasticEasingFunction();
-            DevExpress.XtraCharts.Series series12 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView12 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle6 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram7 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series13 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView13 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation7 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction7 = new DevExpress.XtraCharts.ElasticEasingFunction();
-            DevExpress.XtraCharts.Series series14 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView14 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle7 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange4 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange5 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange6 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraCharts.XYDiagram xyDiagram8 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series15 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView15 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation8 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction8 = new DevExpress.XtraCharts.ElasticEasingFunction();
-            DevExpress.XtraCharts.Series series16 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView16 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle8 = new DevExpress.XtraCharts.ChartTitle();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction1 = new DevExpress.XtraCharts.ElasticEasingFunction();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction2 = new DevExpress.XtraCharts.ElasticEasingFunction();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView5 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation3 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction3 = new DevExpress.XtraCharts.ElasticEasingFunction();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView6 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange1 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange2 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange3 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView7 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation4 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.ElasticEasingFunction elasticEasingFunction4 = new DevExpress.XtraCharts.ElasticEasingFunction();
+            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView8 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lbltitle = new System.Windows.Forms.Label();
-            this.tmr = new System.Windows.Forms.Timer();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             this.pnUC = new System.Windows.Forms.Panel();
             this.uc_month = new FORM.UC.UC_MONTH_SELECTION();
             this.splMain = new System.Windows.Forms.SplitContainer();
@@ -173,23 +174,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
             this.tblMain2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).BeginInit();
             this.tblMain.SuspendLayout();
             this.pnGauge.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -200,11 +201,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,7 +270,7 @@
             this.pnUC.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnUC.Location = new System.Drawing.Point(0, 109);
             this.pnUC.Name = "pnUC";
-            this.pnUC.Size = new System.Drawing.Size(1293, 59);
+            this.pnUC.Size = new System.Drawing.Size(1866, 59);
             this.pnUC.TabIndex = 5;
             // 
             // uc_month
@@ -296,7 +297,7 @@
             // 
             this.splMain.Panel2.Controls.Add(this.tblMain2);
             this.splMain.Panel2.Controls.Add(this.tblMain);
-            this.splMain.Size = new System.Drawing.Size(1293, 547);
+            this.splMain.Size = new System.Drawing.Size(1866, 547);
             this.splMain.SplitterDistance = 201;
             this.splMain.TabIndex = 6;
             // 
@@ -308,7 +309,7 @@
             this.grdView.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdView.MainView = this.gvwView;
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1293, 201);
+            this.grdView.Size = new System.Drawing.Size(1866, 201);
             this.grdView.TabIndex = 1;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
@@ -1212,84 +1213,84 @@
             this.tblMain2.Name = "tblMain2";
             this.tblMain2.RowCount = 1;
             this.tblMain2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain2.Size = new System.Drawing.Size(1293, 281);
+            this.tblMain2.Size = new System.Drawing.Size(1866, 281);
             this.tblMain2.TabIndex = 1;
             // 
             // chartUPS3
             // 
             this.chartUPS3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS3.DataBindings = null;
-            xyDiagram5.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram5.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPS3.Diagram = xyDiagram5;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartUPS3.Diagram = xyDiagram1;
             this.chartUPS3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS3.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartUPS3.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartUPS3.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
             this.chartUPS3.Legend.Name = "Default Legend";
-            this.chartUPS3.Location = new System.Drawing.Point(865, 3);
+            this.chartUPS3.Location = new System.Drawing.Point(1247, 3);
             this.chartUPS3.Name = "chartUPS3";
-            series9.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series9.Name = "Actual";
-            lineSeriesView9.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation5.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
-            elasticEasingFunction5.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
-            xyMarkerSlideAnimation5.EasingFunction = elasticEasingFunction5;
-            lineSeriesView9.SeriesPointAnimation = xyMarkerSlideAnimation5;
-            series9.View = lineSeriesView9;
-            series10.Name = "Target";
-            series10.View = lineSeriesView10;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Actual";
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            elasticEasingFunction1.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
+            xyMarkerSlideAnimation1.EasingFunction = elasticEasingFunction1;
+            lineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
+            series1.View = lineSeriesView1;
+            series2.Name = "Target";
+            series2.View = lineSeriesView2;
             this.chartUPS3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series9,
-        series10};
-            this.chartUPS3.Size = new System.Drawing.Size(425, 275);
+        series1,
+        series2};
+            this.chartUPS3.Size = new System.Drawing.Size(616, 275);
             this.chartUPS3.TabIndex = 2;
-            chartTitle5.Text = "Stitching 3";
+            chartTitle1.Text = "Stitching 3";
             this.chartUPS3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle5});
+            chartTitle1});
             this.chartUPS3.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
             // chartUPS2
             // 
             this.chartUPS2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS2.DataBindings = null;
-            xyDiagram6.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram6.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPS2.Diagram = xyDiagram6;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartUPS2.Diagram = xyDiagram2;
             this.chartUPS2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartUPS2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartUPS2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
             this.chartUPS2.Legend.Name = "Default Legend";
-            this.chartUPS2.Location = new System.Drawing.Point(434, 3);
+            this.chartUPS2.Location = new System.Drawing.Point(625, 3);
             this.chartUPS2.Name = "chartUPS2";
-            series11.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series11.Name = "Actual";
-            lineSeriesView11.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation6.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
-            elasticEasingFunction6.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
-            xyMarkerSlideAnimation6.EasingFunction = elasticEasingFunction6;
-            lineSeriesView11.SeriesPointAnimation = xyMarkerSlideAnimation6;
-            series11.View = lineSeriesView11;
-            series12.Name = "Target";
-            series12.View = lineSeriesView12;
+            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.Name = "Actual";
+            lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation2.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            elasticEasingFunction2.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
+            xyMarkerSlideAnimation2.EasingFunction = elasticEasingFunction2;
+            lineSeriesView3.SeriesPointAnimation = xyMarkerSlideAnimation2;
+            series3.View = lineSeriesView3;
+            series4.Name = "Target";
+            series4.View = lineSeriesView4;
             this.chartUPS2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series11,
-        series12};
-            this.chartUPS2.Size = new System.Drawing.Size(425, 275);
+        series3,
+        series4};
+            this.chartUPS2.Size = new System.Drawing.Size(616, 275);
             this.chartUPS2.TabIndex = 1;
-            chartTitle6.Text = "Stitching 2";
+            chartTitle2.Text = "Stitching 2";
             this.chartUPS2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle6});
+            chartTitle2});
             this.chartUPS2.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
             // chartUPS1
             // 
             this.chartUPS1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPS1.DataBindings = null;
-            xyDiagram7.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram7.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPS1.Diagram = xyDiagram7;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartUPS1.Diagram = xyDiagram3;
             this.chartUPS1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPS1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartUPS1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
@@ -1297,24 +1298,24 @@
             this.chartUPS1.Legend.Name = "Default Legend";
             this.chartUPS1.Location = new System.Drawing.Point(3, 3);
             this.chartUPS1.Name = "chartUPS1";
-            series13.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series13.Name = "Actual";
-            lineSeriesView13.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation7.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
-            elasticEasingFunction7.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
-            xyMarkerSlideAnimation7.EasingFunction = elasticEasingFunction7;
-            lineSeriesView13.SeriesPointAnimation = xyMarkerSlideAnimation7;
-            series13.View = lineSeriesView13;
-            series14.Name = "Target";
-            series14.View = lineSeriesView14;
+            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series5.Name = "Actual";
+            lineSeriesView5.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation3.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            elasticEasingFunction3.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
+            xyMarkerSlideAnimation3.EasingFunction = elasticEasingFunction3;
+            lineSeriesView5.SeriesPointAnimation = xyMarkerSlideAnimation3;
+            series5.View = lineSeriesView5;
+            series6.Name = "Target";
+            series6.View = lineSeriesView6;
             this.chartUPS1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series13,
-        series14};
-            this.chartUPS1.Size = new System.Drawing.Size(425, 275);
+        series5,
+        series6};
+            this.chartUPS1.Size = new System.Drawing.Size(616, 275);
             this.chartUPS1.TabIndex = 0;
-            chartTitle7.Text = "Stitching 1";
+            chartTitle3.Text = "Stitching 1";
             this.chartUPS1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle7});
+            chartTitle3});
             this.chartUPS1.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
             // tblMain
@@ -1330,16 +1331,16 @@
             this.tblMain.RowCount = 1;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.Size = new System.Drawing.Size(1293, 281);
+            this.tblMain.Size = new System.Drawing.Size(1866, 281);
             this.tblMain.TabIndex = 0;
             // 
             // pnGauge
             // 
             this.pnGauge.Controls.Add(this.panel2);
             this.pnGauge.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGauge.Location = new System.Drawing.Point(649, 3);
+            this.pnGauge.Location = new System.Drawing.Point(936, 3);
             this.pnGauge.Name = "pnGauge";
-            this.pnGauge.Size = new System.Drawing.Size(641, 275);
+            this.pnGauge.Size = new System.Drawing.Size(927, 275);
             this.pnGauge.TabIndex = 5;
             // 
             // panel2
@@ -1348,7 +1349,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(641, 275);
+            this.panel2.Size = new System.Drawing.Size(927, 275);
             this.panel2.TabIndex = 4;
             // 
             // gaugeControl1
@@ -1363,7 +1364,7 @@
             this.cGauge1});
             this.gaugeControl1.Location = new System.Drawing.Point(0, 0);
             this.gaugeControl1.Name = "gaugeControl1";
-            this.gaugeControl1.Size = new System.Drawing.Size(641, 275);
+            this.gaugeControl1.Size = new System.Drawing.Size(927, 275);
             this.gaugeControl1.TabIndex = 0;
             // 
             // lblYellow
@@ -1456,34 +1457,34 @@
             this.arcScale.Name = "scale1";
             this.arcScale.RadiusX = 104F;
             this.arcScale.RadiusY = 104F;
-            arcScaleRange4.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
-            arcScaleRange4.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
-            arcScaleRange4.EndThickness = 5F;
-            arcScaleRange4.EndValue = 8F;
-            arcScaleRange4.Name = "Range0";
-            arcScaleRange4.ShapeOffset = 0F;
-            arcScaleRange4.StartThickness = 5F;
-            arcScaleRange4.StartValue = 6F;
-            arcScaleRange5.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
-            arcScaleRange5.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
-            arcScaleRange5.EndThickness = 5F;
-            arcScaleRange5.EndValue = 9F;
-            arcScaleRange5.Name = "Range1";
-            arcScaleRange5.ShapeOffset = 0F;
-            arcScaleRange5.StartThickness = 5F;
-            arcScaleRange5.StartValue = 8F;
-            arcScaleRange6.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
-            arcScaleRange6.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
-            arcScaleRange6.EndThickness = 5F;
-            arcScaleRange6.EndValue = 12F;
-            arcScaleRange6.Name = "Range2";
-            arcScaleRange6.ShapeOffset = 0F;
-            arcScaleRange6.StartThickness = 5F;
-            arcScaleRange6.StartValue = 9F;
+            arcScaleRange1.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
+            arcScaleRange1.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Red");
+            arcScaleRange1.EndThickness = 5F;
+            arcScaleRange1.EndValue = 8F;
+            arcScaleRange1.Name = "Range0";
+            arcScaleRange1.ShapeOffset = 0F;
+            arcScaleRange1.StartThickness = 5F;
+            arcScaleRange1.StartValue = 6F;
+            arcScaleRange2.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
+            arcScaleRange2.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Yellow");
+            arcScaleRange2.EndThickness = 5F;
+            arcScaleRange2.EndValue = 9F;
+            arcScaleRange2.Name = "Range1";
+            arcScaleRange2.ShapeOffset = 0F;
+            arcScaleRange2.StartThickness = 5F;
+            arcScaleRange2.StartValue = 8F;
+            arcScaleRange3.AppearanceRange.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
+            arcScaleRange3.AppearanceRange.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:Lime");
+            arcScaleRange3.EndThickness = 5F;
+            arcScaleRange3.EndValue = 12F;
+            arcScaleRange3.Name = "Range2";
+            arcScaleRange3.ShapeOffset = 0F;
+            arcScaleRange3.StartThickness = 5F;
+            arcScaleRange3.StartValue = 9F;
             this.arcScale.Ranges.AddRange(new DevExpress.XtraGauges.Core.Model.IRange[] {
-            arcScaleRange4,
-            arcScaleRange5,
-            arcScaleRange6});
+            arcScaleRange1,
+            arcScaleRange2,
+            arcScaleRange3});
             this.arcScale.StartAngle = -180F;
             this.arcScale.Value = 6F;
             // 
@@ -1506,9 +1507,9 @@
             // 
             this.chartUPC.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartUPC.DataBindings = null;
-            xyDiagram8.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram8.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartUPC.Diagram = xyDiagram8;
+            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartUPC.Diagram = xyDiagram4;
             this.chartUPC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartUPC.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartUPC.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
@@ -1516,30 +1517,30 @@
             this.chartUPC.Legend.Name = "Default Legend";
             this.chartUPC.Location = new System.Drawing.Point(3, 3);
             this.chartUPC.Name = "chartUPC";
-            series15.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series15.Name = "Actual";
-            lineSeriesView15.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation8.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
-            elasticEasingFunction8.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
-            xyMarkerSlideAnimation8.EasingFunction = elasticEasingFunction8;
-            lineSeriesView15.SeriesPointAnimation = xyMarkerSlideAnimation8;
-            series15.View = lineSeriesView15;
-            series16.Name = "Target";
-            series16.View = lineSeriesView16;
+            series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series7.Name = "Actual";
+            lineSeriesView7.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation4.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            elasticEasingFunction4.EasingMode = DevExpress.XtraCharts.EasingMode.Out;
+            xyMarkerSlideAnimation4.EasingFunction = elasticEasingFunction4;
+            lineSeriesView7.SeriesPointAnimation = xyMarkerSlideAnimation4;
+            series7.View = lineSeriesView7;
+            series8.Name = "Target";
+            series8.View = lineSeriesView8;
             this.chartUPC.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series15,
-        series16};
-            this.chartUPC.Size = new System.Drawing.Size(640, 275);
+        series7,
+        series8};
+            this.chartUPC.Size = new System.Drawing.Size(927, 275);
             this.chartUPC.TabIndex = 0;
-            chartTitle8.Text = "Cutting";
+            chartTitle4.Text = "Cutting";
             this.chartUPC.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle8});
+            chartTitle4});
             this.chartUPC.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.chartUPS1_CustomDrawAxisLabel);
             // 
             // FRM_MGL_MONTHLY_PRODUCTIVITY
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1293, 715);
+            this.ClientSize = new System.Drawing.Size(1866, 715);
             this.Controls.Add(this.splMain);
             this.Controls.Add(this.pnUC);
             this.Controls.Add(this.panel1);
@@ -1559,23 +1560,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
             this.tblMain2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPS1)).EndInit();
             this.tblMain.ResumeLayout(false);
             this.pnGauge.ResumeLayout(false);
@@ -1586,11 +1587,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartUPC)).EndInit();
             this.ResumeLayout(false);
 

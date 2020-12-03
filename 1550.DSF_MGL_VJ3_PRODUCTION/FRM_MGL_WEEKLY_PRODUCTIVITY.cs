@@ -93,7 +93,7 @@ namespace FORM
                     ComVar.Var.callForm = "1561";
                     break;
                 case "M":
-                    ComVar.Var.callForm = "1562";
+                    ComVar.Var.callForm = "1564";
                     break;
                 case "Y":
                     ComVar.Var.callForm = "1563";
