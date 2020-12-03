@@ -15,6 +15,8 @@ using DevExpress.XtraEditors.ViewInfo;
 using DevExpress.XtraEditors.Controls;
 using System.IO;
 using System.Diagnostics;
+using DevExpress.XtraGrid.Views.BandedGrid;
+using DevExpress.Utils;
 
 namespace FORM
 {
@@ -66,6 +68,7 @@ namespace FORM
             {
                 //BindingDataRamUp();
                 BindingDataGrid();
+                Create_Grid_NPI_Code();
                 //BindingDataChart();
                 _iCountReload = 0;
 
@@ -119,6 +122,7 @@ namespace FORM
             }
 
         }
+
         public DataTable SMT_MGL_GRID_MR_SELECT(string ARG_TYPE, string ARG_DATE, string ARG_LINE_CD, string ARG_MLINE_CD)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
@@ -329,6 +333,50 @@ namespace FORM
             }
         }
 
+
+        private void Create_Grid_NPI_Code()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                DataTable dt = SMT_MGL_GRID_MR_SELECT("Q2", "", "", "");
+                if (dt!=null && dt.Rows.Count> 0)
+                {
+                    gvwNPI.Bands.Clear();
+                    gvwNPI.Columns.Clear();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        GridBand gridBand = new GridBand();
+                        GridBand gridBand_Child = new GridBand();
+
+                        gridBand.Caption = dt.Rows[i]["NPI_DATE"].ToString();
+                        gridBand.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                        gridBand.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        gridBand.VisibleIndex = i;
+
+                        gridBand_Child.Caption = dt.Rows[i]["NPI_NAME"].ToString();
+                        gridBand_Child.Name = string.Concat(dt.Rows[i]["NPI_CODE"].ToString(), dt.Rows[i]["NPI_DATE"].ToString());
+                        gridBand_Child.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                        gridBand_Child.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+
+                        gvwNPI.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] { gridBand });
+                        gridBand.AppearanceHeader.TextOptions.WordWrap = WordWrap.Wrap;
+                        gridBand.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] { gridBand_Child });
+                        gridBand_Child.AppearanceHeader.TextOptions.WordWrap = WordWrap.Wrap;
+                        gridBand_Child.RowCount = 7;
+                    }
+                }
+                
+
+
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
         private void formatBand()
         {
             int i = 0;
@@ -466,6 +514,7 @@ namespace FORM
         {
             this.Cursor = Cursors.WaitCursor;
             BindingDataGrid();
+            Create_Grid_NPI_Code();
             //BindingDataChart();
             this.Cursor = Cursors.Default;
         }

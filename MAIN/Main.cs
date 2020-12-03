@@ -139,16 +139,16 @@ namespace MAIN
                 ComVar.Var._strValue5 = _dtXML.Rows[0]["CMP_NM"].ToString();
                 _dt = SEL_GET_FORM(_dtXML.Rows[0]["grpForm"].ToString());
                 ComVar.Var.ValueChanged += new ComVar.Var.ValueChangedEventHandler(callForm);
-
-                for (int i = 0; i < _dt.Rows.Count; i++)
-                {
-                    if (_dt.Rows[i]["SHOW_YN"].ToString() == "Y")
+                if (_dt != null && _dt.Rows.Count > 0)
+                    for (int i = 0; i < _dt.Rows.Count; i++)
                     {
-                        addForm(_dt.Rows[i]["DLL_NM"].ToString(), _dt.Rows[i]["CLASS_NM"].ToString());
+                        if (_dt.Rows[i]["SHOW_YN"].ToString() == "Y")
+                        {
+                            addForm(_dt.Rows[i]["DLL_NM"].ToString(), _dt.Rows[i]["CLASS_NM"].ToString());
 
-                        // pnMain.Controls[i].Show();
+                            // pnMain.Controls[i].Show();
+                        }
                     }
-                }
                 ComVar.Var._Frm_Curr = pnMain.Controls[0].Name;
                 pnMain.Controls[0].Show();
             }

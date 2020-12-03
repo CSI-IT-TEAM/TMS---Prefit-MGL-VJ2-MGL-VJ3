@@ -87,7 +87,7 @@ namespace FORM.UC
         {
             btnClose.Enabled = true;
             btnDay.Enabled = true;
-            btnWeek.Enabled = true;
+            btnWeek.Enabled = false;
             btnMonth.Enabled = true;
             btnYear.Enabled = true;
             switch (btnisDisable)

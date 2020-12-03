@@ -161,18 +161,21 @@ namespace FORM
                 string[] FacCode = new string[] { "000", "099", "TOTAL1", "201", "202", "TOTAL2" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
                 DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
-                for (int i = 0; i < dt.Rows.Count; i++)
+                if (dt != null && dt.Rows.Count > 0)
                 {
-                    for (int j = 0; j < UC_MGL_MENU.Length; j++)
+                    for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
+                        for (int j = 0; j < UC_MGL_MENU.Length; j++)
                         {
-                            string Factory = UC_MGL_MENU[j].Tag.ToString();
-                            //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
-                            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                            if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
+                            {
+                                string Factory = UC_MGL_MENU[j].Tag.ToString();
+                                //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                                UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                            }
                         }
-                    }
 
+                    }
                 }
                 // DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
                 //for (int i = 0; i < dt.Rows.Count; i++)

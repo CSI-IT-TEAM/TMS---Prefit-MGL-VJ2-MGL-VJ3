@@ -202,7 +202,7 @@ namespace FORM
                     _line_cd = ComVar.Var._strValue1;
                     Lang = ComVar.Var._strValue3;
                     BindingData(_line_cd);
-                    lblTitle.Text = "Outgoing Area Shortage";
+                    lblTitle.Text = "Outgoing Inventory";
                     //switch (Lang)
                     //{
                     //    case "Vi":
