@@ -238,7 +238,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_PROD.SP_SMT_BOTTOM_INV_SET";
+                string process_name = "MES.PKG_MGL_VJ2.SP_SMT_BOTTOM_INV_SET";
 
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;

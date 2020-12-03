@@ -318,10 +318,6 @@ namespace FORM
                             }
                         }
                     }
-                    //bandDate.Width = 140;
-                    //bandAVG.Width = 80;
-                    //bandMon.Width = (grdView.Width - 220) / dtsource.Rows.Count;
-                    //gvwView.OptionsView.ColumnAutoWidth = false;
                 }
             }
             catch
