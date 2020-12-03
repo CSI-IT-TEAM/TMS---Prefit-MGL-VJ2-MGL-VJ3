@@ -144,11 +144,15 @@ namespace FORM
                             gvwMain.Columns[i].Width = 75;
                         }
                     }
+                    else if (i == _start_column - 2)
+                    {
+                        gvwMain.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+                    }
                     else
                     {
                         gvwMain.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
                         gvwMain.Columns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-                       if (i != 2 && i!=4)
+                        if (i != 2 && i != 4)
                             gvwMain.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
                         else gvwMain.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
                     }
@@ -228,7 +232,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_PROD.SP_SMT_ASSEMBLY_INPUT_SET";
+                string process_name = "MES.PKG_MGL_VJ2.SP_SMT_ASSEMBLY_INPUT_SET";
 
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
