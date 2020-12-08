@@ -408,6 +408,7 @@ namespace FORM
             if (this.Visible)
             {
                 cmdBack.Tag = ComVar.Var._Frm_Back;
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL2") ? "VJ2 Internal OS&&D by Day" : ComVar.Var._strValue2 + " Internal OS&&D by Day";
                 cCount = 39;
                 initForm();
                 timer1.Start();
