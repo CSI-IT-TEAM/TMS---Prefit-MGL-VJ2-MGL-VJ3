@@ -93,7 +93,7 @@ namespace FORM
             {
                 if (this.Visible)
                 {
-                    lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Day" : ComVar.Var._strValue2 + " Production Status by Day";
+                    lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ2 Production Status by Day" : ComVar.Var._strValue2 + " Production Status by Day";
                     cCount = 60;
                     uc.YMD_Change(1, "");                    
                     tmr.Start();

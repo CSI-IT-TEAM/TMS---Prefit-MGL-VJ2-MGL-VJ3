@@ -228,7 +228,7 @@
             // 
             // splMain
             // 
-            this.splMain.Location = new System.Drawing.Point(0, 168);
+            this.splMain.Location = new System.Drawing.Point(0, 156);
             this.splMain.Name = "splMain";
             this.splMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -236,7 +236,7 @@
             // 
             this.splMain.Panel1.Controls.Add(this.grdView);
             this.splMain.Panel2Collapsed = true;
-            this.splMain.Size = new System.Drawing.Size(1920, 301);
+            this.splMain.Size = new System.Drawing.Size(1920, 316);
             this.splMain.SplitterDistance = 110;
             this.splMain.TabIndex = 3;
             // 
@@ -250,7 +250,7 @@
             this.grdView.MainView = this.gvwView;
             this.grdView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1920, 301);
+            this.grdView.Size = new System.Drawing.Size(1920, 316);
             this.grdView.TabIndex = 3;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
@@ -300,15 +300,19 @@
             this.gvwView.GridControl = this.grdView;
             this.gvwView.Name = "gvwView";
             this.gvwView.OptionsBehavior.AllowSortAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.gvwView.OptionsBehavior.Editable = false;
+            this.gvwView.OptionsBehavior.ReadOnly = true;
             this.gvwView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvwView.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvwView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gvwView.OptionsView.AllowCellMerge = true;
             this.gvwView.OptionsView.ColumnAutoWidth = false;
             this.gvwView.OptionsView.ShowColumnHeaders = false;
             this.gvwView.OptionsView.ShowGroupPanel = false;
             this.gvwView.OptionsView.ShowIndicator = false;
             this.gvwView.PaintStyleName = "Flat";
             this.gvwView.RowHeight = 45;
+            this.gvwView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvwView_RowCellStyle);
             // 
             // bandDate
             // 
@@ -1208,11 +1212,12 @@
             // uc_year
             // 
             this.uc_year.AutoSize = true;
-            this.uc_year.Location = new System.Drawing.Point(3, 115);
+            this.uc_year.Location = new System.Drawing.Point(3, 112);
             this.uc_year.Name = "uc_year";
             this.uc_year.Size = new System.Drawing.Size(229, 47);
             this.uc_year.TabIndex = 53;
             this.uc_year.ValueChangeEvent += new System.EventHandler(this.uc_year_ValueChangeEvent);
+            this.uc_year.Load += new System.EventHandler(this.uc_year_Load);
             // 
             // FRM_MGL_YEARLY_PRODUCTION
             // 

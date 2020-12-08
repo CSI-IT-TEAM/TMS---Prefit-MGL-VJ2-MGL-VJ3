@@ -17,6 +17,8 @@ using System.IO;
 using System.Diagnostics;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using DevExpress.Utils;
+using DevExpress.XtraGrid.Columns;
+using WindowsApplication1;
 
 namespace FORM
 {
@@ -30,6 +32,8 @@ namespace FORM
 
         #region Global Variant
         int _iCountReload = 0;
+        private MyCellMergeHelper _Helper;
+        bool first = true;
         Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
         #endregion
 
@@ -37,7 +41,7 @@ namespace FORM
         private void Form_Load(object sender, EventArgs e)
         {
             
-            pnHeader.BackColor = Color.FromArgb(0, 176, 80);
+            
         }
 
         void OnUCMenuClick(string TitleCode, string MenuCode)
@@ -50,6 +54,7 @@ namespace FORM
             if (this.Visible)
             {
                 lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 New Production Introduction" : ComVar.Var._strValue2 + " New Production Introduction";
                 _iCountReload = 40;
                 tmrDate.Start();
 
@@ -69,7 +74,8 @@ namespace FORM
                 //BindingDataRamUp();
                 BindingDataGrid();
                 Create_Grid_NPI_Code();
-                //BindingDataChart();
+                BindingDataGridNPI();
+                BindingDataGridRR();
                 _iCountReload = 0;
 
             }
@@ -252,25 +258,13 @@ namespace FORM
         {
 
         }
-        private void BindingDataRamUp()
-        {
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
-                bandDate.Caption = DateTime.Now.ToString("yyyy");
-                DataTable dt = SMT_MGL_GRID_MR_SELECT("RAMUP", "", ComVar.Var._strValue1, "");
-                grdView.DataSource = dt;
-                FormatGridRamUP();
-                this.Cursor = Cursors.Default;
-            }
-            catch { }
-        }
 
         private void BindingDataGrid()
         {
             try
             {
                 this.Cursor = Cursors.WaitCursor;
+                gridBase1.DataSource = null;
                 DataTable dt = SMT_MGL_GRID_MR_SELECT("Q", "", ComVar.Var._strValue1, "");
                 gridBase1.DataSource = dt;
                 FormatGrid();
@@ -333,6 +327,54 @@ namespace FORM
             }
         }
 
+        private void BindingDataGridNPI()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                grdView.DataSource = null;
+                DataTable dt = SMT_MGL_GRID_MR_SELECT("Q3", "", ComVar.Var._strValue1, "");
+                if (!first)
+                    _Helper.removeMerged();
+                grdView.DataSource = dt;
+                if (!first)
+                    _Helper.removeMerged();
+                formatgridNPI();
+                if (!first)
+                    _Helper.removeMerged();
+                formatgridNPI();
+
+                this.Cursor = Cursors.Default;
+                //formatBand();
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void BindingDataGridRR()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                grdRR.DataSource = null;
+                DataTable dt = SMT_MGL_GRID_MR_SELECT("Q4", "", ComVar.Var._strValue1, "");
+                grdRR.DataSource = dt;
+                for (int i = 0; i < gvwRR.Columns.Count; i++)
+                {
+                    gvwRR.Columns[i].OptionsColumn.AllowMerge = i == 1 ? DefaultBoolean.True : DefaultBoolean.False;
+                    gvwRR.Columns[i].AppearanceCell.Font = new Font("Calibri", 12, FontStyle.Bold);
+                }
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
 
         private void Create_Grid_NPI_Code()
         {
@@ -364,6 +406,36 @@ namespace FORM
                         gridBand.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] { gridBand_Child });
                         gridBand_Child.AppearanceHeader.TextOptions.WordWrap = WordWrap.Wrap;
                         gridBand_Child.RowCount = 7;
+                    }
+
+
+                    gvwView.Columns.Clear();
+
+                    GridColumn column1 = new GridColumn();
+                    column1.Name = "MODEL_NAME";
+                    column1.FieldName = "MODEL_NAME";
+                    column1.VisibleIndex = 0;
+                    GridColumn column2 = new GridColumn();
+                    column2.Name = "DIV";
+                    column2.FieldName = "DIV";
+                    column2.VisibleIndex = 1;
+                    gvwView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { column1, column2 });
+                    column1.Visible = false;
+                    column2.Visible = false;
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        GridColumn column = new GridColumn();
+                        column.Caption = "C" + dt.Rows[i]["NPI_DATE"].ToString();
+                        //column.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                        //column.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        column.VisibleIndex = i + 2;
+                        column.Name = "C" + dt.Rows[i]["NPI_CODE"].ToString();
+                        column.FieldName = "C" + dt.Rows[i]["NPI_CODE"].ToString(); 
+
+                        gvwView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { column });
+                        column.Width = 40;
+                        column.AppearanceHeader.TextOptions.WordWrap = WordWrap.Wrap;
                     }
                 }
                 
@@ -477,6 +549,33 @@ namespace FORM
             catch (Exception ex)
             { }
         }
+
+        private void formatgridNPI()
+        {            
+            if (first)
+            {
+                _Helper = new MyCellMergeHelper(gvwView);
+                first = false;
+            }
+            _Helper.removeMerged();
+
+            if (first)
+                _Helper = new MyCellMergeHelper(gvwView);
+            for (int irow = 0; irow < gvwView.RowCount; irow++)
+            {
+                if (irow % 3 == 0)
+                {
+                    for (int icol = 2; icol < gvwView.Columns.Count; icol++)
+                    {
+                        if (icol < gvwView.Columns.Count - 1)
+                        {
+                            _Helper.AddMergedCell(irow, icol, icol + 1, "");
+                        }
+                    }
+                }
+            }            
+        }
+
         private void gvw_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
 
@@ -515,7 +614,8 @@ namespace FORM
             this.Cursor = Cursors.WaitCursor;
             BindingDataGrid();
             Create_Grid_NPI_Code();
-            //BindingDataChart();
+            BindingDataGridNPI();
+            BindingDataGridRR();
             this.Cursor = Cursors.Default;
         }
 
@@ -694,5 +794,98 @@ namespace FORM
 
         }
 
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
+        }
+
+        private void gvwView_RowCellStyle_1(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                if (gvwView.GetRowCellValue(e.RowHandle, "DIV").ToString().Equals("3") && e.Column.ColumnHandle > 1)
+                {
+                    if (e.CellValue.ToString().Contains("G"))
+                    {
+                        e.Appearance.BackColor = Color.Green;
+                    }
+                    else if (e.CellValue.ToString().Contains("Y"))
+                    {
+                        e.Appearance.BackColor = Color.Yellow;
+                    }
+                    else if (e.CellValue.ToString().Contains("R"))
+                    {
+                        e.Appearance.BackColor = Color.Red;
+                    }
+                    else if (e.CellValue.ToString().Contains("B"))
+                    {
+                        e.Appearance.BackColor = Color.Black;
+                    }
+                    else if (e.CellValue.ToString().Contains("S"))
+                    {
+                        e.Appearance.BackColor = Color.Silver;
+                    }
+                }
+                if (gvwView.GetRowCellValue(e.RowHandle, "DIV").ToString().Equals("1"))
+                {
+                    e.Appearance.TextOptions.HAlignment = HorzAlignment.Near;
+                    e.Appearance.TextOptions.VAlignment = VertAlignment.Center;
+                    e.Appearance.Font = new Font("Calibri", 12, FontStyle.Bold);
+                }
+            }
+            catch { }
+        }
+
+        private void gvwRR_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            try
+            {
+                if (e.CellValue.ToString().Contains("GREEN"))
+                {
+                    e.Appearance.BackColor = Color.Green;
+                    e.Appearance.ForeColor = Color.White;
+                }
+                else if (e.CellValue.ToString().Contains("RED"))
+                {
+                    e.Appearance.BackColor = Color.Red;
+                    e.Appearance.ForeColor = Color.White;
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void gvwRR_CellMerge(object sender, CellMergeEventArgs e)
+        {
+            try
+            {
+                if (e.RowHandle1 < 0 || gvwRR.RowCount == 0)
+                    return;
+                e.Merge = false;
+                e.Handled = true;
+
+                if (e.Column.FieldName == "YMD")
+                {
+                    string model1 = gvwRR.GetRowCellDisplayText(e.RowHandle1, "MODEL_NAME").Trim();
+                    string model2 = gvwRR.GetRowCellDisplayText(e.RowHandle2, "MODEL_NAME").Trim();
+                    string ymd1 = gvwRR.GetRowCellDisplayText(e.RowHandle1, "YMD").Trim();
+                    string ymd2 = gvwRR.GetRowCellDisplayText(e.RowHandle2, "YMD").Trim();
+
+                    if (ymd1 == ymd2 && model1 == model2)
+                    {
+                        e.Merge = true;
+                    }
+                    else
+                    {
+                        e.Merge = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+        }
     }
 }

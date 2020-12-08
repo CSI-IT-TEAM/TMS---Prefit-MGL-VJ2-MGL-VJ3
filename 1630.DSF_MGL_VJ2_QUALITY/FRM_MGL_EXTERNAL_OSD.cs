@@ -1,16 +1,14 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraCharts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OracleClient;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OracleClient;
+using System.Runtime.InteropServices;
+using DevExpress.XtraCharts;
 
 namespace FORM
 {
@@ -19,243 +17,688 @@ namespace FORM
         public FRM_MGL_EXTERNAL_OSD()
         {
             InitializeComponent();
+            //tmrDate.Stop();
         }
 
-        private void splMain_Panel2_Paint(object sender, PaintEventArgs e)
-        {
+        const int AW_SLIDE = 0X40000;
+        const int AW_HOR_POSITIVE = 0X4;
+        const int AW_HOR_NEGATIVE = 0X2;
+        const int AW_BLEND = 0X80000;
+        const int AW_HIDE = 0x00010000;
+      //  init strinit = new init();
+        [DllImport("user32")]
+        static extern bool AnimateWindow(IntPtr hwnd, int time, int flags);
 
-        }
-        private DataTable MGL_E_QSD_DATA_SELECT(string ARG_TYPE, string ARG_FROM, string ARG_TO)
+        int indexScreen;
+        string line, Mline, Lang;
+        public FRM_MGL_EXTERNAL_OSD(string Title, int _indexScreen, string _Line, string _Mline, string _Lang)
         {
-            System.Data.DataSet retDS;
+            InitializeComponent();
+            indexScreen = _indexScreen;
+            Mline = _Mline;
+            line = _Line;
+            Lang = _Lang;
+            tmrDate.Stop();
+            //arrForm[2] = new FRM_SMT_MON_PROD_STATS("Monthly Productivity Status", 1, _Line, _Mline); //Lenl
+           // lblTitle.Text = Title;
+        }
+
+        public void SetData(string Title, int _indexScreen, string _Line, string _Mline, string _Lang)
+        {
+            indexScreen = _indexScreen;
+            Mline = _Mline;
+            line = _Line;
+            Lang = _Lang;
+            tmrDate.Stop();
+
+            lblTitle.Text = Title;
+        }
+        public DataTable SP_SMT_OSD_DETAIL(string V_P_OSD_LINE, string V_P_MLINE_CD, string V_P_DATE_FROM, string V_P_DATE_TO, string V_P_OP_CD, string V_P_CONFIRM_CHK)
+        {
             COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            try
+            {
+                string process_name = "MES.PKG_SMT_PHUOC.SP_SMT_OSD_DETAIL";
 
-            MyOraDB.ReDim_Parameter(8);
-            MyOraDB.Process_Name = "MES.PKG_MGL_VJ2.MGL_E_QSD_DATA_SUPPORT";
-            //  for (int i = 0; i < intParm; i++)
+                MyOraDB.ReDim_Parameter(7);
+                MyOraDB.Process_Name = process_name;
 
-            MyOraDB.Parameter_Type[0] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[1] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[2] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[3] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[4] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[5] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[6] = (char)OracleType.VarChar;
-            MyOraDB.Parameter_Type[7] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Name[0] = "V_P_OSD_LINE";
+                MyOraDB.Parameter_Name[1] = "V_P_MLINE_CD";
+                MyOraDB.Parameter_Name[2] = "V_P_DATE_FROM";
+                MyOraDB.Parameter_Name[3] = "V_P_DATE_TO";
+                MyOraDB.Parameter_Name[4] = "V_P_OP_CD";
+                MyOraDB.Parameter_Name[5] = "V_P_CONFIRM_CHK";
+                MyOraDB.Parameter_Name[6] = "OUT_CURSOR";
 
-            //V_P_TYPE,V_P_OPTION
-            MyOraDB.Parameter_Name[0] = "ARG_TYPE";
-            MyOraDB.Parameter_Name[1] = "ARG_FROM";
-            MyOraDB.Parameter_Name[2] = "ARG_TO";
-            MyOraDB.Parameter_Name[3] = "ARG_PLANT";
-            MyOraDB.Parameter_Name[4] = "ARG_PROCESS";
-            MyOraDB.Parameter_Name[5] = "ARG_MLINE";
-            MyOraDB.Parameter_Name[6] = "ARG_LANG";
-            MyOraDB.Parameter_Name[7] = "OUT_CURSOR";
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[4] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[5] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[6] = (int)OracleType.Cursor;
 
-            MyOraDB.Parameter_Values[0] = ARG_TYPE;
-            MyOraDB.Parameter_Values[1] = ARG_FROM;
-            MyOraDB.Parameter_Values[2] = ARG_TO;
-            MyOraDB.Parameter_Values[3] = ComVar.Var._strValue1;
-            MyOraDB.Parameter_Values[4] = "UPSVJ3";
-            MyOraDB.Parameter_Values[5] = "";
-            MyOraDB.Parameter_Values[6] = "";
-            MyOraDB.Parameter_Values[7] = "";
+                MyOraDB.Parameter_Values[0] = V_P_OSD_LINE;
+                MyOraDB.Parameter_Values[1] = V_P_MLINE_CD;
+                MyOraDB.Parameter_Values[2] = V_P_DATE_FROM;
+                MyOraDB.Parameter_Values[3] = V_P_DATE_TO;
+                MyOraDB.Parameter_Values[4] = V_P_OP_CD;
+                MyOraDB.Parameter_Values[5] = V_P_CONFIRM_CHK;
+                MyOraDB.Parameter_Values[6] = "";
 
-            MyOraDB.Add_Select_Parameter(true);
-            retDS = MyOraDB.Exe_Select_Procedure();
-            if (retDS == null) return null;
-            return retDS.Tables[MyOraDB.Process_Name];
+
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[process_name];
+            }
+            catch
+            {
+                return null;
+            }
         }
-        private void BindingDataChart()
+        public DataTable SP_SMT_OSD_DAILY(string ARG_COMP_NAME, string ARG_LINE_CD, string ARG_MLINE_CD, string ARG_MONTH)
         {
-            string DATE_FROM = UC_MONTH.GetValue() + "01", DATE_TO = UC_MONTH.GetValue() + DateTime.DaysInMonth(Convert.ToInt32(UC_MONTH.GetValue().Substring(0, 4)), Convert.ToInt32(UC_MONTH.GetValue().Substring(4, 2))).ToString();
-            loadTopLeft(MGL_E_QSD_DATA_SELECT("CHART1", DATE_FROM, DATE_TO));
-            bindingDataGrid(DATE_FROM, DATE_TO);
+            COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            try
+            {
+                string process_name = "MES.PKG_SMT_DSF_NOS.SP_SMT_OSD_DAILY_DIV_V2";
+
+                MyOraDB.ReDim_Parameter(5);
+                MyOraDB.Process_Name = process_name;
+
+                MyOraDB.Parameter_Name[0] = "ARG_COMP_NAME";
+                MyOraDB.Parameter_Name[1] = "ARG_LINE_CD";
+                MyOraDB.Parameter_Name[2] = "ARG_MLINE_CD";
+                MyOraDB.Parameter_Name[3] = "ARG_MONTH";
+                MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
+
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[4] = (int)OracleType.Cursor;
+
+                MyOraDB.Parameter_Values[0] = ARG_COMP_NAME;
+                MyOraDB.Parameter_Values[1] = ComVar.Var._strValue1;
+                MyOraDB.Parameter_Values[2] = ComVar.Var._strValue2;
+                MyOraDB.Parameter_Values[3] = ARG_MONTH;
+                MyOraDB.Parameter_Values[4] = "";
+
+
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[process_name];
+            }
+            catch
+            {
+                return null;
+            }
         }
-        private bool loadTopLeft(DataTable DTF)
+
+        private void GoFullscreen()
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+
+        }
+
+        private void FRM_SMT_OSD_DAILY_PHUOC_Load(object sender, EventArgs e)
+        {
+            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            GoFullscreen();
+            setConfigForm();
+           // this.Cursor = Cursors.WaitCursor;
+            //BindingOSDDaily();
+          //  if (!bgw.IsBusy)
+           //     bgw.RunWorkerAsync();
+            //BindingOSDWeekly("IPPH");
+            //BindingOSDWeekly("IN");
+            //BindingOSDWeekly("DMPPU");
+            //BindingOSDWeekly("OS");
+            //load_data();
+          //  this.Cursor = Cursors.Default;
+        }
+
+        private string GetText(AxFPSpreadADO.AxfpSpread spread, int col, int row)
         {
             try
             {
-                chartControl1.Series[0].Points.Clear();
-                chartControl1.Series[1].Points.Clear();
-                chartControl1.Series[2].Points.Clear();
-                for (int i = 0; i < DTF.Rows.Count; i++)
-                {
-                    chartControl1.Series[0].Points.Add(new SeriesPoint(DTF.Rows[i]["YMD"].ToString(), DTF.Rows[i]["OSD_QTY"]));
-                    chartControl1.Series[1].Points.Add(new SeriesPoint(DTF.Rows[i]["YMD"].ToString(), DTF.Rows[i]["RETURN_QTY"]));
-                    chartControl1.Series[2].Points.Add(new SeriesPoint(DTF.Rows[i]["YMD"].ToString(), DTF.Rows[i]["PER"]));
+                object data = null;
+                spread.GetText(col, row, ref data);
+                return data.ToString();
+            }
+            catch 
+            {
+                //return "";
+                //log.Error(ex);
+                return null;
+            }
 
-                    if (Convert.ToDouble(DTF.Rows[i]["OSD_QTY"]) == Convert.ToDouble(DTF.Rows[i]["RETURN_QTY"]))
+        }
+
+
+        private void CLearGrid()
+        {
+            for (int iRow = 2; iRow <= axfpOSD.MaxRows; iRow++)
+            {
+                for (int iCol = 2; iCol <= axfpOSD.MaxCols; iCol++)
+                {
+                    axfpOSD.SetText(iCol, iRow, "");
+                    axfpOSD.Row = iRow;
+                    axfpOSD.Col = iCol;
+                    if (iRow < axfpOSD.MaxRows)
                     {
 
-                        chartControl1.Series[0].Points[i].Color = Color.Green;
-                        chartControl1.Series[1].Points[i].Color = Color.Green;
+                        axfpOSD.BackColor = Color.White;
+                        axfpOSD.ForeColor = Color.Black;
                     }
                     else
                     {
-                        chartControl1.Series[0].Points[i].Color = System.Drawing.Color.FromArgb(255, 128, 0);
-                        chartControl1.Series[1].Points[i].Color = System.Drawing.Color.DodgerBlue;
+                        axfpOSD.BackColor = Color.FromArgb(251, 255, 209);
+                        axfpOSD.ForeColor = Color.Black;
                     }
-
                 }
             }
-            catch (Exception ex)
-            {
-                return false;
-            }
-            return true;
         }
-        DataTable dtf = null;
-        private void bindingDataGrid(string DATE_FROM, string DATE_TO)
+
+        private void Animation(AxFPSpreadADO.AxfpSpread Grid, DataTable dt)
         {
-            grdBase.Refresh();
-            gvwBase.Columns.Clear();
-            DataTable dt = dtf = MGL_E_QSD_DATA_SELECT("GRID", DATE_FROM, DATE_TO);
-            grdBase.DataSource = dt;
+            Grid.Hide();
+            this.Cursor = Cursors.WaitCursor;
+            BindingGrid(dt);
+            AnimateWindow(Grid.Handle, 500, AW_SLIDE | 0X4); //IPEX_Monitor.ClassLib.WinAPI.getSlidType("2")
+            Grid.Show();
+            this.Cursor = Cursors.Default;
 
-            gvwBase.OptionsView.ColumnAutoWidth = false;
-            for (int i = 0; i < gvwBase.Columns.Count; i++)
+        }
+
+        private void BindingGrid(DataTable dt)
+        {
+
+            if (dt != null && dt.Rows.Count > 0)
             {
-                gvwBase.Columns[i].AppearanceHeader.TextOptions.HAlignment = HorzAlignment.Center;
-                gvwBase.Columns[i].AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-                gvwBase.Columns[i].AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-                gvwBase.Columns[i].AppearanceHeader.ForeColor = System.Drawing.Color.White;
-                gvwBase.Columns[i].AppearanceHeader.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-                gvwBase.Columns[i].OptionsColumn.ReadOnly = true;
-                gvwBase.Columns[i].OptionsColumn.AllowEdit = false;
-                gvwBase.Columns[i].OptionsColumn.ReadOnly = true;
-                gvwBase.Columns[i].OptionsColumn.AllowEdit = false;
-                gvwBase.Columns[i].OptionsFilter.AllowFilter = false;
-                gvwBase.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-                if (i < 2)
+                try
                 {
-                    gvwBase.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-                    gvwBase.Columns[i].Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-                }
-                else
-                {
-                    gvwBase.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-                    gvwBase.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-                    gvwBase.Columns[i].DisplayFormat.FormatString = "#,0.##";
-                }
 
-                gvwBase.Columns[i].Caption = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(gvwBase.Columns[i].GetCaption().Replace("_", " ").Replace("'", " ").ToLower()).Split(',')[0];
-                gvwBase.Columns[0].Visible = false;
-                if (gvwBase.Columns[i].FieldName == "TOTAL")
-                {
-                    gvwBase.Columns[i].VisibleIndex = 999;
+                    axfpOSD.MaxCols = dt.Rows.Count + 3;
+                    CLearGrid();
+
+                    axfpOSD.set_ColWidth(1, 9d);
+
+
+                    axfpOSD.SetText(1, 1, dt.Rows[0]["OSD_YMD"].ToString().Substring(0, 3));
+
+                    for (int iCol = 2; iCol <= axfpOSD.MaxCols; iCol++)
+                    {
+                        axfpOSD.set_ColWidth(iCol, 123d / (axfpOSD.MaxCols - 1));
+                        axfpOSD.Row = 1;
+                        axfpOSD.Col = iCol;
+                        axfpOSD.BackColor = Color.FromArgb(192, 192, 192);
+                        axfpOSD.ForeColor = Color.Black;
+                        axfpOSD.Font = new System.Drawing.Font("Calibri", 12, FontStyle.Bold);
+                    }
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 1, "AVG");
+                    axfpOSD.SetText(axfpOSD.MaxCols, 1, "TOT");
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        // for (int iCol = 1; iCol < axfpOSD.MaxCols; iCol++)
+                        // {
+                        //if (dt.Rows[i]["OSD_YMD"].ToString().Substring(4, 2).Equals(GetText(this.axfpOSD,iCol,1)))
+                        //  {
+
+                        axfpOSD.SetText(i + 2, 1, dt.Rows[i]["OSD_YMD"].ToString().Substring(4, 2));
+                        axfpOSD.SetText(i + 2, 2, dt.Rows[i]["IN"].ToString());
+                        axfpOSD.SetText(i + 2, 3, dt.Rows[i]["OS"].ToString());
+                        axfpOSD.SetText(i + 2, 4, dt.Rows[i]["IP"].ToString());
+                        axfpOSD.SetText(i + 2, 5, dt.Rows[i]["PH"].ToString());
+                        axfpOSD.SetText(i + 2, 6, dt.Rows[i]["DMP"].ToString());
+                        axfpOSD.SetText(i + 2, 7, dt.Rows[i]["PU"].ToString());
+                        axfpOSD.SetText(i + 2, 8, dt.Rows[i]["TOT"].ToString());
+
+
+                        if (dt.Rows[i]["TODAY"].ToString().Equals(GetText(this.axfpOSD, i + 2, 1)))
+                        {
+                            axfpOSD.Col = i + 2;
+
+                            for (int iRow = 2; iRow <= axfpOSD.MaxRows; iRow++)
+                            {
+                                axfpOSD.Row = iRow;
+                                axfpOSD.BackColor = Color.Orange;
+                            }
+
+                        }
+
+                        for (int iRow = 1; iRow <= 8; iRow++)
+                        {
+                            axfpOSD.Row = iRow + 1;
+                            axfpOSD.Col = i + 2;
+                            axfpOSD.CellType = FPSpreadADO.CellTypeConstants.CellTypeNumber;
+                            axfpOSD.TypeNumberDecPlaces = 1;
+                            axfpOSD.TypeNumberShowSep = true;
+                            axfpOSD.Font = new System.Drawing.Font("Calibri", 11, FontStyle.Bold);
+                            axfpOSD.SetCellBorder(1, 1, axfpOSD.MaxCols, axfpOSD.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexTop, 1, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
+                            axfpOSD.SetCellBorder(1, 1, axfpOSD.MaxCols, axfpOSD.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexRight, 1, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
+                            axfpOSD.SetCellBorder(1, 1, axfpOSD.MaxCols, axfpOSD.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexLeft, 1, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
+                            axfpOSD.SetCellBorder(1, 1, axfpOSD.MaxCols, axfpOSD.MaxRows, FPSpreadADO.CellBorderIndexConstants.CellBorderIndexBottom, 1, FPSpreadADO.CellBorderStyleConstants.CellBorderStyleSolid);
+
+
+                        }
+
+
+                        axfpOSD.Col = axfpOSD.MaxCols;
+                        for (int iRow = 2; iRow <= axfpOSD.MaxRows; iRow++)
+                        {
+                            axfpOSD.Row = iRow;
+                            axfpOSD.BackColor = Color.FromArgb(255, 255, 202);
+                            axfpOSD.Font = new System.Drawing.Font("Calibri", 11, FontStyle.Bold);
+                        }
+
+                        axfpOSD.Col = axfpOSD.MaxCols - 1;
+                        for (int iRow = 2; iRow <= axfpOSD.MaxRows; iRow++)
+                        {
+                            axfpOSD.Row = iRow;
+                            axfpOSD.BackColor = Color.FromArgb(244, 212, 252);
+                            axfpOSD.Font = new System.Drawing.Font("Calibri", 11, FontStyle.Bold);
+
+                        }
+                        //}
+                        // }
+                    }
+                    //AVG
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 2, dt.Rows[0]["AVG_IN"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 3, dt.Rows[0]["AVG_OS"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 4, dt.Rows[0]["AVG_IP"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 5, dt.Rows[0]["AVG_PH"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 6, dt.Rows[0]["AVG_DMP"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 7, dt.Rows[0]["AVG_PU"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols - 1, 8, dt.Rows[0]["AVG_TOT"].ToString());
+                    //TOT
+                    axfpOSD.SetText(axfpOSD.MaxCols, 2, dt.Rows[0]["TOT_IN"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 3, dt.Rows[0]["TOT_OS"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 4, dt.Rows[0]["TOT_IP"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 5, dt.Rows[0]["TOT_PH"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 6, dt.Rows[0]["TOT_DMP"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 7, dt.Rows[0]["TOT_PU"].ToString());
+                    axfpOSD.SetText(axfpOSD.MaxCols, 8, dt.Rows[0]["TOT_TOT"].ToString());
+
                 }
-                if (i == 1)
-                    gvwBase.Columns[i].Width = 200;
-                else
-                    gvwBase.Columns[i].Width = 75;
+                catch
+                { }
             }
         }
-        private void FRM_MGL_EXTERNAL_OSD_VisibleChanged(object sender, EventArgs e)
+
+        private void BindingOSDDaily()
+        {
+            try
+            {
+                DataTable dt = SP_SMT_OSD_DAILY("DAILY", line, Mline, UC_MONTH.GetValue());
+                chartOSDDaily.DataSource = dt;
+
+                Animation(axfpOSD, dt);
+                //BindingGrid(dt);
+
+                chartOSDDaily.Series[0].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[0].ValueDataMembers.AddRange(new string[] { "IN" });
+                chartOSDDaily.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                chartOSDDaily.Series[1].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[1].ValueDataMembers.AddRange(new string[] { "OS" });
+                chartOSDDaily.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                chartOSDDaily.Series[2].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[2].ValueDataMembers.AddRange(new string[] { "IP" });
+                chartOSDDaily.Series[2].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                chartOSDDaily.Series[3].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[3].ValueDataMembers.AddRange(new string[] { "DMP" });
+                chartOSDDaily.Series[3].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                chartOSDDaily.Series[4].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[4].ValueDataMembers.AddRange(new string[] { "PH" });
+                chartOSDDaily.Series[4].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                chartOSDDaily.Series[5].ArgumentDataMember = "OSD_YMD";
+                chartOSDDaily.Series[5].ValueDataMembers.AddRange(new string[] { "PU" });
+                chartOSDDaily.Series[5].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void BindingOSDWeekly(string Comp_Name)
+        {
+            try
+            {
+                switch (Comp_Name)
+                {
+                    case "IN":
+                        chartIN.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartIN.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartIN.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartIN.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartIN.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartIN.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartIN.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+                        ((XYDiagram)chartIN.Diagram).AxisX.Label.Angle = -35;
+
+                        break;
+                    case "IP":
+                        chartIPPH.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartIPPH.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartIPPH.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartIPPH.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartIPPH.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartIPPH.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartIPPH.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        ((XYDiagram)chartIPPH.Diagram).AxisX.Label.Angle = -35;
+                        break;
+                    case "PH":
+                        chartPH.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartPH.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartPH.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartPH.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartPH.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartPH.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartPH.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        ((XYDiagram)chartPH.Diagram).AxisX.Label.Angle = -35;
+                        break;
+                    case "DMP":
+                        chartDMPPU.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartDMPPU.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartDMPPU.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartDMPPU.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartDMPPU.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartDMPPU.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartDMPPU.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        ((XYDiagram)chartDMPPU.Diagram).AxisX.Label.Angle = -35;
+                        break;
+                    case "PU":
+                        chartPU.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartPU.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartPU.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartPU.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartPU.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartPU.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartPU.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+                        ((XYDiagram)chartPU.Diagram).AxisX.Label.Angle = -35;
+                        break;
+                    case "OS":
+                        chartOS.DataSource = SP_SMT_OSD_DAILY(Comp_Name, line, Mline, UC_MONTH.GetValue());
+                        chartOS.Series[0].ArgumentDataMember = "STYLE_NAME";
+                        chartOS.Series[0].ValueDataMembers.AddRange(new string[] { "QTY" });
+                        chartOS.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+
+                        chartOS.Series[1].ArgumentDataMember = "STYLE_NAME";
+                        chartOS.Series[1].ValueDataMembers.AddRange(new string[] { "PER" });
+                        chartOS.Series[1].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+                        ((XYDiagram)chartOS.Diagram).AxisX.Label.Angle = -35;
+                        break;
+
+                }
+            }
+            catch 
+            { }
+        }
+
+        private void load_data()
+        {
+            try
+            {
+                splitMain.Visible = false;
+                BindingOSDDaily();
+                BindingOSDWeekly("IP");
+                BindingOSDWeekly("PH");
+                BindingOSDWeekly("OS");
+                BindingOSDWeekly("DMP");
+                BindingOSDWeekly("PU");
+                BindingOSDWeekly("IN");
+            }
+            catch
+            {
+            }
+            finally
+            {
+                splitMain.Visible = true;
+            }
+        }
+
+        private void bgw_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // return;
+                if (this.chartOSDDaily.InvokeRequired)
+                    this.chartOSDDaily.Invoke((MethodInvoker)delegate
+                    {
+                        BindingOSDDaily();
+                    });
+                else
+                    BindingOSDDaily();
+
+                if (this.chartIPPH.InvokeRequired)
+                    this.chartIPPH.Invoke((MethodInvoker)delegate
+                    {
+                        BindingOSDWeekly("IP");
+                        BindingOSDWeekly("PH");
+                    });
+                else
+                {
+                    BindingOSDWeekly("IP");
+                    BindingOSDWeekly("PH");
+                }
+
+                if (this.chartOS.InvokeRequired)
+                    this.chartOS.Invoke((MethodInvoker)delegate
+                    {
+                        BindingOSDWeekly("OS");
+                    });
+                else
+                    BindingOSDWeekly("OS");
+
+
+                if (this.chartDMPPU.InvokeRequired)
+                    this.chartDMPPU.Invoke((MethodInvoker)delegate
+                    {
+                        BindingOSDWeekly("DMP");
+                        BindingOSDWeekly("PU");
+                    });
+                else
+                {
+                    BindingOSDWeekly("PU");
+                    BindingOSDWeekly("DMP");
+                }
+                if (this.chartIN.InvokeRequired)
+                    this.chartIN.Invoke((MethodInvoker)delegate
+                    {
+                        BindingOSDWeekly("IN");
+                    });
+                else
+                    BindingOSDWeekly("IN");
+            }
+            catch 
+            { }
+        }
+
+        private void lblTitle_DoubleClick(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            //BindingOSDDaily();
+            if (!bgw.IsBusy)
+                bgw.RunWorkerAsync();
+
+            this.Cursor = Cursors.Default;
+        }
+        int cCount = 0;
+        private void tmrDate_Tick(object sender, EventArgs e)
+        {
+            cCount++;
+            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            if (cCount >= 30)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //   // BindingOSDDaily();
+                if (!bgw.IsBusy)
+                    bgw.RunWorkerAsync();
+                // load_data();
+                cCount = 0;
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FRM_SMT_OSD_DAILY_PHUOC_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)
             {
-                lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
-                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support External OS&&D by Month" : ComVar.Var._strValue2 + " External OS&&D by Month";
-                cCount = 60;
+                cmdBack.Tag = ComVar.Var._Frm_Back;
+                line = ComVar.Var._strValue1;
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL2") ? "VJ2 External OS&&D by Day" : ComVar.Var._strValue2 + " External OS&&D by Day";
+                initForm();
+                cCount = 30;
+                tmrDate.Start();
             }
             else
-            {
-                //Stop stb
-            }
-        }
-        private void gvwBase_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            if (gvwBase.GetRowCellValue(e.RowHandle, gvwBase.Columns[1]).ToString().ToUpper().Contains("REPLENISHMENT RATE(%)") && e.Column.ColumnHandle > 1)
-            {
-                if (e.CellValue.ToString() != "")
-                {
-                    if (double.Parse(e.CellValue.ToString()) >= 100)
-                        e.Appearance.ForeColor = Color.Blue;
-                    else
-                        e.Appearance.ForeColor = Color.Red;
-                }
-            }
-            if (gvwBase.GetRowCellValue(e.RowHandle, gvwBase.Columns[1]).ToString().ToUpper().Contains("OS&D RATE(%)") && e.Column.ColumnHandle > 1)
-            {
-                if (e.CellValue.ToString() != "")
-                {
-                    if (double.Parse(e.CellValue.ToString()) < 1)
-                        e.Appearance.ForeColor = Color.Blue;
-                    else
-                        e.Appearance.ForeColor = Color.Red;
-                }
-            }
-            if (gvwBase.GetRowCellDisplayText(e.RowHandle, e.Column).ToString() == "")
-            {
-                // e.Column.Visible = false;
-            }
-
-            if (gvwBase.GetRowCellValue(e.RowHandle, gvwBase.Columns[1]).ToString().ToUpper().Contains("PRODUCTION QUANTITY (PRS)"))  //gvwBase.GetRowCellValue(e.RowHandle, "DIV").Equals("Production Quantity (Prs)"))
-            {
-                e.Appearance.BackColor = Color.Blue;
-                e.Appearance.ForeColor = Color.White;
-            }
+                tmrDate.Stop();
         }
 
         private void UC_MONTH_ValueChangeEvent(object sender, EventArgs e)
         {
-            try
-            {
-                this.Cursor = Cursors.WaitCursor;
-                cCount = 0;
-                string DATE_FROM = UC_MONTH.GetValue() + "01", DATE_TO = UC_MONTH.GetValue() + DateTime.DaysInMonth(Convert.ToInt32(UC_MONTH.GetValue().Substring(0, 4)), Convert.ToInt32(UC_MONTH.GetValue().Substring(4, 2))).ToString();
-                loadTopLeft(MGL_E_QSD_DATA_SELECT("CHART1", DATE_FROM, DATE_TO));
-                bindingDataGrid(DATE_FROM, DATE_TO);
-                this.Cursor = Cursors.Default;
-            }
-            catch { this.Cursor = Cursors.Default; }
+
+            cCount = 30;
+            tmrDate.Start();
+            //line = strinit.line;
+            //Mline = strinit.mline;
+            //Lang = strinit.lang;
         }
-        int cCount = 0;
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void axfpOSD_ClickEvent(object sender, AxFPSpreadADO._DSpreadEvents_ClickEvent e)
         {
-            cCount++;
-            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
-            if (cCount >= 60)
+            string sCellValue = "";
+            axfpOSD.Row = 1;
+            axfpOSD.Col = e.col;
+            sCellValue = axfpOSD.Value.ToString();
+
+            string date = UC_MONTH.GetValue() + sCellValue;
+            //MessageBox.Show(date);
+            //this.TopMost = false;
+            DataTable dt = SP_SMT_OSD_DETAIL(line, Mline, date, date, "", "Y");
+            Popup.FRM_SMT_EXTERNAL_POPUP_1 frm_pop = new Popup.FRM_SMT_EXTERNAL_POPUP_1(dt);
+           // FRM_EXTERNAL_OSND_POP frm_pop = new FRM_EXTERNAL_OSND_POP(line, Mline, date, date);
+            frm_pop.ShowDialog();
+           // frm_pop.TopMost = true;
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void initForm()
+        {
+            this.Mline = ComVar.Var._strValue2;
+            this.line = ComVar.Var._strValue1;
+            this.Lang = ComVar.Var._strValue3;
+            if (ComVar.Var._strValue3 == "Vn")
             {
-                try
-                {
-                    this.Cursor = Cursors.WaitCursor;
-                    string DATE_FROM = UC_MONTH.GetValue() + "01", DATE_TO = UC_MONTH.GetValue() + DateTime.DaysInMonth(Convert.ToInt32(UC_MONTH.GetValue().Substring(0, 4)), Convert.ToInt32(UC_MONTH.GetValue().Substring(4, 2))).ToString();
-                    loadTopLeft(MGL_E_QSD_DATA_SELECT("CHART1", DATE_FROM, DATE_TO));
-                    bindingDataGrid(DATE_FROM, DATE_TO);
-                    this.Cursor = Cursors.Default;
-                    cCount = 0;
-                }
-                catch { this.Cursor = Cursors.Default; cCount = 0; }
+                this.lblTitle.Text = "Hàng C trả về bottom theo tháng";
+            }
+            else
+            {
+                this.lblTitle.Text = "External OS&&D by Month";
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cmdBack_Click(object sender, EventArgs e)
         {
             ComVar.Var.callForm = "back";
         }
 
-        private void gvwBase_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void menu_Click(object sender, EventArgs e)
         {
-            if (e.Column.ColumnHandle < 2 || e.Clicks <= 1) return;
-            string DateF = string.Concat(UC_MONTH.GetValue(), dtf.Columns[e.Column.ColumnHandle].ColumnName.ToString().Replace("'", ""));
-            string DateT = string.Concat(UC_MONTH.GetValue(), dtf.Columns[e.Column.ColumnHandle].ColumnName.ToString().Replace("'", ""));
-            DataTable dtF = new DataTable();
-            if (e.RowHandle == gvwBase.RowCount - 2 && e.Column.ColumnHandle != 2)
-            {
-                dtF = MGL_E_QSD_DATA_SELECT("POPUP1", DateF, DateT);
-                Popup.FRM_SMT_EXTERNAL_POPUP_1 POPUP_1 = new Popup.FRM_SMT_EXTERNAL_POPUP_1(dtF);
-                POPUP_1.ShowDialog();
-            }
+            //Control cnt = (Control)sender;
+            ComVar.Var.callForm = "1634";
+        }
 
-            if (e.RowHandle == gvwBase.RowCount - 1 && e.Column.ColumnHandle != 2)
+        private void UC_MONTH_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        #region  Get Config Data From Database
+        /// <summary>
+        /// Declare _dtnInit
+        /// Dictionary<string, string> _dtnInit = new Dictionary<string, string>();
+        /// </summary>
+        private void setConfigForm()
+        {
+            try
             {
-                dtF = MGL_E_QSD_DATA_SELECT("POPUP2", DateF, DateT);
-                Popup.FRM_SMT_EXTERNAL_POPUP_2 POPUP_2 = new Popup.FRM_SMT_EXTERNAL_POPUP_2(dtF);
-                POPUP_2.ShowDialog();
+                System.Collections.Generic.Dictionary<string, string> dtnInit = new System.Collections.Generic.Dictionary<string, string>();
+                dtnInit = ComVar.Func.getInitForm(ComVar.Var._Area + this.GetType().Assembly.GetName().Name, this.GetType().Name);
+                if (dtnInit == null) return;
+                for (int i = 0; i < dtnInit.Count; i++)
+                {
+                    setComValue(dtnInit.ElementAt(i).Key, dtnInit.ElementAt(i).Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                ComVar.Var.writeToLog(this.GetType().Name + "-->setConfigForm-->Err:    " + ex.ToString());
             }
         }
+
+        private void setComValue(string obj, string obj_value)
+        {
+            try
+            {
+                if (obj.Contains('.'))
+                {
+                    string[] strSplit = obj.Split('.');
+                    Control[] cnt = this.Controls.Find(strSplit[0], true);
+
+                    for (int i = 0; i < cnt.Length; i++)
+                    {
+                        System.Reflection.PropertyInfo propertyInfo = cnt[i].GetType().GetProperty(strSplit[1]);
+                        propertyInfo.SetValue(cnt[i], Convert.ChangeType(obj_value, propertyInfo.PropertyType), null);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ComVar.Var.writeToLog(this.GetType().Name + "-->setComValue (" + obj + ", " + obj_value + ") Err:    " + ex.ToString());
+            }
+
+        }
+        #endregion 
+
+        
+
     }
 }

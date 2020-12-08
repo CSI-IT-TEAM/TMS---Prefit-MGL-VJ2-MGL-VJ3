@@ -383,7 +383,7 @@ namespace FORM
             if (this.Visible)
             {
                 uc.YMD_Change(2, "");
-                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Week" : ComVar.Var._strValue2 + " Production Status by Week";
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ2 Production Status by Week" : ComVar.Var._strValue2 + " Production Status by Week";
                 int_count = 19;
                 line = ComVar.Var._strValue1;
                 timer2.Start();

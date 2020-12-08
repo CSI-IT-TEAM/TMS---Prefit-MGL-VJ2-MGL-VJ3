@@ -117,59 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="carcsi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carcsi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="go_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\go_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Footer_CSI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Footer_CSI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VJ3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VJ3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VJ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VJ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FtyButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FtyButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="go" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VJ2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VJ2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Detail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Detail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Detail_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Detail_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Back-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="truckgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\truckgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FtyButtonHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FtyButtonHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ip_icon_05_sample5e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ip_icon_05_sample5e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
