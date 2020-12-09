@@ -38,7 +38,7 @@ namespace FORM
                 COM.OraDB MyOraDB = new COM.OraDB();
                 System.Data.DataSet ds_ret;
 
-                string process_name = "MES.PKG_MGL_VJ2.SELECT_STIT_LINE";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_STIT_LINE";
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -75,7 +75,7 @@ namespace FORM
             System.Data.DataSet retDS;
             COM.OraDB MyOraDB = new COM.OraDB();
             MyOraDB.ReDim_Parameter(5);
-            MyOraDB.Process_Name = "MES.PKG_MGL_VJ2.SELECT_STITCHING_SET";
+            MyOraDB.Process_Name = "MES.PKG_MGL_VJ2.MGL_STITCHING_SET";
 
             MyOraDB.Parameter_Name[0] = "ARG_DATE";
             MyOraDB.Parameter_Name[1] = "ARG_PLANT";
@@ -308,7 +308,7 @@ namespace FORM
             System.Data.DataSet retDS;
             COM.OraDB MyOraDB = new COM.OraDB();
             MyOraDB.ReDim_Parameter(9);
-            MyOraDB.Process_Name = "MES.PKG_MGL_VJ2.SELECT_SET_BALANCE_TAIL";
+            MyOraDB.Process_Name = "MES.PKG_MGL_VJ2.MGL_SET_BALANCE_TAIL";
 
             MyOraDB.Parameter_Name[0] = "ARG_DATE";
             MyOraDB.Parameter_Name[1] = "ARG_PLANT";

@@ -312,6 +312,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Green;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
@@ -328,6 +329,7 @@
             this.btnStopAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnStopAll.BackgroundImage = global::FORM.Properties.Resources.stop_icon;
             this.btnStopAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStopAll.Enabled = false;
             this.btnStopAll.FlatAppearance.BorderSize = 0;
             this.btnStopAll.Location = new System.Drawing.Point(459, 337);
             this.btnStopAll.Name = "btnStopAll";
@@ -341,6 +343,7 @@
             this.btnApply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnApply.BackgroundImage = global::FORM.Properties.Resources.checkbox_icon;
             this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnApply.Enabled = false;
             this.btnApply.FlatAppearance.BorderSize = 0;
             this.btnApply.Location = new System.Drawing.Point(459, 257);
             this.btnApply.Name = "btnApply";
@@ -379,6 +382,7 @@
             this.btnTransfer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTransfer.BackgroundImage = global::FORM.Properties.Resources.transfer_icon_up_2;
             this.btnTransfer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTransfer.Enabled = false;
             this.btnTransfer.FlatAppearance.BorderSize = 0;
             this.btnTransfer.Location = new System.Drawing.Point(459, 104);
             this.btnTransfer.Name = "btnTransfer";
@@ -405,6 +409,7 @@
             this.cboReason.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(213)))), ((int)(((byte)(244)))));
             this.cboReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboReason.DropDownWidth = 600;
+            this.cboReason.Enabled = false;
             this.cboReason.Font = new System.Drawing.Font("Calibri", 24F);
             this.cboReason.ForeColor = System.Drawing.Color.White;
             this.cboReason.FormattingEnabled = true;
@@ -431,6 +436,7 @@
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnOK.BackgroundImage = global::FORM.Properties.Resources.OK1;
             this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK.Enabled = false;
             this.btnOK.FlatAppearance.BorderSize = 0;
             this.btnOK.Location = new System.Drawing.Point(199, 104);
             this.btnOK.Name = "btnOK";

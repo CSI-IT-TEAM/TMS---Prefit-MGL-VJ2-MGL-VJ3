@@ -34,6 +34,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxInterop.FPSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.FPUSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\AxInterop.FPUSpreadADO.dll</HintPath>
+    </Reference>
     <Reference Include="COM, Version=1.0.7378.15998, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MAIN\bin\Debug\COM.dll</HintPath>
@@ -57,6 +65,21 @@
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.FPSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\MAIN\bin\Debug\Interop.FPSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FPUSpreadADO, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\MAIN\bin\Debug\Interop.FPUSpreadADO.dll</HintPath>
+    </Reference>
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\msdatasrc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -94,6 +117,30 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.designer.cs">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY.designer.cs">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_WEEKLY_PRODUCTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_WEEKLY_PRODUCTIVITY.designer.cs">
+      <DependentUpon>FRM_MGL_WEEKLY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTIVITY.designer.cs">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_HOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +288,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTIVITY.resx">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_MONTHLY_PRODUCTIVITY.resx">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_WEEKLY_PRODUCTIVITY.resx">
+      <DependentUpon>FRM_MGL_WEEKLY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_YEARLY_PRODUCTIVITY.resx">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_HOME.resx">
       <DependentUpon>FRM_HOME.cs</DependentUpon>
     </EmbeddedResource>
