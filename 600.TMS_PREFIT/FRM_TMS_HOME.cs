@@ -258,26 +258,39 @@ namespace FORM
             }
         }
 
+        bool iback = false;
         private void FRM_TMS_HOME_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)
             {
+                iback = ComVar.Var._IsBack;
                 if (!string.IsNullOrEmpty(ComVar.Var._Frm_Back))
                     if (ComVar.Var._Frm_Back.Equals("300") || ComVar.Var._Frm_Back.Equals("375"))
                         btnBack.Visible = true;
                     else
                         btnBack.Visible = false;
                 else
-                    btnBack.Visible = false;
+                    btnBack.Visible = ComVar.Var._IsBack; //false;
                 tmrDate.Start();
             }
             else
                 tmrDate.Stop();
         }
 
+
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ComVar.Var.callForm = ComVar.Var._Frm_Back;
+            if (!string.IsNullOrEmpty(ComVar.Var._Frm_Back))
+            {
+                if (!ComVar.Var._Frm_Back.Contains("SMT_I_TMS_MAIN"))
+                    ComVar.Var.callForm = ComVar.Var._Frm_Back;
+                else
+                    ComVar.Var.callForm = "back";
+            }
+            else
+            {
+                ComVar.Var.callForm = "back";
+            }
         }
     }
 }

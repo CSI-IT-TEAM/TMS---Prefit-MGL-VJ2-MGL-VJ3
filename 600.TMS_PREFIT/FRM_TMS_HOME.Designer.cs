@@ -32,6 +32,7 @@
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.SplashScreen1), true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnRow1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.splRow2 = new System.Windows.Forms.SplitContainer();
@@ -39,10 +40,14 @@
             this.lblTanPhu = new System.Windows.Forms.Label();
             this.lblLongThanh = new System.Windows.Forms.Label();
             this.lblVinhCuu = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picVJ1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -50,27 +55,22 @@
             this.tmrTitle = new System.Windows.Forms.Timer(this.components);
             this.advancedPanel3 = new FORM.AdvancedPanel();
             this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.advancedPanel2 = new FORM.AdvancedPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.advancedPanel1 = new FORM.AdvancedPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnVJ2_VJ1 = new FORM.AdvancedPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.advancedPanel6 = new FORM.AdvancedPanel();
             this.tblMainVJ3 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel5 = new FORM.AdvancedPanel();
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picVJ1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -78,8 +78,12 @@
             this.splRow2.Panel2.SuspendLayout();
             this.splRow2.SuspendLayout();
             this.pnRow2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.advancedPanel3.SuspendLayout();
             this.advancedPanel2.SuspendLayout();
             this.advancedPanel1.SuspendLayout();
@@ -87,10 +91,6 @@
             this.advancedPanel6.SuspendLayout();
             this.advancedPanel5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -125,6 +125,21 @@
             this.pnRow1.Name = "pnRow1";
             this.pnRow1.Size = new System.Drawing.Size(1882, 70);
             this.pnRow1.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Location = new System.Drawing.Point(1611, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 74);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblDate
             // 
@@ -219,6 +234,36 @@
             this.lblVinhCuu.Text = "Vĩnh Cửu";
             this.lblVinhCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::FORM.Properties.Resources.VJ3;
+            this.pictureBox2.Location = new System.Drawing.Point(495, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(240, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FORM.Properties.Resources.VJ2;
+            this.pictureBox1.Location = new System.Drawing.Point(249, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // picVJ1
+            // 
+            this.picVJ1.Image = global::FORM.Properties.Resources.VJ;
+            this.picVJ1.Location = new System.Drawing.Point(3, 3);
+            this.picVJ1.Name = "picVJ1";
+            this.picVJ1.Size = new System.Drawing.Size(240, 122);
+            this.picVJ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVJ1.TabIndex = 0;
+            this.picVJ1.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -278,6 +323,16 @@
             this.label2.TabIndex = 73;
             this.label2.Text = "Transportation Management System";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::FORM.Properties.Resources.Footer_CSI;
+            this.pictureBox5.Location = new System.Drawing.Point(7, 786);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(305, 56);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 72;
+            this.pictureBox5.TabStop = false;
             // 
             // labelControl2
             // 
@@ -371,6 +426,21 @@
             this.label7.Text = "VJ3 —> VJ3";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(66, 27);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 99);
+            this.button3.TabIndex = 1;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // advancedPanel2
             // 
             this.advancedPanel2.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
@@ -403,6 +473,21 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "VJ3 —> VJ1";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(77, 26);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 99);
+            this.button4.TabIndex = 1;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // advancedPanel1
             // 
@@ -437,6 +522,21 @@
             this.label5.Text = "VJ1 —> VJ1";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(68, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 99);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // pnVJ2_VJ1
             // 
             this.pnVJ2_VJ1.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
@@ -469,6 +569,21 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "VJ2 —> VJ2";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(67, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 99);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // advancedPanel6
             // 
@@ -571,119 +686,6 @@
             this.tblMainVJ1.Size = new System.Drawing.Size(724, 707);
             this.tblMainVJ1.TabIndex = 0;
             // 
-            // btnBack
-            // 
-            this.btnBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(1611, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 74);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FORM.Properties.Resources.VJ3;
-            this.pictureBox2.Location = new System.Drawing.Point(495, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(240, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FORM.Properties.Resources.VJ2;
-            this.pictureBox1.Location = new System.Drawing.Point(249, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picVJ1
-            // 
-            this.picVJ1.Image = global::FORM.Properties.Resources.VJ;
-            this.picVJ1.Location = new System.Drawing.Point(3, 3);
-            this.picVJ1.Name = "picVJ1";
-            this.picVJ1.Size = new System.Drawing.Size(240, 122);
-            this.picVJ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picVJ1.TabIndex = 0;
-            this.picVJ1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(66, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 99);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(77, 26);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 99);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(68, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 99);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(67, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 99);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::FORM.Properties.Resources.Footer_CSI;
-            this.pictureBox5.Location = new System.Drawing.Point(7, 786);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(305, 56);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 72;
-            this.pictureBox5.TabStop = false;
-            // 
             // FRM_TMS_HOME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -705,8 +707,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).EndInit();
             this.splRow2.ResumeLayout(false);
             this.pnRow2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.advancedPanel3.ResumeLayout(false);
             this.advancedPanel2.ResumeLayout(false);
             this.advancedPanel1.ResumeLayout(false);
@@ -714,10 +720,6 @@
             this.advancedPanel6.ResumeLayout(false);
             this.advancedPanel5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
