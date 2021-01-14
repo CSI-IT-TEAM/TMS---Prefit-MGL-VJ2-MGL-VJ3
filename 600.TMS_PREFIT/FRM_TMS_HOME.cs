@@ -192,6 +192,7 @@ namespace FORM
             len = txt.Length;
             label1.Text = "";
             tmrTitle.Start();
+            btnBack.Visible = ComVar.Var._IsBack;
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             DataTable dt = TMS_HOME_SELECT("Q1", DateTime.Now.ToString()); //Lấy dữ liệu từ DB
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
@@ -269,8 +270,8 @@ namespace FORM
                         btnBack.Visible = true;
                     else
                         btnBack.Visible = false;
-                else
-                    btnBack.Visible = ComVar.Var._IsBack; //false;
+                //else
+                //    btnBack.Visible = ComVar.Var._IsBack; //false;
                 tmrDate.Start();
             }
             else
