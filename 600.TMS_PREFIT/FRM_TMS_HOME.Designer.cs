@@ -44,15 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picVJ1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
-            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
             this.advancedPanel3 = new FORM.AdvancedPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -65,12 +56,21 @@
             this.pnVJ2_VJ1 = new FORM.AdvancedPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel6 = new FORM.AdvancedPanel();
             this.tblMainVJ3 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel5 = new FORM.AdvancedPanel();
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -82,12 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.advancedPanel3.SuspendLayout();
             this.advancedPanel2.SuspendLayout();
             this.advancedPanel1.SuspendLayout();
             this.pnVJ2_VJ1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.advancedPanel6.SuspendLayout();
             this.advancedPanel5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
@@ -284,115 +284,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 128);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Controls.Add(this.labelControl2);
-            this.groupBox1.Controls.Add(this.labelControl1);
-            this.groupBox1.Controls.Add(this.labelControl7);
-            this.groupBox1.Controls.Add(this.advancedPanel6);
-            this.groupBox1.Controls.Add(this.advancedPanel5);
-            this.groupBox1.Controls.Add(this.advancedPanel4);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 213);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1882, 859);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(1557, 826);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(327, 32);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Prefit Process";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(1559, 788);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 32);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Transportation Management System";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::FORM.Properties.Resources.Footer_CSI;
-            this.pictureBox5.Location = new System.Drawing.Point(7, 786);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(305, 56);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 72;
-            this.pictureBox5.TabStop = false;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl2.LineColor = System.Drawing.Color.Teal;
-            this.labelControl2.LineVisible = true;
-            this.labelControl2.Location = new System.Drawing.Point(1398, 8);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(484, 49);
-            this.labelControl2.TabIndex = 67;
-            this.labelControl2.Text = "Tân Phú";
-            this.labelControl2.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelControl1.LineVisible = true;
-            this.labelControl1.Location = new System.Drawing.Point(780, 8);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(594, 49);
-            this.labelControl1.TabIndex = 67;
-            this.labelControl1.Text = "Long Thành";
-            this.labelControl1.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.labelControl7.LineVisible = true;
-            this.labelControl7.Location = new System.Drawing.Point(21, 8);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(737, 49);
-            this.labelControl7.TabIndex = 67;
-            this.labelControl7.Text = "Vĩnh Cửu";
-            this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            // 
-            // tmrDate
-            // 
-            this.tmrDate.Enabled = true;
-            this.tmrDate.Interval = 1000;
-            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
-            // 
-            // tmrTitle
-            // 
-            this.tmrTitle.Enabled = true;
-            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
-            // 
             // advancedPanel3
             // 
             this.advancedPanel3.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
@@ -585,6 +476,104 @@
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.pictureBox5);
+            this.groupBox1.Controls.Add(this.labelControl2);
+            this.groupBox1.Controls.Add(this.labelControl1);
+            this.groupBox1.Controls.Add(this.labelControl7);
+            this.groupBox1.Controls.Add(this.advancedPanel6);
+            this.groupBox1.Controls.Add(this.advancedPanel5);
+            this.groupBox1.Controls.Add(this.advancedPanel4);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 213);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1882, 859);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(1557, 826);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(327, 32);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "Prefit Process";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(1559, 788);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(327, 32);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Transportation Management System";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::FORM.Properties.Resources.Footer_CSI;
+            this.pictureBox5.Location = new System.Drawing.Point(7, 786);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(305, 56);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 72;
+            this.pictureBox5.TabStop = false;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl2.LineColor = System.Drawing.Color.Teal;
+            this.labelControl2.LineVisible = true;
+            this.labelControl2.Location = new System.Drawing.Point(1398, 8);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(484, 49);
+            this.labelControl2.TabIndex = 67;
+            this.labelControl2.Text = "Tân Phú";
+            this.labelControl2.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.labelControl1.LineVisible = true;
+            this.labelControl1.Location = new System.Drawing.Point(780, 8);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(594, 49);
+            this.labelControl1.TabIndex = 67;
+            this.labelControl1.Text = "Long Thành";
+            this.labelControl1.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.labelControl7.LineVisible = true;
+            this.labelControl7.Location = new System.Drawing.Point(21, 8);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(737, 49);
+            this.labelControl7.TabIndex = 67;
+            this.labelControl7.Text = "Vĩnh Cửu";
+            this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
             // advancedPanel6
             // 
             this.advancedPanel6.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
@@ -686,6 +675,17 @@
             this.tblMainVJ1.Size = new System.Drawing.Size(724, 707);
             this.tblMainVJ1.TabIndex = 0;
             // 
+            // tmrDate
+            // 
+            this.tmrDate.Enabled = true;
+            this.tmrDate.Interval = 1000;
+            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
+            // 
+            // tmrTitle
+            // 
+            this.tmrTitle.Enabled = true;
+            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
+            // 
             // FRM_TMS_HOME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -711,12 +711,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.advancedPanel3.ResumeLayout(false);
             this.advancedPanel2.ResumeLayout(false);
             this.advancedPanel1.ResumeLayout(false);
             this.pnVJ2_VJ1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.advancedPanel6.ResumeLayout(false);
             this.advancedPanel5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
