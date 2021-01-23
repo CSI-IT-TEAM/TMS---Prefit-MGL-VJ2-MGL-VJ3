@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.btnUpstream = new System.Windows.Forms.Button();
@@ -38,7 +37,7 @@
             this.splContent = new System.Windows.Forms.SplitContainer();
             this.tblContent = new System.Windows.Forms.TableLayoutPanel();
             this.tblChart = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splContent)).BeginInit();
