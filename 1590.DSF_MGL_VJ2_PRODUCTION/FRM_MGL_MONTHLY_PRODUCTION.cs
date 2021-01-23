@@ -494,7 +494,7 @@ namespace FORM
             {
                 uc.YMD_Change(3, "");
                 line = ComVar.Var._strValue1;
-                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Support Production Status by Month" : ComVar.Var._strValue2 + " Production Status by Month";
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ2 Production Status by Month" : ComVar.Var._strValue2 + " Production Status by Month";
                 int_count = 19;
                 timer2.Start();
             }

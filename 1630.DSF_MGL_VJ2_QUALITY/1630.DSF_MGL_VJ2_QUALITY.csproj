@@ -115,9 +115,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClassLib\Var.cs" />
-    <Compile Include="FORM_NPI.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FRM_MGL_EXTERNAL_OSD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +126,21 @@
     </Compile>
     <Compile Include="FRM_MGL_INTERNAL_OSD.Designer.cs">
       <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_NPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_EXTERNAL_OSD_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_EXTERNAL_OSD_S.Designer.cs">
+      <DependentUpon>FRM_MGL_EXTERNAL_OSD_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_INTERNAL_OSD_S.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_INTERNAL_OSD_S.Designer.cs">
+      <DependentUpon>FRM_MGL_INTERNAL_OSD_S.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_MGL_NPI.cs">
       <SubType>Form</SubType>
@@ -160,6 +172,15 @@
     <Compile Include="FRM_SMT_INTERNAL_POPUP_2.designer.cs">
       <DependentUpon>FRM_SMT_INTERNAL_POPUP_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\MyCellMergeHelper.cs" />
+    <Compile Include="Helper\MyGridPainter.cs" />
+    <Compile Include="Helper\MyMergedCell.cs" />
+    <Compile Include="POPUP_EXT_OSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POPUP_EXT_OSD.designer.cs">
+      <DependentUpon>POPUP_EXT_OSD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -187,14 +208,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FORM_NPI.resx">
-      <DependentUpon>FORM_NPI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_EXTERNAL_OSD.resx">
       <DependentUpon>FRM_MGL_EXTERNAL_OSD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_INTERNAL_OSD.resx">
       <DependentUpon>FRM_MGL_INTERNAL_OSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_NPI.resx">
+      <DependentUpon>FORM_NPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_EXTERNAL_OSD_S.resx">
+      <DependentUpon>FRM_MGL_EXTERNAL_OSD_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_INTERNAL_OSD_S.resx">
+      <DependentUpon>FRM_MGL_INTERNAL_OSD_S.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_NPI.resx">
       <DependentUpon>FRM_MGL_NPI.cs</DependentUpon>
@@ -210,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_SMT_INTERNAL_POPUP_2.resx">
       <DependentUpon>FRM_SMT_INTERNAL_POPUP_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POPUP_EXT_OSD.resx">
+      <DependentUpon>POPUP_EXT_OSD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -327,6 +357,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ip_icon_05_sample5e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

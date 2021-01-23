@@ -35,10 +35,11 @@ namespace FORM
             sPrio_Input = _sPrio_Input;
             Prod = _sQty;
             sOPCD = _sOPCD;
-            if (_sOPCD.Equals("UPS"))
-                btnStopAll.Visible = true;
-            else
-                btnStopAll.Visible = false;
+            //khong cho to
+            //if (_sOPCD.Equals("UPS"))
+            //    btnStopAll.Visible = true;
+            //else
+            //    btnStopAll.Visible = false;
         }
         private static int iTotalPC =  20;
         private bool sSearchAgain = false;
@@ -213,18 +214,19 @@ namespace FORM
                 dt_color = dt.Copy();
                 if (dt.Rows.Count > 0)
                 {
-                    if (dt.Rows[0]["FLAG"].ToString().Equals("FINISH"))
-                    {
-                        btnOK.Enabled = false;
-                        btnApply.Enabled = false;
-                        btnUpdate.Enabled = false;
-                        btnTransfer.Enabled = false;
-                    }
-                    else if (dt.Rows[0]["FLAG"].ToString().Equals("HIDE"))
-                    {
-                        btnOK.Enabled = false;
-                        btnTransfer.Enabled = false;
-                    }
+                    //khong cho to
+                    //if (dt.Rows[0]["FLAG"].ToString().Equals("FINISH"))
+                    //{
+                    //    btnOK.Enabled = false;
+                    //    btnApply.Enabled = false;
+                    //    btnUpdate.Enabled = false;
+                    //    btnTransfer.Enabled = false;
+                    //}
+                    //else if (dt.Rows[0]["FLAG"].ToString().Equals("HIDE"))
+                    //{
+                    //    btnOK.Enabled = false;
+                    //    btnTransfer.Enabled = false;
+                    //}
                 }
                 //cach 1
                 RepositoryItemCheckEdit checkEdit = grdView.RepositoryItems.Add("CheckEdit") as RepositoryItemCheckEdit;

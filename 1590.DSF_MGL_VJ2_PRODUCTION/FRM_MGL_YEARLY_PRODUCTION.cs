@@ -121,7 +121,22 @@ namespace FORM
                 //DataTable dt1 = SEL_SMT_MON_PROD_STATUS("C1", line, mline, "");
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                   
+
+                    grdView.DataSource = dt;
+                    for (int i = 0; i < gvwView.Columns.Count; i++)
+                    {
+                        if (i <= 1)
+                            gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+                        else gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+                        if (i > 2)
+                        {
+                            gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                            gvwView.Columns[i].DisplayFormat.FormatString = "#,0.##";
+                        }
+                    }
+
+
+
                     //for (int i = 0; i < dt.Rows.Count; i++)
                     //{
                     //    for (int j = 1; j < dt.Columns.Count; j++)
@@ -170,32 +185,32 @@ namespace FORM
                 int i_min = 0, i_max = 100;
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    //if (GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim() != "")
-                    //{
+                    if (gvwView.GetRowCellValue(4,"RATE").ToString() != "")
+                    {
 
-                    //    if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1,7).Replace("%", "").Trim()) > 90 && Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) < 100)
-                    //    {
-                    //        i_min = 90;
-                    //        i_max = 100;
-                    //    }
-                    //    else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) < 90)
-                    //    {
-                    //        i_min = 90 - 3;
-                    //        i_max = 100;
-                    //    }
-                    //    else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) > 100)
-                    //    {
-                    //        i_min = 90;
-                    //        i_max = 100 + 3;
-                    //    }
-                    //    else if (Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) == 0)
-                    //    {
-                    //        i_min = 0;
-                    //        i_max = 100;
-                    //    }
-                    //    BindingGauges(circularGauge1, Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()), i_min, i_max, 95, 98);
-                    //    lblRate.Text = Convert.ToDouble(GetText(axfpSpread, dt.Columns.Count - 1, 7).Replace("%", "").Trim()) + "%";
-                    //}
+                        if (Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) > 90 && Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) < 100)
+                        {
+                            i_min = 90;
+                            i_max = 100;
+                        }
+                        else if (Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) < 90)
+                        {
+                            i_min = 90 - 3;
+                            i_max = 100;
+                        }
+                        else if (Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) > 100)
+                        {
+                            i_min = 90;
+                            i_max = 100 + 3;
+                        }
+                        else if (Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) == 0)
+                        {
+                            i_min = 0;
+                            i_max = 100;
+                        }
+                        BindingGauges(circularGauge1, Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()), i_min, i_max, 95, 98);
+                        lblRate.Text = Convert.ToDouble(gvwView.GetRowCellValue(4, "RATE").ToString().Replace("%", "").Trim()) + "%";
+                    }
                 }
                 else
                 {
@@ -236,15 +251,15 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_MGL.SP_PROD_YEAR";
+                string process_name = "MES.PKG_MGL_VJ2.MGL_PRODUCTION_YEARLY";
 
                 MyOraDB.ReDim_Parameter(5);
                 MyOraDB.Process_Name = process_name;
 
-                MyOraDB.Parameter_Name[0] = "V_P_TYPE";
-                MyOraDB.Parameter_Name[1] = "V_P_FAC";
-                MyOraDB.Parameter_Name[2] = "V_P_MLINE";
-                MyOraDB.Parameter_Name[3] = "V_P_DATE";
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_LINE";
+                MyOraDB.Parameter_Name[2] = "ARG_MLINE";
+                MyOraDB.Parameter_Name[3] = "ARG_DATE";
                 MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
 
                 MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
@@ -337,6 +352,9 @@ namespace FORM
         {
             if (this.Visible)
             {
+                line = ComVar.Var._strValue1;
+                uc.YMD_Change(4, "");
+                lbltitle.Text = ComVar.Var._strValue1.Equals("TOTAL2") ? "VJ2 Production Status by Year" : ComVar.Var._strValue2 + " Production Status by Year";
                 int_count = 19;
                 timer2.Start();
             }
@@ -360,8 +378,53 @@ namespace FORM
             }
         }
 
+        private void uc_year_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvwView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            if(e.Column.FieldName.Contains("RATE"))
+            {
+                if (e.CellValue == DBNull.Value) return;
+                if (double.Parse(e.CellValue.ToString()) < 95)
+                {
+                    e.Appearance.BackColor = Color.Red;
+                    e.Appearance.ForeColor = Color.White;
+                }
+                else if (double.Parse(e.CellValue.ToString()) > 98)
+                {
+                    e.Appearance.BackColor = Color.Green;
+                    e.Appearance.ForeColor = Color.White;
+                }
+                else
+                {
+                    e.Appearance.BackColor = Color.Yellow;
+                    e.Appearance.ForeColor = Color.Black;
+                }
+                //if (Convert.ToDouble(GetText(axfpSpread, j, i + 3).Replace("%", "").Trim()) < 95)
+                //            {
+                //                axfpSpread.BackColor = Color.Red;
+                //                axfpSpread.ForeColor = Color.White;
+                //            }
+                //            else if (Convert.ToDouble(GetText(axfpSpread, j, i + 3).Replace("%", "").Trim()) > 98)
+                //            {
+                //                axfpSpread.BackColor = Color.Green;
+                //                axfpSpread.ForeColor = Color.White;
+                //            }
+                //            else
+                //            {
+                //                axfpSpread.BackColor = Color.Yellow;
+                //                axfpSpread.ForeColor = Color.Black;
+                //            }
+
+            }
+        }
+
         private void uc_year_ValueChangeEvent(object sender, EventArgs e)
         {
+            bandYear.Caption = uc_year.GetValue().ToString();
             load_data();
         }
 

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_NPI));
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.pnYMD = new System.Windows.Forms.Panel();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnBody = new System.Windows.Forms.Panel();
@@ -115,48 +115,30 @@
             this.SEASON = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.DPA = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.TD_CODE = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grdView = new DevExpress.XtraGrid.GridControl();
-            this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.bandDate = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.DIV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bans1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.band01 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL01 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band02 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL02 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band03 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL03 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.RATE = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bans2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.band04 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL04 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band05 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL05 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band06 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL06 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bans3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.band07 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL07 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band08 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL08 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band09 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL09 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bans4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.band11 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL11 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band10 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL10 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.band12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COL12 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandAVG = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.COLAVG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.TARGET = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.spl1 = new System.Windows.Forms.SplitContainer();
-            this.spl2 = new System.Windows.Forms.SplitContainer();
+            this.gvwView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdRR = new DevExpress.XtraGrid.GridControl();
+            this.gvwRR = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MODEL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.YMD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DIV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ptb1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.grdNPI = new DevExpress.XtraGrid.GridControl();
             this.gvwNPI = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.spl1 = new System.Windows.Forms.SplitContainer();
+            this.spl2 = new System.Windows.Forms.SplitContainer();
             this.pnHeader.SuspendLayout();
             this.pnBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
@@ -165,14 +147,23 @@
             this.splMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridBase1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwRR)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdNPI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwNPI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spl1)).BeginInit();
             this.spl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spl2)).BeginInit();
             this.spl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdNPI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvwNPI)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrDate
@@ -183,36 +174,41 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            this.pnHeader.Controls.Add(this.pnYMD);
+            this.pnHeader.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pnHeader.Controls.Add(this.cmdBack);
             this.pnHeader.Controls.Add(this.lblDate);
             this.pnHeader.Controls.Add(this.lblTitle);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1920, 110);
+            this.pnHeader.Size = new System.Drawing.Size(1920, 94);
             this.pnHeader.TabIndex = 0;
             // 
-            // pnYMD
+            // cmdBack
             // 
-            this.pnYMD.BackColor = System.Drawing.Color.Transparent;
-            this.pnYMD.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnYMD.Location = new System.Drawing.Point(1227, 0);
-            this.pnYMD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnYMD.Name = "pnYMD";
-            this.pnYMD.Size = new System.Drawing.Size(420, 110);
-            this.pnYMD.TabIndex = 54;
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1362, 0);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(108, 101);
+            this.cmdBack.TabIndex = 52;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 34F, System.Drawing.FontStyle.Bold);
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 31F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(1647, 0);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(273, 110);
+            this.lblDate.Size = new System.Drawing.Size(273, 94);
             this.lblDate.TabIndex = 2;
             this.lblDate.Tag = "Minimized";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -220,13 +216,14 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.BackColor = System.Drawing.Color.DarkTurquoise;
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTitle.Font = new System.Drawing.Font("Calibri", 45F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 44F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(781, 110);
+            this.lblTitle.Size = new System.Drawing.Size(1368, 94);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Tag = "Minimized";
             this.lblTitle.Text = "New Production Introduction";
@@ -239,10 +236,10 @@
             this.pnBody.Controls.Add(this.splMain);
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnBody.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
-            this.pnBody.Location = new System.Drawing.Point(0, 110);
+            this.pnBody.Location = new System.Drawing.Point(0, 94);
             this.pnBody.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1920, 970);
+            this.pnBody.Size = new System.Drawing.Size(1920, 986);
             this.pnBody.TabIndex = 1;
             // 
             // splMain
@@ -258,10 +255,10 @@
             // 
             // splMain.Panel2
             // 
-            this.splMain.Panel2.Controls.Add(this.grdView);
+            this.splMain.Panel2.Controls.Add(this.panel1);
             this.splMain.Panel2.Controls.Add(this.grdNPI);
-            this.splMain.Size = new System.Drawing.Size(1920, 970);
-            this.splMain.SplitterDistance = 409;
+            this.splMain.Size = new System.Drawing.Size(1920, 986);
+            this.splMain.SplitterDistance = 415;
             this.splMain.TabIndex = 1;
             // 
             // gridBase1
@@ -274,7 +271,7 @@
             this.gridBase1.MainView = this.gvwView1;
             this.gridBase1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridBase1.Name = "gridBase1";
-            this.gridBase1.Size = new System.Drawing.Size(1920, 409);
+            this.gridBase1.Size = new System.Drawing.Size(1920, 415);
             this.gridBase1.TabIndex = 4;
             this.gridBase1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView1});
@@ -1268,514 +1265,267 @@
             this.TD_CODE.Name = "TD_CODE";
             this.TD_CODE.Visible = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 223);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 344);
+            this.panel1.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 351F));
+            this.tableLayoutPanel1.Controls.Add(this.grdView, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.grdRR, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 35);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 309);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
             // grdView
             // 
             this.grdView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdView.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grdView.Location = new System.Drawing.Point(0, 223);
+            this.grdView.Location = new System.Drawing.Point(4, 5);
             this.grdView.LookAndFeel.SkinName = "Office 2010 Blue";
             this.grdView.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdView.MainView = this.gvwView;
             this.grdView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1920, 334);
-            this.grdView.TabIndex = 3;
+            this.grdView.Size = new System.Drawing.Size(1459, 299);
+            this.grdView.TabIndex = 5;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
             // 
             // gvwView
             // 
-            this.gvwView.Appearance.BandPanel.BackColor = System.Drawing.Color.Gray;
-            this.gvwView.Appearance.BandPanel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gvwView.Appearance.BandPanel.ForeColor = System.Drawing.Color.White;
-            this.gvwView.Appearance.BandPanel.Options.UseBackColor = true;
-            this.gvwView.Appearance.BandPanel.Options.UseFont = true;
-            this.gvwView.Appearance.BandPanel.Options.UseForeColor = true;
-            this.gvwView.Appearance.BandPanel.Options.UseTextOptions = true;
-            this.gvwView.Appearance.BandPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gvwView.Appearance.BandPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gvwView.Appearance.Row.Font = new System.Drawing.Font("Calibri", 14F);
+            this.gvwView.Appearance.Row.Font = new System.Drawing.Font("Calibri", 12F);
             this.gvwView.Appearance.Row.Options.UseFont = true;
             this.gvwView.Appearance.Row.Options.UseTextOptions = true;
             this.gvwView.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvwView.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gvwView.BandPanelRowHeight = 50;
-            this.gvwView.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.bandDate,
-            this.bans1,
-            this.gridBand3,
-            this.bans2,
-            this.bans3,
-            this.bans4,
-            this.bandAVG,
-            this.gridBand1});
-            this.gvwView.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.DIV,
-            this.COL01,
-            this.COL02,
-            this.COL03,
-            this.COL04,
-            this.COL05,
-            this.COL06,
-            this.COL07,
-            this.COL08,
-            this.COL09,
-            this.COL10,
-            this.COL11,
-            this.COL12,
-            this.COLAVG,
-            this.TARGET,
-            this.RATE});
             this.gvwView.GridControl = this.grdView;
             this.gvwView.Name = "gvwView";
             this.gvwView.OptionsBehavior.AllowSortAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.gvwView.OptionsBehavior.Editable = false;
+            this.gvwView.OptionsBehavior.ReadOnly = true;
+            this.gvwView.OptionsCustomization.AllowColumnMoving = false;
+            this.gvwView.OptionsCustomization.AllowColumnResizing = false;
+            this.gvwView.OptionsCustomization.AllowFilter = false;
+            this.gvwView.OptionsCustomization.AllowSort = false;
             this.gvwView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvwView.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvwView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gvwView.OptionsView.ColumnAutoWidth = false;
             this.gvwView.OptionsView.ShowColumnHeaders = false;
             this.gvwView.OptionsView.ShowGroupPanel = false;
             this.gvwView.OptionsView.ShowIndicator = false;
-            this.gvwView.PaintStyleName = "Flat";
-            this.gvwView.RowHeight = 45;
-            this.gvwView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvwView_RowCellStyle);
+            this.gvwView.RowHeight = 30;
+            this.gvwView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvwView_RowCellStyle_1);
             // 
-            // bandDate
+            // grdRR
             // 
-            this.bandDate.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bandDate.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bandDate.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bandDate.AppearanceHeader.Options.UseBackColor = true;
-            this.bandDate.AppearanceHeader.Options.UseForeColor = true;
-            this.bandDate.Caption = "2019";
-            this.bandDate.Columns.Add(this.DIV);
-            this.bandDate.Name = "bandDate";
-            this.bandDate.VisibleIndex = 0;
-            this.bandDate.Width = 145;
+            this.grdRR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdRR.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdRR.Location = new System.Drawing.Point(1573, 5);
+            this.grdRR.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.grdRR.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.grdRR.MainView = this.gvwRR;
+            this.grdRR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdRR.Name = "grdRR";
+            this.grdRR.Size = new System.Drawing.Size(343, 299);
+            this.grdRR.TabIndex = 6;
+            this.grdRR.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvwRR});
+            // 
+            // gvwRR
+            // 
+            this.gvwRR.Appearance.Row.Font = new System.Drawing.Font("Calibri", 14F);
+            this.gvwRR.Appearance.Row.Options.UseFont = true;
+            this.gvwRR.Appearance.Row.Options.UseTextOptions = true;
+            this.gvwRR.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvwRR.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gvwRR.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MODEL,
+            this.YMD,
+            this.DIV,
+            this.RR});
+            this.gvwRR.GridControl = this.grdRR;
+            this.gvwRR.Name = "gvwRR";
+            this.gvwRR.OptionsBehavior.AllowSortAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.gvwRR.OptionsBehavior.Editable = false;
+            this.gvwRR.OptionsBehavior.ReadOnly = true;
+            this.gvwRR.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvwRR.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gvwRR.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gvwRR.OptionsView.AllowCellMerge = true;
+            this.gvwRR.OptionsView.ColumnAutoWidth = false;
+            this.gvwRR.OptionsView.ShowColumnHeaders = false;
+            this.gvwRR.OptionsView.ShowGroupPanel = false;
+            this.gvwRR.OptionsView.ShowIndicator = false;
+            this.gvwRR.RowHeight = 30;
+            this.gvwRR.CellMerge += new DevExpress.XtraGrid.Views.Grid.CellMergeEventHandler(this.gvwRR_CellMerge);
+            this.gvwRR.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvwRR_RowCellStyle);
+            // 
+            // MODEL
+            // 
+            this.MODEL.Caption = "MODEL_NAME";
+            this.MODEL.FieldName = "MODEL_NAME";
+            this.MODEL.Name = "MODEL";
+            // 
+            // YMD
+            // 
+            this.YMD.Caption = "Date";
+            this.YMD.FieldName = "YMD";
+            this.YMD.Name = "YMD";
+            this.YMD.Visible = true;
+            this.YMD.VisibleIndex = 0;
+            this.YMD.Width = 105;
             // 
             // DIV
             // 
-            this.DIV.Caption = "DIV";
             this.DIV.FieldName = "DIV";
             this.DIV.Name = "DIV";
             this.DIV.Visible = true;
-            this.DIV.Width = 145;
-            // 
-            // bans1
-            // 
-            this.bans1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans1.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bans1.AppearanceHeader.Options.UseBackColor = true;
-            this.bans1.AppearanceHeader.Options.UseForeColor = true;
-            this.bans1.Caption = "SU19";
-            this.bans1.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.band01,
-            this.band02,
-            this.band03});
-            this.bans1.Name = "bans1";
-            this.bans1.VisibleIndex = 1;
-            this.bans1.Width = 165;
-            // 
-            // band01
-            // 
-            this.band01.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band01.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band01.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band01.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band01.AppearanceHeader.Options.UseBackColor = true;
-            this.band01.AppearanceHeader.Options.UseFont = true;
-            this.band01.AppearanceHeader.Options.UseForeColor = true;
-            this.band01.Caption = "Jan";
-            this.band01.Columns.Add(this.COL01);
-            this.band01.Name = "band01";
-            this.band01.VisibleIndex = 0;
-            this.band01.Width = 55;
-            // 
-            // COL01
-            // 
-            this.COL01.Caption = "COL01";
-            this.COL01.FieldName = "COL01";
-            this.COL01.Name = "COL01";
-            this.COL01.Visible = true;
-            this.COL01.Width = 55;
-            // 
-            // band02
-            // 
-            this.band02.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band02.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band02.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band02.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band02.AppearanceHeader.Options.UseBackColor = true;
-            this.band02.AppearanceHeader.Options.UseFont = true;
-            this.band02.AppearanceHeader.Options.UseForeColor = true;
-            this.band02.Caption = "Feb";
-            this.band02.Columns.Add(this.COL02);
-            this.band02.Name = "band02";
-            this.band02.VisibleIndex = 1;
-            this.band02.Width = 55;
-            // 
-            // COL02
-            // 
-            this.COL02.Caption = "COL02";
-            this.COL02.FieldName = "COL02";
-            this.COL02.Name = "COL02";
-            this.COL02.Visible = true;
-            this.COL02.Width = 55;
-            // 
-            // band03
-            // 
-            this.band03.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band03.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band03.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band03.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band03.AppearanceHeader.Options.UseBackColor = true;
-            this.band03.AppearanceHeader.Options.UseFont = true;
-            this.band03.AppearanceHeader.Options.UseForeColor = true;
-            this.band03.Caption = "Mar";
-            this.band03.Columns.Add(this.COL03);
-            this.band03.Name = "band03";
-            this.band03.VisibleIndex = 2;
-            this.band03.Width = 55;
-            // 
-            // COL03
-            // 
-            this.COL03.Caption = "COL03";
-            this.COL03.FieldName = "COL03";
-            this.COL03.Name = "COL03";
-            this.COL03.Visible = true;
-            this.COL03.Width = 55;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridBand3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand3.Caption = "%";
-            this.gridBand3.Columns.Add(this.RATE);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.Visible = false;
-            this.gridBand3.VisibleIndex = -1;
-            this.gridBand3.Width = 75;
-            // 
-            // RATE
-            // 
-            this.RATE.Caption = "%";
-            this.RATE.FieldName = "RATE";
-            this.RATE.Name = "RATE";
-            this.RATE.Visible = true;
-            // 
-            // bans2
-            // 
-            this.bans2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans2.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bans2.AppearanceHeader.Options.UseBackColor = true;
-            this.bans2.AppearanceHeader.Options.UseForeColor = true;
-            this.bans2.Caption = "FA19";
-            this.bans2.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.band04,
-            this.band05,
-            this.band06});
-            this.bans2.Name = "bans2";
-            this.bans2.VisibleIndex = 2;
-            this.bans2.Width = 165;
-            // 
-            // band04
-            // 
-            this.band04.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band04.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band04.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band04.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band04.AppearanceHeader.Options.UseBackColor = true;
-            this.band04.AppearanceHeader.Options.UseFont = true;
-            this.band04.AppearanceHeader.Options.UseForeColor = true;
-            this.band04.Caption = "Apr";
-            this.band04.Columns.Add(this.COL04);
-            this.band04.Name = "band04";
-            this.band04.VisibleIndex = 0;
-            this.band04.Width = 55;
-            // 
-            // COL04
-            // 
-            this.COL04.Caption = "COL04";
-            this.COL04.FieldName = "COL04";
-            this.COL04.Name = "COL04";
-            this.COL04.Visible = true;
-            this.COL04.Width = 55;
-            // 
-            // band05
-            // 
-            this.band05.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band05.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band05.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band05.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band05.AppearanceHeader.Options.UseBackColor = true;
-            this.band05.AppearanceHeader.Options.UseFont = true;
-            this.band05.AppearanceHeader.Options.UseForeColor = true;
-            this.band05.Caption = "May";
-            this.band05.Columns.Add(this.COL05);
-            this.band05.Name = "band05";
-            this.band05.VisibleIndex = 1;
-            this.band05.Width = 55;
-            // 
-            // COL05
-            // 
-            this.COL05.Caption = "COL05";
-            this.COL05.FieldName = "COL05";
-            this.COL05.Name = "COL05";
-            this.COL05.Visible = true;
-            this.COL05.Width = 55;
-            // 
-            // band06
-            // 
-            this.band06.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band06.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band06.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band06.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band06.AppearanceHeader.Options.UseBackColor = true;
-            this.band06.AppearanceHeader.Options.UseFont = true;
-            this.band06.AppearanceHeader.Options.UseForeColor = true;
-            this.band06.Caption = "Jun";
-            this.band06.Columns.Add(this.COL06);
-            this.band06.Name = "band06";
-            this.band06.VisibleIndex = 2;
-            this.band06.Width = 55;
-            // 
-            // COL06
-            // 
-            this.COL06.Caption = "COL06";
-            this.COL06.FieldName = "COL06";
-            this.COL06.Name = "COL06";
-            this.COL06.Visible = true;
-            this.COL06.Width = 55;
-            // 
-            // bans3
-            // 
-            this.bans3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans3.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bans3.AppearanceHeader.Options.UseBackColor = true;
-            this.bans3.AppearanceHeader.Options.UseForeColor = true;
-            this.bans3.Caption = "HO19";
-            this.bans3.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.band07,
-            this.band08,
-            this.band09});
-            this.bans3.Name = "bans3";
-            this.bans3.VisibleIndex = 3;
-            this.bans3.Width = 165;
-            // 
-            // band07
-            // 
-            this.band07.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band07.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band07.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band07.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band07.AppearanceHeader.Options.UseBackColor = true;
-            this.band07.AppearanceHeader.Options.UseFont = true;
-            this.band07.AppearanceHeader.Options.UseForeColor = true;
-            this.band07.Caption = "Jul";
-            this.band07.Columns.Add(this.COL07);
-            this.band07.Name = "band07";
-            this.band07.VisibleIndex = 0;
-            this.band07.Width = 55;
-            // 
-            // COL07
-            // 
-            this.COL07.Caption = "COL07";
-            this.COL07.FieldName = "COL07";
-            this.COL07.Name = "COL07";
-            this.COL07.Visible = true;
-            this.COL07.Width = 55;
-            // 
-            // band08
-            // 
-            this.band08.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band08.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band08.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band08.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band08.AppearanceHeader.Options.UseBackColor = true;
-            this.band08.AppearanceHeader.Options.UseFont = true;
-            this.band08.AppearanceHeader.Options.UseForeColor = true;
-            this.band08.Caption = "Aug";
-            this.band08.Columns.Add(this.COL08);
-            this.band08.Name = "band08";
-            this.band08.VisibleIndex = 1;
-            this.band08.Width = 55;
-            // 
-            // COL08
-            // 
-            this.COL08.Caption = "COL08";
-            this.COL08.FieldName = "COL08";
-            this.COL08.Name = "COL08";
-            this.COL08.Visible = true;
-            this.COL08.Width = 55;
-            // 
-            // band09
-            // 
-            this.band09.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band09.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band09.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band09.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band09.AppearanceHeader.Options.UseBackColor = true;
-            this.band09.AppearanceHeader.Options.UseFont = true;
-            this.band09.AppearanceHeader.Options.UseForeColor = true;
-            this.band09.Caption = "Nov";
-            this.band09.Columns.Add(this.COL09);
-            this.band09.Name = "band09";
-            this.band09.VisibleIndex = 2;
-            this.band09.Width = 55;
-            // 
-            // COL09
-            // 
-            this.COL09.Caption = "COL09";
-            this.COL09.FieldName = "COL09";
-            this.COL09.Name = "COL09";
-            this.COL09.Visible = true;
-            this.COL09.Width = 55;
-            // 
-            // bans4
-            // 
-            this.bans4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans4.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bans4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bans4.AppearanceHeader.Options.UseBackColor = true;
-            this.bans4.AppearanceHeader.Options.UseForeColor = true;
-            this.bans4.Caption = "SP20";
-            this.bans4.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.band11,
-            this.band10,
-            this.band12});
-            this.bans4.Name = "bans4";
-            this.bans4.VisibleIndex = 4;
-            this.bans4.Width = 165;
-            // 
-            // band11
-            // 
-            this.band11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band11.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band11.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band11.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band11.AppearanceHeader.Options.UseBackColor = true;
-            this.band11.AppearanceHeader.Options.UseFont = true;
-            this.band11.AppearanceHeader.Options.UseForeColor = true;
-            this.band11.Caption = "Sep";
-            this.band11.Columns.Add(this.COL11);
-            this.band11.Name = "band11";
-            this.band11.VisibleIndex = 0;
-            this.band11.Width = 55;
-            // 
-            // COL11
-            // 
-            this.COL11.Caption = "COL11";
-            this.COL11.FieldName = "COL11";
-            this.COL11.Name = "COL11";
-            this.COL11.Visible = true;
-            this.COL11.Width = 55;
-            // 
-            // band10
-            // 
-            this.band10.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band10.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band10.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band10.AppearanceHeader.Options.UseBackColor = true;
-            this.band10.AppearanceHeader.Options.UseFont = true;
-            this.band10.AppearanceHeader.Options.UseForeColor = true;
-            this.band10.Caption = "Oct";
-            this.band10.Columns.Add(this.COL10);
-            this.band10.Name = "band10";
-            this.band10.VisibleIndex = 1;
-            this.band10.Width = 55;
-            // 
-            // COL10
-            // 
-            this.COL10.Caption = "COL10";
-            this.COL10.FieldName = "COL10";
-            this.COL10.Name = "COL10";
-            this.COL10.Visible = true;
-            this.COL10.Width = 55;
-            // 
-            // band12
-            // 
-            this.band12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band12.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.band12.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.band12.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.band12.AppearanceHeader.Options.UseBackColor = true;
-            this.band12.AppearanceHeader.Options.UseFont = true;
-            this.band12.AppearanceHeader.Options.UseForeColor = true;
-            this.band12.Caption = "Dec";
-            this.band12.Columns.Add(this.COL12);
-            this.band12.Name = "band12";
-            this.band12.VisibleIndex = 2;
-            this.band12.Width = 55;
-            // 
-            // COL12
-            // 
-            this.COL12.Caption = "COL12";
-            this.COL12.FieldName = "COL12";
-            this.COL12.Name = "COL12";
-            this.COL12.Visible = true;
-            this.COL12.Width = 55;
-            // 
-            // bandAVG
-            // 
-            this.bandAVG.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bandAVG.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.bandAVG.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bandAVG.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.bandAVG.AppearanceHeader.Options.UseBackColor = true;
-            this.bandAVG.AppearanceHeader.Options.UseFont = true;
-            this.bandAVG.AppearanceHeader.Options.UseForeColor = true;
-            this.bandAVG.Caption = "AVG";
-            this.bandAVG.Columns.Add(this.COLAVG);
-            this.bandAVG.Name = "bandAVG";
-            this.bandAVG.VisibleIndex = 5;
-            this.bandAVG.Width = 68;
-            // 
-            // COLAVG
-            // 
-            this.COLAVG.Caption = "COLAVG";
-            this.COLAVG.FieldName = "COLAVG";
-            this.COLAVG.Name = "COLAVG";
-            this.COLAVG.Visible = true;
-            this.COLAVG.Width = 68;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.gridBand1.AppearanceHeader.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(180)))));
-            this.gridBand1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridBand1.AppearanceHeader.Options.UseBackColor = true;
-            this.gridBand1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridBand1.Caption = "Target";
-            this.gridBand1.Columns.Add(this.TARGET);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 6;
-            this.gridBand1.Width = 90;
-            // 
-            // TARGET
-            // 
-            this.TARGET.Caption = "TARGET";
-            this.TARGET.FieldName = "TAR";
-            this.TARGET.Name = "TARGET";
-            this.TARGET.Visible = true;
-            this.TARGET.Width = 90;
-            // 
-            // spl1
-            // 
-            this.spl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spl1.Location = new System.Drawing.Point(0, 0);
-            this.spl1.Name = "spl1";
-            this.spl1.Size = new System.Drawing.Size(150, 100);
-            this.spl1.TabIndex = 0;
-            // 
-            // spl2
-            // 
-            this.spl2.Location = new System.Drawing.Point(0, 0);
-            this.spl2.Name = "spl2";
-            this.spl2.Size = new System.Drawing.Size(150, 100);
-            this.spl2.TabIndex = 0;
+            this.DIV.VisibleIndex = 1;
+            this.DIV.Width = 105;
+            // 
+            // RR
+            // 
+            this.RR.Caption = "RR (Result)";
+            this.RR.FieldName = "RR";
+            this.RR.Name = "RR";
+            this.RR.Visible = true;
+            this.RR.VisibleIndex = 2;
+            this.RR.Width = 105;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.ptb1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1470, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(96, 303);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // ptb1
+            // 
+            this.ptb1.BackgroundImage = global::FORM.Properties.Resources.ip_icon_05_sample5e;
+            this.ptb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ptb1.Location = new System.Drawing.Point(3, 3);
+            this.ptb1.Name = "ptb1";
+            this.ptb1.Size = new System.Drawing.Size(90, 91);
+            this.ptb1.TabIndex = 4;
+            this.ptb1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FORM.Properties.Resources.ip_icon_05_sample5e;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 104);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 91);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::FORM.Properties.Resources.ip_icon_05_sample5e;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 205);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 93);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1920, 35);
+            this.panel2.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(576, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "None";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(435, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Late 3 Days";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(294, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Late 2 Days";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Yellow;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(153, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Late 1 Day";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "On Time";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grdNPI
             // 
@@ -1822,6 +1572,21 @@
             this.gvwNPI.PaintStyleName = "Flat";
             this.gvwNPI.RowHeight = 45;
             // 
+            // spl1
+            // 
+            this.spl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spl1.Location = new System.Drawing.Point(0, 0);
+            this.spl1.Name = "spl1";
+            this.spl1.Size = new System.Drawing.Size(150, 100);
+            this.spl1.TabIndex = 0;
+            // 
+            // spl2
+            // 
+            this.spl2.Location = new System.Drawing.Point(0, 0);
+            this.spl2.Name = "spl2";
+            this.spl2.Size = new System.Drawing.Size(150, 100);
+            this.spl2.TabIndex = 0;
+            // 
             // FRM_MGL_NPI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1844,14 +1609,23 @@
             this.splMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridBase1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwRR)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdNPI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwNPI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spl1)).EndInit();
             this.spl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spl2)).EndInit();
             this.spl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdNPI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvwNPI)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1867,7 +1641,6 @@
         private System.Windows.Forms.SplitContainer spl2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splMain;
-        private System.Windows.Forms.Panel pnYMD;
         private DevExpress.XtraGrid.GridControl gridBase1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView gvwView1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn PLANT;
@@ -1947,45 +1720,28 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand47;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand48;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand23;
-        private DevExpress.XtraGrid.GridControl grdView;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView gvwView;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandDate;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn DIV;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bans1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band01;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL01;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band02;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL02;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band03;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL03;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn RATE;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bans2;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band04;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL04;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band05;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL05;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band06;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL06;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bans3;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band07;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL07;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band08;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL08;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band09;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL09;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bans4;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band11;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL11;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band10;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL10;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand band12;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COL12;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandAVG;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn COLAVG;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn TARGET;
         private DevExpress.XtraGrid.GridControl grdNPI;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView gvwNPI;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraGrid.GridControl grdView;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvwView;
+        private DevExpress.XtraGrid.GridControl grdRR;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvwRR;
+        private DevExpress.XtraGrid.Columns.GridColumn YMD;
+        private DevExpress.XtraGrid.Columns.GridColumn DIV;
+        private DevExpress.XtraGrid.Columns.GridColumn RR;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox ptb1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button cmdBack;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn MODEL;
     }
 }
