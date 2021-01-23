@@ -47,6 +47,72 @@ namespace FORM.UC
                 return null;
             }
         }
+
+        private DataTable SP_MGL_SET_TREELIST(string ARG_TYPE,string ARG_DATE, string ARG_PLANT)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            try
+            {
+                string process_name = "MES.PKG_MGL_VJ3.SP_MGL_SET_TREELIST";
+                MyOraDB.ReDim_Parameter(4);
+                MyOraDB.Process_Name = process_name;
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_DATE";
+                MyOraDB.Parameter_Name[2] = "ARG_PLANT";
+                MyOraDB.Parameter_Name[3] = "OUT_CURSOR";
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Values[0] = ARG_TYPE;
+                MyOraDB.Parameter_Values[1] = ARG_DATE;
+                MyOraDB.Parameter_Values[2] = ARG_PLANT;
+                MyOraDB.Parameter_Values[3] = "";
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[process_name];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        private DataTable SP_MGL_TREELIST_CHART_DETAIL(string ARG_TYPE,string ARG_DATE, string ARG_PLANT)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            try
+            {
+                string process_name = "MES.PKG_MGL_VJ3.SP_MGL_TREELIST_CHART_DETAIL";
+                MyOraDB.ReDim_Parameter(4);
+                MyOraDB.Process_Name = process_name;
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_DATE";
+                MyOraDB.Parameter_Name[2] = "ARG_PLANT";
+                MyOraDB.Parameter_Name[3] = "OUT_CURSOR";
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Values[0] = ARG_TYPE;
+                MyOraDB.Parameter_Values[1] = ARG_DATE;
+                MyOraDB.Parameter_Values[2] = ARG_PLANT;
+                MyOraDB.Parameter_Values[3] = "";
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[process_name];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         public void BindingData(DataTable dt)
         {
             chartControl1.DataSource = dt;
@@ -58,20 +124,40 @@ namespace FORM.UC
             chartControl1.Series[2].ValueDataMembers.AddRange(new string[] { "RATE" });
 
         }
-
+        POPUP_PROD_BY_PLANT[] POPUP_TEMP = new POPUP_PROD_BY_PLANT[1];
         private void chartControl1_Click(object sender, EventArgs e)
         {
             try
             {
+                this.Cursor = Cursors.WaitCursor;
                 DataTable dt = SP_MGL_HOME_CHART_DETAIL_SELECT("Q", this.Tag.ToString());
-                POPUP_PROD_BY_PLANT POPUP = new POPUP_PROD_BY_PLANT(((DevExpress.XtraCharts.ChartControl)sender), dt);
+                DataTable dtTree = SP_MGL_SET_TREELIST("Q",DateTime.Now.ToString("yyyyMMdd"), this.Tag.ToString());
+                DataTable dtTreeDetailChart = SP_MGL_TREELIST_CHART_DETAIL("Q", DateTime.Now.ToString("yyyyMMdd"), this.Tag.ToString());
+                POPUP_PROD_BY_PLANT POPUP = new POPUP_PROD_BY_PLANT(((DevExpress.XtraCharts.ChartControl)sender), dt, dtTreeDetailChart);
+                POPUP_TEMP[0] = POPUP;
+                POPUP.OnDateChange +=OnDateChanging;
+                POPUP.BindingTreeView(dtTree);
                 POPUP.BindingData();
                 POPUP.ShowDialog();
+                this.Cursor = Cursors.Default;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                this.Cursor = Cursors.Default;
             }
+        }
+        void OnDateChanging(string date)
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                DataTable dtTree = SP_MGL_SET_TREELIST("Q", date, this.Tag.ToString());
+                DataTable dtTreeDetailChart = SP_MGL_TREELIST_CHART_DETAIL("Q", date, this.Tag.ToString());
+                POPUP_TEMP[0].BindingTreeView(dtTree);
+                POPUP_TEMP[0].BindingDataWhenDateChanged(dtTreeDetailChart);
+                this.Cursor = Cursors.Default;
+            }
+            catch { this.Cursor = Cursors.Default; }
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_ASSEMBLY_INPUT_SET));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnYear = new DevExpress.XtraEditors.SimpleButton();
@@ -41,8 +40,8 @@
             this.splMain = new System.Windows.Forms.SplitContainer();
             this.grdMain = new DevExpress.XtraGrid.GridControl();
             this.gvwMain = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer2 = new System.Windows.Forms.Timer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
@@ -182,7 +181,7 @@
             this.lblTitle.Size = new System.Drawing.Size(1110, 109);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Tag = "Minimized";
-            this.lblTitle.Text = "Production Status by Month";
+            this.lblTitle.Text = "Assembly Input Set Balance";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTitle.DoubleClick += new System.EventHandler(this.menu_Click);
             // 
@@ -243,14 +242,14 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // FORM_SMT_BOTTOM_INV_SET
+            // FRM_MGL_ASSEMBLY_INPUT_SET
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.splMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FORM_SMT_BOTTOM_INV_SET";
+            this.Name = "FRM_MGL_ASSEMBLY_INPUT_SET";
             this.Text = "FRM_SMT_MON_PROD_STATUS";
             this.Load += new System.EventHandler(this.FRM_SMT_MON_PROD_STATUS_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_MON_PROD_STATUS_VisibleChanged);

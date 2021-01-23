@@ -66,12 +66,12 @@ namespace FORM
 
         private void showAnimation(Control flg)
         {
-            flg.Hide();
+           // flg.Hide();
             timer2.Stop();
             this.Cursor = Cursors.WaitCursor;
             load_data("MAIN");
-            AnimateWindow(flg.Handle, 300, AW_SLIDE | 0X4); //IPEX_Monitor.ClassLib.WinAPI.getSlidType("2")
-            flg.Show();
+           // AnimateWindow(flg.Handle, 300, AW_SLIDE | 0X4); //IPEX_Monitor.ClassLib.WinAPI.getSlidType("2")
+           // flg.Show();
             timer2.Interval = 1000;
             timer2.Start();
             this.Cursor = Cursors.Default;
