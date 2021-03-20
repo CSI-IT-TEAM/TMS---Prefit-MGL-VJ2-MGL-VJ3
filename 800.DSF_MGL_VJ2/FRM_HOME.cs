@@ -77,7 +77,7 @@ namespace FORM
         {
             try
             {
-                string[] FacCode = new string[] { "000", "099", "TOTAL1", "201", "202", "TOTAL2" };
+                string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD Assembly", "LE Assembly", "Total" };
 
                 DataTable dt = SP_SMT_EMD_MENU_SELECT("Q");
@@ -158,7 +158,7 @@ namespace FORM
             if (cCount >= 10)
             {
                 cCount = 0;
-                string[] FacCode = new string[] { "000", "099", "TOTAL1", "201", "202", "TOTAL2" };
+                string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
                 DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
                 if (dt != null && dt.Rows.Count > 0)
@@ -198,7 +198,8 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
-            //ComVar.Var.callForm = "538";//DSF plant b
+            ComVar.Var._strValue1 = "202";
+            ComVar.Var.callForm = "69";//DSF plant b
         }
 
         private void lblDate_DoubleClick(object sender, EventArgs e)
@@ -215,7 +216,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
-            ComVar.Var.callForm = "23";
+            ComVar.Var.callForm = "300";
         }
 
         private void FRM_HOME_VisibleChanged(object sender, EventArgs e)
@@ -234,6 +235,11 @@ namespace FORM
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
             ComVar.Var.callForm = "1680";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
         }
     }
 }

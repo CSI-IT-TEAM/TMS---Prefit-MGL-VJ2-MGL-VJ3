@@ -197,8 +197,10 @@ namespace FORM.UC
             {
                 ComVar.Var.callForm = "23";
             }
-            else
+            else if (_FacCode.Equals("201") || _FacCode.Equals("202"))
+            {
                 ComVar.Var.callForm = "69";
+            }
         }
     }
 }

@@ -37,6 +37,7 @@
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
             this.splMain.Panel2.SuspendLayout();
@@ -53,6 +54,7 @@
             // splMain.Panel1
             // 
             this.splMain.Panel1.BackColor = System.Drawing.Color.Turquoise;
+            this.splMain.Panel1.Controls.Add(this.btnBack);
             this.splMain.Panel1.Controls.Add(this.btnPrefit_Cockpit);
             this.splMain.Panel1.Controls.Add(this.lblDate);
             this.splMain.Panel1.Controls.Add(this.lblTitle);
@@ -146,6 +148,27 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Calibri", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(1430, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(111, 107);
+            this.btnBack.TabIndex = 39;
+            this.btnBack.Tag = "minimized";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Visible = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FRM_SMT_MGL_DSF_VJ2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -177,7 +200,8 @@
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.Button btnPrefit_Cockpit;
-     //   private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.Button btnBack;
+        //   private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
 
     }
 }

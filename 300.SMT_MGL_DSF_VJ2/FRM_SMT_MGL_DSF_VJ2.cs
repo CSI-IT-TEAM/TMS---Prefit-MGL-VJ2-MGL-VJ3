@@ -18,7 +18,7 @@ namespace FORM
 
         }
         int cCount = 0;
-
+        bool isBack = false;
         private void setImg(int number)
         {
             for (int i = 0; i < number; i++)
@@ -151,9 +151,10 @@ namespace FORM
         private void FRM_SMT_MGL_DSF_VJ2cs_Load(object sender, EventArgs e)
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
-           // DataTable _dtXML = null;
+                                                                                         // DataTable _dtXML = null;
 
-          //  _dtXML = ComVar.Func.ReadXML(Application.StartupPath + "\\Config.XML", "MAIN");
+            //  _dtXML = ComVar.Func.ReadXML(Application.StartupPath + "\\Config.XML", "MAIN");
+            isBack = ComVar.Var._IsBack;
             try 
             {
                 for (int i = 0; i < 5; i++)
@@ -278,13 +279,18 @@ namespace FORM
 
         private void FRM_SMT_MGL_DSF_VJ2_VisibleChanged(object sender, EventArgs e)
         {
-
+                btnBack.Visible = isBack;
         }
 
         private void btnPrefit_Cockpit_Click(object sender, EventArgs e)
         {
             ComVar.Var._Frm_Back = "300";
             ComVar.Var.callForm = "600";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
         }
     }
 

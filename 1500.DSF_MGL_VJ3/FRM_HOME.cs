@@ -121,6 +121,7 @@ namespace FORM
 
         private void FRM_HOME_Load(object sender, EventArgs e)
         {
+            btnBack.Visible = ComVar.Var._IsBack;
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             InitTableContents();
             InitTableChart();
@@ -212,6 +213,11 @@ namespace FORM
             }
             else
                 tmrDate.Stop();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
         }
     }
 }

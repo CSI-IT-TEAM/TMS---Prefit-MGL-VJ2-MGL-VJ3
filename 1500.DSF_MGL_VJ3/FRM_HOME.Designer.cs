@@ -30,6 +30,7 @@
         {
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnUpstream = new System.Windows.Forms.Button();
             this.btnDSF = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnHeader.Controls.Add(this.btnBack);
             this.pnHeader.Controls.Add(this.btnUpstream);
             this.pnHeader.Controls.Add(this.btnDSF);
             this.pnHeader.Controls.Add(this.lblDate);
@@ -73,6 +75,26 @@
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(1898, 97);
             this.pnHeader.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Calibri", 35.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(1302, -3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(111, 107);
+            this.btnBack.TabIndex = 38;
+            this.btnBack.Tag = "minimized";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnUpstream
             // 
@@ -238,6 +260,6 @@
         private System.Windows.Forms.TableLayoutPanel tblChart;
         private System.Windows.Forms.Button btnDSF;
         private System.Windows.Forms.Button btnUpstream;
-
+        private System.Windows.Forms.Button btnBack;
     }
 }

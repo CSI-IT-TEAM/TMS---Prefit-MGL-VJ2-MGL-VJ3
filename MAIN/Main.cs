@@ -224,20 +224,11 @@ namespace MAIN
                     case "back":
                         showFormBack();
                         break;
-                    case "0":
-                        break;
-                    case "23":
-                        //strForm = getFormName("140");
-                        //showFormCall(strForm);
-                        break;
                     case "":
                         break;
                     default:
                         strForm = getFormName(argForm);
                         showFormCall(strForm);
-
-
-
                         break;
                 }
             }
