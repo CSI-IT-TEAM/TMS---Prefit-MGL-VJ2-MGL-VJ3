@@ -174,26 +174,6 @@ namespace FORM
             { }
 
         }
-        //private void FullScreen(int ArgMonitor)
-        //{
-        //    this.WindowState = FormWindowState.Normal;
-        //    //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;\
-        //    Screen[] S = Screen.AllScreens;
-        //    if (S.Length > 1)
-        //    {
-        //        this.Bounds = S[ArgMonitor - 1].Bounds;
-        //        this.Height = S[ArgMonitor - 1].WorkingArea.Height + 70;
-        //        this.Width = S[ArgMonitor - 1].WorkingArea.Width + 17;
-        //        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-        //        this.WindowState = FormWindowState.Maximized;
-        //    }  
-        //    else
-        //    {
-        //        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-        //        this.Bounds = S[0].Bounds; 
-        //        this.Width = S[0].WorkingArea.Width; 
-        //    }
-        //}
         private void tmr_Tick(object sender, EventArgs e) 
         {
             cCount++; 
@@ -280,6 +260,8 @@ namespace FORM
         private void FRM_SMT_MGL_DSF_VJ2_VisibleChanged(object sender, EventArgs e)
         {
                 btnBack.Visible = isBack;
+            cCount = 0;
+             tmr.Start();
         }
 
         private void btnPrefit_Cockpit_Click(object sender, EventArgs e)
@@ -291,6 +273,7 @@ namespace FORM
         private void btnBack_Click(object sender, EventArgs e)
         {
             ComVar.Var.callForm = "back";
+            tmr.Stop();
         }
     }
 

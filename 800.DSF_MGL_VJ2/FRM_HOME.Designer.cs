@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.tblContent = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
@@ -38,7 +37,7 @@
             this.btnDSF = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +136,7 @@
             this.btnUpstream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpstream.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpstream.ForeColor = System.Drawing.Color.White;
-            this.btnUpstream.Location = new System.Drawing.Point(1400, -1);
+            this.btnUpstream.Location = new System.Drawing.Point(1507, 0);
             this.btnUpstream.Name = "btnUpstream";
             this.btnUpstream.Size = new System.Drawing.Size(101, 99);
             this.btnUpstream.TabIndex = 38;
@@ -155,11 +154,11 @@
             this.btnDSF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSF.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnDSF.ForeColor = System.Drawing.Color.White;
-            this.btnDSF.Location = new System.Drawing.Point(1507, 0);
+            this.btnDSF.Location = new System.Drawing.Point(1400, 0);
             this.btnDSF.Name = "btnDSF";
             this.btnDSF.Size = new System.Drawing.Size(101, 99);
             this.btnDSF.TabIndex = 39;
-            this.btnDSF.Text = "DSF\r\nPlant E";
+            this.btnDSF.Text = "DSF\r\nPlant A";
             this.btnDSF.UseVisualStyleBackColor = true;
             this.btnDSF.Click += new System.EventHandler(this.btnDSF_Click);
             // 

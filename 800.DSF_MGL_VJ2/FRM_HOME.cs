@@ -198,8 +198,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var._Value = "back";
-            ComVar.Var._strValue1 = "202";
-            ComVar.Var.callForm = "69";//DSF plant b
+            ComVar.Var.callForm = "23";//DSF plant b
         }
 
         private void lblDate_DoubleClick(object sender, EventArgs e)
