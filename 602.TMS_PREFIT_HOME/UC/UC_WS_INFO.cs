@@ -37,7 +37,7 @@ namespace FORM.UC
             {
                 if (Enable_YN.Equals("Y"))
                 {
-                    label1.Text = "Plant";
+                    label1.Text = "Jit Plan";
                     label3.Text = "Current";
                     lblPlantName.BackColor =  Color.DarkTurquoise;
                     sBtnDetail.BackColor = Color.Gold;
@@ -110,7 +110,7 @@ namespace FORM.UC
                     lblPlantQty.ForeColor = Color.Gray;
                     lblWip_Qty.Text = "";
                     lblWip_Qty.ForeColor = Color.Gray;
-                    label1.Text = "Plant";
+                    label1.Text = "Jit Plan";
                     label1.ForeColor = Color.Gray;
                     label3.Text = "Current";
                     label3.ForeColor = Color.Gray;

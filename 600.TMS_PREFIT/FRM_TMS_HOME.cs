@@ -19,6 +19,7 @@ namespace FORM
             InitializeComponent();
         }
         #region Variable
+        bool isBack = false;
         int counter = 0;
         int len = 0;
         string txt;
@@ -192,7 +193,8 @@ namespace FORM
             len = txt.Length;
             label1.Text = "";
             tmrTitle.Start();
-            btnBack.Visible = ComVar.Var._IsBack;
+            isBack = ComVar.Var._IsBack;
+          
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             DataTable dt = TMS_HOME_SELECT("Q1", DateTime.Now.ToString()); //Lấy dữ liệu từ DB
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
@@ -264,15 +266,8 @@ namespace FORM
         {
             if (this.Visible)
             {
-                iback = ComVar.Var._IsBack;
-                if (!string.IsNullOrEmpty(ComVar.Var._Frm_Back))
-                    if (ComVar.Var._Frm_Back.Equals("300") || ComVar.Var._Frm_Back.Equals("375"))
-                        btnBack.Visible = true;
-                    else
-                        btnBack.Visible = false;
-                //else
-                //    btnBack.Visible = ComVar.Var._IsBack; //false;
-                tmrDate.Start();
+              btnBack.Visible = isBack;
+              tmrDate.Start();
             }
             else
                 tmrDate.Stop();
