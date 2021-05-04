@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.SplashScreen1), true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnRow1 = new System.Windows.Forms.Panel();
@@ -69,8 +68,10 @@
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
-            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrTitle = new System.Windows.Forms.Timer();
+            this.pnUnder = new System.Windows.Forms.Panel();
+            this.tmrUnder = new System.Windows.Forms.Timer();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -243,6 +244,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // pictureBox1
             // 
@@ -253,6 +255,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // picVJ1
             // 
@@ -263,6 +266,7 @@
             this.picVJ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVJ1.TabIndex = 0;
             this.picVJ1.TabStop = false;
+            this.picVJ1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -331,6 +335,7 @@
             this.button3.Size = new System.Drawing.Size(125, 99);
             this.button3.TabIndex = 1;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button_Click);
             // 
             // advancedPanel2
             // 
@@ -379,6 +384,7 @@
             this.button4.Size = new System.Drawing.Size(125, 99);
             this.button4.TabIndex = 1;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button_Click);
             // 
             // advancedPanel1
             // 
@@ -427,6 +433,7 @@
             this.button2.Size = new System.Drawing.Size(125, 99);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button_Click);
             // 
             // pnVJ2_VJ1
             // 
@@ -475,6 +482,7 @@
             this.button1.Size = new System.Drawing.Size(125, 99);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button_Click);
             // 
             // groupBox1
             // 
@@ -686,11 +694,28 @@
             this.tmrTitle.Enabled = true;
             this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
             // 
+            // pnUnder
+            // 
+            this.pnUnder.BackColor = System.Drawing.Color.Transparent;
+            this.pnUnder.BackgroundImage = global::FORM.Properties.Resources.under_construction;
+            this.pnUnder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnUnder.Location = new System.Drawing.Point(797, 425);
+            this.pnUnder.Name = "pnUnder";
+            this.pnUnder.Size = new System.Drawing.Size(294, 224);
+            this.pnUnder.TabIndex = 3;
+            // 
+            // tmrUnder
+            // 
+            this.tmrUnder.Enabled = true;
+            this.tmrUnder.Interval = 1000;
+            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
+            // 
             // FRM_TMS_HOME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1888, 1075);
+            this.Controls.Add(this.pnUnder);
             this.Controls.Add(this.tblMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_TMS_HOME";
@@ -767,5 +792,7 @@
         private System.Windows.Forms.Timer tmrDate;
         private System.Windows.Forms.Timer tmrTitle;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Panel pnUnder;
+        private System.Windows.Forms.Timer tmrUnder;
     }
 }

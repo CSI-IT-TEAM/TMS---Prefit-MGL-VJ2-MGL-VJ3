@@ -17,6 +17,8 @@ namespace FORM
         public FRM_TMS_HOME()
         {
             InitializeComponent();
+            tmrUnder.Stop();
+            pnUnder.Visible = false;
         }
         #region Variable
         bool isBack = false;
@@ -287,6 +289,36 @@ namespace FORM
             {
                 ComVar.Var.callForm = "back";
             }
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            cCountUnder = 0;
+            Screen screen = Screen.FromControl(this);
+            Rectangle workingArea = screen.WorkingArea;
+            pnUnder.Visible = true;
+            pnUnder.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - 150, Screen.PrimaryScreen.WorkingArea.Height / 2 - 100);
+            tmrUnder.Start();
+        }
+        int cCountUnder = 0;
+        private void tmrUnder_Tick(object sender, EventArgs e)
+        {
+            cCountUnder++;
+            if (cCountUnder >= 2)
+            {
+                cCountUnder = 0;
+                pnUnder.Visible = false;
+            }
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            cCountUnder = 0;
+            Screen screen = Screen.FromControl(this);
+            Rectangle workingArea = screen.WorkingArea;
+            pnUnder.Visible = true;
+            pnUnder.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - 150, Screen.PrimaryScreen.WorkingArea.Height / 2 - 100);
+            tmrUnder.Start();
         }
     }
 }

@@ -151,13 +151,16 @@
   <data name="Detail_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Detail_Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Back-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="truckgreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\truckgreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Back-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="under-construction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\under-construction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

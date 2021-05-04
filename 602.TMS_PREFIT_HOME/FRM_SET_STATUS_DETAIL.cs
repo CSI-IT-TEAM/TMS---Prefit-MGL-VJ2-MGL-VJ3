@@ -213,7 +213,7 @@ namespace FORM
                     gridView1.Columns[i].AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                     gridView1.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                     gridView1.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-                    if (i < 6)
+                    if (i < 5)
                     {
                         if (i == 0)
                             gridView1.Columns[i].Visible = false;

@@ -168,23 +168,23 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 35);
+            this.label1.Size = new System.Drawing.Size(66, 35);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Plan";
+            this.label1.Text = "Jit Plan";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPlantQty
             // 
             this.lblPlantQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblPlantQty.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
+            this.lblPlantQty.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlantQty.ForeColor = System.Drawing.Color.Green;
-            this.lblPlantQty.Location = new System.Drawing.Point(64, 0);
+            this.lblPlantQty.Location = new System.Drawing.Point(75, 0);
             this.lblPlantQty.Name = "lblPlantQty";
-            this.lblPlantQty.Size = new System.Drawing.Size(107, 35);
+            this.lblPlantQty.Size = new System.Drawing.Size(95, 35);
             this.lblPlantQty.TabIndex = 1;
             this.lblPlantQty.Text = "0 Prs";
             this.lblPlantQty.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -192,7 +192,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(3, 35);
             this.label3.Name = "label3";
@@ -204,7 +204,7 @@
             // lblWip_Qty
             // 
             this.lblWip_Qty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblWip_Qty.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
+            this.lblWip_Qty.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWip_Qty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblWip_Qty.Location = new System.Drawing.Point(83, 35);
             this.lblWip_Qty.Name = "lblWip_Qty";
