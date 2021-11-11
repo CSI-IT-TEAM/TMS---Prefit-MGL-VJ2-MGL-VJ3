@@ -139,7 +139,7 @@ namespace FORM
                 double op_qty = 0;
                 double op_set = 0;
                 double op_set_per = 0;
-                string set_rate = "";
+       
 
                 while (gridView1.Columns.Count > 0)
                 {
@@ -203,8 +203,22 @@ namespace FORM
                         gridView1.SetRowCellValue(i, gridView1.Columns["DIV"],"% SET");
                     }
                 }
-
-
+                ////format grid
+                //for (int i = 0; i <= gridView1.RowCount - 1; i++)
+                //{
+                //    for (int j = 5; j <= gridView1.Columns.Count - 1; j++)
+                //    {
+                //        if (gridView1.GetRowCellValue(i, gridView1.Columns["DIV"]).ToString() == "% SET")
+                //        {
+                //            gridView1.Columns[i].DisplayFormat.FormatString = "#0.0";
+                //        }
+                //        else
+                //        {
+                //            gridView1.Columns[i].DisplayFormat.FormatString = "#,#.#";
+                //        }
+                //    }
+                //}
+                
             }
             catch { }
 
@@ -264,7 +278,10 @@ namespace FORM
                         gridView1.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                         gridView1.Columns[i].DisplayFormat.FormatString = "#,#";
                     }
+
+                 
                 }
+               
                 gridView1.EndUpdate();
             }
             catch { }

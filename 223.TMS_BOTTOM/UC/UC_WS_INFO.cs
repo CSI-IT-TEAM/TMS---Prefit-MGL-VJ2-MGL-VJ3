@@ -51,7 +51,7 @@ namespace FORM.UC
                 lblPlantQty.Text = string.IsNullOrEmpty(PLANT_QTY) ? "0 Prs" : String.Format("{0:n0}", Convert.ToInt32(PLANT_QTY)) + " Prs";
                 lblWip_Qty.Text = string.IsNullOrEmpty(WIP_QTY) ? "0 Prs" : String.Format("{0:n0}", Convert.ToInt32(WIP_QTY)) + " Prs";
                 _Set_rate = Set_rate;
-                sBtnSet.Text = string.Concat("Set\n", String.Format("{0:n1}",Convert.ToDouble(Set_rate)),"%");
+                //sBtnSet.Text = string.Concat("Set\n", String.Format("{0:n1}",Convert.ToDouble(Set_rate)),"%");
                 if (string.IsNullOrEmpty(Rate))
                     Rate = "0";
                 double r = Convert.ToDouble(Rate);
