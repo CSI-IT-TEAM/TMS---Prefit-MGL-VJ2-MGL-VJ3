@@ -282,13 +282,18 @@ namespace FORM
                 {
                     splashScreenManager1.ShowWaitForm();
 
-                    FRM_TMS_PREFIT_OUTGOING_SHORTAGE POPUP = new FRM_TMS_PREFIT_OUTGOING_SHORTAGE();
+                  
+                    string Factory = ComVar.Var._strValue1;
+                    string ProcCode = ComVar.Var._strValue2;
+                    string isBottom = ComVar.Var._bValue1.ToString();
+
+                FRM_TMS_PREFIT_OUTGOING_SHORTAGE POPUP = new FRM_TMS_PREFIT_OUTGOING_SHORTAGE(Factory,ProcCode, isBottom);
                     splashScreenManager1.CloseWaitForm();
                     POPUP.ShowDialog();
 
 
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     splashScreenManager1.CloseWaitForm();
                     throw;

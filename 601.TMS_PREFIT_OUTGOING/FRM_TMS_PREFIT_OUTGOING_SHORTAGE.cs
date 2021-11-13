@@ -19,9 +19,16 @@ namespace FORM
 {
     public partial class FRM_TMS_PREFIT_OUTGOING_SHORTAGE : Form
     {
-        public FRM_TMS_PREFIT_OUTGOING_SHORTAGE()
+        string Factory = "";
+        string ProcCode = "";
+        string isBottom = "";
+
+        public FRM_TMS_PREFIT_OUTGOING_SHORTAGE(string fty, string opcd,string bottom_yn)
         {
             InitializeComponent();
+            Factory = fty;
+            ProcCode = opcd;
+            isBottom = bottom_yn;
 
         }
         #region Ora
@@ -95,7 +102,7 @@ namespace FORM
                 labelControl1.Text = string.Concat("★ ", ComVar.Var._strValue3, " OUTGOING SHORTAGE BY ASSEMBLY DAY ");
                 labelControl2.Text = string.Concat("★ ", ComVar.Var._strValue3, " OUTGOING SHORTAGE CHART BY PLANT ");
 
-                BindingData("", "", "");
+                BindingData(Factory,ProcCode,isBottom);
             }
             else
             {
