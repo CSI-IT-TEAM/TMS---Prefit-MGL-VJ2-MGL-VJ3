@@ -28,8 +28,38 @@ namespace FORM
         Random r = new Random();
         UC.UC_TMS_CARD_V3[] UC = new UC.UC_TMS_CARD_V3[15];
         int iCount = 0;
+        DataTable dtSet = new DataTable();
         #endregion
         #region Ora
+        private DataTable TMS_PREFIT_SET_HOME(string ARG_TYPE)
+        {
+            try
+            {
+                COM.OraDB MyOraDB = new COM.OraDB();
+                System.Data.DataSet ds_ret;
+
+                string process_name = "MES.PKG_TMS_PREFIT.TMS_PREFIT_SET_HOME";
+                MyOraDB.ReDim_Parameter(2);
+                MyOraDB.Process_Name = process_name;
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
+
+                MyOraDB.Parameter_Type[0] = (char)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (char)OracleType.Cursor;
+
+                MyOraDB.Parameter_Values[0] = ARG_TYPE;
+                MyOraDB.Parameter_Values[1] = "";
+
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
         private DataTable TMS_HOME_SELECT(string ARG_TYPE, string ARG_YMD)
         {
             try
@@ -196,14 +226,188 @@ namespace FORM
             label1.Text = "";
             tmrTitle.Start();
             isBack = ComVar.Var._IsBack;
-          
+
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             DataTable dt = TMS_HOME_SELECT("Q1", DateTime.Now.ToString()); //Lấy dữ liệu từ DB
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
             DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
             InitUC_Card(dt, null, dtRatioAll);
+            dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
+
+            sbSet(dtSet);
+
+
+
+
         }
 
+        private void sbSet(DataTable dtset)
+        {
+            string strvalue = "";
+            
+            //           string factory = ((System.Windows.Forms.Label) sender).Tag.ToString();// 
+            for (int i = 0; i <= dtset.Rows.Count - 1; i++)
+            {
+                strvalue = dtset.Rows[i]["SET_RATE"].ToString();
+                if (strvalue.Contains("100."))
+                {
+                    strvalue = "100";
+                }
+                if (dtset.Rows[i]["FACTORY"].ToString() == "1")
+                {
+                    if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 1")
+                    {
+                        lblF1.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF1");
+                    }
+                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 2")
+                    {
+                        lblF2.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF2");
+                    }
+                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 3")
+                    {
+                        lblF3.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF3");
+                    }
+                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 4")
+                    {
+                        lblF4.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF4");
+                    }
+                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 5")
+                    {
+                        lblF5.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF5");
+                    }
+                }
+                else if (dtset.Rows[i]["FACTORY"].ToString() == "2")
+                {
+                    lblLT.Text = strvalue + "%";
+                    sbSet_Color(strvalue, "lblLT");
+                }
+                else if (dtset.Rows[i]["FACTORY"].ToString() == "3")
+                {
+                    lblTP.Text = strvalue + "%";
+                    sbSet_Color(strvalue, "lblTP");
+                }
+            }
+            
+            
+        }
+        private void sbSet_Color(string label_percent, string label_name)
+        {
+            double per = 0;
+
+            //((System.Windows.Forms.Label)sender).Tag.ToString()
+
+            double.TryParse(label_percent,out per);
+            if (per < 70)
+            {
+                if (label_name == "lblF1")
+                {
+                    lblF1.BackColor = Color.Red;
+                    lblF1.ForeColor = Color.White;
+                }
+                else if (label_name == "lblF2")
+                {
+                    lblF2.BackColor = Color.Red;
+                    lblF2.ForeColor = Color.White;
+                }
+                else if (label_name == "lblF3")
+                {
+                    lblF3.BackColor = Color.Red;
+                    lblF3.ForeColor = Color.White;
+                }
+                else if (label_name == "lblF4")
+                {
+                    lblF4.BackColor = Color.Red;
+                    lblF4.ForeColor = Color.White;
+                }
+                else if (label_name == "lblF5")
+                {
+                    lblF5.BackColor = Color.Red;
+                    lblF5.ForeColor = Color.White;
+                }
+                else if (label_name == "lblLT")
+                {
+                    lblLT.BackColor = Color.Red;
+                    lblLT.ForeColor = Color.White;
+                }
+                else if (label_name == "lblTP")
+                {
+                    lblTP.BackColor = Color.Red;
+                    lblTP.ForeColor = Color.White;
+                }
+            }
+            else if (per >= 70 && per <= 90)
+            {
+                if (label_name == "lblF1")
+                {
+                    lblF1.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblF2")
+                {
+                    lblF2.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblF3")
+                {
+                    lblF3.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblF4")
+                {
+                    lblF4.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblF5")
+                {
+                    lblF5.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblLT")
+                {
+                    lblLT.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblTP")
+                {
+                    lblTP.BackColor = Color.Yellow;
+                }
+            }
+            else if (per > 90)
+            {
+                if (label_name == "lblF1")
+                {
+                    lblF1.BackColor = Color.Green;
+                }
+                else if (label_name == "lblF2")
+                {
+                    lblF2.BackColor = Color.Green;
+                }
+                else if (label_name == "lblF3")
+                {
+                    lblF3.BackColor = Color.Green;
+                }
+                else if (label_name == "lblF4")
+                {
+                    lblF4.BackColor = Color.Green;
+                }
+                else if (label_name == "lblF5")
+                {
+                    lblF5.BackColor = Color.Yellow;
+                }
+                else if (label_name == "lblLT")
+                {
+                    lblLT.BackColor = Color.Green;
+                }
+                else if (label_name == "lblTP")
+                {
+                    lblTP.BackColor = Color.Green;
+                }
+
+            
+            }
+            
+
+
+            }
         private void label1_DoubleClick(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Minimized;
@@ -319,6 +523,48 @@ namespace FORM
             pnUnder.Visible = true;
             pnUnder.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - 150, Screen.PrimaryScreen.WorkingArea.Height / 2 - 100);
             tmrUnder.Start();
+        }
+
+     
+
+        private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+      
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Factory = ((System.Windows.Forms.Label)sender).Tag.ToString();// ComVar.Var._strValue1;
+                string Plant = "";//ComVar.Var._strValue2;
+                string isBottom = "";//ComVar.Var._bValue1.ToString();
+
+                if (Factory == "1" || Factory == "2" || Factory == "3" || Factory == "4" || Factory == "5")
+                {
+                    Plant = "1";
+                }
+                else if (Factory == "LT")
+                {
+                    Plant = "2";
+                }
+                else if (Factory == "TP")
+                {
+                    Plant = "3";
+                }
+
+
+                FRM_TMS_PREFIT_SET_BALANCE POPUP = new FRM_TMS_PREFIT_SET_BALANCE(Plant, Factory, isBottom);
+                POPUP.ShowDialog();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

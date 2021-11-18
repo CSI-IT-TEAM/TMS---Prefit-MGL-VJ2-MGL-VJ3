@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.SplashScreen1), true, true);
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnRow1 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,19 +46,23 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picVJ1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.advancedPanel3 = new FORM.AdvancedPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.advancedPanel2 = new FORM.AdvancedPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.advancedPanel1 = new FORM.AdvancedPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pnVJ2_VJ1 = new FORM.AdvancedPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblF3 = new System.Windows.Forms.Label();
+            this.lblF5 = new System.Windows.Forms.Label();
+            this.lblLT = new System.Windows.Forms.Label();
+            this.lblTP = new System.Windows.Forms.Label();
+            this.lblF4 = new System.Windows.Forms.Label();
+            this.lblF1 = new System.Windows.Forms.Label();
+            this.lblF2 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,10 +76,10 @@
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrDate = new System.Windows.Forms.Timer();
-            this.tmrTitle = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
+            this.tmrUnder = new System.Windows.Forms.Timer(this.components);
             this.pnUnder = new System.Windows.Forms.Panel();
-            this.tmrUnder = new System.Windows.Forms.Timer();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -82,11 +90,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.advancedPanel3.SuspendLayout();
-            this.advancedPanel2.SuspendLayout();
-            this.advancedPanel1.SuspendLayout();
-            this.pnVJ2_VJ1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.advancedPanel6.SuspendLayout();
@@ -96,7 +104,7 @@
             // 
             // splashScreenManager1
             // 
-            splashScreenManager1.ClosingDelay = 1500;
+            splashScreenManager1.ClosingDelay = 500;
             // 
             // tblMain
             // 
@@ -118,6 +126,9 @@
             // 
             // pnRow1
             // 
+            this.pnRow1.Controls.Add(this.label23);
+            this.pnRow1.Controls.Add(this.label24);
+            this.pnRow1.Controls.Add(this.label25);
             this.pnRow1.Controls.Add(this.btnBack);
             this.pnRow1.Controls.Add(this.lblDate);
             this.pnRow1.Controls.Add(this.label1);
@@ -126,6 +137,45 @@
             this.pnRow1.Name = "pnRow1";
             this.pnRow1.Size = new System.Drawing.Size(1882, 70);
             this.pnRow1.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Green;
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label23.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(1256, 36);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(175, 34);
+            this.label23.TabIndex = 433;
+            this.label23.Text = "> 90 %";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Red;
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label24.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(904, 36);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(175, 34);
+            this.label24.TabIndex = 431;
+            this.label24.Text = "< 70%";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Yellow;
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label25.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(1080, 36);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(175, 34);
+            this.label25.TabIndex = 432;
+            this.label25.Text = "70 % ~ 90 %";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBack
             // 
@@ -179,10 +229,10 @@
             // 
             // splRow2.Panel2
             // 
-            this.splRow2.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splRow2.Panel2.Controls.Add(this.splitContainer1);
             this.splRow2.Size = new System.Drawing.Size(1882, 128);
-            this.splRow2.SplitterDistance = 739;
-            this.splRow2.SplitterWidth = 50;
+            this.splRow2.SplitterDistance = 867;
+            this.splRow2.SplitterWidth = 20;
             this.splRow2.TabIndex = 999;
             // 
             // pnRow2
@@ -268,221 +318,278 @@
             this.picVJ1.TabStop = false;
             this.picVJ1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
-            // tableLayoutPanel1
+            // splitContainer1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.advancedPanel3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.advancedPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.advancedPanel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnVJ2_VJ1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 128);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // advancedPanel3
+            // splitContainer1.Panel1
             // 
-            this.advancedPanel3.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.advancedPanel3.Controls.Add(this.label7);
-            this.advancedPanel3.Controls.Add(this.button3);
-            this.advancedPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedPanel3.EdgeWidth = 2;
-            this.advancedPanel3.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel3.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel3.Location = new System.Drawing.Point(549, 3);
-            this.advancedPanel3.Name = "advancedPanel3";
-            this.advancedPanel3.RectRadius = 20;
-            this.advancedPanel3.ShadowColor = System.Drawing.Color.Silver;
-            this.advancedPanel3.ShadowShift = 0;
-            this.advancedPanel3.ShadowStyle = FORM.AdvancedPanel.ShadowMode.ForwardDiagonal;
-            this.advancedPanel3.Size = new System.Drawing.Size(267, 122);
-            this.advancedPanel3.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel3.Style = FORM.AdvancedPanel.BevelStyle.Flat;
-            this.advancedPanel3.TabIndex = 4;
+            this.splitContainer1.Panel1.Controls.Add(this.label8);
             // 
-            // label7
+            // splitContainer1.Panel2
             // 
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(12, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(244, 32);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "VJ3 —> VJ3";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel2);
+            this.splitContainer1.Size = new System.Drawing.Size(995, 128);
+            this.splitContainer1.SplitterDistance = 135;
+            this.splitContainer1.TabIndex = 0;
             // 
-            // button3
+            // label8
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(66, 27);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 99);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button_Click);
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 128);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "UPSTREAM SET";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // advancedPanel2
+            // tableLayoutPanel2
             // 
-            this.advancedPanel2.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.advancedPanel2.Controls.Add(this.label6);
-            this.advancedPanel2.Controls.Add(this.button4);
-            this.advancedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedPanel2.EdgeWidth = 2;
-            this.advancedPanel2.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel2.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel2.Location = new System.Drawing.Point(822, 3);
-            this.advancedPanel2.Name = "advancedPanel2";
-            this.advancedPanel2.RectRadius = 20;
-            this.advancedPanel2.ShadowColor = System.Drawing.Color.Silver;
-            this.advancedPanel2.ShadowShift = 0;
-            this.advancedPanel2.ShadowStyle = FORM.AdvancedPanel.ShadowMode.ForwardDiagonal;
-            this.advancedPanel2.Size = new System.Drawing.Size(268, 122);
-            this.advancedPanel2.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel2.Style = FORM.AdvancedPanel.BevelStyle.Flat;
-            this.advancedPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31349F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31381F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.13591F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.Controls.Add(this.label22, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label21, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label20, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label18, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblF3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF5, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblLT, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblTP, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(856, 128);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // label6
+            // label22
             // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(13, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(244, 32);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "VJ3 —> VJ1";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(734, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 64);
+            this.label22.TabIndex = 15;
+            this.label22.Tag = "TP";
+            this.label22.Text = "TP";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // button4
+            // label21
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(77, 26);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 99);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.label21.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(612, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(116, 64);
+            this.label21.TabIndex = 14;
+            this.label21.Tag = "LT";
+            this.label21.Text = "LT";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // advancedPanel1
+            // label20
             // 
-            this.advancedPanel1.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.advancedPanel1.Controls.Add(this.label5);
-            this.advancedPanel1.Controls.Add(this.button2);
-            this.advancedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedPanel1.EdgeWidth = 2;
-            this.advancedPanel1.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel1.Location = new System.Drawing.Point(3, 3);
-            this.advancedPanel1.Name = "advancedPanel1";
-            this.advancedPanel1.RectRadius = 20;
-            this.advancedPanel1.ShadowColor = System.Drawing.Color.Silver;
-            this.advancedPanel1.ShadowShift = 0;
-            this.advancedPanel1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.ForwardDiagonal;
-            this.advancedPanel1.Size = new System.Drawing.Size(267, 122);
-            this.advancedPanel1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.advancedPanel1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
-            this.advancedPanel1.TabIndex = 2;
+            this.label20.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(490, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(116, 64);
+            this.label20.TabIndex = 13;
+            this.label20.Tag = "5";
+            this.label20.Text = "F# 5";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // label5
+            // label19
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(12, 1);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(244, 32);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "VJ1 —> VJ1";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(368, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(116, 64);
+            this.label19.TabIndex = 12;
+            this.label19.Tag = "4";
+            this.label19.Text = "F# 4";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // button2
+            // label18
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(68, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 99);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button_Click);
+            this.label18.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(247, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 64);
+            this.label18.TabIndex = 11;
+            this.label18.Tag = "3";
+            this.label18.Text = "F# 3";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // pnVJ2_VJ1
+            // label17
             // 
-            this.pnVJ2_VJ1.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.pnVJ2_VJ1.Controls.Add(this.label4);
-            this.pnVJ2_VJ1.Controls.Add(this.button1);
-            this.pnVJ2_VJ1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ2_VJ1.EdgeWidth = 2;
-            this.pnVJ2_VJ1.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.pnVJ2_VJ1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.pnVJ2_VJ1.Location = new System.Drawing.Point(276, 3);
-            this.pnVJ2_VJ1.Name = "pnVJ2_VJ1";
-            this.pnVJ2_VJ1.RectRadius = 20;
-            this.pnVJ2_VJ1.ShadowColor = System.Drawing.Color.Silver;
-            this.pnVJ2_VJ1.ShadowShift = 0;
-            this.pnVJ2_VJ1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.ForwardDiagonal;
-            this.pnVJ2_VJ1.Size = new System.Drawing.Size(267, 122);
-            this.pnVJ2_VJ1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.pnVJ2_VJ1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
-            this.pnVJ2_VJ1.TabIndex = 1;
+            this.label17.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(3, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 64);
+            this.label17.TabIndex = 3;
+            this.label17.Tag = "1";
+            this.label17.Text = "F#1";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.Click += new System.EventHandler(this.lbl_Click);
             // 
-            // label4
+            // lblF3
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 1);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "VJ2 —> VJ2";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF3.ForeColor = System.Drawing.Color.Black;
+            this.lblF3.Location = new System.Drawing.Point(247, 64);
+            this.lblF3.Name = "lblF3";
+            this.lblF3.Size = new System.Drawing.Size(115, 64);
+            this.lblF3.TabIndex = 10;
+            this.lblF3.Tag = "";
+            this.lblF3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // lblF5
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::FORM.Properties.Resources.truckgreen;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(67, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 99);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button_Click);
+            this.lblF5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF5.ForeColor = System.Drawing.Color.Black;
+            this.lblF5.Location = new System.Drawing.Point(490, 64);
+            this.lblF5.Name = "lblF5";
+            this.lblF5.Size = new System.Drawing.Size(116, 64);
+            this.lblF5.TabIndex = 9;
+            this.lblF5.Tag = "";
+            this.lblF5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLT
+            // 
+            this.lblLT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblLT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLT.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLT.ForeColor = System.Drawing.Color.White;
+            this.lblLT.Location = new System.Drawing.Point(612, 64);
+            this.lblLT.Name = "lblLT";
+            this.lblLT.Size = new System.Drawing.Size(116, 64);
+            this.lblLT.TabIndex = 8;
+            this.lblLT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTP
+            // 
+            this.lblTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTP.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTP.ForeColor = System.Drawing.Color.Black;
+            this.lblTP.Location = new System.Drawing.Point(734, 64);
+            this.lblTP.Name = "lblTP";
+            this.lblTP.Size = new System.Drawing.Size(119, 64);
+            this.lblTP.TabIndex = 7;
+            this.lblTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblF4
+            // 
+            this.lblF4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF4.ForeColor = System.Drawing.Color.White;
+            this.lblF4.Location = new System.Drawing.Point(368, 64);
+            this.lblF4.Name = "lblF4";
+            this.lblF4.Size = new System.Drawing.Size(116, 64);
+            this.lblF4.TabIndex = 6;
+            this.lblF4.Tag = "";
+            this.lblF4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblF1
+            // 
+            this.lblF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF1.ForeColor = System.Drawing.Color.Black;
+            this.lblF1.Location = new System.Drawing.Point(3, 64);
+            this.lblF1.Name = "lblF1";
+            this.lblF1.Size = new System.Drawing.Size(116, 64);
+            this.lblF1.TabIndex = 5;
+            this.lblF1.Tag = "";
+            this.lblF1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblF2
+            // 
+            this.lblF2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF2.ForeColor = System.Drawing.Color.Black;
+            this.lblF2.Location = new System.Drawing.Point(125, 64);
+            this.lblF2.Name = "lblF2";
+            this.lblF2.Size = new System.Drawing.Size(116, 64);
+            this.lblF2.TabIndex = 4;
+            this.lblF2.Tag = "";
+            this.lblF2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(125, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 64);
+            this.label16.TabIndex = 4;
+            this.label16.Tag = "2";
+            this.label16.Text = "F# 2";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.Click += new System.EventHandler(this.lbl_Click);
             // 
             // groupBox1
             // 
@@ -694,6 +801,12 @@
             this.tmrTitle.Enabled = true;
             this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
             // 
+            // tmrUnder
+            // 
+            this.tmrUnder.Enabled = true;
+            this.tmrUnder.Interval = 1000;
+            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
+            // 
             // pnUnder
             // 
             this.pnUnder.BackColor = System.Drawing.Color.Transparent;
@@ -703,12 +816,6 @@
             this.pnUnder.Name = "pnUnder";
             this.pnUnder.Size = new System.Drawing.Size(294, 224);
             this.pnUnder.TabIndex = 3;
-            // 
-            // tmrUnder
-            // 
-            this.tmrUnder.Enabled = true;
-            this.tmrUnder.Interval = 1000;
-            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
             // 
             // FRM_TMS_HOME
             // 
@@ -735,11 +842,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVJ1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.advancedPanel3.ResumeLayout(false);
-            this.advancedPanel2.ResumeLayout(false);
-            this.advancedPanel1.ResumeLayout(false);
-            this.pnVJ2_VJ1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.advancedPanel6.ResumeLayout(false);
@@ -759,16 +866,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picVJ1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private AdvancedPanel pnVJ2_VJ1;
-        private System.Windows.Forms.Label label4;
-        private AdvancedPanel advancedPanel3;
-        private System.Windows.Forms.Label label7;
-        private AdvancedPanel advancedPanel2;
-        private System.Windows.Forms.Label label6;
-        private AdvancedPanel advancedPanel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private AdvancedPanel advancedPanel4;
         private AdvancedPanel advancedPanel6;
@@ -783,9 +880,6 @@
         private System.Windows.Forms.Label lblLongThanh;
         private System.Windows.Forms.Label lblTanPhu;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDate;
@@ -794,5 +888,25 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnUnder;
         private System.Windows.Forms.Timer tmrUnder;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label lblF3;
+        private System.Windows.Forms.Label lblF5;
+        private System.Windows.Forms.Label lblLT;
+        private System.Windows.Forms.Label lblTP;
+        private System.Windows.Forms.Label lblF4;
+        private System.Windows.Forms.Label lblF1;
+        private System.Windows.Forms.Label lblF2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
