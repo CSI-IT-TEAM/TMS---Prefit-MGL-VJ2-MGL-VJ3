@@ -198,26 +198,31 @@ namespace FORM
                         chartControl1.Series[0].Points.Clear();
 
                         chartControl1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+                        int intPoint = -1;
 
                         if (dtData == null) return;
                         for (int i = 0; i <= dtData.Rows.Count - 1; i++)
                         {
-                            chartControl1.Series[0].Points.Add(new SeriesPoint(dtData.Rows[i]["LINE_NM"].ToString() + " " + dtData.Rows[i]["MLINE"].ToString(), dtData.Rows[i]["SET_RATE"]));
+                            if (dtData.Rows[i]["DIV"].ToString() != "AVERAGE")
+                            {
+                                intPoint++;
+                                chartControl1.Series[0].Points.Add(new SeriesPoint(dtData.Rows[i]["LINE_NM"].ToString() + "-" + dtData.Rows[i]["MLINE"].ToString(), dtData.Rows[i]["SET_RATE"]));
 
-                            double rate;
-                            double.TryParse(dtData.Rows[i]["SET_RATE"].ToString(), out rate); //out
+                                double rate;
+                                double.TryParse(dtData.Rows[i]["SET_RATE"].ToString(), out rate); //out
 
-                            if (rate < 70)
-                            {
-                                chartControl1.Series[0].Points[i].Color = Color.Red;
-                            }
-                            else if ((rate >= 70) && (rate <= 90))
-                            {
-                                chartControl1.Series[0].Points[i].Color = Color.Yellow;
-                            }
-                            else if (rate > 90)
-                            {
-                                chartControl1.Series[0].Points[i].Color = Color.Green;
+                                if (rate < 70)
+                                {
+                                    chartControl1.Series[0].Points[intPoint].Color = Color.Red;
+                                }
+                                else if ((rate >= 70) && (rate <= 90))
+                                {
+                                    chartControl1.Series[0].Points[intPoint].Color = Color.Yellow;
+                                }
+                                else if (rate > 90)
+                                {
+                                    chartControl1.Series[0].Points[intPoint].Color = Color.Green;
+                                }
                             }
                         }
                     }
@@ -282,7 +287,7 @@ namespace FORM
                 #endregion old
                // splashScreenManager2.CloseWaitForm();
             }
-            catch
+            catch (Exception ex)
             {
                // splashScreenManager2.CloseWaitForm();
             }

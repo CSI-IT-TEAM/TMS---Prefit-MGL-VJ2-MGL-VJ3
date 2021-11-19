@@ -115,6 +115,7 @@
             this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
             xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F);
+            xyDiagram1.AxisX.Reverse = true;
             xyDiagram1.AxisX.Tickmarks.MinorVisible = false;
             xyDiagram1.AxisX.Title.Text = "Plant";
             xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(192)))));
@@ -132,12 +133,12 @@
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(1072, 54);
+            this.chartControl1.Location = new System.Drawing.Point(1082, 55);
             this.chartControl1.Name = "chartControl1";
             series1.CrosshairLabelPattern = "{V:#,#}";
             sideBySideBarSeriesLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            sideBySideBarSeriesLabel1.TextPattern = "{V:#,#}";
+            sideBySideBarSeriesLabel1.TextPattern = "{V:#,#.0}";
             series1.Label = sideBySideBarSeriesLabel1;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Series 1";
@@ -229,7 +230,7 @@
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.labelControl2.LineVisible = true;
-            this.labelControl2.Location = new System.Drawing.Point(1081, 3);
+            this.labelControl2.Location = new System.Drawing.Point(1082, 10);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(849, 39);
             this.labelControl2.TabIndex = 40;

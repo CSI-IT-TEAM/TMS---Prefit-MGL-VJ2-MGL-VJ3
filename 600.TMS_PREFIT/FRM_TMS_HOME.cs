@@ -232,10 +232,19 @@ namespace FORM
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
             DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
             InitUC_Card(dt, null, dtRatioAll);
+
+
+            lbl70.Visible = false;
+            lbl7090.Visible = false;
+            lbl90.Visible = false;
+
             dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
 
             sbSet(dtSet);
 
+            //lbl70.Visible = true;
+            //lbl7090.Visible = true;
+            //lbl90.Visible = true;
 
 
 
@@ -243,7 +252,13 @@ namespace FORM
 
         private void sbSet(DataTable dtset)
         {
+
+            lbl70.Visible = true;
+            lbl7090.Visible = true;
+            lbl90.Visible = true;
+
             string strvalue = "";
+
             
             //           string factory = ((System.Windows.Forms.Label) sender).Tag.ToString();// 
             for (int i = 0; i <= dtset.Rows.Count - 1; i++)
@@ -345,30 +360,37 @@ namespace FORM
                 if (label_name == "lblF1")
                 {
                     lblF1.BackColor = Color.Yellow;
+                    lblF1.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF2")
                 {
                     lblF2.BackColor = Color.Yellow;
+                    lblF2.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF3")
                 {
                     lblF3.BackColor = Color.Yellow;
+                    lblF3.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF4")
                 {
                     lblF4.BackColor = Color.Yellow;
+                    lblF4.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF5")
                 {
                     lblF5.BackColor = Color.Yellow;
+                    lblF5.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblLT")
                 {
                     lblLT.BackColor = Color.Yellow;
+                    lblLT.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblTP")
                 {
                     lblTP.BackColor = Color.Yellow;
+                    lblTP.ForeColor = Color.Black;
                 }
             }
             else if (per > 90)
@@ -376,30 +398,37 @@ namespace FORM
                 if (label_name == "lblF1")
                 {
                     lblF1.BackColor = Color.Green;
+                    lblF1.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF2")
                 {
                     lblF2.BackColor = Color.Green;
+                    lblF2.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF3")
                 {
                     lblF3.BackColor = Color.Green;
+                    lblF3.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF4")
                 {
                     lblF4.BackColor = Color.Green;
+                    lblF4.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblF5")
                 {
                     lblF5.BackColor = Color.Yellow;
+                    lblF5.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblLT")
                 {
                     lblLT.BackColor = Color.Green;
+                    lblLT.ForeColor = Color.Black;
                 }
                 else if (label_name == "lblTP")
                 {
                     lblTP.BackColor = Color.Green;
+                    lblTP.ForeColor = Color.Black;
                 }
 
             
@@ -565,6 +594,7 @@ namespace FORM
             {
                 throw;
             }
+
         }
     }
 }

@@ -32,9 +32,9 @@
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnRow1 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lbl90 = new System.Windows.Forms.Label();
+            this.lbl70 = new System.Windows.Forms.Label();
+            this.lbl7090 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,16 +70,16 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
+            this.tmrUnder = new System.Windows.Forms.Timer(this.components);
+            this.pnUnder = new System.Windows.Forms.Panel();
             this.advancedPanel6 = new FORM.AdvancedPanel();
             this.tblMainVJ3 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel5 = new FORM.AdvancedPanel();
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
-            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
-            this.tmrUnder = new System.Windows.Forms.Timer(this.components);
-            this.pnUnder = new System.Windows.Forms.Panel();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -126,9 +126,9 @@
             // 
             // pnRow1
             // 
-            this.pnRow1.Controls.Add(this.label23);
-            this.pnRow1.Controls.Add(this.label24);
-            this.pnRow1.Controls.Add(this.label25);
+            this.pnRow1.Controls.Add(this.lbl90);
+            this.pnRow1.Controls.Add(this.lbl70);
+            this.pnRow1.Controls.Add(this.lbl7090);
             this.pnRow1.Controls.Add(this.btnBack);
             this.pnRow1.Controls.Add(this.lblDate);
             this.pnRow1.Controls.Add(this.label1);
@@ -138,44 +138,47 @@
             this.pnRow1.Size = new System.Drawing.Size(1882, 70);
             this.pnRow1.TabIndex = 0;
             // 
-            // label23
+            // lbl90
             // 
-            this.label23.BackColor = System.Drawing.Color.Green;
-            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1256, 36);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(175, 34);
-            this.label23.TabIndex = 433;
-            this.label23.Text = "> 90 %";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl90.BackColor = System.Drawing.Color.Green;
+            this.lbl90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl90.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.lbl90.ForeColor = System.Drawing.Color.Black;
+            this.lbl90.Location = new System.Drawing.Point(1256, 36);
+            this.lbl90.Name = "lbl90";
+            this.lbl90.Size = new System.Drawing.Size(175, 34);
+            this.lbl90.TabIndex = 433;
+            this.lbl90.Text = "> 90 %";
+            this.lbl90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl90.Visible = false;
             // 
-            // label24
+            // lbl70
             // 
-            this.label24.BackColor = System.Drawing.Color.Red;
-            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label24.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(904, 36);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(175, 34);
-            this.label24.TabIndex = 431;
-            this.label24.Text = "< 70%";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl70.BackColor = System.Drawing.Color.Red;
+            this.lbl70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl70.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.lbl70.ForeColor = System.Drawing.Color.White;
+            this.lbl70.Location = new System.Drawing.Point(904, 36);
+            this.lbl70.Name = "lbl70";
+            this.lbl70.Size = new System.Drawing.Size(175, 34);
+            this.lbl70.TabIndex = 431;
+            this.lbl70.Text = "< 70%";
+            this.lbl70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl70.Visible = false;
             // 
-            // label25
+            // lbl7090
             // 
-            this.label25.BackColor = System.Drawing.Color.Yellow;
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label25.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(1080, 36);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(175, 34);
-            this.label25.TabIndex = 432;
-            this.label25.Text = "70 % ~ 90 %";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl7090.BackColor = System.Drawing.Color.Yellow;
+            this.lbl7090.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl7090.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.lbl7090.ForeColor = System.Drawing.Color.Black;
+            this.lbl7090.Location = new System.Drawing.Point(1080, 36);
+            this.lbl7090.Name = "lbl7090";
+            this.lbl7090.Size = new System.Drawing.Size(175, 34);
+            this.lbl7090.TabIndex = 432;
+            this.lbl7090.Text = "70 % ~ 90 %";
+            this.lbl7090.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl7090.Visible = false;
             // 
             // btnBack
             // 
@@ -397,7 +400,6 @@
             this.label22.Tag = "TP";
             this.label22.Text = "TP";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label22.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label21
             // 
@@ -413,7 +415,6 @@
             this.label21.Tag = "LT";
             this.label21.Text = "LT";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label21.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label20
             // 
@@ -429,7 +430,6 @@
             this.label20.Tag = "5";
             this.label20.Text = "F# 5";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label20.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label19
             // 
@@ -445,7 +445,6 @@
             this.label19.Tag = "4";
             this.label19.Text = "F# 4";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label19.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label18
             // 
@@ -461,7 +460,6 @@
             this.label18.Tag = "3";
             this.label18.Text = "F# 3";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label18.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label17
             // 
@@ -477,7 +475,6 @@
             this.label17.Tag = "1";
             this.label17.Text = "F#1";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label17.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblF3
             // 
@@ -490,8 +487,9 @@
             this.lblF3.Name = "lblF3";
             this.lblF3.Size = new System.Drawing.Size(115, 64);
             this.lblF3.TabIndex = 10;
-            this.lblF3.Tag = "";
+            this.lblF3.Tag = "3";
             this.lblF3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF3.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblF5
             // 
@@ -504,8 +502,9 @@
             this.lblF5.Name = "lblF5";
             this.lblF5.Size = new System.Drawing.Size(116, 64);
             this.lblF5.TabIndex = 9;
-            this.lblF5.Tag = "";
+            this.lblF5.Tag = "5";
             this.lblF5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF5.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblLT
             // 
@@ -518,7 +517,9 @@
             this.lblLT.Name = "lblLT";
             this.lblLT.Size = new System.Drawing.Size(116, 64);
             this.lblLT.TabIndex = 8;
+            this.lblLT.Tag = "LT";
             this.lblLT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLT.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblTP
             // 
@@ -531,7 +532,9 @@
             this.lblTP.Name = "lblTP";
             this.lblTP.Size = new System.Drawing.Size(119, 64);
             this.lblTP.TabIndex = 7;
+            this.lblTP.Tag = "TP";
             this.lblTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTP.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblF4
             // 
@@ -544,8 +547,9 @@
             this.lblF4.Name = "lblF4";
             this.lblF4.Size = new System.Drawing.Size(116, 64);
             this.lblF4.TabIndex = 6;
-            this.lblF4.Tag = "";
+            this.lblF4.Tag = "4";
             this.lblF4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF4.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblF1
             // 
@@ -558,8 +562,9 @@
             this.lblF1.Name = "lblF1";
             this.lblF1.Size = new System.Drawing.Size(116, 64);
             this.lblF1.TabIndex = 5;
-            this.lblF1.Tag = "";
+            this.lblF1.Tag = "1";
             this.lblF1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF1.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblF2
             // 
@@ -572,8 +577,9 @@
             this.lblF2.Name = "lblF2";
             this.lblF2.Size = new System.Drawing.Size(116, 64);
             this.lblF2.TabIndex = 4;
-            this.lblF2.Tag = "";
+            this.lblF2.Tag = "2";
             this.lblF2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF2.Click += new System.EventHandler(this.lbl_Click);
             // 
             // label16
             // 
@@ -589,7 +595,6 @@
             this.label16.Tag = "2";
             this.label16.Text = "F# 2";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label16.Click += new System.EventHandler(this.lbl_Click);
             // 
             // groupBox1
             // 
@@ -688,6 +693,33 @@
             this.labelControl7.TabIndex = 67;
             this.labelControl7.Text = "Vĩnh Cửu";
             this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            // 
+            // tmrDate
+            // 
+            this.tmrDate.Enabled = true;
+            this.tmrDate.Interval = 1000;
+            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
+            // 
+            // tmrTitle
+            // 
+            this.tmrTitle.Enabled = true;
+            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
+            // 
+            // tmrUnder
+            // 
+            this.tmrUnder.Enabled = true;
+            this.tmrUnder.Interval = 1000;
+            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
+            // 
+            // pnUnder
+            // 
+            this.pnUnder.BackColor = System.Drawing.Color.Transparent;
+            this.pnUnder.BackgroundImage = global::FORM.Properties.Resources.under_construction;
+            this.pnUnder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnUnder.Location = new System.Drawing.Point(797, 425);
+            this.pnUnder.Name = "pnUnder";
+            this.pnUnder.Size = new System.Drawing.Size(294, 224);
+            this.pnUnder.TabIndex = 3;
             // 
             // advancedPanel6
             // 
@@ -790,33 +822,6 @@
             this.tblMainVJ1.Size = new System.Drawing.Size(724, 707);
             this.tblMainVJ1.TabIndex = 0;
             // 
-            // tmrDate
-            // 
-            this.tmrDate.Enabled = true;
-            this.tmrDate.Interval = 1000;
-            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
-            // 
-            // tmrTitle
-            // 
-            this.tmrTitle.Enabled = true;
-            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
-            // 
-            // tmrUnder
-            // 
-            this.tmrUnder.Enabled = true;
-            this.tmrUnder.Interval = 1000;
-            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
-            // 
-            // pnUnder
-            // 
-            this.pnUnder.BackColor = System.Drawing.Color.Transparent;
-            this.pnUnder.BackgroundImage = global::FORM.Properties.Resources.under_construction;
-            this.pnUnder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnUnder.Location = new System.Drawing.Point(797, 425);
-            this.pnUnder.Name = "pnUnder";
-            this.pnUnder.Size = new System.Drawing.Size(294, 224);
-            this.pnUnder.TabIndex = 3;
-            // 
             // FRM_TMS_HOME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -905,8 +910,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbl90;
+        private System.Windows.Forms.Label lbl70;
+        private System.Windows.Forms.Label lbl7090;
     }
 }

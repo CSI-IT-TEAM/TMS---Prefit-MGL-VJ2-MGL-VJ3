@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
@@ -56,7 +55,7 @@
             this.separatorControl4 = new DevExpress.XtraEditors.SeparatorControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.btnBack = new System.Windows.Forms.Button();
             this.splashScreenManager2 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.label7 = new System.Windows.Forms.Label();
@@ -231,6 +230,7 @@
             this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
             xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F);
+            xyDiagram1.AxisX.Reverse = true;
             xyDiagram1.AxisX.Tickmarks.MinorVisible = false;
             xyDiagram1.AxisX.Title.Text = "Plant";
             xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(192)))));
@@ -253,7 +253,7 @@
             series1.CrosshairLabelPattern = "{V:#,#}";
             sideBySideBarSeriesLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            sideBySideBarSeriesLabel1.TextPattern = "{V:#,#}";
+            sideBySideBarSeriesLabel1.TextPattern = "{V:#,#.0}";
             series1.Label = sideBySideBarSeriesLabel1;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Series 1";
