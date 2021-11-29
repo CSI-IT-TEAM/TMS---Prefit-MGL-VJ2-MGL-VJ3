@@ -43,13 +43,13 @@
             this.SEQ_FORM = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.lblRate = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Rate = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Actua = new System.Windows.Forms.Label();
             this.lblRplan = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Rplan = new System.Windows.Forms.Label();
             this.lblDplan = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Dplan = new System.Windows.Forms.Label();
             this.lblFac = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).BeginInit();
@@ -152,13 +152,13 @@
             this.advancedPanel1.Controls.Add(this.separatorControl1);
             this.advancedPanel1.Controls.Add(this.treeList1);
             this.advancedPanel1.Controls.Add(this.lblRate);
-            this.advancedPanel1.Controls.Add(this.label4);
+            this.advancedPanel1.Controls.Add(this.lbl_Rate);
             this.advancedPanel1.Controls.Add(this.lblAct);
-            this.advancedPanel1.Controls.Add(this.label3);
+            this.advancedPanel1.Controls.Add(this.lbl_Actua);
             this.advancedPanel1.Controls.Add(this.lblRplan);
-            this.advancedPanel1.Controls.Add(this.label2);
+            this.advancedPanel1.Controls.Add(this.lbl_Rplan);
             this.advancedPanel1.Controls.Add(this.lblDplan);
-            this.advancedPanel1.Controls.Add(this.label1);
+            this.advancedPanel1.Controls.Add(this.lbl_Dplan);
             this.advancedPanel1.Controls.Add(this.lblFac);
             this.advancedPanel1.EdgeWidth = 1;
             this.advancedPanel1.EndColor = System.Drawing.SystemColors.Control;
@@ -294,17 +294,17 @@
             this.lblRate.Text = "99%";
             this.lblRate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // lbl_Rate
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(308, 317);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 47);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Rate";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Rate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_Rate.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_Rate.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Rate.Location = new System.Drawing.Point(308, 317);
+            this.lbl_Rate.Name = "lbl_Rate";
+            this.lbl_Rate.Size = new System.Drawing.Size(131, 47);
+            this.lbl_Rate.TabIndex = 5;
+            this.lbl_Rate.Text = "Rate";
+            this.lbl_Rate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblAct
             // 
@@ -318,17 +318,17 @@
             this.lblAct.Text = "1,023 Prs";
             this.lblAct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lbl_Actua
             // 
-            this.label3.BackColor = System.Drawing.Color.Gray;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(308, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 47);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Act";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Actua.BackColor = System.Drawing.Color.Gray;
+            this.lbl_Actua.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_Actua.ForeColor = System.Drawing.Color.White;
+            this.lbl_Actua.Location = new System.Drawing.Point(308, 233);
+            this.lbl_Actua.Name = "lbl_Actua";
+            this.lbl_Actua.Size = new System.Drawing.Size(131, 47);
+            this.lbl_Actua.TabIndex = 6;
+            this.lbl_Actua.Text = "Act";
+            this.lbl_Actua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblRplan
             // 
@@ -342,17 +342,17 @@
             this.lblRplan.Text = "1,024 Prs";
             this.lblRplan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lbl_Rplan
             // 
-            this.label2.BackColor = System.Drawing.Color.Gray;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(308, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 47);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "R.Plan";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Rplan.BackColor = System.Drawing.Color.Gray;
+            this.lbl_Rplan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_Rplan.ForeColor = System.Drawing.Color.White;
+            this.lbl_Rplan.Location = new System.Drawing.Point(308, 161);
+            this.lbl_Rplan.Name = "lbl_Rplan";
+            this.lbl_Rplan.Size = new System.Drawing.Size(131, 47);
+            this.lbl_Rplan.TabIndex = 7;
+            this.lbl_Rplan.Text = "R.Plan";
+            this.lbl_Rplan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDplan
             // 
@@ -366,17 +366,17 @@
             this.lblDplan.Text = "2,048 Prs";
             this.lblDplan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // lbl_Dplan
             // 
-            this.label1.BackColor = System.Drawing.Color.Gray;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(308, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 47);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "D.Plan";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_Dplan.BackColor = System.Drawing.Color.Gray;
+            this.lbl_Dplan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_Dplan.ForeColor = System.Drawing.Color.White;
+            this.lbl_Dplan.Location = new System.Drawing.Point(308, 84);
+            this.lbl_Dplan.Name = "lbl_Dplan";
+            this.lbl_Dplan.Size = new System.Drawing.Size(131, 47);
+            this.lbl_Dplan.TabIndex = 8;
+            this.lbl_Dplan.Text = "D.Plan";
+            this.lbl_Dplan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblFac
             // 
@@ -423,10 +423,10 @@
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent arcScaleRangeBarComponent3;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScaleComponent3;
         private DevExpress.XtraEditors.LabelControl lblFac;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Rate;
+        private System.Windows.Forms.Label lbl_Actua;
+        private System.Windows.Forms.Label lbl_Rplan;
+        private System.Windows.Forms.Label lbl_Dplan;
         private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn SEQ_FORM;

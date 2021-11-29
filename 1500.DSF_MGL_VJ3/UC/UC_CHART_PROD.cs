@@ -113,15 +113,40 @@ namespace FORM.UC
             }
         }
 
-        public void BindingData(DataTable dt)
+        public void BindingData(DataTable dt, string type)
         {
-            chartControl1.DataSource = dt;
-            chartControl1.Series[1].ArgumentDataMember = "LINE_CD";
-            chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
-            chartControl1.Series[0].ArgumentDataMember = "LINE_CD";
-            chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "PLAN_QTY" });
-            chartControl1.Series[2].ArgumentDataMember = "LINE_CD";
-            chartControl1.Series[2].ValueDataMembers.AddRange(new string[] { "RATE" });
+            
+            if (type == "HR")
+            {
+                chartControl2.DataSource = dt;
+                chartControl2.Dock = DockStyle.Fill;
+                chartControl1.Dock = DockStyle.None;
+                chartControl1.Visible = false;
+                chartControl2.Visible = true;
+                chartControl2.Series[1].ArgumentDataMember = "LINE_CD";
+                chartControl2.Series[1].ValueDataMembers.AddRange(new string[] { "PO_ACT_QTY" });
+                chartControl2.Series[0].ArgumentDataMember = "LINE_CD";
+                chartControl2.Series[0].ValueDataMembers.AddRange(new string[] { "PO_QTY" });
+                chartControl2.Series[2].ArgumentDataMember = "LINE_CD";
+                chartControl2.Series[2].ValueDataMembers.AddRange(new string[] { "ABSENT" });
+            }
+            else
+            {
+                chartControl1.DataSource = dt;
+                chartControl1.Dock = DockStyle.Fill;
+                chartControl2.Dock = DockStyle.None;
+                chartControl2.Visible = false;
+                chartControl1.Visible = true;
+
+                chartControl1.Series[1].ArgumentDataMember = "LINE_CD";
+                chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+                chartControl1.Series[0].ArgumentDataMember = "LINE_CD";
+                chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "PLAN_QTY" });
+                chartControl1.Series[2].ArgumentDataMember = "LINE_CD";
+                chartControl1.Series[2].ValueDataMembers.AddRange(new string[] { "RATE" });
+
+            }
+
 
         }
         POPUP_PROD_BY_PLANT[] POPUP_TEMP = new POPUP_PROD_BY_PLANT[1];
@@ -141,7 +166,7 @@ namespace FORM.UC
                 POPUP.ShowDialog();
                 this.Cursor = Cursors.Default;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 this.Cursor = Cursors.Default;
             }
