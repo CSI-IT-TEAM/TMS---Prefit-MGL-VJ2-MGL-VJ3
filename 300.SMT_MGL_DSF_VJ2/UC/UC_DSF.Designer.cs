@@ -37,22 +37,22 @@
             this.groupBoxEx4 = new FORM.GroupBoxEx();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_Rate = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel3 = new FORM.AdvancedPanel();
             this.groupBoxEx3 = new FORM.GroupBoxEx();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_Act = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel2 = new FORM.AdvancedPanel();
             this.groupBoxEx2 = new FORM.GroupBoxEx();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_Real = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel1 = new FORM.AdvancedPanel();
             this.groupBoxEx1 = new FORM.GroupBoxEx();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_shift = new DevExpress.XtraEditors.LabelControl();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
@@ -192,7 +192,7 @@
             this.groupBoxEx4.BackgroundPanelImage = null;
             this.groupBoxEx4.Controls.Add(this.pictureBox4);
             this.groupBoxEx4.Controls.Add(this.label4);
-            this.groupBoxEx4.Controls.Add(this.labelControl3);
+            this.groupBoxEx4.Controls.Add(this.lbl_Rate);
             this.groupBoxEx4.DrawGroupBorder = true;
             this.groupBoxEx4.GroupBorderColor = System.Drawing.Color.BurlyWood;
             this.groupBoxEx4.GroupPanelColor = System.Drawing.SystemColors.InactiveBorder;
@@ -228,20 +228,20 @@
             this.label4.Text = "0%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelControl3
+            // lbl_Rate
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl3.LineVisible = true;
-            this.labelControl3.Location = new System.Drawing.Point(55, 2);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(287, 49);
-            this.labelControl3.TabIndex = 66;
-            this.labelControl3.Text = "RATE";
-            this.labelControl3.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.lbl_Rate.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lbl_Rate.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_Rate.Appearance.Options.UseFont = true;
+            this.lbl_Rate.Appearance.Options.UseForeColor = true;
+            this.lbl_Rate.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lbl_Rate.LineVisible = true;
+            this.lbl_Rate.Location = new System.Drawing.Point(55, 2);
+            this.lbl_Rate.Name = "lbl_Rate";
+            this.lbl_Rate.Size = new System.Drawing.Size(287, 49);
+            this.lbl_Rate.TabIndex = 66;
+            this.lbl_Rate.Text = "RATE";
+            this.lbl_Rate.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // advancedPanel3
             // 
@@ -266,7 +266,7 @@
             this.groupBoxEx3.BackgroundPanelImage = null;
             this.groupBoxEx3.Controls.Add(this.pictureBox3);
             this.groupBoxEx3.Controls.Add(this.label3);
-            this.groupBoxEx3.Controls.Add(this.labelControl2);
+            this.groupBoxEx3.Controls.Add(this.lbl_Act);
             this.groupBoxEx3.DrawGroupBorder = true;
             this.groupBoxEx3.GroupBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.groupBoxEx3.GroupPanelColor = System.Drawing.SystemColors.InactiveBorder;
@@ -302,20 +302,20 @@
             this.label3.Text = "0 Prs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelControl2
+            // lbl_Act
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl2.LineVisible = true;
-            this.labelControl2.Location = new System.Drawing.Point(55, 0);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(287, 49);
-            this.labelControl2.TabIndex = 66;
-            this.labelControl2.Text = "ACTUAL";
-            this.labelControl2.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.lbl_Act.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lbl_Act.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_Act.Appearance.Options.UseFont = true;
+            this.lbl_Act.Appearance.Options.UseForeColor = true;
+            this.lbl_Act.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lbl_Act.LineVisible = true;
+            this.lbl_Act.Location = new System.Drawing.Point(55, 0);
+            this.lbl_Act.Name = "lbl_Act";
+            this.lbl_Act.Size = new System.Drawing.Size(287, 49);
+            this.lbl_Act.TabIndex = 66;
+            this.lbl_Act.Text = "ACTUAL";
+            this.lbl_Act.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // advancedPanel2
             // 
@@ -340,7 +340,7 @@
             this.groupBoxEx2.BackgroundPanelImage = null;
             this.groupBoxEx2.Controls.Add(this.pictureBox2);
             this.groupBoxEx2.Controls.Add(this.label2);
-            this.groupBoxEx2.Controls.Add(this.labelControl1);
+            this.groupBoxEx2.Controls.Add(this.lbl_Real);
             this.groupBoxEx2.DrawGroupBorder = true;
             this.groupBoxEx2.GroupBorderColor = System.Drawing.Color.Blue;
             this.groupBoxEx2.GroupPanelColor = System.Drawing.SystemColors.InactiveBorder;
@@ -376,20 +376,20 @@
             this.label2.Text = "0 Prs";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelControl1
+            // lbl_Real
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl1.LineVisible = true;
-            this.labelControl1.Location = new System.Drawing.Point(55, 0);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(287, 49);
-            this.labelControl1.TabIndex = 66;
-            this.labelControl1.Text = "REAL PLAN";
-            this.labelControl1.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.lbl_Real.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lbl_Real.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_Real.Appearance.Options.UseFont = true;
+            this.lbl_Real.Appearance.Options.UseForeColor = true;
+            this.lbl_Real.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lbl_Real.LineVisible = true;
+            this.lbl_Real.Location = new System.Drawing.Point(55, 0);
+            this.lbl_Real.Name = "lbl_Real";
+            this.lbl_Real.Size = new System.Drawing.Size(287, 49);
+            this.lbl_Real.TabIndex = 66;
+            this.lbl_Real.Text = "REAL PLAN";
+            this.lbl_Real.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // advancedPanel1
             // 
@@ -414,7 +414,7 @@
             this.groupBoxEx1.BackgroundPanelImage = null;
             this.groupBoxEx1.Controls.Add(this.pictureBox1);
             this.groupBoxEx1.Controls.Add(this.label1);
-            this.groupBoxEx1.Controls.Add(this.labelControl7);
+            this.groupBoxEx1.Controls.Add(this.lbl_shift);
             this.groupBoxEx1.DrawGroupBorder = true;
             this.groupBoxEx1.GroupBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.groupBoxEx1.GroupPanelColor = System.Drawing.SystemColors.InactiveBorder;
@@ -450,20 +450,20 @@
             this.label1.Text = "0 Prs";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelControl7
+            // lbl_shift
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl7.LineVisible = true;
-            this.labelControl7.Location = new System.Drawing.Point(55, 0);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(287, 49);
-            this.labelControl7.TabIndex = 66;
-            this.labelControl7.Text = "SHIFT PLAN";
-            this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.lbl_shift.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lbl_shift.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lbl_shift.Appearance.Options.UseFont = true;
+            this.lbl_shift.Appearance.Options.UseForeColor = true;
+            this.lbl_shift.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lbl_shift.LineVisible = true;
+            this.lbl_shift.Location = new System.Drawing.Point(55, 0);
+            this.lbl_shift.Name = "lbl_shift";
+            this.lbl_shift.Size = new System.Drawing.Size(287, 49);
+            this.lbl_shift.TabIndex = 66;
+            this.lbl_shift.Text = "SHIFT PLAN";
+            this.lbl_shift.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // UC_DSF
             // 
@@ -505,22 +505,22 @@
         private GroupBoxEx groupBoxEx4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl lbl_Rate;
         private AdvancedPanel advancedPanel3;
         private GroupBoxEx groupBoxEx3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lbl_Act;
         private AdvancedPanel advancedPanel2;
         private GroupBoxEx groupBoxEx2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lbl_Real;
         private AdvancedPanel advancedPanel1;
         private GroupBoxEx groupBoxEx1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl lbl_shift;
         private DevExpress.XtraEditors.SimpleButton btnTitle;
     }
 }

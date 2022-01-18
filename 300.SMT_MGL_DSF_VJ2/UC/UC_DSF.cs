@@ -21,15 +21,29 @@ namespace FORM.UC
         DataTable dt_hf = null;
         int i_count = 0;
 
-        public void BindingData(DataTable dt)
+        public void BindingData(DataTable dt, string type)
         {
+            if (type == "Q")
+            {
+                lbl_shift.Text = "SHIFT PLAN";
+                lbl_Real.Text = "REAL PLAN";
+                lbl_Act.Text = "ACTUAL";
+                lbl_Rate.Text = "RATE";
+            }
+            if (type == "HR")
+            {
+                lbl_shift.Text = "TO";
+                lbl_Real.Text = "PO";
+                lbl_Act.Text = "PO ACTUAL";
+                lbl_Rate.Text = "ABSENT";
+            }
 
             if (dt.Select("TYPE =   '" + btnTitle.Text.Replace("LASER CUTTING", "LASER") + "'", "").Count() > 0)
             {
                 DataTable dt_printing = dt.Select("TYPE = '" + btnTitle.Text.Replace("LASER CUTTING","LASER") + "'", "").CopyToDataTable();
                 if (dt_printing.Rows.Count > 0 && dt_printing != null)
                 {
-                    pBindingData(dt_printing);
+                    pBindingData(dt_printing, type);
                 }
             }
             
@@ -39,7 +53,7 @@ namespace FORM.UC
         public delegate void ButtonMenuhandler(string TitleCD);
         public ButtonMenuhandler OnTitleClick = null;
     
-        private void pBindingData(DataTable _dt)
+        private void pBindingData(DataTable _dt, string type)
         {
             try
             {
@@ -50,11 +64,21 @@ namespace FORM.UC
                 label4.Text = "0 %";
                 if (dt.Rows.Count > 0 && dt != null)
                 {
-                    label1.Text = Convert.ToDouble(dt.Rows[0]["COMP_SPLAN"]).ToString("#,#0") + " Prs";
-                    label2.Text = Convert.ToDouble(dt.Rows[0]["COMP_RPLAN"]).ToString("#,#0") + " Prs";
-                    label3.Text = Convert.ToDouble(dt.Rows[0]["COMP_ACTUAL"]).ToString("#,#0") + " Prs";
-                    label4.Text = Convert.ToDouble(dt.Rows[0]["COMP_RATE"]).ToString("#,0") + " %";
-                    
+                    if (type == "Q")
+                    {
+                        label1.Text = Convert.ToDouble(dt.Rows[0]["COMP_SPLAN"]).ToString("#,#0") + " Prs";
+                        label2.Text = Convert.ToDouble(dt.Rows[0]["COMP_RPLAN"]).ToString("#,#0") + " Prs";
+                        label3.Text = Convert.ToDouble(dt.Rows[0]["COMP_ACTUAL"]).ToString("#,#0") + " Prs";
+                        label4.Text = Convert.ToDouble(dt.Rows[0]["COMP_RATE"]).ToString("#,#.#") + " %";
+                    }
+                    if (type == "HR")
+                    {
+                        label1.Text = Convert.ToDouble(dt.Rows[0]["COMP_SPLAN"]).ToString("#,#0" + " Persons");
+                        label2.Text = Convert.ToDouble(dt.Rows[0]["COMP_RPLAN"]).ToString("#,#0" + " Persons");
+                        label3.Text = Convert.ToDouble(dt.Rows[0]["COMP_ACTUAL"]).ToString("#,#0" + " Persons");
+                        label4.Text = Convert.ToDouble(dt.Rows[0]["COMP_RATE"]).ToString("#,0" + " Persons");
+                    }
+
                 }
             }
             catch (Exception ex)
