@@ -17,6 +17,13 @@ namespace FORM
         {
             InitializeComponent();
         }
+
+        enum RunType
+        {
+            PROD,
+            HR,
+        }
+        RunType _type = RunType.PROD;
         #region DB
         private DataTable SP_SMT_EMD_MENU_SELECT(string V_P_TYPE)
         {
@@ -50,7 +57,12 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ3.MGL_HOME_DATA_SELECT";
+                string process_name = "";
+                if (_type.ToString() == "HR")
+                    process_name = "MES.PKG_SMT_MGL_V2.MGL_HOME_HRVJ3_SELECT";
+                else
+                    process_name = "MES.PKG_MGL_VJ3.MGL_HOME_DATA_SELECT";
+
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -70,7 +82,34 @@ namespace FORM
                 return null;
             }
         }
-       
+        private DataTable SP_MGL_HOME_DATA_CHART_SELECT(string V_P_TYPE)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+            DataSet ds_ret;
+            try
+            {
+                string process_name = "MES.PKG_MGL_VJ3.MGL_HOME_DATA_SELECT";
+
+                MyOraDB.ReDim_Parameter(2);
+                MyOraDB.Process_Name = process_name;
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Values[0] = V_P_TYPE;
+                MyOraDB.Parameter_Values[1] = "";
+                MyOraDB.Add_Select_Parameter(true);
+                ds_ret = MyOraDB.Exe_Select_Procedure();
+
+                if (ds_ret == null) return null;
+                return ds_ret.Tables[process_name];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         #endregion
         UC.UC_DSF_MGL_CARD[] UC_MGL_MENU = new UC.UC_DSF_MGL_CARD[3];
         private void InitTableContents()
@@ -130,25 +169,26 @@ namespace FORM
         private void timer1_Tick(object sender, EventArgs e)
         {
             cCount++;
-            if (cCount >= 10)
+            if (cCount >= 30)
             {
                 cCount = 0;
-                string[] FacCode = new string[] { "VJ1", "VJ2", "TOT" };
-                string[] FacTitle = new string[] { "VJ1 Support", "VJ2 Support", "Total Support" };
-                DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    for (int j = 0; j < UC_MGL_CHART.Length; j++)
-                    {
-                        if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_CHART[j].Tag.ToString()))
-                        {
-                            string Factory = UC_MGL_CHART[j].Tag.ToString();
-                            UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
-                            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
-                        }
-                    }
+                bindingdata();
+                //////string[] FacCode = new string[] { "VJ1", "VJ2", "TOT" };
+                //////string[] FacTitle = new string[] { "VJ1 Support", "VJ2 Support", "Total Support" };
+                //////DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
+                //////for (int i = 0; i < dt.Rows.Count; i++)
+                //////{
+                //////    for (int j = 0; j < UC_MGL_CHART.Length; j++)
+                //////    {
+                //////        if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_CHART[j].Tag.ToString()))
+                //////        {
+                //////            string Factory = UC_MGL_CHART[j].Tag.ToString();
+                //////            UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                //////            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                //////        }
+                //////    }
 
-                }
+                //////}
                 //for (int i = 0; i < UC_MGL_CHART.Length; i++)
                 //{
 
@@ -157,6 +197,43 @@ namespace FORM
                 //}
             }
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
+        }
+
+        private void bindingdata()
+        {
+            try
+            {
+                string[] FacCode = new string[] { "VJ1", "VJ2", "TOT" };
+                string[] FacTitle = new string[] { "VJ1 Support", "VJ2 Support", "Total Support" };
+                DataTable dt = SP_MGL_HOME_DATA_SELECT(_type.ToString());
+                //DataTable dtchart = SP_MGL_HOME_DATA_CHART_SELECT("Q");
+               
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    for (int j = 0; j < UC_MGL_CHART.Length; j++)
+                    {
+                        if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_CHART[j].Tag.ToString()))
+                        {
+                            string Factory = UC_MGL_CHART[j].Tag.ToString();
+                            UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable(), _type.ToString());
+                            UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable(), _type.ToString());
+                        }
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                if (_type == RunType.HR) _type = RunType.PROD;
+                else _type = RunType.HR;
+            }
         }
 
         private void btnPrefit_Cockpit_MouseEnter(object sender, EventArgs e)
@@ -208,7 +285,7 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cCount = 10;
+                cCount = 29;
                 tmrDate.Start();
             }
             else
