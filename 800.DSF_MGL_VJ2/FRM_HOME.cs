@@ -124,6 +124,7 @@ namespace FORM
                 }
 
                 DataTable dt1 = SP_SMT_EMD_MENU_SELECT("Q2");
+                DataTable dt_LE = SP_SMT_EMD_MENU_SELECT("Q_LE");
                 j = 1;
                 for (int i = 0; i < tblContent.ColumnCount; i++)
                 {
@@ -133,7 +134,10 @@ namespace FORM
                     MGL_CARD.Tag = FacCode[iDx];
                     UC_MGL_MENU[iDx] = MGL_CARD;
                     MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null,_type.ToString());
-                    MGL_CARD.BindingTree(dt1);
+                    if (FacCode[iDx] == "202")
+                        MGL_CARD.BindingTree(dt_LE);
+                    else
+                        MGL_CARD.BindingTree(dt1);
                     MGL_CARD.Dock = DockStyle.Fill;
                     iDx++;
                 }

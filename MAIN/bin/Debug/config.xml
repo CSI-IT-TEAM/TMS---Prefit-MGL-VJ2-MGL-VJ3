@@ -2,7 +2,7 @@
 <Base>
 	<MAIN>
 		<!--<grpForm>TMS_PREFIT</grpForm>-->
-                <grpForm>SMT_MGL_DSF_VJ2</grpForm>
+                <grpForm>DSF_MGL_VJ2</grpForm>
                 <!--<grpForm>SMT_MGL_DSF_VJ3</grpForm>-->
 		<FlashScreen>false</FlashScreen>
 		<Auto_Download>false</Auto_Download>

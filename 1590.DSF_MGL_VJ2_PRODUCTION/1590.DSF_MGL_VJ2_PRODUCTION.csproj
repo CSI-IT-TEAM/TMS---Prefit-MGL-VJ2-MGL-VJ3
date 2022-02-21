@@ -117,11 +117,29 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="FRM_MGL_DAILY_PRODUCTION_8LINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_DAILY_PRODUCTION_8LINE.Designer.cs">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTION_8LINE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY_8LINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY_8LINE.designer.cs">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY_8LINE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRM_MGL_DAILY_PRODUCTIVITY.designer.cs">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY_8LINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY_8LINE.designer.cs">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY_8LINE.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_MGL_MONTHLY_PRODUCTIVITY.cs">
       <SubType>Form</SubType>
@@ -134,6 +152,12 @@
     </Compile>
     <Compile Include="FRM_MGL_WEEKLY_PRODUCTIVITY.designer.cs">
       <DependentUpon>FRM_MGL_WEEKLY_PRODUCTIVITY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTIVITY_8LINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MGL_YEARLY_PRODUCTIVITY_8LINE.designer.cs">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTIVITY_8LINE.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_MGL_YEARLY_PRODUCTIVITY.cs">
       <SubType>Form</SubType>
@@ -288,14 +312,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTION_8LINE.resx">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTION_8LINE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTIVITY_8LINE.resx">
+      <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY_8LINE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_DAILY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_DAILY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_MONTHLY_PRODUCTIVITY_8LINE.resx">
+      <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY_8LINE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_MONTHLY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_MONTHLY_PRODUCTIVITY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_WEEKLY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_WEEKLY_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MGL_YEARLY_PRODUCTIVITY_8LINE.resx">
+      <DependentUpon>FRM_MGL_YEARLY_PRODUCTIVITY_8LINE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_MGL_YEARLY_PRODUCTIVITY.resx">
       <DependentUpon>FRM_MGL_YEARLY_PRODUCTIVITY.cs</DependentUpon>
