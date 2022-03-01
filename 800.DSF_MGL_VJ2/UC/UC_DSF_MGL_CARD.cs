@@ -41,23 +41,47 @@ namespace FORM.UC
             return table;
         }
         string _FacCode, _FacTitle;
-        public void BindingData(string FacCode,string FacTitle,DataTable dt)
+        public void BindingData(string FacCode,string FacTitle,DataTable dt, string type)
         {
-            lblFac.Text = FacTitle;
-            _FacCode = FacCode;
-            _FacTitle = FacTitle;
             lblDplan.Text = "0 Prs";
             lblRplan.Text = "0 Prs";
             lblAct.Text = "0 Prs";
             lblRate.Text = "0%";
-
-            if (dt!=null && dt.Rows.Count>0)
+            if (type == "HR")
             {
-                lblDplan.Text =string.Concat(string.Format("{0:n0}", dt.Rows[0]["PLAN_QTY"])," Prs");
-                lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["RPLAN_QTY"]), " Prs");
-                lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PROD_QTY"]), " Prs");
-                lblRate.Text = string.Concat(string.Format("{0:n1}", dt.Rows[0]["RATE"]), "%");
+                lbl_Dplan.Text = "TO";
+                lbl_RPlan.Text = "PO";
+                lbl_Act.Text = "PO.Act";
+                lbl_Rate.Text = "Absent";
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["TO_QTY"]), " Pers");
+                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_QTY"]), " Pers");
+                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_ACT_QTY"]), " Pers");
+                    lblRate.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["ABSENT"]), " Pers");
+                }
+
             }
+            else
+            {
+                lbl_Dplan.Text = "D.Plan";
+                lbl_RPlan.Text = "R.Plan";
+                lbl_Act.Text = "Act";
+                lbl_Rate.Text = "Rate";
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PLAN_QTY"]), " Prs");
+                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["RPLAN_QTY"]), " Prs");
+                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PROD_QTY"]), " Prs");
+                    lblRate.Text = string.Concat(string.Format("{0:n1}", dt.Rows[0]["RATE"]), "%");
+                }
+            }
+            lblFac.Text = FacTitle;
+            _FacCode = FacCode;
+            _FacTitle = FacTitle;
+           
+
+          
         }
         public void BindingTree(DataTable dt)
         {

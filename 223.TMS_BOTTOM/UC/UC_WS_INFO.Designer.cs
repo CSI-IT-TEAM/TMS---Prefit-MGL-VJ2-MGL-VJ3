@@ -123,7 +123,7 @@
             this.sBtnDetail.TabIndex = 9;
             this.sBtnDetail.Tag = "227";
             this.sBtnDetail.Text = "Detail";
-            this.sBtnDetail.Click += new System.EventHandler(this.sBtnDetail_Click);
+          //  this.sBtnDetail.Click += new System.EventHandler(this.sBtnDetail_Click);
             // 
             // simpleButton2
             // 

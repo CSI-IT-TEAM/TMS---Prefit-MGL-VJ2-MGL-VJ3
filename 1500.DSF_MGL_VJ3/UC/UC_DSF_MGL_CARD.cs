@@ -40,8 +40,8 @@ namespace FORM.UC
             table.Rows.Add(5, 3, 300, "Dilantin", "Melanie", DateTime.Now);
             return table;
         }
-        string _FacCode;
-        public void BindingData(string FacCode,string FacTitle,DataTable dt)
+        string _FacCode, _type;
+        public void BindingData(string FacCode,string FacTitle,DataTable dt, string type)
         {
             lblFac.Text = FacTitle;
             _FacCode = FacCode;
@@ -49,14 +49,36 @@ namespace FORM.UC
             lblRplan.Text = "0 Prs";
             lblAct.Text = "0 Prs";
             lblRate.Text = "0%";
-
-            if (dt!=null && dt.Rows.Count>0)
+            if (type == "HR")
             {
-                lblDplan.Text =string.Concat(string.Format("{0:n0}", dt.Rows[0]["PLAN_QTY"])," Prs");
-                lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["RPLAN_QTY"]), " Prs");
-                lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PROD_QTY"]), " Prs");
-                lblRate.Text = string.Concat(string.Format("{0:n1}", dt.Rows[0]["RATE"]), "%");
+                lbl_Dplan.Text = "TO";
+                lbl_Rplan.Text = "PO";
+                lbl_Actua.Text = "PO.Act";
+                lbl_Rate.Text = "Absent";
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["TO_QTY"]), " Pers");
+                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_QTY"]), " Pers");
+                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_ACT_QTY"]), " Pers");
+                    lblRate.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["ABSENT"]), " Pers");
+                }
+
             }
+            else
+            {
+                lbl_Dplan.Text = "D.Plan";
+                lbl_Rplan.Text = "R.Plan";
+               lbl_Actua.Text = "Act";
+                lbl_Rate.Text = "Rate";
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PLAN_QTY"]), " Prs");
+                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["RPLAN_QTY"]), " Prs");
+                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PROD_QTY"]), " Prs");
+                    lblRate.Text = string.Concat(string.Format("{0:n1}", dt.Rows[0]["RATE"]), "%");
+                }
+            }
+           
         }
         public void BindingTree(DataTable dt)
         {

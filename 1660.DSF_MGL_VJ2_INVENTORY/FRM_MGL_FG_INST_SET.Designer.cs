@@ -152,10 +152,10 @@
             this.lblTitle.LineVisible = true;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(849, 94);
+            this.lblTitle.Size = new System.Drawing.Size(1337, 94);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Tag = "Minimized";
-            this.lblTitle.Text = "Instant Set Balance";
+            this.lblTitle.Text = "VJ2 Instant Set Balance";
             // 
             // pnChart
             // 
@@ -245,13 +245,12 @@
             this.tmrDelay.Interval = 1000;
             this.tmrDelay.Tick += new System.EventHandler(this.tmrDelay_Tick);
             // 
-            // FRM_SMT_FG_INST_SET
+            // FRM_MGL_FG_INST_SET
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.tblMain);
-            this.Name = "FRM_SMT_FG_INST_SET";
+            this.Name = "FRM_MGL_FG_INST_SET";
             this.Text = "FRM_SMT_FG_INST_SET";
             this.Load += new System.EventHandler(this.FRM_SMT_FG_INST_SET_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_FG_INST_SET_VisibleChanged);

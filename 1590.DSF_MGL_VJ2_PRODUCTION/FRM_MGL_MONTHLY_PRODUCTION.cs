@@ -44,7 +44,7 @@ namespace FORM
                     ComVar.Var.callForm = "back";
                     break;
                 case "D":
-                    ComVar.Var.callForm = "1640";
+                    ComVar.Var.callForm = "1644";
                     break;
                 case "W":
                     ComVar.Var.callForm = "1641";
@@ -282,12 +282,13 @@ namespace FORM
                     for(int i=0; i<gvwView.Columns.Count; i++)
                     {
                         gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
-                        if (gvwView.Columns[i].FieldName.Equals("LINE"))
+                        if (gvwView.Columns[i].FieldName.Contains("LINE"))
                         {
                             gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
                         }
-                        if (gvwView.Columns[i].FieldName.Equals("RATE"))
+                        if (gvwView.Columns[i].FieldName.Contains("COL"))
                         {
+                            gvwView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                             gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                             gvwView.Columns[i].DisplayFormat.FormatString = "#,#.#";
                         }

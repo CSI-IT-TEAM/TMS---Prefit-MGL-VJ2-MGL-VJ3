@@ -67,6 +67,7 @@
             this.lblVinhCuu = new System.Windows.Forms.Label();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tmrDate = new System.Windows.Forms.Timer();
+            this.lblShortage = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -354,7 +355,7 @@
             this.gridControl1.Location = new System.Drawing.Point(11, 51);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(996, 748);
+            this.gridControl1.Size = new System.Drawing.Size(996, 587);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -551,11 +552,25 @@
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
             // 
+            // lblShortage
+            // 
+            this.lblShortage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblShortage.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShortage.ForeColor = System.Drawing.Color.White;
+            this.lblShortage.Location = new System.Drawing.Point(576, 168);
+            this.lblShortage.Name = "lblShortage";
+            this.lblShortage.Size = new System.Drawing.Size(93, 64);
+            this.lblShortage.TabIndex = 81;
+            this.lblShortage.Text = "Shortage";
+            this.lblShortage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblShortage.Click += new System.EventHandler(this.lblShortage_Click);
+            // 
             // FRM_TMS_PREFIT_OUTGOING
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lblShortage);
             this.Controls.Add(this.lblVinhCuu);
             this.Controls.Add(this.lblLongThanh);
             this.Controls.Add(this.lblTanPhu);
@@ -636,5 +651,6 @@
         private System.Windows.Forms.Label lblVinhCuu;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.Timer tmrDate;
+        private System.Windows.Forms.Label lblShortage;
     }
 }

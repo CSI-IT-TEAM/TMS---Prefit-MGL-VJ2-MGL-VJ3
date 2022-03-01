@@ -265,11 +265,11 @@ namespace FORM
                         e.Appearance.ForeColor = Color.Black;
                     }
                 }
-                if (gvwView.GetRowCellValue(e.RowHandle, "HMS").ToString().Contains("TOTAL"))
-                {
-                    e.Appearance.BackColor = Color.FromArgb(254, 255, 198);
-                    e.Appearance.ForeColor = Color.Black;
-                }
+                //if (gvwView.GetRowCellValue(e.RowHandle, "HMS").ToString().Contains("TOTAL"))
+                //{
+                //    e.Appearance.BackColor = Color.FromArgb(254, 255, 198);
+                //    e.Appearance.ForeColor = Color.Black;
+                //}
             }
             catch (Exception ex)
             { }

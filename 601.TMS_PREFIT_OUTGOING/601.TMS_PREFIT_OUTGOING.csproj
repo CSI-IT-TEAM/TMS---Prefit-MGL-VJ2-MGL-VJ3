@@ -100,6 +100,12 @@
     <Compile Include="FRM_TMS_PREFIT_OUTGOING.Designer.cs">
       <DependentUpon>FRM_TMS_PREFIT_OUTGOING.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_TMS_PREFIT_OUTGOING_SHORTAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_TMS_PREFIT_OUTGOING_SHORTAGE.designer.cs">
+      <DependentUpon>FRM_TMS_PREFIT_OUTGOING_SHORTAGE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_TMS_PREFIT_OUTGOING.resx">
       <DependentUpon>FRM_TMS_PREFIT_OUTGOING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_TMS_PREFIT_OUTGOING_SHORTAGE.resx">
+      <DependentUpon>FRM_TMS_PREFIT_OUTGOING_SHORTAGE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

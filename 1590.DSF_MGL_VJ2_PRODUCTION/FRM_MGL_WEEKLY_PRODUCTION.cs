@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.OracleClient;
 using DevExpress.XtraCharts;
 using DevExpress.XtraGauges.Core.Model;
+using System.Diagnostics;
 
 namespace FORM
 {
@@ -78,8 +79,9 @@ namespace FORM
                     labelRate.Text = "0%";
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
             }
         }
 
@@ -277,7 +279,7 @@ namespace FORM
                     ComVar.Var.callForm = "back";
                     break;
                 case "D":
-                    ComVar.Var.callForm = "1640";
+                    ComVar.Var.callForm = "1644";
                     break;
                 case "W":
                     ComVar.Var.callForm = "1641";

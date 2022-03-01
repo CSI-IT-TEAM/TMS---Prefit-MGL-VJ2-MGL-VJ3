@@ -90,7 +90,7 @@ namespace FORM
                 gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
                 gridView1.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
 
-                if (i >= 4)
+                if (i >= 3)
                 {
                     gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                     gridView1.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -99,9 +99,9 @@ namespace FORM
                     gridView1.Columns[i].DisplayFormat.FormatString = "#,#.#";
                 }
             }
-            gridView1.Columns[0].Visible = false;
-            gridView1.Columns[1].Visible = false;
-            gridView1.Columns[3].Visible = false;
+            gridView1.Columns["SET_FAKE_TIME"].Visible = false;
+            gridView1.Columns["FA_WC_CD"].Visible = false;
+            //gridView1.Columns[3].Visible = false;
         }
         private void BindingChartData()
         {
@@ -319,10 +319,14 @@ namespace FORM
         {
             try
             {
-                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Instant Set Balance" : ComVar.Var._strValue2 + " New Instant Set Balance";
+                lblTitle.Text = ComVar.Var._strValue1.Equals("TOTAL1") ? "VJ1 Instant Set Balance" : ComVar.Var._strValue2 + " Instant Set Balance";
                 if (this.Visible)
+                {
+                    isLoop = false;
                     iCounter = 30;
-            }
+                    tmrDelay.Start();
+                }
+                }
             catch { }
         }
 
