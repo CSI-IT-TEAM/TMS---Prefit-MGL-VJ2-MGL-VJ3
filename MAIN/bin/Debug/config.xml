@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Base>
 	<MAIN>
-		<!--<grpForm>TMS_PREFIT</grpForm>-->
-                <grpForm>SMT_MGL_DSF_VJ2</grpForm>
-                <!--<grpForm>SMT_MGL_DSF_VJ3</grpForm>-->
+		<grpForm>DSF_MGL_VJ3</grpForm>
 		<FlashScreen>false</FlashScreen>
 		<Auto_Download>false</Auto_Download>
 	     	<OP_CD>IPP</OP_CD>
@@ -18,7 +16,7 @@
 	</MAIN>
   
 	<Auto_Download>
-		<grpForm>SMT_MGL_DSF_VJ2</grpForm>
+		<grpForm>DSF_MGL_VJ3</grpForm>
 	</Auto_Download>
 	<GMES>
 		<PROCESS_NAME>JBrowser6</PROCESS_NAME>
