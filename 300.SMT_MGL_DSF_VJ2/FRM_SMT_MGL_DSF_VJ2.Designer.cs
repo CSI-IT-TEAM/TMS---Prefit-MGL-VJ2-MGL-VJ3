@@ -86,7 +86,6 @@
             this.btnBack.TabIndex = 39;
             this.btnBack.Tag = "minimized";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Visible = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnPrefit_Cockpit

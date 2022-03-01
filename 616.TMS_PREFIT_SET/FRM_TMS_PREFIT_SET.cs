@@ -30,8 +30,8 @@ namespace FORM
             {
                 COM.OraDB MyOraDB = new COM.OraDB();
                 System.Data.DataSet ds_ret;
-
-                string process_name = "MES.PKG_TMS_PREFIT.TMS_HOME_SET_SELECT";
+               
+                string process_name = "MES.PKG_TMS_PREFIT.TMS_HOME_SET_SELECT_NEW";
                 MyOraDB.ReDim_Parameter(6);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -98,7 +98,8 @@ namespace FORM
             {
                 int[] rowtotal = new int[dtSource.Columns.Count];
                 string distinct_row = "";
-                int temp1, temp2;
+                double temp1, temp2;
+               
                 for (int i = 0; i < dtTemp.Rows.Count; i++)
                 {
                     if (distinct_row != string.Concat(dtTemp.Rows[i]["MLINE_CD"].ToString(), dtTemp.Rows[i]["STYLE_CD"].ToString(), dtTemp.Rows[i]["DIV"].ToString()))
@@ -111,12 +112,17 @@ namespace FORM
                         dtSource.Rows[dtSource.Rows.Count - 1][j] = dtTemp.Rows[i][j];
                     }
 
-                    int.TryParse(dtTemp.Rows[i]["QTY"].ToString(), out temp1);
-                    int.TryParse(dtSource.Rows[dtSource.Rows.Count - 1][dtTemp.Rows[i]["CS_SIZE"].ToString()].ToString(), out temp2);
+                    double.TryParse(dtTemp.Rows[i]["QTY"].ToString(), out temp1);
+                    double.TryParse(dtSource.Rows[dtSource.Rows.Count - 1][dtTemp.Rows[i]["CS_SIZE"].ToString()].ToString(), out temp2);
                     dtSource.Rows[dtSource.Rows.Count - 1][dtTemp.Rows[i]["CS_SIZE"].ToString()] = (temp1 + temp2).ToString();
-                    int.TryParse(dtSource.Rows[dtSource.Rows.Count - 1][_start_column - 1].ToString(), out temp2);
+                    double.TryParse(dtSource.Rows[dtSource.Rows.Count - 1][_start_column - 1].ToString(), out temp2);                    
+                   
                     dtSource.Rows[dtSource.Rows.Count - 1][_start_column - 1] = (temp1 + temp2).ToString();
+
+                   
                 }
+                
+
                 return true;
             }
             catch (Exception ex)
@@ -129,6 +135,12 @@ namespace FORM
         {
             try
             {
+
+                double op_qty = 0;
+                double op_set = 0;
+                double op_set_per = 0;
+       
+
                 while (gridView1.Columns.Count > 0)
                 {
                     gridView1.Columns.RemoveAt(0);
@@ -150,6 +162,63 @@ namespace FORM
                 {
                     gridControl1.DataSource = null;
                 }
+
+
+                //---tinh set_per cua cot total---
+
+                for (int i = 0; i <= gridView1.RowCount - 1; i++)
+                {
+                    if (gridView1.GetRowCellDisplayText(i, gridView1.Columns["DIV"]).ToString().Contains(ComVar.Var._strValue3))
+                    {
+                        double.TryParse(gridView1.GetRowCellDisplayText(i, gridView1.Columns[_start_column - 1]).ToString().Replace(",", ""), out op_qty);//cot total
+
+                    }
+                    if (gridView1.GetRowCellDisplayText(i, gridView1.Columns["DIV"]).ToString().Equals("SET"))
+                    {
+                        double.TryParse(gridView1.GetRowCellDisplayText(i, gridView1.Columns[_start_column - 1]).ToString().Replace(",", ""), out op_set);//cot total
+
+                    }
+                    if (gridView1.GetRowCellDisplayText(i, gridView1.Columns["DIV"]).ToString().Equals("SET_PER"))
+                    {
+                        if (op_qty > 0)
+                        {
+                            op_set_per = Math.Round(op_set / op_qty * 100,2);
+                            //set_rate = op_set_per + "%";
+                            gridView1.SetRowCellValue(i, gridView1.Columns[_start_column - 1], op_set_per);
+                        }
+                        else
+                        {
+                            op_set_per = 0;
+                            gridView1.SetRowCellValue(i, gridView1.Columns[_start_column - 1], "0");
+                        }
+                    }
+
+
+                }
+
+                for (int i = 0; i <= gridView1.RowCount - 1; i++)
+                {
+                    if (gridView1.GetRowCellDisplayText(i, gridView1.Columns["DIV"]).ToString() == "SET_PER")
+                    {
+                        gridView1.SetRowCellValue(i, gridView1.Columns["DIV"],"% SET");
+                    }
+                }
+                ////format grid
+                //for (int i = 0; i <= gridView1.RowCount - 1; i++)
+                //{
+                //    for (int j = 5; j <= gridView1.Columns.Count - 1; j++)
+                //    {
+                //        if (gridView1.GetRowCellValue(i, gridView1.Columns["DIV"]).ToString() == "% SET")
+                //        {
+                //            gridView1.Columns[i].DisplayFormat.FormatString = "#0.0";
+                //        }
+                //        else
+                //        {
+                //            gridView1.Columns[i].DisplayFormat.FormatString = "#,#.#";
+                //        }
+                //    }
+                //}
+                
             }
             catch { }
 
@@ -209,7 +278,10 @@ namespace FORM
                         gridView1.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
                         gridView1.Columns[i].DisplayFormat.FormatString = "#,#";
                     }
+
+                 
                 }
+               
                 gridView1.EndUpdate();
             }
             catch { }
@@ -246,6 +318,11 @@ namespace FORM
 
                 }
                 if (tomau_row_g.Equals("SET"))
+                {
+                    e.Appearance.BackColor = Color.FromArgb(255, 222, 59);
+
+                }
+                if (tomau_row_g.Equals("% SET"))
                 {
                     e.Appearance.BackColor = Color.FromArgb(255, 222, 59);
 

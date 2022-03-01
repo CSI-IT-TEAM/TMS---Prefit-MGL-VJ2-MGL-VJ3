@@ -19,6 +19,7 @@ namespace FORM
         }
         int cCount = 0;
         bool isBack = false;
+        string type = "Q";
         private void setImg(int number)
         {
             for (int i = 0; i < number; i++)
@@ -33,7 +34,7 @@ namespace FORM
         {
 
             DataTable dt = new DataTable();
-            dt = PRINTING_OS_PRODUCTION_DATA("Q");
+            dt = PRINTING_OS_PRODUCTION_DATA(type);
             //for (int i = 0; i < tblLayout.ColumnCount; i++)
             //{
             //    UC.UC_DSF DSF = (UC.UC_DSF)tblLayout.GetControlFromPosition(i, 0);
@@ -109,12 +110,17 @@ namespace FORM
                 //    }
                 //}
 
-                DSF.BindingData(dt);
+                DSF.BindingData(dt,type);
                // DSF.LoadImage_final(i);
                 DSF.Dock = DockStyle.Fill;
             }
+            if (type == "Q")
+                type = "HR";
+            else
+                type = "Q";
 
-          
+
+
         }
         void clickMenu(string argFrom)
         {
@@ -223,7 +229,16 @@ namespace FORM
 
             try
             {
-                string process_name = "MES.PKG_SMT_PRINTING_VJ2_PLANTB.PRINTING_SELECT_MENU";
+                string process_name = "";
+                if (ARG_QTYPE == "Q")
+                {
+                    process_name = "MES.PKG_SMT_PRINTING_VJ2_PLANTB.PRINTING_SELECT_MENU";
+                }
+                else
+                {
+                    process_name = "MES.PKG_SMT_PRINTING_VJ2_PLANTB.SEL_VJ3_PLANA_MANPOWER";
+                }
+               // string process_name = "MES.PKG_SMT_PRINTING_VJ2_PLANTB.PRINTING_SELECT_MENU";
 
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
@@ -259,7 +274,7 @@ namespace FORM
 
         private void FRM_SMT_MGL_DSF_VJ2_VisibleChanged(object sender, EventArgs e)
         {
-                btnBack.Visible = isBack;
+            btnBack.Visible = isBack;
             cCount = 0;
              tmr.Start();
         }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Base>
 	<MAIN>
-		<grpForm>DSF_MGL_VJ2</grpForm>
+		<!--<grpForm>TMS_PREFIT</grpForm>-->
+                <grpForm>DSF_MGL_VJ2</grpForm>
+                <!--<grpForm>SMT_MGL_DSF_VJ3</grpForm>-->
 		<FlashScreen>false</FlashScreen>
 		<Auto_Download>false</Auto_Download>
 	     	<OP_CD>IPP</OP_CD>

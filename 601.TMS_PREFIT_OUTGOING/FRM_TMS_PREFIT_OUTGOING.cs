@@ -274,5 +274,31 @@ namespace FORM
             }
             catch { }
         }
+
+        private void lblShortage_Click(object sender, EventArgs e)
+        {
+          
+                try
+                {
+                    splashScreenManager1.ShowWaitForm();
+
+                  
+                    string Factory = ComVar.Var._strValue1;
+                    string ProcCode = ComVar.Var._strValue2;
+                    string isBottom = ComVar.Var._bValue1.ToString();
+
+                FRM_TMS_PREFIT_OUTGOING_SHORTAGE POPUP = new FRM_TMS_PREFIT_OUTGOING_SHORTAGE(Factory,ProcCode, isBottom);
+                    splashScreenManager1.CloseWaitForm();
+                    POPUP.ShowDialog();
+
+
+                }
+                catch (Exception ex)
+                {
+                    splashScreenManager1.CloseWaitForm();
+                    throw;
+                }
+            
+        }
     }
 }

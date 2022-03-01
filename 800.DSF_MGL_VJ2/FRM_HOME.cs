@@ -17,6 +17,13 @@ namespace FORM
         {
             InitializeComponent();
         }
+
+        enum RunType
+        {
+            PROD,
+            HR,
+        }
+        RunType _type = RunType.PROD;
         #region DB
         private DataTable SP_SMT_EMD_MENU_SELECT(string V_P_TYPE)
         {
@@ -50,7 +57,12 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_MGL_VJ2.MGL_HOME_DATA_SELECT";
+                string process_name = "";
+                if (_type.ToString() == "HR")
+                    process_name = "MES.PKG_SMT_MGL_V2.MGL_HOME_HRVJ2_SELECT";
+                else                   
+                    process_name = "MES.PKG_MGL_VJ2.MGL_HOME_DATA_SELECT"; 
+               
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -105,13 +117,14 @@ namespace FORM
                     tblContent.Controls.Add(MGL_CARD, i, j);
                     MGL_CARD.Tag = FacCode[iDx];
                     UC_MGL_MENU[iDx] = MGL_CARD;
-                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
+                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null, _type.ToString());
                     MGL_CARD.BindingTree(dt);
                     MGL_CARD.Dock = DockStyle.Fill;
                     iDx++;  
                 }
 
                 DataTable dt1 = SP_SMT_EMD_MENU_SELECT("Q2");
+                DataTable dt_LE = SP_SMT_EMD_MENU_SELECT("Q_LE");
                 j = 1;
                 for (int i = 0; i < tblContent.ColumnCount; i++)
                 {
@@ -120,8 +133,11 @@ namespace FORM
                     tblContent.Controls.Add(MGL_CARD, i, j);
                     MGL_CARD.Tag = FacCode[iDx];
                     UC_MGL_MENU[iDx] = MGL_CARD;
-                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null);
-                    MGL_CARD.BindingTree(dt1);
+                    MGL_CARD.BindingData(FacCode[iDx], FacTitle[iDx], null,_type.ToString());
+                    if (FacCode[iDx] == "202")
+                        MGL_CARD.BindingTree(dt_LE);
+                    else
+                        MGL_CARD.BindingTree(dt1);
                     MGL_CARD.Dock = DockStyle.Fill;
                     iDx++;
                 }
@@ -155,28 +171,30 @@ namespace FORM
         private void timer1_Tick(object sender, EventArgs e)
         {
             cCount++;
-            if (cCount >= 10)
+            if (cCount >= 30)
             {
                 cCount = 0;
-                string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
-                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
-                DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
-                if (dt != null && dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        for (int j = 0; j < UC_MGL_MENU.Length; j++)
-                        {
-                            if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
-                            {
-                                string Factory = UC_MGL_MENU[j].Tag.ToString();
-                                //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
-                                UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
-                            }
-                        }
+                bindingdata();
+                //////string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
+                //////string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
+                //////DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
+                //////if (dt != null && dt.Rows.Count > 0)
+                //////{
+                //////    for (int i = 0; i < dt.Rows.Count; i++)
+                //////    {
+                //////        for (int j = 0; j < UC_MGL_MENU.Length; j++)
+                //////        {
+                //////            if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
+                //////            {
+                //////                string Factory = UC_MGL_MENU[j].Tag.ToString();
+                //////                //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                //////                UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                //////            }
+                //////        }
 
-                    }
-                }
+                //////    }
+                //////}
+                ///
                 // DataTable dt = SP_MGL_HOME_DATA_SELECT("Q");
                 //for (int i = 0; i < dt.Rows.Count; i++)
                 //{
@@ -192,6 +210,43 @@ namespace FORM
 
             }
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
+        }
+
+        private void bindingdata()
+        {
+            try
+            {
+                string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
+                string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
+                DataTable dt = SP_MGL_HOME_DATA_SELECT(_type.ToString());
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < UC_MGL_MENU.Length; j++)
+                        {
+                            if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
+                            {
+                                string Factory = UC_MGL_MENU[j].Tag.ToString();
+                                //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
+                                UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable(), _type.ToString());
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (_type == RunType.HR) _type = RunType.PROD;
+                else _type = RunType.HR;
+            }
         }
 
         private void btnDSF_Click(object sender, EventArgs e)
@@ -222,7 +277,7 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cCount = 10;
+                cCount = 28;
                 tmrDate.Start();
             }
             else
