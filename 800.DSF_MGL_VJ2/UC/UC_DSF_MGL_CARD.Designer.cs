@@ -169,7 +169,7 @@
             this.advancedPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.advancedPanel1.ShadowShift = 8;
             this.advancedPanel1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel1.Size = new System.Drawing.Size(626, 460);
+            this.advancedPanel1.Size = new System.Drawing.Size(620, 438);
             this.advancedPanel1.StartColor = System.Drawing.SystemColors.Control;
             this.advancedPanel1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel1.TabIndex = 0;
@@ -225,7 +225,7 @@
             this.treeList1.OptionsView.ShowVertLines = false;
             this.treeList1.RowHeight = 50;
             this.treeList1.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowAlways;
-            this.treeList1.Size = new System.Drawing.Size(294, 391);
+            this.treeList1.Size = new System.Drawing.Size(279, 391);
             this.treeList1.StateImageList = this.imageCollection1;
             this.treeList1.TabIndex = 9;
             this.treeList1.TreeLineStyle = DevExpress.XtraTreeList.LineStyle.Dark;
@@ -237,7 +237,7 @@
             // 
             // treeListColumn1
             // 
-            this.treeListColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeListColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeListColumn1.AppearanceHeader.Options.UseFont = true;
             this.treeListColumn1.Caption = "Manager Group Leader - MENU";
             this.treeListColumn1.FieldName = "MENU_NM";
@@ -287,9 +287,9 @@
             this.lblRate.BackColor = System.Drawing.Color.Green;
             this.lblRate.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblRate.ForeColor = System.Drawing.Color.White;
-            this.lblRate.Location = new System.Drawing.Point(445, 338);
+            this.lblRate.Location = new System.Drawing.Point(435, 338);
             this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(171, 61);
+            this.lblRate.Size = new System.Drawing.Size(175, 61);
             this.lblRate.TabIndex = 5;
             this.lblRate.Text = "99%";
             this.lblRate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,7 +299,7 @@
             this.lbl_Rate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbl_Rate.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_Rate.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Rate.Location = new System.Drawing.Point(308, 338);
+            this.lbl_Rate.Location = new System.Drawing.Point(298, 338);
             this.lbl_Rate.Name = "lbl_Rate";
             this.lbl_Rate.Size = new System.Drawing.Size(131, 61);
             this.lbl_Rate.TabIndex = 5;
@@ -311,9 +311,9 @@
             this.lblAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblAct.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblAct.ForeColor = System.Drawing.Color.Black;
-            this.lblAct.Location = new System.Drawing.Point(445, 233);
+            this.lblAct.Location = new System.Drawing.Point(435, 233);
             this.lblAct.Name = "lblAct";
-            this.lblAct.Size = new System.Drawing.Size(171, 58);
+            this.lblAct.Size = new System.Drawing.Size(175, 58);
             this.lblAct.TabIndex = 6;
             this.lblAct.Text = "1,023 Prs";
             this.lblAct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,7 +323,7 @@
             this.lbl_Act.BackColor = System.Drawing.Color.Gray;
             this.lbl_Act.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_Act.ForeColor = System.Drawing.Color.White;
-            this.lbl_Act.Location = new System.Drawing.Point(308, 233);
+            this.lbl_Act.Location = new System.Drawing.Point(298, 233);
             this.lbl_Act.Name = "lbl_Act";
             this.lbl_Act.Size = new System.Drawing.Size(131, 58);
             this.lbl_Act.TabIndex = 6;
@@ -335,9 +335,9 @@
             this.lblRplan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblRplan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblRplan.ForeColor = System.Drawing.Color.Black;
-            this.lblRplan.Location = new System.Drawing.Point(445, 161);
+            this.lblRplan.Location = new System.Drawing.Point(435, 161);
             this.lblRplan.Name = "lblRplan";
-            this.lblRplan.Size = new System.Drawing.Size(171, 58);
+            this.lblRplan.Size = new System.Drawing.Size(175, 58);
             this.lblRplan.TabIndex = 7;
             this.lblRplan.Text = "1,024 Prs";
             this.lblRplan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,7 +347,7 @@
             this.lbl_RPlan.BackColor = System.Drawing.Color.Gray;
             this.lbl_RPlan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_RPlan.ForeColor = System.Drawing.Color.White;
-            this.lbl_RPlan.Location = new System.Drawing.Point(308, 161);
+            this.lbl_RPlan.Location = new System.Drawing.Point(298, 161);
             this.lbl_RPlan.Name = "lbl_RPlan";
             this.lbl_RPlan.Size = new System.Drawing.Size(131, 58);
             this.lbl_RPlan.TabIndex = 7;
@@ -359,9 +359,9 @@
             this.lblDplan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblDplan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblDplan.ForeColor = System.Drawing.Color.Black;
-            this.lblDplan.Location = new System.Drawing.Point(445, 84);
+            this.lblDplan.Location = new System.Drawing.Point(435, 84);
             this.lblDplan.Name = "lblDplan";
-            this.lblDplan.Size = new System.Drawing.Size(171, 58);
+            this.lblDplan.Size = new System.Drawing.Size(175, 58);
             this.lblDplan.TabIndex = 8;
             this.lblDplan.Text = "2,048 Prs";
             this.lblDplan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,7 +371,7 @@
             this.lbl_Dplan.BackColor = System.Drawing.Color.Gray;
             this.lbl_Dplan.Font = new System.Drawing.Font("Times New Roman", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_Dplan.ForeColor = System.Drawing.Color.White;
-            this.lbl_Dplan.Location = new System.Drawing.Point(308, 84);
+            this.lbl_Dplan.Location = new System.Drawing.Point(298, 84);
             this.lbl_Dplan.Name = "lbl_Dplan";
             this.lbl_Dplan.Size = new System.Drawing.Size(131, 58);
             this.lbl_Dplan.TabIndex = 8;
@@ -386,9 +386,9 @@
             this.lblFac.Appearance.Options.UseForeColor = true;
             this.lblFac.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblFac.LineVisible = true;
-            this.lblFac.Location = new System.Drawing.Point(308, 8);
+            this.lblFac.Location = new System.Drawing.Point(298, 8);
             this.lblFac.Name = "lblFac";
-            this.lblFac.Size = new System.Drawing.Size(308, 53);
+            this.lblFac.Size = new System.Drawing.Size(318, 53);
             this.lblFac.TabIndex = 4;
             this.lblFac.Text = "Vĩnh Cửu (VJ1)";
             this.lblFac.Click += new System.EventHandler(this.lblFac_Click);
@@ -399,7 +399,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.advancedPanel1);
             this.Name = "UC_DSF_MGL_CARD";
-            this.Size = new System.Drawing.Size(626, 926);
+            this.Size = new System.Drawing.Size(639, 457);
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();

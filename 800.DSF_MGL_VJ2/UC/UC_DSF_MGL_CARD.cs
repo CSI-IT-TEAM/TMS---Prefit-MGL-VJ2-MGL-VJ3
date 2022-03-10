@@ -200,7 +200,6 @@ namespace FORM.UC
 
         private void treeList1_NodeCellStyle_1(object sender, DevExpress.XtraTreeList.GetCustomNodeCellStyleEventArgs e)
         {
-
             if (e.Node.HasChildren)
                 // --if (e.Node.Id % 2 == 0)
                 e.Appearance.BackColor = Color.FromArgb(233, 255, 201); //Color.FromArgb(228, 250, 185);
