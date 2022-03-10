@@ -231,7 +231,7 @@
             this.tabData.Controls.Add(this.tblContent);
             this.tabData.Name = "tabData";
             this.tabData.Size = new System.Drawing.Size(1896, 858);
-            this.tabData.Text = "    Data     ";
+            this.tabData.Text = "    Data       ";
             // 
             // tblContent
             // 
@@ -260,7 +260,7 @@
             this.tabChart.Controls.Add(this.tblChart);
             this.tabChart.Name = "tabChart";
             this.tabChart.Size = new System.Drawing.Size(1896, 858);
-            this.tabChart.Text = "     Chart     ";
+            this.tabChart.Text = "     Chart      ";
             // 
             // tblChart
             // 
