@@ -57,10 +57,10 @@ namespace FORM.UC
                 lbl_Rate.Text = "Absent";
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["TO_QTY"]), " Pers");
-                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_QTY"]), " Pers");
-                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_ACT_QTY"]), " Pers");
-                    lblRate.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["ABSENT"]), " Pers");
+                    lblDplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["TO_QTY"]), "");
+                    lblRplan.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_QTY"]), "");
+                    lblAct.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["PO_ACT_QTY"]), "");
+                    lblRate.Text = string.Concat(string.Format("{0:n0}", dt.Rows[0]["ABSENT"]), "");
                 }
 
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.SplashScreen1), true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnRow1 = new System.Windows.Forms.Panel();
@@ -68,8 +69,8 @@
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrDate = new System.Windows.Forms.Timer();
-            this.tmrTitle = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tblMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tblContent = new System.Windows.Forms.TableLayoutPanel();
+            this.components = new System.ComponentModel.Container();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.pnHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnPrefit = new System.Windows.Forms.Button();
@@ -37,41 +37,27 @@
             this.btnDSF = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
-            this.tblMain.SuspendLayout();
+            this.tblMain = new System.Windows.Forms.TableLayoutPanel();
+            this.tabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.tabData = new DevExpress.XtraTab.XtraTabPage();
+            this.tblContent = new System.Windows.Forms.TableLayoutPanel();
+            this.tabChart = new DevExpress.XtraTab.XtraTabPage();
+            this.tblChart = new System.Windows.Forms.TableLayoutPanel();
+            this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.pnHeader.SuspendLayout();
+            this.tblMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
+            this.tabControl.SuspendLayout();
+            this.tabData.SuspendLayout();
+            this.tabChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             this.SuspendLayout();
             // 
-            // tblMain
+            // tmrDate
             // 
-            this.tblMain.ColumnCount = 1;
-            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain.Controls.Add(this.tblContent, 0, 1);
-            this.tblMain.Controls.Add(this.pnHeader, 0, 0);
-            this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMain.Location = new System.Drawing.Point(0, 0);
-            this.tblMain.Name = "tblMain";
-            this.tblMain.RowCount = 2;
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblMain.Size = new System.Drawing.Size(1904, 1041);
-            this.tblMain.TabIndex = 0;
-            // 
-            // tblContent
-            // 
-            this.tblContent.BackColor = System.Drawing.Color.White;
-            this.tblContent.ColumnCount = 3;
-            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tblContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblContent.Location = new System.Drawing.Point(3, 106);
-            this.tblContent.Name = "tblContent";
-            this.tblContent.RowCount = 2;
-            this.tblContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblContent.Size = new System.Drawing.Size(1898, 932);
-            this.tblContent.TabIndex = 3;
+            this.tmrDate.Enabled = true;
+            this.tmrDate.Interval = 1000;
+            this.tmrDate.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pnHeader
             // 
@@ -195,11 +181,109 @@
             this.lblTitle.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.lblTitle.DoubleClick += new System.EventHandler(this.lblTitle_DoubleClick);
             // 
-            // tmrDate
+            // tblMain
             // 
-            this.tmrDate.Enabled = true;
-            this.tmrDate.Interval = 1000;
-            this.tmrDate.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tblMain.ColumnCount = 1;
+            this.tblMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblMain.Controls.Add(this.tabControl, 0, 1);
+            this.tblMain.Controls.Add(this.pnHeader, 0, 0);
+            this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblMain.Location = new System.Drawing.Point(0, 0);
+            this.tblMain.Name = "tblMain";
+            this.tblMain.RowCount = 2;
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblMain.Size = new System.Drawing.Size(1904, 1041);
+            this.tblMain.TabIndex = 0;
+            // 
+            // tabControl
+            // 
+            this.tabControl.AppearancePage.Header.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tabControl.AppearancePage.Header.Options.UseFont = true;
+            this.tabControl.AppearancePage.HeaderActive.Font = new System.Drawing.Font("Calibri", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.tabControl.AppearancePage.HeaderActive.Options.UseFont = true;
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(3, 106);
+            this.tabControl.LookAndFeel.SkinName = "VS2010";
+            this.tabControl.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.PaintStyleName = "PropertyView";
+            this.tabControl.SelectedTabPage = this.tabData;
+            this.tabControl.Size = new System.Drawing.Size(1898, 932);
+            this.tabControl.TabIndex = 53;
+            this.tabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabData,
+            this.tabChart});
+            this.tabControl.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabControl_SelectedPageChanged);
+            // 
+            // tabData
+            // 
+            this.tabData.Appearance.Header.Font = new System.Drawing.Font("Calibri", 35.25F, System.Drawing.FontStyle.Bold);
+            this.tabData.Appearance.Header.Options.UseFont = true;
+            this.tabData.Appearance.HeaderActive.Font = new System.Drawing.Font("Calibri", 40.25F, System.Drawing.FontStyle.Bold);
+            this.tabData.Appearance.HeaderActive.Options.UseFont = true;
+            this.tabData.Appearance.PageClient.BorderColor = System.Drawing.Color.White;
+            this.tabData.Appearance.PageClient.Options.UseBorderColor = true;
+            this.tabData.Controls.Add(this.tblContent);
+            this.tabData.Name = "tabData";
+            this.tabData.Size = new System.Drawing.Size(1896, 858);
+            this.tabData.Text = "    Data       ";
+            // 
+            // tblContent
+            // 
+            this.tblContent.BackColor = System.Drawing.Color.White;
+            this.tblContent.ColumnCount = 3;
+            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tblContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tblContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblContent.Location = new System.Drawing.Point(0, 0);
+            this.tblContent.Name = "tblContent";
+            this.tblContent.RowCount = 2;
+            this.tblContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblContent.Size = new System.Drawing.Size(1896, 858);
+            this.tblContent.TabIndex = 6;
+            // 
+            // tabChart
+            // 
+            this.tabChart.Appearance.Header.Font = new System.Drawing.Font("Calibri", 35.25F, System.Drawing.FontStyle.Bold);
+            this.tabChart.Appearance.Header.Options.UseFont = true;
+            this.tabChart.Appearance.HeaderActive.Font = new System.Drawing.Font("Calibri", 40.25F, System.Drawing.FontStyle.Bold);
+            this.tabChart.Appearance.HeaderActive.Options.UseFont = true;
+            this.tabChart.Appearance.PageClient.BorderColor = System.Drawing.Color.White;
+            this.tabChart.Appearance.PageClient.Options.UseBorderColor = true;
+            this.tabChart.Controls.Add(this.tblChart);
+            this.tabChart.Name = "tabChart";
+            this.tabChart.Size = new System.Drawing.Size(1896, 858);
+            this.tabChart.Text = "     Chart      ";
+            // 
+            // tblChart
+            // 
+            this.tblChart.BackColor = System.Drawing.Color.White;
+            this.tblChart.ColumnCount = 3;
+            this.tblChart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblChart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tblChart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tblChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblChart.Location = new System.Drawing.Point(0, 0);
+            this.tblChart.Name = "tblChart";
+            this.tblChart.RowCount = 2;
+            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblChart.Size = new System.Drawing.Size(1896, 858);
+            this.tblChart.TabIndex = 8;
+            // 
+            // repositoryItemButtonEdit3
+            // 
+            this.repositoryItemButtonEdit3.AutoHeight = false;
+            this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             // 
             // FRM_HOME
             // 
@@ -213,24 +297,33 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_HOME_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_HOME_VisibleChanged);
-            this.tblMain.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.pnHeader.PerformLayout();
+            this.tblMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
+            this.tabControl.ResumeLayout(false);
+            this.tabData.ResumeLayout(false);
+            this.tabChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tblMain;
-        private System.Windows.Forms.Panel pnHeader;
-        private DevExpress.XtraEditors.LabelControl lblTitle;
-        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer tmrDate;
-        private System.Windows.Forms.TableLayoutPanel tblContent;
+        private System.Windows.Forms.Panel pnHeader;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnPrefit;
         private System.Windows.Forms.Button btnUpstream;
         private System.Windows.Forms.Button btnDSF;
-        private System.Windows.Forms.Button btnPrefit;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblDate;
+        private DevExpress.XtraEditors.LabelControl lblTitle;
+        private System.Windows.Forms.TableLayoutPanel tblMain;
+        private DevExpress.XtraTab.XtraTabControl tabControl;
+        private DevExpress.XtraTab.XtraTabPage tabData;
+        private DevExpress.XtraTab.XtraTabPage tabChart;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
+        private System.Windows.Forms.TableLayoutPanel tblContent;
+        private System.Windows.Forms.TableLayoutPanel tblChart;
     }
 }
