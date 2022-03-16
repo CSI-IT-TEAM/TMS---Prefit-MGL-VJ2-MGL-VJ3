@@ -24,9 +24,6 @@ namespace FORM
             HR,
         }
         RunType _type = RunType.PROD;
-
-        string _tabIndex = "0";
-
         #region DB
         private DataTable SP_SMT_EMD_MENU_SELECT(string V_P_TYPE)
         {
@@ -147,26 +144,6 @@ namespace FORM
             }
             catch (Exception ex) { }
         }
-
-        UC.UC_CHART_PROD[] UC_MGL_CHART = new UC.UC_CHART_PROD[6];
-        private void InitTableChart()
-        {
-            string[] UCtag = new string[] { "F1 Support", "NOS N Support", "Total Support", "LD Assembly", "LE Assembly", "Total" };
-
-            for(int iRow = 0; iRow <= 1; iRow++)
-            {
-                for (int i = 0; i < tblChart.ColumnCount; i++) //3
-                {
-                    UC.UC_CHART_PROD MGL_CHART = new UC.UC_CHART_PROD();
-                    MGL_CHART.Tag = UCtag[iRow * tblChart.ColumnCount + i];
-                    UC_MGL_CHART[iRow * tblChart.ColumnCount + i] = MGL_CHART;
-
-                    tblChart.Controls.Add(MGL_CHART, i, iRow);
-                    MGL_CHART.Dock = DockStyle.Fill;
-                }
-            }
-        }
-
         Random r = new Random();
         private DataTable getDataforChart()
         {
@@ -189,7 +166,6 @@ namespace FORM
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             InitTableContents();
-            InitTableChart();
         }
         int cCount = 0;
         private void timer1_Tick(object sender, EventArgs e)
@@ -243,14 +219,6 @@ namespace FORM
                 string[] FacCode = new string[] { "001", "099", "TOTAL1", "201", "202", "TOTAL2" };
                 string[] FacTitle = new string[] { "F1 Support", "NOS N Support", "Total VJ1 Support", "LD", "LE", "Total VJ2" };
                 DataTable dt = SP_MGL_HOME_DATA_SELECT(_type.ToString());
-
-                //Add new column 
-                dt.Columns.Add("LINE_NM");
-                for(int i = 0; i < dt.Rows.Count; i++)
-                {
-                    dt.Rows[i]["LINE_NM"] = FacTitle[i];
-                }
-
                 if (dt != null && dt.Rows.Count > 0)
                 {
                     for (int i = 0; i < dt.Rows.Count; i++)
@@ -260,12 +228,14 @@ namespace FORM
                             if (dt.Rows[i]["LINE_CD"].ToString().Equals(UC_MGL_MENU[j].Tag.ToString()))
                             {
                                 string Factory = UC_MGL_MENU[j].Tag.ToString();
-                                UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable(), _type.ToString());
+                                //UC_MGL_CHART[j].BindingData(dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable());
                                 UC_MGL_MENU[j].BindingData(FacCode[j], FacTitle[j], dt.Select("LINE_CD = '" + Factory + "'").CopyToDataTable(), _type.ToString());
                             }
                         }
+
                     }
                 }
+
             }
             catch (Exception)
             {
@@ -324,11 +294,6 @@ namespace FORM
         private void btnBack_Click(object sender, EventArgs e)
         {
             ComVar.Var.callForm = "back";
-        }
-
-        private void tabControl_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
-            _tabIndex = tabControl.SelectedTabPageIndex.ToString();
         }
     }
 }

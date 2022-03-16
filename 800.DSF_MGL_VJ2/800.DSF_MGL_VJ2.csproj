@@ -106,12 +106,6 @@
     <Compile Include="FRM_TMS_HOME.Designer.cs">
       <DependentUpon>FRM_TMS_HOME.cs</DependentUpon>
     </Compile>
-    <Compile Include="POPUP_PROD_BY_PLANT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="POPUP_PROD_BY_PLANT.designer.cs">
-      <DependentUpon>POPUP_PROD_BY_PLANT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_TMS_HOME.resx">
       <DependentUpon>FRM_TMS_HOME.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="POPUP_PROD_BY_PLANT.resx">
-      <DependentUpon>POPUP_PROD_BY_PLANT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
