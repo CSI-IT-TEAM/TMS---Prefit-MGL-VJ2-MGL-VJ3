@@ -463,7 +463,7 @@
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(287, 49);
             this.labelControl7.TabIndex = 66;
-            this.labelControl7.Text = "DAY PLAN";
+            this.labelControl7.Text = "SHIFT PLAN";
             this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // UC_DSF
