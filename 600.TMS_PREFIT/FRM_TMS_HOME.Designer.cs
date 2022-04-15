@@ -70,16 +70,16 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
-            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
-            this.tmrUnder = new System.Windows.Forms.Timer(this.components);
-            this.pnUnder = new System.Windows.Forms.Panel();
             this.advancedPanel6 = new FORM.AdvancedPanel();
             this.tblMainVJ3 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel5 = new FORM.AdvancedPanel();
             this.tblMainVJ2 = new System.Windows.Forms.TableLayoutPanel();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.tblMainVJ1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrTitle = new System.Windows.Forms.Timer(this.components);
+            this.tmrUnder = new System.Windows.Forms.Timer(this.components);
+            this.pnUnder = new System.Windows.Forms.Panel();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -694,33 +694,6 @@
             this.labelControl7.Text = "Vĩnh Cửu";
             this.labelControl7.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // tmrDate
-            // 
-            this.tmrDate.Enabled = true;
-            this.tmrDate.Interval = 1000;
-            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
-            // 
-            // tmrTitle
-            // 
-            this.tmrTitle.Enabled = true;
-            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
-            // 
-            // tmrUnder
-            // 
-            this.tmrUnder.Enabled = true;
-            this.tmrUnder.Interval = 1000;
-            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
-            // 
-            // pnUnder
-            // 
-            this.pnUnder.BackColor = System.Drawing.Color.Transparent;
-            this.pnUnder.BackgroundImage = global::FORM.Properties.Resources.under_construction;
-            this.pnUnder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnUnder.Location = new System.Drawing.Point(797, 425);
-            this.pnUnder.Name = "pnUnder";
-            this.pnUnder.Size = new System.Drawing.Size(294, 224);
-            this.pnUnder.TabIndex = 3;
-            // 
             // advancedPanel6
             // 
             this.advancedPanel6.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
@@ -821,6 +794,33 @@
             this.tblMainVJ1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 707F));
             this.tblMainVJ1.Size = new System.Drawing.Size(724, 707);
             this.tblMainVJ1.TabIndex = 0;
+            // 
+            // tmrDate
+            // 
+            this.tmrDate.Enabled = true;
+            this.tmrDate.Interval = 1000;
+            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
+            // 
+            // tmrTitle
+            // 
+            this.tmrTitle.Enabled = true;
+            this.tmrTitle.Tick += new System.EventHandler(this.tmrTitle_Tick);
+            // 
+            // tmrUnder
+            // 
+            this.tmrUnder.Enabled = true;
+            this.tmrUnder.Interval = 1000;
+            this.tmrUnder.Tick += new System.EventHandler(this.tmrUnder_Tick);
+            // 
+            // pnUnder
+            // 
+            this.pnUnder.BackColor = System.Drawing.Color.Transparent;
+            this.pnUnder.BackgroundImage = global::FORM.Properties.Resources.under_construction;
+            this.pnUnder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnUnder.Location = new System.Drawing.Point(797, 425);
+            this.pnUnder.Name = "pnUnder";
+            this.pnUnder.Size = new System.Drawing.Size(294, 224);
+            this.pnUnder.TabIndex = 3;
             // 
             // FRM_TMS_HOME
             // 
