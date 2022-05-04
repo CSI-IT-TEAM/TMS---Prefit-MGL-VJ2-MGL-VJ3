@@ -38,7 +38,7 @@ namespace FORM
                 COM.OraDB MyOraDB = new COM.OraDB();
                 System.Data.DataSet ds_ret;
 
-                string process_name = "MES.PKG_TMS_PREFIT.TMS_PREFIT_SET_HOME";
+                string process_name = "MES.PKG_TMS_PREFIT.TMS_PREFIT_SET_HOME_V2";
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -263,45 +263,53 @@ namespace FORM
             //           string factory = ((System.Windows.Forms.Label) sender).Tag.ToString();// 
             for (int i = 0; i <= dtset.Rows.Count - 1; i++)
             {
-                strvalue = dtset.Rows[i]["SET_RATE"].ToString();
+                strvalue = String.Format("{0:n1}", dtset.Rows[i]["SET_RATE"]);
                 if (strvalue.Contains("100."))
                 {
                     strvalue = "100";
                 }
-                if (dtset.Rows[i]["FACTORY"].ToString() == "1")
+                if (dtset.Rows[i]["PLANT_CD"].ToString() == "2110")
                 {
-                    if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 1")
+                    if (dtset.Rows[i]["FACTORY"].ToString() == "F1")
                     {
                         lblF1.Text = strvalue + "%";
                         sbSet_Color(strvalue, "lblF1");
                     }
-                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 2")
+                    else if (dtset.Rows[i]["FACTORY"].ToString() == "F2")
                     {
                         lblF2.Text = strvalue + "%";
                         sbSet_Color(strvalue, "lblF2");
                     }
-                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 3")
+                    else if (dtset.Rows[i]["FACTORY"].ToString() == "F3")
                     {
                         lblF3.Text = strvalue + "%";
                         sbSet_Color(strvalue, "lblF3");
                     }
-                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 4")
+                    else if (dtset.Rows[i]["FACTORY"].ToString() == "F4")
                     {
                         lblF4.Text = strvalue + "%";
                         sbSet_Color(strvalue, "lblF4");
                     }
-                    else if (dtset.Rows[i]["LINE_FTY"].ToString() == "Factory 5")
+                    else if (dtset.Rows[i]["FACTORY"].ToString() == "F5")
                     {
                         lblF5.Text = strvalue + "%";
                         sbSet_Color(strvalue, "lblF5");
                     }
                 }
-                else if (dtset.Rows[i]["FACTORY"].ToString() == "2")
+                else if (dtset.Rows[i]["PLANT_CD"].ToString() == "2120")
                 {
-                    lblLT.Text = strvalue + "%";
-                    sbSet_Color(strvalue, "lblLT");
+                    if (dtset.Rows[i]["FACTORY"].ToString() == "F1")
+                    {
+                        lblF1.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblF1");
+                    }
+                    else if (dtset.Rows[i]["FACTORY"].ToString() == "VJ2")
+                    {
+                        lblLT.Text = strvalue + "%";
+                        sbSet_Color(strvalue, "lblLT");
+                    }
                 }
-                else if (dtset.Rows[i]["FACTORY"].ToString() == "3")
+                else if (dtset.Rows[i]["PLANT_CD"].ToString() == "2210")
                 {
                     lblTP.Text = strvalue + "%";
                     sbSet_Color(strvalue, "lblTP");

@@ -48,22 +48,22 @@
             DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
             DevExpress.XtraCharts.XYMarkerWidenAnimation xyMarkerWidenAnimation3 = new DevExpress.XtraCharts.XYMarkerWidenAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram6 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.ChartTitle chartTitle6 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_YEARLY_PRODUCTIVITY_8LINE));
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange4 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange5 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
-            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange6 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             DevExpress.XtraCharts.XYDiagram xyDiagram5 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.ChartTitle chartTitle5 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram6 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel3 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.ChartTitle chartTitle6 = new DevExpress.XtraCharts.ChartTitle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MGL_YEARLY_PRODUCTIVITY_8LINE));
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange4 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange5 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
+            DevExpress.XtraGauges.Core.Model.ArcScaleRange arcScaleRange6 = new DevExpress.XtraGauges.Core.Model.ArcScaleRange();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pn_body = new System.Windows.Forms.Panel();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
@@ -81,8 +81,9 @@
             this.arcScaleNeedleComponent3 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent();
             this.arcScaleSpindleCapComponent2 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleSpindleCapComponent();
             this.Chart3 = new DevExpress.XtraCharts.ChartControl();
-            this.Chart5 = new DevExpress.XtraCharts.ChartControl();
             this.Chart4 = new DevExpress.XtraCharts.ChartControl();
+            this.Chart6 = new DevExpress.XtraCharts.ChartControl();
+            this.Chart5 = new DevExpress.XtraCharts.ChartControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.uc_year = new FORM.UC.UC_YEAR_SELECTION();
             this.axGrid = new AxFPUSpreadADO.AxfpSpread();
@@ -94,7 +95,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.pnYMD = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.Chart6 = new DevExpress.XtraCharts.ChartControl();
             this.pn_body.SuspendLayout();
             this.tblMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chart1)).BeginInit();
@@ -116,14 +116,18 @@
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent1)).BeginInit();
@@ -131,10 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -469,38 +469,6 @@
             chartTitle3});
             this.Chart3.Visible = false;
             // 
-            // Chart5
-            // 
-            this.Chart5.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.Chart5.DataBindings = null;
-            xyDiagram6.AxisX.GridLines.Visible = true;
-            xyDiagram6.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram6.AxisY.VisibleInPanesSerializable = "-1";
-            this.Chart5.Diagram = xyDiagram6;
-            this.Chart5.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.Chart5.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.Chart5.Legend.Margins.Bottom = 0;
-            this.Chart5.Legend.Margins.Left = 0;
-            this.Chart5.Legend.Margins.Right = 0;
-            this.Chart5.Legend.Margins.Top = 0;
-            this.Chart5.Legend.Name = "Default Legend";
-            this.Chart5.Location = new System.Drawing.Point(3, 342);
-            this.Chart5.Name = "Chart5";
-            sideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series6.Label = sideBySideBarSeriesLabel3;
-            series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series6.Name = "Series 1";
-            this.Chart5.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series6};
-            this.Chart5.Size = new System.Drawing.Size(473, 333);
-            this.Chart5.TabIndex = 9;
-            chartTitle6.Alignment = System.Drawing.StringAlignment.Near;
-            chartTitle6.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
-            chartTitle6.Text = "Cutting";
-            chartTitle6.TextColor = System.Drawing.Color.Blue;
-            this.Chart5.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle6});
-            // 
             // Chart4
             // 
             this.Chart4.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
@@ -532,6 +500,70 @@
             chartTitle4.TextColor = System.Drawing.Color.Blue;
             this.Chart4.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle4});
+            // 
+            // Chart6
+            // 
+            this.Chart6.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.Chart6.DataBindings = null;
+            xyDiagram5.AxisX.GridLines.Visible = true;
+            xyDiagram5.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram5.AxisY.VisibleInPanesSerializable = "-1";
+            this.Chart6.Diagram = xyDiagram5;
+            this.Chart6.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.Chart6.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.Chart6.Legend.Margins.Bottom = 0;
+            this.Chart6.Legend.Margins.Left = 0;
+            this.Chart6.Legend.Margins.Right = 0;
+            this.Chart6.Legend.Margins.Top = 0;
+            this.Chart6.Legend.Name = "Default Legend";
+            this.Chart6.Location = new System.Drawing.Point(482, 342);
+            this.Chart6.Name = "Chart6";
+            sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series5.Label = sideBySideBarSeriesLabel2;
+            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series5.Name = "Series 1";
+            this.Chart6.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series5};
+            this.Chart6.Size = new System.Drawing.Size(473, 333);
+            this.Chart6.TabIndex = 65;
+            chartTitle5.Alignment = System.Drawing.StringAlignment.Near;
+            chartTitle5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            chartTitle5.Text = "Cutting";
+            chartTitle5.TextColor = System.Drawing.Color.Blue;
+            this.Chart6.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle5});
+            // 
+            // Chart5
+            // 
+            this.Chart5.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.Chart5.DataBindings = null;
+            xyDiagram6.AxisX.GridLines.Visible = true;
+            xyDiagram6.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram6.AxisY.VisibleInPanesSerializable = "-1";
+            this.Chart5.Diagram = xyDiagram6;
+            this.Chart5.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.Chart5.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.Chart5.Legend.Margins.Bottom = 0;
+            this.Chart5.Legend.Margins.Left = 0;
+            this.Chart5.Legend.Margins.Right = 0;
+            this.Chart5.Legend.Margins.Top = 0;
+            this.Chart5.Legend.Name = "Default Legend";
+            this.Chart5.Location = new System.Drawing.Point(3, 342);
+            this.Chart5.Name = "Chart5";
+            sideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series6.Label = sideBySideBarSeriesLabel3;
+            series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series6.Name = "Series 1";
+            this.Chart5.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series6};
+            this.Chart5.Size = new System.Drawing.Size(473, 333);
+            this.Chart5.TabIndex = 9;
+            chartTitle6.Alignment = System.Drawing.StringAlignment.Near;
+            chartTitle6.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            chartTitle6.Text = "Cutting";
+            chartTitle6.TextColor = System.Drawing.Color.Blue;
+            this.Chart5.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle6});
             // 
             // panel2
             // 
@@ -686,38 +718,6 @@
             this.lblTitle.Text = "Productivity Status by Year";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Chart6
-            // 
-            this.Chart6.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.Chart6.DataBindings = null;
-            xyDiagram5.AxisX.GridLines.Visible = true;
-            xyDiagram5.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram5.AxisY.VisibleInPanesSerializable = "-1";
-            this.Chart6.Diagram = xyDiagram5;
-            this.Chart6.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.Chart6.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.Chart6.Legend.Margins.Bottom = 0;
-            this.Chart6.Legend.Margins.Left = 0;
-            this.Chart6.Legend.Margins.Right = 0;
-            this.Chart6.Legend.Margins.Top = 0;
-            this.Chart6.Legend.Name = "Default Legend";
-            this.Chart6.Location = new System.Drawing.Point(482, 342);
-            this.Chart6.Name = "Chart6";
-            sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series5.Label = sideBySideBarSeriesLabel2;
-            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series5.Name = "Series 1";
-            this.Chart6.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5};
-            this.Chart6.Size = new System.Drawing.Size(473, 333);
-            this.Chart6.TabIndex = 65;
-            chartTitle5.Alignment = System.Drawing.StringAlignment.Near;
-            chartTitle5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
-            chartTitle5.Text = "Cutting";
-            chartTitle5.TextColor = System.Drawing.Color.Blue;
-            this.Chart6.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle5});
-            // 
             // FRM_MGL_YEARLY_PRODUCTIVITY_8LINE
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -751,14 +751,18 @@
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axGrid)).EndInit();
@@ -767,10 +771,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleSpindleCapComponent1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart6)).EndInit();
             this.ResumeLayout(false);
 
         }
