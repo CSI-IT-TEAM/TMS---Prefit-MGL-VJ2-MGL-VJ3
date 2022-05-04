@@ -94,6 +94,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClassLib\Var.cs" />
+    <Compile Include="POPUP_PROD_BY_PLANT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POPUP_PROD_BY_PLANT.Designer.cs">
+      <DependentUpon>POPUP_PROD_BY_PLANT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_HOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="POPUP_PROD_BY_PLANT.resx">
+      <DependentUpon>POPUP_PROD_BY_PLANT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_HOME.resx">
       <DependentUpon>FRM_HOME.cs</DependentUpon>
     </EmbeddedResource>
