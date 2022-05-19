@@ -21,6 +21,10 @@ namespace FORM.UC
             InitializeComponent();
         }
         DataTable table;
+
+        public delegate void MenuHandler(string MenuName);
+
+        public MenuHandler OnMenuClick = null;
         DataTable GetTable()
         {
             // Here we create a DataTable with four columns.
@@ -193,6 +197,12 @@ namespace FORM.UC
                 // The right image that does not depend on the focus.
                 node.StateImageIndex = 2;
             }
+        }
+
+        private void lblFac_Click(object sender, EventArgs e)
+        {
+            if (OnMenuClick != null)
+                OnMenuClick(_FacCode);
         }
 
         private void treeList1_NodeCellStyle_1(object sender, DevExpress.XtraTreeList.GetCustomNodeCellStyleEventArgs e)

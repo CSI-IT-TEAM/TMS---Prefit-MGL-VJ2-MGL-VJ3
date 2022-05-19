@@ -124,8 +124,19 @@ namespace FORM
                 tblContent.Controls.Add(MGL_CARD, i, 0);
                 UC_MGL_MENU[i] = MGL_CARD;
                 MGL_CARD.BindingTree(dt);
+                MGL_CARD.OnMenuClick += OnMenuClick;
                 MGL_CARD.Dock = DockStyle.Fill;
             }
+        }
+
+        private void OnMenuClick(string argFactory)
+        {
+            if (_type == RunType.PROD)
+                _type = RunType.HR;
+            else
+                _type = RunType.PROD;
+            cCount = 0;
+            bindingdata();
         }
         Random r = new Random();
         private DataTable getDataforChart()
@@ -229,11 +240,11 @@ namespace FORM
 
                 throw ex;
             }
-            finally
-            {
-                if (_type == RunType.HR) _type = RunType.PROD;
-                else _type = RunType.HR;
-            }
+            //finally
+            //{
+            //    if (_type == RunType.HR) _type = RunType.PROD;
+            //    else _type = RunType.HR;
+            //}
         }
 
         private void btnPrefit_Cockpit_MouseEnter(object sender, EventArgs e)

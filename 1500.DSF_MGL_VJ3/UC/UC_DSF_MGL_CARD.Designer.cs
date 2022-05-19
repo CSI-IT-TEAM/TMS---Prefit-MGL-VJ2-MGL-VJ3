@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DSF_MGL_CARD));
             this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
             this.arcScaleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
@@ -41,7 +40,7 @@
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.SEQ_FORM = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection();
             this.lblRate = new System.Windows.Forms.Label();
             this.lbl_Rate = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
@@ -391,6 +390,7 @@
             this.lblFac.Size = new System.Drawing.Size(308, 53);
             this.lblFac.TabIndex = 4;
             this.lblFac.Text = "Vĩnh Cửu (VJ1)";
+            this.lblFac.Click += new System.EventHandler(this.lblFac_Click);
             // 
             // UC_DSF_MGL_CARD
             // 
