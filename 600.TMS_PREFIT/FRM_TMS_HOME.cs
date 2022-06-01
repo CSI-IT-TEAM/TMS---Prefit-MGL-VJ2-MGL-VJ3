@@ -35,10 +35,10 @@ namespace FORM
         {
             try
             {
-                COM.OraDB MyOraDB = new COM.OraDB();
+                COM.OraDB MyOraDB = new COM.OraDB(1);
                 System.Data.DataSet ds_ret;
 
-                string process_name = "MES.PKG_TMS_PREFIT.TMS_PREFIT_SET_HOME_V2";
+                string process_name = "TMS_PREFIT_SET_HOME";
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -238,9 +238,7 @@ namespace FORM
             lbl7090.Visible = false;
             lbl90.Visible = false;
 
-            dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
 
-            sbSet(dtSet);
 
             //lbl70.Visible = true;
             //lbl7090.Visible = true;
@@ -259,7 +257,7 @@ namespace FORM
 
             string strvalue = "";
 
-            
+
             //           string factory = ((System.Windows.Forms.Label) sender).Tag.ToString();// 
             for (int i = 0; i <= dtset.Rows.Count - 1; i++)
             {
@@ -315,8 +313,8 @@ namespace FORM
                     sbSet_Color(strvalue, "lblTP");
                 }
             }
-            
-            
+
+
         }
         private void sbSet_Color(string label_percent, string label_name)
         {
@@ -324,7 +322,7 @@ namespace FORM
 
             //((System.Windows.Forms.Label)sender).Tag.ToString()
 
-            double.TryParse(label_percent,out per);
+            double.TryParse(label_percent, out per);
             if (per < 70)
             {
                 if (label_name == "lblF1")
@@ -439,12 +437,12 @@ namespace FORM
                     lblTP.ForeColor = Color.Black;
                 }
 
-            
-            }
-            
-
 
             }
+
+
+
+        }
         private void label1_DoubleClick(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Minimized;
@@ -452,13 +450,17 @@ namespace FORM
         }
         private void BindingRatioData()
         {
+
             // DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
             DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
+
             for (int i = 0; i < UC.Length; i++)
             {
                 //UC[i].BindingArc(string.IsNullOrEmpty(dtRatioPlant.Rows[i]["RATIO"].ToString()) ? 0 : Convert.ToInt32(dtRatioPlant.Rows[i]["RATIO"]), 1);
                 UC[i].BindingArc(string.IsNullOrEmpty(dtRatioAll.Rows[i]["RATIO"].ToString()) ? 0 : Convert.ToInt32(dtRatioAll.Rows[i]["RATIO"]), 2);
             }
+
+
         }
         private void tmrDate_Tick(object sender, EventArgs e)
         {
@@ -469,6 +471,10 @@ namespace FORM
                 if (iCount >= 10)
                 {
                     iCount = 0;
+                    dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
+                    if (dtSet != null && dtSet.Rows.Count > 0)
+                        sbSet(dtSet);
+
                     Thread t = new Thread(BindingRatioData);
                     t.Start();
                 }
@@ -509,8 +515,8 @@ namespace FORM
         {
             if (this.Visible)
             {
-              btnBack.Visible = isBack;
-              tmrDate.Start();
+                btnBack.Visible = isBack;
+                tmrDate.Start();
             }
             else
                 tmrDate.Stop();
@@ -562,14 +568,14 @@ namespace FORM
             tmrUnder.Start();
         }
 
-     
+
 
         private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-      
+
 
         private void lbl_Click(object sender, EventArgs e)
         {
