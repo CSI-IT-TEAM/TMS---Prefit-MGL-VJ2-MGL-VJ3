@@ -35,7 +35,8 @@ namespace FORM
         {
             try
             {
-                COM.OraDB MyOraDB = new COM.OraDB(1);
+                COM.OraDB MyOraDB = new COM.OraDB();
+                MyOraDB.ConnectName = COM.OraDB.ConnectDB.LMES;
                 System.Data.DataSet ds_ret;
 
                 string process_name = "TMS_PREFIT_SET_HOME";
@@ -237,7 +238,7 @@ namespace FORM
             lbl70.Visible = false;
             lbl7090.Visible = false;
             lbl90.Visible = false;
-
+            iCount = 10;
 
 
             //lbl70.Visible = true;
@@ -516,6 +517,7 @@ namespace FORM
             if (this.Visible)
             {
                 btnBack.Visible = isBack;
+                
                 tmrDate.Start();
             }
             else
