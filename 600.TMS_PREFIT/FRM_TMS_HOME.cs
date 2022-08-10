@@ -150,9 +150,9 @@ namespace FORM
                     DataTable _dtRatioPlantVJ1 = null;// dtRatioPlant.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
                     DataTable _dtRatioPlantVJ2 = null;// dtRatioPlant.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
                     DataTable _dtRatioPlantVJ3 = null;// dtRatioPlant.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ1 = dtRatioAll.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ2 = dtRatioAll.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ3 = dtRatioAll.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ1 = dtRatioAll.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ2 = dtRatioAll.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ3 = dtRatioAll.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
                     int iDx = 0, RATIOPLANT = 0, RATIOALL = 0;
                     //Khởi tạo card VJ1
                     for (int i = 0; i < tblMainVJ1.ColumnCount; i++)
@@ -167,7 +167,7 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ1.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         //RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ1.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ1.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ1.Rows[i]["RATIO"]);
                         //  Card.BindingArc(RATIOPLANT, 1);
                         Card.BindingArc(RATIOALL, 2);
                         tblMainVJ1.Controls.Add(Card, i, 0);
@@ -187,9 +187,9 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ2.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         // RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ2.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ2.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ2.Rows[i]["RATIO"]);
                         //Card.BindingArc(RATIOPLANT, 1);
-                        Card.BindingArc(RATIOALL, 2);
+                        //Card.BindingArc(RATIOALL, 2);
                         tblMainVJ2.Controls.Add(Card, i, 0);
                         UC[iDx] = Card;
                         iDx++;
@@ -207,7 +207,7 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ3.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         // RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ3.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ3.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ3.Rows[i]["RATIO"]);
                         //Card.BindingArc(RATIOPLANT, 1);
                         Card.BindingArc(RATIOALL, 2);
                         tblMainVJ3.Controls.Add(Card, i, 0);
@@ -231,10 +231,8 @@ namespace FORM
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             DataTable dt = TMS_HOME_SELECT("Q1", DateTime.Now.ToString()); //Lấy dữ liệu từ DB
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
-            DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
-            InitUC_Card(dt, null, dtRatioAll);
-
-
+           // DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
+            InitUC_Card(dt, null, null);
             lbl70.Visible = false;
             lbl7090.Visible = false;
             lbl90.Visible = false;
@@ -472,9 +470,9 @@ namespace FORM
                 if (iCount >= 10)
                 {
                     iCount = 0;
-                    dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
-                    if (dtSet != null && dtSet.Rows.Count > 0)
-                        sbSet(dtSet);
+                    //dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
+                    //if (dtSet != null && dtSet.Rows.Count > 0)
+                    //    sbSet(dtSet);
 
                     Thread t = new Thread(BindingRatioData);
                     t.Start();

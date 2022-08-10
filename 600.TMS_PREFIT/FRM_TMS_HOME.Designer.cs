@@ -48,21 +48,6 @@
             this.picVJ1 = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label8 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblF3 = new System.Windows.Forms.Label();
-            this.lblF5 = new System.Windows.Forms.Label();
-            this.lblLT = new System.Windows.Forms.Label();
-            this.lblTP = new System.Windows.Forms.Label();
-            this.lblF4 = new System.Windows.Forms.Label();
-            this.lblF1 = new System.Windows.Forms.Label();
-            this.lblF2 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +65,21 @@
             this.tmrTitle = new System.Windows.Forms.Timer(this.components);
             this.tmrUnder = new System.Windows.Forms.Timer(this.components);
             this.pnUnder = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblF2 = new System.Windows.Forms.Label();
+            this.lblF1 = new System.Windows.Forms.Label();
+            this.lblF4 = new System.Windows.Forms.Label();
+            this.lblTP = new System.Windows.Forms.Label();
+            this.lblLT = new System.Windows.Forms.Label();
+            this.lblF5 = new System.Windows.Forms.Label();
+            this.lblF3 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMain.SuspendLayout();
             this.pnRow1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splRow2)).BeginInit();
@@ -94,12 +94,12 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.advancedPanel6.SuspendLayout();
             this.advancedPanel5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -351,250 +351,7 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "UPSTREAM SET";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31349F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31381F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.13591F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
-            this.tableLayoutPanel2.Controls.Add(this.label22, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label21, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label20, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label19, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label18, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblF3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblF5, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblLT, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblTP, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblF4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblF1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblF2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(856, 128);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(734, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(119, 64);
-            this.label22.TabIndex = 15;
-            this.label22.Tag = "TP";
-            this.label22.Text = "TP";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(612, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(116, 64);
-            this.label21.TabIndex = 14;
-            this.label21.Tag = "LT";
-            this.label21.Text = "LT";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(490, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(116, 64);
-            this.label20.TabIndex = 13;
-            this.label20.Tag = "5";
-            this.label20.Text = "F# 5";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(368, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(116, 64);
-            this.label19.TabIndex = 12;
-            this.label19.Tag = "4";
-            this.label19.Text = "F# 4";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(247, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 64);
-            this.label18.TabIndex = 11;
-            this.label18.Tag = "3";
-            this.label18.Text = "F# 3";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(3, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(116, 64);
-            this.label17.TabIndex = 3;
-            this.label17.Tag = "1";
-            this.label17.Text = "F#1";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblF3
-            // 
-            this.lblF3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblF3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblF3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF3.ForeColor = System.Drawing.Color.Black;
-            this.lblF3.Location = new System.Drawing.Point(247, 64);
-            this.lblF3.Name = "lblF3";
-            this.lblF3.Size = new System.Drawing.Size(115, 64);
-            this.lblF3.TabIndex = 10;
-            this.lblF3.Tag = "3";
-            this.lblF3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF3.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblF5
-            // 
-            this.lblF5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblF5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblF5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF5.ForeColor = System.Drawing.Color.Black;
-            this.lblF5.Location = new System.Drawing.Point(490, 64);
-            this.lblF5.Name = "lblF5";
-            this.lblF5.Size = new System.Drawing.Size(116, 64);
-            this.lblF5.TabIndex = 9;
-            this.lblF5.Tag = "5";
-            this.lblF5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF5.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblLT
-            // 
-            this.lblLT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblLT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblLT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLT.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLT.ForeColor = System.Drawing.Color.White;
-            this.lblLT.Location = new System.Drawing.Point(612, 64);
-            this.lblLT.Name = "lblLT";
-            this.lblLT.Size = new System.Drawing.Size(116, 64);
-            this.lblLT.TabIndex = 8;
-            this.lblLT.Tag = "LT";
-            this.lblLT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLT.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblTP
-            // 
-            this.lblTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblTP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTP.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTP.ForeColor = System.Drawing.Color.Black;
-            this.lblTP.Location = new System.Drawing.Point(734, 64);
-            this.lblTP.Name = "lblTP";
-            this.lblTP.Size = new System.Drawing.Size(119, 64);
-            this.lblTP.TabIndex = 7;
-            this.lblTP.Tag = "TP";
-            this.lblTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTP.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblF4
-            // 
-            this.lblF4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblF4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblF4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF4.ForeColor = System.Drawing.Color.White;
-            this.lblF4.Location = new System.Drawing.Point(368, 64);
-            this.lblF4.Name = "lblF4";
-            this.lblF4.Size = new System.Drawing.Size(116, 64);
-            this.lblF4.TabIndex = 6;
-            this.lblF4.Tag = "4";
-            this.lblF4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF4.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblF1
-            // 
-            this.lblF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblF1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblF1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF1.ForeColor = System.Drawing.Color.Black;
-            this.lblF1.Location = new System.Drawing.Point(3, 64);
-            this.lblF1.Name = "lblF1";
-            this.lblF1.Size = new System.Drawing.Size(116, 64);
-            this.lblF1.TabIndex = 5;
-            this.lblF1.Tag = "1";
-            this.lblF1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF1.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // lblF2
-            // 
-            this.lblF2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblF2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblF2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF2.ForeColor = System.Drawing.Color.Black;
-            this.lblF2.Location = new System.Drawing.Point(125, 64);
-            this.lblF2.Name = "lblF2";
-            this.lblF2.Size = new System.Drawing.Size(116, 64);
-            this.lblF2.TabIndex = 4;
-            this.lblF2.Tag = "2";
-            this.lblF2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblF2.Click += new System.EventHandler(this.lbl_Click);
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(125, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 64);
-            this.label16.TabIndex = 4;
-            this.label16.Tag = "2";
-            this.label16.Text = "F# 2";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Visible = false;
             // 
             // groupBox1
             // 
@@ -822,6 +579,251 @@
             this.pnUnder.Size = new System.Drawing.Size(294, 224);
             this.pnUnder.TabIndex = 3;
             // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(125, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 64);
+            this.label16.TabIndex = 4;
+            this.label16.Tag = "2";
+            this.label16.Text = "F# 2";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblF2
+            // 
+            this.lblF2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF2.ForeColor = System.Drawing.Color.Black;
+            this.lblF2.Location = new System.Drawing.Point(125, 64);
+            this.lblF2.Name = "lblF2";
+            this.lblF2.Size = new System.Drawing.Size(116, 64);
+            this.lblF2.TabIndex = 4;
+            this.lblF2.Tag = "2";
+            this.lblF2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF2.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblF1
+            // 
+            this.lblF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF1.ForeColor = System.Drawing.Color.Black;
+            this.lblF1.Location = new System.Drawing.Point(3, 64);
+            this.lblF1.Name = "lblF1";
+            this.lblF1.Size = new System.Drawing.Size(116, 64);
+            this.lblF1.TabIndex = 5;
+            this.lblF1.Tag = "1";
+            this.lblF1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF1.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblF4
+            // 
+            this.lblF4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF4.ForeColor = System.Drawing.Color.White;
+            this.lblF4.Location = new System.Drawing.Point(368, 64);
+            this.lblF4.Name = "lblF4";
+            this.lblF4.Size = new System.Drawing.Size(116, 64);
+            this.lblF4.TabIndex = 6;
+            this.lblF4.Tag = "4";
+            this.lblF4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF4.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblTP
+            // 
+            this.lblTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTP.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTP.ForeColor = System.Drawing.Color.Black;
+            this.lblTP.Location = new System.Drawing.Point(734, 64);
+            this.lblTP.Name = "lblTP";
+            this.lblTP.Size = new System.Drawing.Size(119, 64);
+            this.lblTP.TabIndex = 7;
+            this.lblTP.Tag = "TP";
+            this.lblTP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTP.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblLT
+            // 
+            this.lblLT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblLT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLT.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLT.ForeColor = System.Drawing.Color.White;
+            this.lblLT.Location = new System.Drawing.Point(612, 64);
+            this.lblLT.Name = "lblLT";
+            this.lblLT.Size = new System.Drawing.Size(116, 64);
+            this.lblLT.TabIndex = 8;
+            this.lblLT.Tag = "LT";
+            this.lblLT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLT.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblF5
+            // 
+            this.lblF5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF5.ForeColor = System.Drawing.Color.Black;
+            this.lblF5.Location = new System.Drawing.Point(490, 64);
+            this.lblF5.Name = "lblF5";
+            this.lblF5.Size = new System.Drawing.Size(116, 64);
+            this.lblF5.TabIndex = 9;
+            this.lblF5.Tag = "5";
+            this.lblF5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF5.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // lblF3
+            // 
+            this.lblF3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblF3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblF3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF3.ForeColor = System.Drawing.Color.Black;
+            this.lblF3.Location = new System.Drawing.Point(247, 64);
+            this.lblF3.Name = "lblF3";
+            this.lblF3.Size = new System.Drawing.Size(115, 64);
+            this.lblF3.TabIndex = 10;
+            this.lblF3.Tag = "3";
+            this.lblF3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblF3.Click += new System.EventHandler(this.lbl_Click);
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(3, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(116, 64);
+            this.label17.TabIndex = 3;
+            this.label17.Tag = "1";
+            this.label17.Text = "F#1";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(247, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 64);
+            this.label18.TabIndex = 11;
+            this.label18.Tag = "3";
+            this.label18.Text = "F# 3";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(368, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(116, 64);
+            this.label19.TabIndex = 12;
+            this.label19.Tag = "4";
+            this.label19.Text = "F# 4";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(490, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(116, 64);
+            this.label20.TabIndex = 13;
+            this.label20.Tag = "5";
+            this.label20.Text = "F# 5";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(612, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(116, 64);
+            this.label21.TabIndex = 14;
+            this.label21.Tag = "LT";
+            this.label21.Text = "LT";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(734, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 64);
+            this.label22.TabIndex = 15;
+            this.label22.Tag = "TP";
+            this.label22.Text = "TP";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31349F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.31381F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.13591F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.3092F));
+            this.tableLayoutPanel2.Controls.Add(this.label22, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label21, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label20, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label18, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblF3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF5, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblLT, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblTP, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblF2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(856, 128);
+            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Visible = false;
+            // 
             // FRM_TMS_HOME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -851,12 +853,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.advancedPanel6.ResumeLayout(false);
             this.advancedPanel5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -894,7 +896,17 @@
         private System.Windows.Forms.Panel pnUnder;
         private System.Windows.Forms.Timer tmrUnder;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl90;
+        private System.Windows.Forms.Label lbl70;
+        private System.Windows.Forms.Label lbl7090;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblF3;
         private System.Windows.Forms.Label lblF5;
         private System.Windows.Forms.Label lblLT;
@@ -902,16 +914,6 @@
         private System.Windows.Forms.Label lblF4;
         private System.Windows.Forms.Label lblF1;
         private System.Windows.Forms.Label lblF2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lbl90;
-        private System.Windows.Forms.Label lbl70;
-        private System.Windows.Forms.Label lbl7090;
     }
 }

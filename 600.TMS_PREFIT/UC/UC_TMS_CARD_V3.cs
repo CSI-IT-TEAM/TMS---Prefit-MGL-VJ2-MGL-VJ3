@@ -43,11 +43,11 @@ namespace FORM.UC
                 //}
                 //else
                 //{
-                //arcScaleComponent2.EnableAnimation = false;
-                //arcScaleComponent2.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseIn;
-                //arcScaleComponent2.EasingFunction = new BackEase();
-                //arcScaleComponent2.Value = 0;
-                //labelComponent2.Text = "0%"; 
+                arcScaleComponent2.EnableAnimation = false;
+                arcScaleComponent2.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseIn;
+                arcScaleComponent2.EasingFunction = new BackEase();
+                arcScaleComponent2.Value = 0;
+                labelComponent2.Text = "0%";
                 arcScaleComponent2.Value = value;
                 labelComponent2.Text = string.Concat(value, "%");
                 //}
