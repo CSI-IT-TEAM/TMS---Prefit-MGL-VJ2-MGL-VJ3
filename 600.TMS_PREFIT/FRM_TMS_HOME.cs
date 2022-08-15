@@ -527,9 +527,9 @@ namespace FORM
         {
             if (!string.IsNullOrEmpty(ComVar.Var._Frm_Back))
             {
-                if (!ComVar.Var._Frm_Back.Contains("SMT_I_TMS_MAIN"))
-                    ComVar.Var.callForm = ComVar.Var._Frm_Back;
-                else
+                //if (!ComVar.Var._Frm_Back.Contains("SMT_I_TMS_MAIN"))
+                //    ComVar.Var.callForm = ComVar.Var._Frm_Back;
+                //else
                     ComVar.Var.callForm = "back";
             }
             else
