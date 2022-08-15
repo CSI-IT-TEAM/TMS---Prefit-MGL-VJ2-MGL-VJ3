@@ -297,6 +297,7 @@ namespace FORM
         {
             ComVar.Var._Frm_Back = "375";
             ComVar.Var.callForm = "600";
+            ComVar.Var._IsBack = true;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
