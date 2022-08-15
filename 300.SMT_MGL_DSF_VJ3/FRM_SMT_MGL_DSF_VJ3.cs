@@ -295,9 +295,9 @@ namespace FORM
 
         private void btnPrefit_Cockpit_Click(object sender, EventArgs e)
         {
+            ComVar.Var._IsBack = true;
             ComVar.Var._Frm_Back = "375";
             ComVar.Var.callForm = "600";
-            ComVar.Var._IsBack = true;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
