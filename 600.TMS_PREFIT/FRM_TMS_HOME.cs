@@ -36,9 +36,10 @@ namespace FORM
             try
             {
                 COM.OraDB MyOraDB = new COM.OraDB();
+                MyOraDB.ConnectName = COM.OraDB.ConnectDB.LMES;
                 System.Data.DataSet ds_ret;
 
-                string process_name = "MES.PKG_TMS_PREFIT.TMS_PREFIT_SET_HOME_V2";
+                string process_name = "TMS_PREFIT_SET_HOME";
                 MyOraDB.ReDim_Parameter(2);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
@@ -149,9 +150,9 @@ namespace FORM
                     DataTable _dtRatioPlantVJ1 = null;// dtRatioPlant.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
                     DataTable _dtRatioPlantVJ2 = null;// dtRatioPlant.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
                     DataTable _dtRatioPlantVJ3 = null;// dtRatioPlant.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ1 = dtRatioAll.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ2 = dtRatioAll.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
-                    DataTable _dtRatioAllVJ3 = dtRatioAll.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ1 = dtRatioAll.Select("FACTORY = '1'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ2 = dtRatioAll.Select("FACTORY = '2'", "FACTORY,PROC_ID").CopyToDataTable();
+                    //DataTable _dtRatioAllVJ3 = dtRatioAll.Select("FACTORY = '3'", "FACTORY,PROC_ID").CopyToDataTable();
                     int iDx = 0, RATIOPLANT = 0, RATIOALL = 0;
                     //Khởi tạo card VJ1
                     for (int i = 0; i < tblMainVJ1.ColumnCount; i++)
@@ -166,7 +167,7 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ1.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         //RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ1.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ1.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ1.Rows[i]["RATIO"]);
                         //  Card.BindingArc(RATIOPLANT, 1);
                         Card.BindingArc(RATIOALL, 2);
                         tblMainVJ1.Controls.Add(Card, i, 0);
@@ -186,9 +187,9 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ2.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         // RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ2.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ2.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ2.Rows[i]["RATIO"]);
                         //Card.BindingArc(RATIOPLANT, 1);
-                        Card.BindingArc(RATIOALL, 2);
+                        //Card.BindingArc(RATIOALL, 2);
                         tblMainVJ2.Controls.Add(Card, i, 0);
                         UC[iDx] = Card;
                         iDx++;
@@ -206,7 +207,7 @@ namespace FORM
                         model.PART_SHOW_YN = Convert.ToBoolean(dtVJ3.Rows[i]["PART_SHOW_YN"].ToString().Equals("Y") ? 1 : 0);
                         Card.BindingData(model);
                         // RATIOPLANT = Convert.ToInt32(_dtRatioPlantVJ3.Rows[i]["RATIO"]);
-                        RATIOALL = Convert.ToInt32(_dtRatioAllVJ3.Rows[i]["RATIO"]);
+                        //RATIOALL = Convert.ToInt32(_dtRatioAllVJ3.Rows[i]["RATIO"]);
                         //Card.BindingArc(RATIOPLANT, 1);
                         Card.BindingArc(RATIOALL, 2);
                         tblMainVJ3.Controls.Add(Card, i, 0);
@@ -230,17 +231,13 @@ namespace FORM
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
             DataTable dt = TMS_HOME_SELECT("Q1", DateTime.Now.ToString()); //Lấy dữ liệu từ DB
             //  DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
-            DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
-            InitUC_Card(dt, null, dtRatioAll);
-
-
+           // DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
+            InitUC_Card(dt, null, null);
             lbl70.Visible = false;
             lbl7090.Visible = false;
             lbl90.Visible = false;
+            iCount = 10;
 
-            dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
-
-            sbSet(dtSet);
 
             //lbl70.Visible = true;
             //lbl7090.Visible = true;
@@ -259,7 +256,7 @@ namespace FORM
 
             string strvalue = "";
 
-            
+
             //           string factory = ((System.Windows.Forms.Label) sender).Tag.ToString();// 
             for (int i = 0; i <= dtset.Rows.Count - 1; i++)
             {
@@ -315,8 +312,8 @@ namespace FORM
                     sbSet_Color(strvalue, "lblTP");
                 }
             }
-            
-            
+
+
         }
         private void sbSet_Color(string label_percent, string label_name)
         {
@@ -324,7 +321,7 @@ namespace FORM
 
             //((System.Windows.Forms.Label)sender).Tag.ToString()
 
-            double.TryParse(label_percent,out per);
+            double.TryParse(label_percent, out per);
             if (per < 70)
             {
                 if (label_name == "lblF1")
@@ -439,12 +436,12 @@ namespace FORM
                     lblTP.ForeColor = Color.Black;
                 }
 
-            
-            }
-            
-
 
             }
+
+
+
+        }
         private void label1_DoubleClick(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Minimized;
@@ -452,13 +449,17 @@ namespace FORM
         }
         private void BindingRatioData()
         {
+
             // DataTable dtRatioPlant = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[0];
             DataTable dtRatioAll = TMS_HOME_RATIO_SELECT("Q", DateTime.Now.ToString("yyyyMMdd"), ComVar.Var._strValue1).Tables[1];
+
             for (int i = 0; i < UC.Length; i++)
             {
                 //UC[i].BindingArc(string.IsNullOrEmpty(dtRatioPlant.Rows[i]["RATIO"].ToString()) ? 0 : Convert.ToInt32(dtRatioPlant.Rows[i]["RATIO"]), 1);
                 UC[i].BindingArc(string.IsNullOrEmpty(dtRatioAll.Rows[i]["RATIO"].ToString()) ? 0 : Convert.ToInt32(dtRatioAll.Rows[i]["RATIO"]), 2);
             }
+
+
         }
         private void tmrDate_Tick(object sender, EventArgs e)
         {
@@ -469,6 +470,10 @@ namespace FORM
                 if (iCount >= 10)
                 {
                     iCount = 0;
+                    //dtSet = TMS_PREFIT_SET_HOME("Q"); //Lấy dữ liệu từ DB
+                    //if (dtSet != null && dtSet.Rows.Count > 0)
+                    //    sbSet(dtSet);
+
                     Thread t = new Thread(BindingRatioData);
                     t.Start();
                 }
@@ -509,8 +514,9 @@ namespace FORM
         {
             if (this.Visible)
             {
-              btnBack.Visible = isBack;
-              tmrDate.Start();
+                btnBack.Visible = isBack;
+                
+                tmrDate.Start();
             }
             else
                 tmrDate.Stop();
@@ -521,9 +527,9 @@ namespace FORM
         {
             if (!string.IsNullOrEmpty(ComVar.Var._Frm_Back))
             {
-                if (!ComVar.Var._Frm_Back.Contains("SMT_I_TMS_MAIN"))
-                    ComVar.Var.callForm = ComVar.Var._Frm_Back;
-                else
+                //if (!ComVar.Var._Frm_Back.Contains("SMT_I_TMS_MAIN"))
+                //    ComVar.Var.callForm = ComVar.Var._Frm_Back;
+                //else
                     ComVar.Var.callForm = "back";
             }
             else
@@ -562,14 +568,14 @@ namespace FORM
             tmrUnder.Start();
         }
 
-     
+
 
         private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-      
+
 
         private void lbl_Click(object sender, EventArgs e)
         {
