@@ -367,7 +367,7 @@
             // FRM_ORDERVSOUTGOING_TRACKING
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1384, 900);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;

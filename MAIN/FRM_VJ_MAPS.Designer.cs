@@ -94,7 +94,7 @@
             // FRM_VJ_MAPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1884, 1061);
             this.Controls.Add(this.pnMain);
             this.MaximizeBox = false;

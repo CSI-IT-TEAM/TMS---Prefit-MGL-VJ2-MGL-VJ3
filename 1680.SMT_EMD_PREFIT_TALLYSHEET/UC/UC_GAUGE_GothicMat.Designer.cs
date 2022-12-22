@@ -68,7 +68,7 @@
             // UC_GAUGE_GothicMat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.gaugeControl1);
             this.Name = "UC_GAUGE_GothicMat";
             this.Size = new System.Drawing.Size(159, 59);

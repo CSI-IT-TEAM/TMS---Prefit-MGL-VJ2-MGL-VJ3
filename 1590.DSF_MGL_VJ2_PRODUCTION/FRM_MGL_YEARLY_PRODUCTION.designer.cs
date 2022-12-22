@@ -1222,7 +1222,7 @@
             // FRM_MGL_YEARLY_PRODUCTION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1920, 1100);
             this.Controls.Add(this.uc_year);
             this.Controls.Add(this.tableLayoutPanel1);

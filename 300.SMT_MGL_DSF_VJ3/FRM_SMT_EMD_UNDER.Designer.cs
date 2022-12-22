@@ -63,7 +63,7 @@
             // FRM_SMT_EMD_UNDER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(506, 272);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
