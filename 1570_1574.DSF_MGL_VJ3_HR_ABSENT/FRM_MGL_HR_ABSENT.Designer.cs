@@ -91,6 +91,7 @@
             // 
             // pnYMD
             // 
+            this.pnYMD.AutoSize = true;
             this.pnYMD.Location = new System.Drawing.Point(1183, 6);
             this.pnYMD.Name = "pnYMD";
             this.pnYMD.Size = new System.Drawing.Size(450, 96);
@@ -393,10 +394,9 @@
             // 
             // FRM_MGL_HR_ABSENT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 1062);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.uc_year);
             this.Controls.Add(this.uc_month);
             this.Controls.Add(this.lblTotAbsent);
@@ -412,6 +412,7 @@
             this.Load += new System.EventHandler(this.FRM_SMT_HR_ABSENT_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_HR_ABSENT_VisibleChanged);
             this.pnHeader.ResumeLayout(false);
+            this.pnHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axfpAbsent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cGauge1)).EndInit();

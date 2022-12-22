@@ -63,7 +63,8 @@ namespace FORM
             try
             {
 
-                COM.OraDB MyOraDB = new COM.OraDB(1); //lmes
+                COM.OraDB MyOraDB = new COM.OraDB(); //lmes
+                MyOraDB.ConnectName = COM.OraDB.ConnectDB.LMES;
                 System.Data.DataSet ds_ret;
 
                 string process_name = "SP_OUT_SCN_VJ1_VJ2";

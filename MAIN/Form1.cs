@@ -26,7 +26,8 @@ namespace MAIN
             try
             {
 
-                COM.OraDB MyOraDB = new COM.OraDB(1);
+                COM.OraDB MyOraDB = new COM.OraDB();
+                MyOraDB.ConnectName = COM.OraDB.ConnectDB.LMES;
                 System.Data.DataSet ds_ret;
                 string process_name = "LMES.SP_ID_GET_IMAGES";
                 MyOraDB.ReDim_Parameter(6);

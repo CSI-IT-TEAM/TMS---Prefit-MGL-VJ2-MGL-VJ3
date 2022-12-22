@@ -26,7 +26,8 @@ namespace FORM
         private DataSet SELECT_DATA(string WorkType, string DateF, string DateT, string Line, string Trip)
         {
             System.Data.DataSet retDS;
-            COM.OraDB MyOraDB = new COM.OraDB(1); //1.LMES , 2.SEPHIROTH
+            COM.OraDB MyOraDB = new COM.OraDB(); //1.LMES , 2.SEPHIROTH
+            MyOraDB.ConnectName = COM.OraDB.ConnectDB.LMES;
 
             MyOraDB.ReDim_Parameter(14);
             MyOraDB.Process_Name = "P_GMES0262_Q_PHUOCTEST";

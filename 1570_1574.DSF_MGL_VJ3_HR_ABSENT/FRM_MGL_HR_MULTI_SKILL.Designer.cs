@@ -86,6 +86,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.AutoSize = true;
             this.groupBox2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
@@ -95,9 +96,9 @@
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(781, 2);
+            this.groupBox2.Location = new System.Drawing.Point(781, -4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(688, 103);
+            this.groupBox2.Size = new System.Drawing.Size(688, 112);
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             // 
@@ -191,13 +192,14 @@
             // 
             // cmdBack
             // 
+            this.cmdBack.AutoSize = true;
             this.cmdBack.BackColor = System.Drawing.Color.Transparent;
             this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
             this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.cmdBack.FlatAppearance.BorderSize = 0;
             this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Location = new System.Drawing.Point(1525, 3);
+            this.cmdBack.Location = new System.Drawing.Point(1514, 3);
             this.cmdBack.Name = "cmdBack";
             this.cmdBack.Size = new System.Drawing.Size(108, 101);
             this.cmdBack.TabIndex = 51;
@@ -207,13 +209,12 @@
             // lblDate
             // 
             this.lblDate.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblDate.Location = new System.Drawing.Point(1639, 0);
+            this.lblDate.Location = new System.Drawing.Point(1628, 6);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(281, 109);
+            this.lblDate.Size = new System.Drawing.Size(273, 106);
             this.lblDate.TabIndex = 49;
             this.lblDate.Text = "lblDate";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -238,7 +239,7 @@
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 109);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(1904, 945);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(1904, 932);
             this.xtraScrollableControl1.TabIndex = 15;
             // 
             // xtraTabControl1
@@ -260,7 +261,7 @@
             this.xtraTabControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.Cutting;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1904, 945);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1904, 932);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Cutting,
@@ -275,7 +276,7 @@
             // 
             this.Cutting.Controls.Add(this.axfpHR);
             this.Cutting.Name = "Cutting";
-            this.Cutting.Size = new System.Drawing.Size(1856, 939);
+            this.Cutting.Size = new System.Drawing.Size(1856, 926);
             this.Cutting.Text = "Cutting";
             // 
             // axfpHR
@@ -285,37 +286,37 @@
             this.axfpHR.Location = new System.Drawing.Point(0, 0);
             this.axfpHR.Name = "axfpHR";
             this.axfpHR.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axfpHR.OcxState")));
-            this.axfpHR.Size = new System.Drawing.Size(1856, 939);
+            this.axfpHR.Size = new System.Drawing.Size(1856, 926);
             this.axfpHR.TabIndex = 0;
             // 
             // Nosew
             // 
             this.Nosew.Name = "Nosew";
-            this.Nosew.Size = new System.Drawing.Size(1856, 939);
+            this.Nosew.Size = new System.Drawing.Size(1856, 926);
             this.Nosew.Text = "Nosew";
             // 
             // HF
             // 
             this.HF.Name = "HF";
-            this.HF.Size = new System.Drawing.Size(1856, 939);
+            this.HF.Size = new System.Drawing.Size(1856, 926);
             this.HF.Text = "HF";
             // 
             // Stitching
             // 
             this.Stitching.Name = "Stitching";
-            this.Stitching.Size = new System.Drawing.Size(1856, 939);
+            this.Stitching.Size = new System.Drawing.Size(1856, 926);
             this.Stitching.Text = "Stitching";
             // 
             // Stockfit
             // 
             this.Stockfit.Name = "Stockfit";
-            this.Stockfit.Size = new System.Drawing.Size(1856, 939);
+            this.Stockfit.Size = new System.Drawing.Size(1856, 926);
             this.Stockfit.Text = "Stockfit";
             // 
             // Assembly
             // 
             this.Assembly.Name = "Assembly";
-            this.Assembly.Size = new System.Drawing.Size(1856, 939);
+            this.Assembly.Size = new System.Drawing.Size(1856, 926);
             this.Assembly.Text = "Assembly";
             // 
             // tmrDate
@@ -323,12 +324,11 @@
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
             // 
-            // FORM_SMT_MULTI_SKILL_RATIO
+            // FRM_MGL_HR_MULTI_SKILL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1904, 1054);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.xtraScrollableControl1);
             this.Controls.Add(this.panel1);
             this.Name = "FRM_MGL_HR_MULTI_SKILL";
@@ -336,6 +336,7 @@
             this.Load += new System.EventHandler(this.FRM_MUILTI_SKILL_V2_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_MUILTI_SKILL_V2_VisibleChanged);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
